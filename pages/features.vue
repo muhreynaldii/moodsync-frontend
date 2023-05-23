@@ -1,6 +1,5 @@
 <template>
   <div class="features-container">
-    <app-nav rootClassName="nav-root-class-name4"></app-nav>
     <bg-bawah rootClassName="bg-bawah-root-class-name11"></bg-bawah>
     <bg-atas rootClassName="bg-atas-root-class-name4"></bg-atas>
     <div class="features-main-content">
@@ -71,20 +70,21 @@
         </div>
       </div>
     </div>
+    <app-nav rootClassName="nav-root-class-name4"></app-nav>
   </div>
 </template>
 
 <script>
-import AppNav from '../components/nav'
 import BgBawah from '../components/bg-bawah'
 import BgAtas from '../components/bg-atas'
+import AppNav from '../components/nav'
 
 export default {
   name: 'Features',
   components: {
-    AppNav,
     BgBawah,
     BgAtas,
+    AppNav,
   },
   head: {
     title: 'Features - exported project',
