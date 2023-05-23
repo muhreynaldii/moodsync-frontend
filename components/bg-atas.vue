@@ -51,4 +51,9 @@ export default {
   left: 0px;
   position: absolute;
 }
+.bg-atas-root-class-name4 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
 </style>

@@ -1,12 +1,18 @@
 <template>
   <nav class="nav-nav" v-bind:class="rootClassName">
-    <img :alt="Rectangle8_alt" :src="Rectangle8_src" class="nav-rectangle8" />
-    <div class="nav-frame8">
-      <span class="nav-text"><span>About</span></span>
-    </div>
-    <div class="nav-frame9">
-      <span class="nav-text2"><span>Features</span></span>
-    </div>
+    <nuxt-link to="/" class="nav-navlink">
+      <img :alt="Rectangle8_alt" :src="Rectangle8_src" class="nav-rectangle8" />
+    </nuxt-link>
+    <nuxt-link to="/about" class="nav-navlink1">
+      <div class="nav-frame8">
+        <span class="nav-text"><span>About</span></span>
+      </div>
+    </nuxt-link>
+    <nuxt-link to="/features" class="nav-navlink2">
+      <div class="nav-frame9">
+        <span class="nav-text2"><span>Features</span></span>
+      </div>
+    </nuxt-link>
   </nav>
 </template>
 
@@ -35,9 +41,16 @@ export default {
   position: relative;
   align-items: center;
 }
+.nav-navlink {
+  display: contents;
+}
 .nav-rectangle8 {
   width: 50px;
   height: 50px;
+  text-decoration: none;
+}
+.nav-navlink1 {
+  display: contents;
 }
 .nav-frame8 {
   gap: 10px;
@@ -48,6 +61,7 @@ export default {
   align-items: center;
   flex-shrink: 0;
   justify-content: center;
+  text-decoration: none;
 }
 .nav-text {
   color: rgba(0, 0, 0, 1);
@@ -60,6 +74,9 @@ export default {
   line-height: 200%;
   font-stretch: normal;
 }
+.nav-navlink2 {
+  display: contents;
+}
 .nav-frame9 {
   gap: 10px;
   width: 150px;
@@ -69,6 +86,7 @@ export default {
   align-items: center;
   flex-shrink: 0;
   justify-content: center;
+  text-decoration: none;
 }
 .nav-text2 {
   color: rgba(0, 0, 0, 1);
@@ -97,6 +115,11 @@ export default {
   position: absolute;
 }
 .nav-root-class-name3 {
+  top: 38px;
+  left: 105px;
+  position: absolute;
+}
+.nav-root-class-name4 {
   top: 38px;
   left: 105px;
   position: absolute;

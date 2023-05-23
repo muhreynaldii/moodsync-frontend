@@ -128,8 +128,8 @@ export default {
   position: absolute;
 }
 .features-container1 {
-  top: 150px;
-  left: 0px;
+  top: 276px;
+  left: 70px;
   width: 787px;
   height: 387.5625px;
   display: flex;
@@ -165,17 +165,20 @@ export default {
   text-decoration: none;
 }
 .features-feature {
+  gap: var(--dl-space-space-halfunit);
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
 .features-feature-content {
+  gap: var(--dl-space-space-halfunit);
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
 }
 .features-image {
-  width: 100px;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
 .features-text01 {
@@ -189,12 +192,14 @@ export default {
   line-height: 120.00000476837158%;
 }
 .features-feature-content1 {
+  gap: var(--dl-space-space-halfunit);
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
 }
 .features-image1 {
-  width: 100px;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
 .features-text04 {
@@ -208,12 +213,14 @@ export default {
   line-height: 120.00000476837158%;
 }
 .features-feature-content2 {
+  gap: var(--dl-space-space-halfunit);
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
 }
 .features-image2 {
-  width: 100px;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
 .features-text07 {
@@ -227,12 +234,14 @@ export default {
   line-height: 120.00000476837158%;
 }
 .features-feature-content3 {
+  gap: var(--dl-space-space-halfunit);
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
 }
 .features-image3 {
-  width: 100px;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
 .features-text10 {

@@ -88,4 +88,9 @@ export default {
   bottom: 0px;
   position: absolute;
 }
+.bg-bawah-root-class-name11 {
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+}
 </style>
