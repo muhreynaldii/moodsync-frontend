@@ -1,0 +1,72 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\about.vue",
+    "chunkName": "pages/about",
+    "_name": "_5ffe935a"
+  },
+  {
+    "name": "daftar-mahasiswa",
+    "path": "/daftar-mahasiswa",
+    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\daftar-mahasiswa.vue",
+    "chunkName": "pages/daftar-mahasiswa",
+    "_name": "_b49ac6da"
+  },
+  {
+    "name": "dashboard-dosen",
+    "path": "/dashboard-dosen",
+    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\dashboard-dosen.vue",
+    "chunkName": "pages/dashboard-dosen",
+    "_name": "_4742c33e"
+  },
+  {
+    "name": "emotion-detail",
+    "path": "/emotion-detail",
+    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\emotion-detail.vue",
+    "chunkName": "pages/emotion-detail",
+    "_name": "_2ffaf7a6"
+  },
+  {
+    "name": "features",
+    "path": "/features",
+    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\features.vue",
+    "chunkName": "pages/features",
+    "_name": "_60dbca32"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_8d3f97a2"
+  },
+  {
+    "name": "notification",
+    "path": "/notification",
+    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\notification.vue",
+    "chunkName": "pages/notification",
+    "_name": "_23f3c0d6"
+  },
+  {
+    "name": "vicon",
+    "path": "/vicon",
+    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\vicon.vue",
+    "chunkName": "pages/vicon",
+    "_name": "_4b69a3b5"
+  },
+  {
+    "name": "vicon-started",
+    "path": "/vicon-started",
+    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\vicon-started.vue",
+    "chunkName": "pages/vicon-started",
+    "_name": "_1a486069"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_208eddd0"
+  }
+]

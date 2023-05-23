@@ -1,0 +1,1336 @@
+<template>
+  <div class="vicon-container">
+    <bg-bawah rootClassName="bg-bawah-root-class-name6"></bg-bawah>
+    <aside class="vicon-side-bar-full">
+      <div class="vicon-side-bar">
+        <div class="vicon-dashboard">
+          <img
+            alt="chartpie4162"
+            src="/playground_assets/chartpie4462-g92g.svg"
+            class="vicon-chartpie"
+          />
+        </div>
+        <nuxt-link to="/vicon-started" class="vicon-navlink">
+          <div class="vicon-conference">
+            <img
+              alt="cash4162"
+              src="/playground_assets/cash4462-gzxy.svg"
+              class="vicon-cash"
+            />
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/daftar-mahasiswa" class="vicon-navlink1">
+          <div class="vicon-class">
+            <img
+              alt="usergroup4162"
+              src="/playground_assets/usergroup4162-5fld.svg"
+              class="vicon-usergroup"
+            />
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/notification" class="vicon-navlink2">
+          <div class="vicon-notif">
+            <img
+              alt="bell4162"
+              src="/playground_assets/bell4162-7mh8.svg"
+              class="vicon-bell"
+            />
+          </div>
+        </nuxt-link>
+        <div class="vicon-chat">
+          <img
+            alt="chat4162"
+            src="/playground_assets/chat4162-5tzb.svg"
+            class="vicon-chat1"
+          />
+        </div>
+      </div>
+      <img
+        alt="cog4162"
+        src="/playground_assets/cog4162-9gch.svg"
+        loading="lazy"
+        class="vicon-cog"
+      />
+    </aside>
+    <div class="vicon-container1">
+      <div class="vicon-vicon-content">
+        <div class="vicon-vicon">
+          <div class="vicon-lecturer">
+            <img
+              alt="Lecturer4542"
+              src="/playground_assets/lecturer4542-9s9o-1500w.png"
+              class="vicon-lecturer1"
+            />
+            <div class="vicon-profile-card">
+              <div class="vicon-persinal-info">
+                <div class="vicon-name">
+                  <span class="vicon-text">Dr. Dre</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vicon-audience">
+            <div class="vicon-group27">
+              <img
+                alt="Rectangle194542"
+                src="/playground_assets/rectangle194542-92dd-200w.png"
+                class="vicon-rectangle19"
+              />
+              <div class="vicon-profile-card1">
+                <div class="vicon-persinal-info1">
+                  <div class="vicon-name1">
+                    <span class="vicon-text01"><span>Jessica</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="vicon-group17">
+                <img
+                  alt="microphone4542"
+                  src="/playground_assets/microphone4542-y3l.svg"
+                  class="vicon-microphone"
+                />
+              </div>
+              <span class="vicon-text03"><span>😁</span></span>
+            </div>
+            <div class="vicon-group26">
+              <img
+                alt="Rectangle204542"
+                src="/playground_assets/rectangle204542-45gt-200w.png"
+                class="vicon-rectangle20"
+              />
+              <div class="vicon-profile-card2">
+                <div class="vicon-persinal-info2">
+                  <div class="vicon-name2">
+                    <span class="vicon-text05"><span>Roy</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="vicon-group16">
+                <img
+                  alt="microphone4542"
+                  src="/playground_assets/microphone4542-2y4.svg"
+                  class="vicon-microphone1"
+                />
+              </div>
+              <span class="vicon-text07"><span>😁</span></span>
+            </div>
+            <div class="vicon-group25">
+              <img
+                alt="Rectangle214542"
+                src="/playground_assets/rectangle214542-ods6-200w.png"
+                class="vicon-rectangle21"
+              />
+              <div class="vicon-profile-card3">
+                <div class="vicon-persinal-info3">
+                  <div class="vicon-name3">
+                    <span class="vicon-text09"><span>Ramon</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="vicon-group15">
+                <img
+                  alt="microphone4542"
+                  src="/playground_assets/microphone4542-r69l.svg"
+                  class="vicon-microphone2"
+                />
+              </div>
+              <span class="vicon-text11"><span>😁</span></span>
+            </div>
+            <div class="vicon-group24">
+              <img
+                alt="Rectangle224542"
+                src="/playground_assets/rectangle224542-wy2-200w.png"
+                class="vicon-rectangle22"
+              />
+              <div class="vicon-profile-card4">
+                <div class="vicon-persinal-info4">
+                  <div class="vicon-name4">
+                    <span class="vicon-text13"><span>Magen</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="vicon-group14">
+                <img
+                  alt="microphone4542"
+                  src="/playground_assets/microphone4542-nfj7.svg"
+                  class="vicon-microphone3"
+                />
+              </div>
+              <span class="vicon-text15"><span>😁</span></span>
+            </div>
+          </div>
+          <img
+            alt="arrowsexpand4542"
+            src="/playground_assets/arrowsexpand4542-jlcd.svg"
+            class="vicon-arrowsexpand"
+          />
+        </div>
+        <img
+          alt="Seperator4542"
+          src="/playground_assets/seperator4542-o5xk.svg"
+          class="vicon-seperator"
+        />
+        <div class="vicon-action-bar">
+          <img
+            alt="Volume4542"
+            src="/playground_assets/volume4542-g9ck.svg"
+            class="vicon-volume"
+          />
+          <button class="vicon-action-button">
+            <div class="vicon-camera">
+              <img
+                alt="videocamera4542"
+                src="/playground_assets/videocamera4542-5fat.svg"
+                class="vicon-videocamera"
+              />
+            </div>
+            <div class="vicon-mic">
+              <img
+                alt="microphone4542"
+                src="/playground_assets/microphone4542-ky9m.svg"
+                class="vicon-microphone4"
+              />
+            </div>
+            <div class="vicon-share-screen">
+              <img
+                alt="collection4542"
+                src="/playground_assets/collection4542-2vsm.svg"
+                class="vicon-collection"
+              />
+            </div>
+            <div class="vicon-menu">
+              <img
+                alt="dotshorizontal4542"
+                src="/playground_assets/dotshorizontal4542-l31o.svg"
+                class="vicon-dotshorizontal"
+              />
+            </div>
+          </button>
+          <div class="vicon-disconnect">
+            <img
+              alt="phonemissedcall4542"
+              src="/playground_assets/phonemissedcall4542-galo.svg"
+              class="vicon-phonemissedcall"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="vicon-chat-dummy">
+        <img
+          alt="Rectangle234542"
+          src="/playground_assets/rectangle234542-wmv-300w.png"
+          class="vicon-rectangle23"
+        />
+        <img
+          alt="Rectangle244542"
+          src="/playground_assets/rectangle244542-2xpu-200h.png"
+          class="vicon-rectangle24"
+        />
+        <img
+          alt="Rectangle174542"
+          src="/playground_assets/rectangle174542-swg-200h.png"
+          class="vicon-rectangle17"
+        />
+        <img
+          alt="Rectangle184542"
+          src="/playground_assets/rectangle184542-go5m-200h.png"
+          class="vicon-rectangle18"
+        />
+      </div>
+    </div>
+    <header data-thq="thq-navbar" class="vicon-navbar-interactive">
+      <div class="vicon-container2">
+        <nuxt-link to="/dashboard-dosen" class="vicon-navlink3">
+          <img
+            alt="Rectangle84462"
+            src="/playground_assets/logo-200w.png"
+            class="vicon-logo"
+          />
+        </nuxt-link>
+        <nuxt-link to="/daftar-mahasiswa" class="vicon-navlink4">
+          <div class="vicon-back button">
+            <img
+              alt="Rectangle164462"
+              src="/playground_assets/rectangle164462-vd7d-200h.png"
+              class="vicon-rectangle16"
+            />
+            <img
+              alt="chevronleft4462"
+              src="/playground_assets/chevronleft4462-xmap.svg"
+              class="vicon-chevronleft"
+            />
+          </div>
+        </nuxt-link>
+      </div>
+      <div data-thq="thq-navbar-nav" data-role="Nav" class="vicon-desktop-menu">
+        <nav data-thq="thq-navbar-nav-links" data-role="Nav" class="vicon-nav">
+          <span class="HeadlineType33 vicon-text17">Dasar Pemrograman</span>
+        </nav>
+      </div>
+      <div class="vicon-search-and-profile">
+        <div class="vicon-search">
+          <div class="vicon-input">
+            <div class="vicon-content">
+              <img
+                alt="searchI416"
+                src="/playground_assets/searchi416-d8ss.svg"
+                class="vicon-search1"
+              />
+              <span class="vicon-text18 leadingTighttextSmfontNormal">
+                <span>Search</span>
+              </span>
+            </div>
+          </div>
+          <button class="vicon-button">
+            <img
+              alt="searchI416"
+              src="/playground_assets/searchi416-1gp7.svg"
+              class="vicon-search2"
+            />
+          </button>
+        </div>
+        <div class="vicon-profile">
+          <img
+            alt="Rectangle254162"
+            src="/playground_assets/rectangle254162-743-200h.png"
+            class="vicon-rectangle25"
+          />
+          <img
+            alt="chevrondown4162"
+            src="/playground_assets/chevrondown4162-p2v.svg"
+            class="vicon-chevrondown"
+          />
+        </div>
+      </div>
+      <div data-thq="thq-burger-menu" class="vicon-burger-menu">
+        <svg viewBox="0 0 1024 1024" class="vicon-icon">
+          <path
+            d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+          ></path>
+        </svg>
+      </div>
+    </header>
+  </div>
+</template>
+
+<script>
+import BgBawah from '../components/bg-bawah'
+
+export default {
+  name: 'Vicon',
+  components: {
+    BgBawah,
+  },
+  head: {
+    title: 'Vicon - exported project',
+    meta: [
+      {
+        property: 'og:title',
+        content: 'Vicon - exported project',
+      },
+    ],
+  },
+}
+</script>
+
+<style scoped>
+.vicon-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.vicon-side-bar-full {
+  gap: 382px;
+  top: 238px;
+  left: 28px;
+  width: 50px;
+  height: 613px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  margin-right: var(--dl-space-space-threeunits);
+  flex-direction: column;
+}
+.vicon-side-bar {
+  gap: 21px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.vicon-dashboard {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
+  background-color: var(--dl-color-default-white);
+}
+.vicon-chartpie {
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-navlink {
+  display: contents;
+}
+.vicon-conference {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
+  background-color: var(--dl-color-blue-100);
+}
+.vicon-cash {
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-navlink1 {
+  display: contents;
+}
+.vicon-class {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 1);
+}
+.vicon-usergroup {
+  top: 9px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-navlink2 {
+  display: contents;
+}
+.vicon-notif {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 1);
+}
+.vicon-bell {
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-chat {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: var(--dl-radius-radius-round);
+  background-color: rgba(255, 255, 255, 1);
+}
+.vicon-chat1 {
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-cog {
+  left: 10px;
+  width: 30px;
+  bottom: 0px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-container1 {
+  top: 114px;
+  left: 0px;
+  right: 0px;
+  width: 1351px;
+  height: 874px;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+}
+.vicon-vicon-content {
+  gap: 27px;
+  top: 0px;
+  left: 0px;
+  width: 970px;
+  height: auto;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.vicon-vicon {
+  width: 971px;
+  height: 726px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-lecturer {
+  top: 0px;
+  left: 0px;
+  width: 970.75px;
+  height: 726px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-lecturer1 {
+  top: 0px;
+  flex: 1;
+  left: 0px;
+  width: 100%;
+  height: 726px;
+  position: absolute;
+  border-radius: 33px;
+}
+.vicon-profile-card {
+  gap: 2.8138978481292725px;
+  top: 662.25px;
+  left: 33.75506591796875px;
+  width: 162.95562744140625px;
+  height: 36.75px;
+  display: flex;
+  padding: 22.51118278503418px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 11.25559139251709px 22.51118278503418px 0px rgba(0, 0, 0, 0.25) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 4.502236366271973px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.30000001192092896);
+}
+.vicon-persinal-info {
+  gap: 31.16315269470215px;
+  width: 139.7472686767578px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vicon-name {
+  width: 140px;
+  height: 44px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-text {
+  color: var(--dl-color-default-white);
+  width: 140px;
+  height: auto;
+  position: absolute;
+  font-size: 29.2155px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.vicon-audience {
+  gap: 16px;
+  top: 19px;
+  left: 828.875px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.vicon-group27 {
+  width: 107px;
+  height: 105px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-rectangle19 {
+  top: 0px;
+  left: 0px;
+  width: 105px;
+  height: 105px;
+  position: absolute;
+  border-radius: 33px;
+}
+.vicon-profile-card1 {
+  gap: 1.1185681819915771px;
+  top: 85px;
+  left: 27px;
+  width: 50px;
+  height: 16px;
+  display: flex;
+  padding: 8.948545455932617px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 1.7897090911865234px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.30000001192092896);
+}
+.vicon-persinal-info1 {
+  gap: 12.387837409973145px;
+  width: 55.55170822143555px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vicon-name1 {
+  width: 56px;
+  height: 17px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-text01 {
+  color: var(--dl-color-default-white);
+  width: 56px;
+  height: auto;
+  position: absolute;
+  font-size: 11.61359691619873px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.vicon-group17 {
+  right: 8px;
+  width: 20px;
+  bottom: 12px;
+  height: 19.04762077331543px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: var(--dl-radius-radius-round);
+  background-color: rgba(240, 82, 82, 1);
+}
+.vicon-microphone {
+  top: 4.3915228843688965px;
+  left: 4.990626811981201px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+.vicon-text03 {
+  top: 74px;
+  left: 22px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: 120.00000476837158%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.vicon-group26 {
+  width: 107px;
+  height: 105.04762268066406px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-rectangle20 {
+  top: 0px;
+  left: 0px;
+  width: 105px;
+  height: 105px;
+  position: absolute;
+  border-radius: 33px;
+}
+.vicon-profile-card2 {
+  gap: 1.1185681819915771px;
+  top: 85px;
+  left: 27px;
+  width: 50px;
+  height: 16px;
+  display: flex;
+  padding: 8.948545455932617px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 1.7897090911865234px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.30000001192092896);
+}
+.vicon-persinal-info2 {
+  gap: 12.387837409973145px;
+  width: 55.55170822143555px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vicon-name2 {
+  width: 56px;
+  height: 17px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-text05 {
+  color: var(--dl-color-default-white);
+  width: 56px;
+  height: auto;
+  position: absolute;
+  font-size: 11.61359691619873px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.vicon-group16 {
+  right: 8px;
+  width: 20px;
+  bottom: 12px;
+  height: 19.04762077331543px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: var(--dl-radius-radius-round);
+  background-color: rgba(14, 159, 110, 1);
+}
+.vicon-microphone1 {
+  top: 4.3915228843688965px;
+  left: 4.990626811981201px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+.vicon-text07 {
+  top: 76px;
+  left: 22px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: 120.00000476837158%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.vicon-group25 {
+  width: 107px;
+  height: 105.04762268066406px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-rectangle21 {
+  top: 0px;
+  left: 0px;
+  width: 105px;
+  height: 105px;
+  position: absolute;
+  border-radius: 33px;
+}
+.vicon-profile-card3 {
+  gap: 1.1185681819915771px;
+  top: 85px;
+  left: 27px;
+  width: 50px;
+  height: 16px;
+  display: flex;
+  padding: 8.948545455932617px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 1.7897090911865234px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.30000001192092896);
+}
+.vicon-persinal-info3 {
+  gap: 12.387837409973145px;
+  width: 55.55170822143555px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vicon-name3 {
+  width: 56px;
+  height: 17px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-text09 {
+  color: var(--dl-color-default-white);
+  width: 56px;
+  height: auto;
+  position: absolute;
+  font-size: 11.61359691619873px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.vicon-group15 {
+  right: 8px;
+  width: 20px;
+  bottom: 12px;
+  height: 19.04762077331543px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: var(--dl-radius-radius-round);
+  background-color: rgba(28, 100, 242, 1);
+}
+.vicon-microphone2 {
+  top: 4.3915228843688965px;
+  left: 4.990626811981201px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+.vicon-text11 {
+  top: 75.952392578125px;
+  left: 22px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: 120.00000476837158%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.vicon-group24 {
+  width: 107px;
+  height: 105px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-rectangle22 {
+  top: 0px;
+  left: 0px;
+  width: 105px;
+  height: 105px;
+  position: absolute;
+  border-radius: 33px;
+}
+.vicon-profile-card4 {
+  gap: 1.1185681819915771px;
+  top: 83px;
+  left: 27px;
+  width: 50px;
+  height: 16px;
+  display: flex;
+  padding: 8.948545455932617px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 1.7897090911865234px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.30000001192092896);
+}
+.vicon-persinal-info4 {
+  gap: 12.387837409973145px;
+  width: 55.55170822143555px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vicon-name4 {
+  width: 56px;
+  height: 17px;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.vicon-text13 {
+  color: var(--dl-color-default-white);
+  width: 56px;
+  height: auto;
+  position: absolute;
+  font-size: 11.61359691619873px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.vicon-group14 {
+  right: 8px;
+  width: 20px;
+  bottom: 12px;
+  height: 19.04762077331543px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: var(--dl-radius-radius-round);
+  background-color: rgba(240, 82, 82, 1);
+}
+.vicon-microphone3 {
+  top: 4.3915228843688965px;
+  left: 4.990626811981201px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+.vicon-text15 {
+  top: 72.90478515625px;
+  left: 22px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: 120.00000476837158%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.vicon-arrowsexpand {
+  top: 21px;
+  left: 28.875px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.vicon-seperator {
+  width: 948px;
+  height: 1px;
+}
+.vicon-action-bar {
+  gap: 250px;
+  width: 948px;
+  height: 60px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.vicon-volume {
+  top: 0px;
+  left: 0px;
+  width: 150px;
+  height: 56px;
+  position: absolute;
+  box-sizing: content-box;
+}
+.vicon-action-button {
+  gap: 9px;
+  top: 0px;
+  left: 400px;
+  display: flex;
+  position: absolute;
+  align-self: center;
+  align-items: flex-start;
+}
+.vicon-camera {
+  width: 59.20000076293945px;
+  height: 56.38554382324219px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 18.610000610351562px;
+}
+.vicon-videocamera {
+  top: 13px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-mic {
+  width: 59.20000076293945px;
+  height: 56.38554382324219px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 18.610000610351562px;
+}
+.vicon-microphone4 {
+  top: 13px;
+  left: 14.795166015625px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-share-screen {
+  width: 59.20000076293945px;
+  height: 56.38554382324219px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 18.610000610351562px;
+}
+.vicon-collection {
+  top: 13px;
+  left: 15.590347290039062px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-menu {
+  width: 59.20000076293945px;
+  height: 56.38554382324219px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 18.610000610351562px;
+}
+.vicon-dotshorizontal {
+  top: 13px;
+  left: 15.385498046875px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-disconnect {
+  top: 0px;
+  right: 0px;
+  width: 59.20481872558594px;
+  height: 56.38554382324219px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 18.610000610351562px;
+  justify-content: flex-end;
+  background-color: var(--dl-color-red-500);
+}
+.vicon-phonemissedcall {
+  top: 13px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-chat-dummy {
+  top: 0px;
+  right: 0px;
+  width: 297px;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: 20px;
+  background-color: rgba(243, 244, 246, 1);
+}
+.vicon-rectangle23 {
+  top: 105px;
+  left: 16.390727996826172px;
+  width: 264px;
+  height: 196px;
+  position: absolute;
+  border-radius: 33px;
+}
+.vicon-rectangle24 {
+  top: 786px;
+  left: 16.390727996826172px;
+  width: 264px;
+  height: 58px;
+  position: absolute;
+  border-radius: 33px;
+}
+.vicon-rectangle17 {
+  top: 21px;
+  left: 12.456954002380371px;
+  width: 131px;
+  height: 50px;
+  position: absolute;
+  border-radius: 33px;
+}
+.vicon-rectangle18 {
+  top: 21px;
+  left: 153.41722106933594px;
+  width: 131px;
+  height: 50px;
+  position: absolute;
+  border-radius: 33px;
+}
+.vicon-navbar-interactive {
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+.vicon-container2 {
+  width: 157px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vicon-navlink3 {
+  display: contents;
+}
+.vicon-logo {
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+.vicon-navlink4 {
+  display: contents;
+}
+.vicon-back {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-width: 0px;
+  text-decoration: none;
+}
+.vicon-rectangle16 {
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 12px;
+}
+.vicon-chevronleft {
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.vicon-desktop-menu {
+  display: flex;
+}
+.vicon-nav {
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+}
+.vicon-search-and-profile {
+  width: 523px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vicon-search {
+  gap: 10px;
+  width: 320px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.vicon-input {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 12px 16px;
+  align-self: center;
+  box-sizing: content-box;
+  align-items: center;
+  border-color: rgba(209, 213, 219, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: var(--dl-color-gray-50);
+}
+.vicon-content {
+  gap: 8px;
+  display: flex;
+  flex-grow: 1;
+  align-self: center;
+  align-items: center;
+}
+.vicon-search1 {
+  width: 18px;
+  height: 18px;
+}
+.vicon-text18 {
+  color: var(--dl-color-gray-500);
+  height: auto;
+  flex-grow: 1;
+  text-align: left;
+  line-height: 125%;
+}
+.vicon-button {
+  width: auto;
+  height: auto;
+  display: flex;
+  padding: 8px;
+  align-self: center;
+  box-sizing: content-box;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(28, 100, 242, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  justify-content: center;
+  background-color: var(--dl-color-primary-600);
+}
+.vicon-search2 {
+  width: 20px;
+  height: 20px;
+}
+.vicon-profile {
+  gap: 2px;
+  display: flex;
+  align-items: center;
+}
+.vicon-rectangle25 {
+  width: 50px;
+  height: 50px;
+  border-radius: 33px;
+}
+.vicon-chevrondown {
+  width: 30px;
+  height: 30px;
+}
+.vicon-burger-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.vicon-icon {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+}
+@media(max-width: 1600px) {
+  .vicon-container2 {
+    width: 137px;
+  }
+  .vicon-text17 {
+    color: var(--dl-color-primary-600);
+  }
+  .vicon-search-and-profile {
+    width: 372px;
+  }
+  .vicon-search {
+    width: 250px;
+  }
+  .vicon-profile {
+    top: 29px;
+    right: 92px;
+    position: static;
+  }
+}
+@media(max-width: 1200px) {
+  .vicon-search {
+    width: var(--dl-size-size-xlarge);
+  }
+}
+@media(max-width: 767px) {
+  .vicon-navbar-interactive {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .vicon-desktop-menu {
+    display: none;
+  }
+  .vicon-burger-menu {
+    display: flex;
+  }
+}
+@media(max-width: 479px) {
+  .vicon-navbar-interactive {
+    padding: var(--dl-space-space-unit);
+  }
+}
+</style>
