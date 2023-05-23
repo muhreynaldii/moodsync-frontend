@@ -3,42 +3,44 @@
     <app-nav rootClassName="nav-root-class-name2"></app-nav>
     <bg-bawah rootClassName="bg-bawah-root-class-name9"></bg-bawah>
     <bg-atas rootClassName="bg-atas-root-class-name2"></bg-atas>
-    <div class="about-container1">
+    <div class="about-main-content">
       <img
         alt="pastedImage"
         src="/playground_assets/pastedimage-x2a8.svg"
         class="about-emotion"
       />
-      <div class="about-container2">
+      <div class="about-container1">
         <img
           alt="pastedImage"
           src="/playground_assets/pastedimage-sw6m.svg"
           class="about-texture"
         />
         <div class="about-headline">
-          <div class="about-headline1">
-            <span class="about-text HeadlineType65">
-              <span>
-                <span>
-                  Connect with Emotion:
-                  <span v-html="rawvcpt"></span>
-                </span>
-                <span><span v-html="rawr5u9"></span></span>
-              </span>
+          <span class="about-text HeadlineType65">About Us</span>
+          <span class="about-text1">
+            <span class="about-text2 HeadlineType23">
+              Aplikasi Video Conference dengan Emotion Recognition adalah sebuah
+              platform komunikasi jarak jauh yang dirancang khusus untuk
+              meningkatkan pengalaman pengguna dalam konferensi video. Salah satu
+              fitur utama dari aplikasi ini adalah kemampuannya untuk mendeteksi
+              emosi pengguna selama panggilan video.
             </span>
-            <span class="about-text04 HeadlineType46">
-              <span>Experience Video Conferencing like never before!</span>
+            <br class="HeadlineType23" />
+            <br class="HeadlineType23" />
+            <span class="about-text5 HeadlineType23">
+              Dengan menggunakan teknologi pengenalan emosi yang canggih, aplikasi
+              ini dapat menganalisis ekspresi wajah pengguna dalam waktu nyata.
+              Algoritma yang terintegrasi dengan aplikasi akan mengidentifikasi
+              berbagai emosi seperti kegembiraan, kesedihan, kejutan, marah, atau
+              ketidakpuasan. Hal ini memungkinkan para peserta video conference
+              untuk mendapatkan pemahaman yang lebih mendalam tentang respons
+              emosional satu sama lain, bahkan dalam komunikasi nonverbal
             </span>
-          </div>
-          <span class="about-text06 HeadlineType23">
-            <span>
-              Revolutionize your video conferencing experience with real-time
-              emotion recognition technology.
-            </span>
+            <span class="about-text6 HeadlineType23">.</span>
           </span>
           <div class="about-frame6">
             <nuxt-link to="/login" id="GetStarted" class="about-button button">
-              <span class="about-text08"><span>Get Started!</span></span>
+              <span class="about-text7">Lets Try!</span>
             </nuxt-link>
           </div>
         </div>
@@ -58,12 +60,6 @@ export default {
     AppNav,
     BgBawah,
     BgAtas,
-  },
-  data() {
-    return {
-      rawvcpt: ' ',
-      rawr5u9: ' ',
-    }
   },
   head: {
     title: 'About - exported project',
@@ -86,20 +82,18 @@ export default {
   align-items: center;
   flex-direction: column;
 }
-.about-container1 {
+.about-main-content {
   top: 0px;
   left: 0px;
   right: 0px;
-  width: 1531px;
-  bottom: 0px;
+  width: 1600px;
   height: 1002px;
   margin: auto;
   display: flex;
   position: absolute;
   align-self: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
 }
 .about-emotion {
   top: 0px;
@@ -108,8 +102,8 @@ export default {
   height: 1002px;
   position: absolute;
 }
-.about-container2 {
-  top: 273px;
+.about-container1 {
+  top: 150px;
   left: 0px;
   width: 787px;
   height: 387.5625px;
@@ -137,11 +131,6 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
-.about-headline1 {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
 .about-text {
   color: var(--dl-color-default-black);
   width: 741px;
@@ -150,20 +139,31 @@ export default {
   line-height: 120.00000476837158%;
   text-decoration: none;
 }
-.about-text04 {
-  color: var(--dl-color-default-black);
-  width: 741px;
-  height: auto;
-  align-self: flex-start;
-  text-align: left;
-  line-height: 120.00000476837158%;
-}
-.about-text06 {
+.about-text1 {
   color: var(--dl-color-gray-600);
   width: 741px;
   height: auto;
+  font-size: 23px;
+  font-style: normal;
   text-align: left;
+  font-family: Poppins;
+  font-weight: 400px;
   line-height: 120.00000476837158%;
+}
+.about-text2 {
+  width: 741px;
+  height: auto;
+  text-align: left;
+}
+.about-text5 {
+  width: 741px;
+  height: auto;
+  text-align: left;
+}
+.about-text6 {
+  width: 741px;
+  height: auto;
+  text-align: left;
 }
 .about-frame6 {
   gap: 40px;
@@ -184,7 +184,7 @@ export default {
   text-decoration: none;
   background-color: var(--dl-color-primary-7002);
 }
-.about-text08 {
+.about-text7 {
   color: var(--dl-color-default-white);
   height: auto;
   font-size: 16px;
@@ -195,5 +195,36 @@ export default {
   line-height: 150%;
   font-stretch: normal;
   text-decoration: none;
+}
+@media(max-width: 1600px) {
+  .about-emotion {
+    top: 0px;
+    right: 0px;
+  }
+  .about-container1 {
+    top: 172px;
+    left: 0px;
+    height: 681px;
+  }
+  .about-frame6 {
+    align-self: flex-start;
+  }
+  .about-text7 {
+    color: var(--dl-color-default-white);
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 150%;
+    text-decoration: none;
+  }
+}
+@media(max-width: 1200px) {
+  .about-emotion {
+    display: none;
+  }
+  .about-container1 {
+    left: 192px;
+    margin: auto;
+  }
 }
 </style>

@@ -1,44 +1,71 @@
 <template>
   <div class="features-container">
-    <app-nav rootClassName="nav-root-class-name3"></app-nav>
-    <bg-bawah rootClassName="bg-bawah-root-class-name10"></bg-bawah>
-    <bg-atas rootClassName="bg-atas-root-class-name3"></bg-atas>
-    <div class="features-container1">
+    <app-nav rootClassName="nav-root-class-name4"></app-nav>
+    <bg-bawah rootClassName="bg-bawah-root-class-name11"></bg-bawah>
+    <bg-atas rootClassName="bg-atas-root-class-name4"></bg-atas>
+    <div class="features-main-content">
       <img
         alt="pastedImage"
         src="/playground_assets/pastedimage-x2a8.svg"
         class="features-emotion"
       />
-      <div class="features-container2">
+      <div class="features-container1">
         <img
           alt="pastedImage"
           src="/playground_assets/pastedimage-sw6m.svg"
           class="features-texture"
         />
         <div class="features-headline">
-          <div class="features-headline1">
-            <span class="features-text HeadlineType65">
-              <span>
-                <span>
-                  Connect with Emotion:
-                  <span v-html="raw6a6w"></span>
-                </span>
-                <span><span v-html="rawn839"></span></span>
+          <span class="features-text HeadlineType65">Our Features</span>
+          <div class="features-feature">
+            <div class="features-feature-content">
+              <img
+                src="/playground_assets/featuresicon4982-jkr4.svg"
+                alt="image"
+                class="features-image"
+              />
+              <span class="features-text01">
+                <span class="features-text02">Emotion Detection</span>
+                <br />
               </span>
-            </span>
-            <span class="features-text04 HeadlineType46">
-              <span>Experience Video Conferencing like never before!</span>
-            </span>
+            </div>
+            <div class="features-feature-content1">
+              <img
+                src="/playground_assets/featuresicon4982-jkr4.svg"
+                alt="image"
+                class="features-image1"
+              />
+              <span class="features-text04">
+                <span class="features-text05">Emotion Icons atau Avatars</span>
+                <br class="features-text06" />
+              </span>
+            </div>
+            <div class="features-feature-content2">
+              <img
+                src="/playground_assets/featuresicon4982-jkr4.svg"
+                alt="image"
+                class="features-image2"
+              />
+              <span class="features-text07">
+                <span class="features-text08">Emotion Analytics</span>
+                <br class="features-text09" />
+              </span>
+            </div>
+            <div class="features-feature-content3">
+              <img
+                src="/playground_assets/featuresicon4982-jkr4.svg"
+                alt="image"
+                class="features-image3"
+              />
+              <span class="features-text10">
+                <span class="features-text11">Real-time Feedback</span>
+                <br />
+              </span>
+            </div>
           </div>
-          <span class="features-text06 HeadlineType23">
-            <span>
-              Revolutionize your video conferencing experience with real-time
-              emotion recognition technology.
-            </span>
-          </span>
           <div class="features-frame6">
             <nuxt-link to="/login" id="GetStarted" class="features-button button">
-              <span class="features-text08"><span>Get Started!</span></span>
+              <span class="features-text13">Lets Try!</span>
             </nuxt-link>
           </div>
         </div>
@@ -58,12 +85,6 @@ export default {
     AppNav,
     BgBawah,
     BgAtas,
-  },
-  data() {
-    return {
-      raw6a6w: ' ',
-      rawn839: ' ',
-    }
   },
   head: {
     title: 'Features - exported project',
@@ -86,20 +107,18 @@ export default {
   align-items: center;
   flex-direction: column;
 }
-.features-container1 {
+.features-main-content {
   top: 0px;
   left: 0px;
   right: 0px;
-  width: 1531px;
-  bottom: 0px;
+  width: 1600px;
   height: 1002px;
   margin: auto;
   display: flex;
   position: absolute;
   align-self: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
 }
 .features-emotion {
   top: 0px;
@@ -108,8 +127,8 @@ export default {
   height: 1002px;
   position: absolute;
 }
-.features-container2 {
-  top: 273px;
+.features-container1 {
+  top: 150px;
   left: 0px;
   width: 787px;
   height: 387.5625px;
@@ -137,11 +156,6 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
-.features-headline1 {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
 .features-text {
   color: var(--dl-color-default-black);
   width: 741px;
@@ -150,19 +164,85 @@ export default {
   line-height: 120.00000476837158%;
   text-decoration: none;
 }
-.features-text04 {
-  color: var(--dl-color-default-black);
-  width: 741px;
-  height: auto;
-  align-self: flex-start;
-  text-align: left;
-  line-height: 120.00000476837158%;
+.features-feature {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
-.features-text06 {
+.features-feature-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.features-image {
+  width: 100px;
+  object-fit: cover;
+}
+.features-text01 {
   color: var(--dl-color-gray-600);
   width: 741px;
   height: auto;
+  font-size: 23px;
   text-align: left;
+  font-family: Poppins;
+  font-weight: 400px;
+  line-height: 120.00000476837158%;
+}
+.features-feature-content1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.features-image1 {
+  width: 100px;
+  object-fit: cover;
+}
+.features-text04 {
+  color: var(--dl-color-gray-600);
+  width: 741px;
+  height: auto;
+  font-size: 23px;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400px;
+  line-height: 120.00000476837158%;
+}
+.features-feature-content2 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.features-image2 {
+  width: 100px;
+  object-fit: cover;
+}
+.features-text07 {
+  color: var(--dl-color-gray-600);
+  width: 741px;
+  height: auto;
+  font-size: 23px;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400px;
+  line-height: 120.00000476837158%;
+}
+.features-feature-content3 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.features-image3 {
+  width: 100px;
+  object-fit: cover;
+}
+.features-text10 {
+  color: var(--dl-color-gray-600);
+  width: 741px;
+  height: auto;
+  font-size: 23px;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 400px;
   line-height: 120.00000476837158%;
 }
 .features-frame6 {
@@ -184,7 +264,7 @@ export default {
   text-decoration: none;
   background-color: var(--dl-color-primary-7002);
 }
-.features-text08 {
+.features-text13 {
   color: var(--dl-color-default-white);
   height: auto;
   font-size: 16px;
@@ -195,5 +275,105 @@ export default {
   line-height: 150%;
   font-stretch: normal;
   text-decoration: none;
+}
+@media(max-width: 1600px) {
+  .features-emotion {
+    top: 0px;
+    right: 69px;
+  }
+  .features-container1 {
+    top: 318px;
+    left: 134px;
+    height: 360px;
+  }
+  .features-feature {
+    gap: var(--dl-space-space-halfunit);
+  }
+  .features-feature-content {
+    gap: var(--dl-space-space-halfunit);
+    flex-direction: row;
+  }
+  .features-image {
+    width: 32px;
+    height: 32px;
+  }
+  .features-text01 {
+    color: var(--dl-color-gray-600);
+    font-size: 23px;
+    font-style: normal;
+    font-family: Poppins;
+    line-height: 120%;
+  }
+  .features-text02 {
+    font-weight: 500;
+    line-height: 140%;
+  }
+  .features-feature-content1 {
+    gap: var(--dl-space-space-halfunit);
+    flex-direction: row;
+  }
+  .features-image1 {
+    width: 32px;
+    height: 32px;
+  }
+  .features-text05 {
+    font-style: inherit;
+    font-weight: 500;
+  }
+  .features-text06 {
+    font-style: normal;
+  }
+  .features-feature-content2 {
+    gap: var(--dl-space-space-halfunit);
+    flex-direction: row;
+  }
+  .features-image2 {
+    width: 32px;
+    height: 32px;
+  }
+  .features-text08 {
+    font-weight: 500;
+  }
+  .features-text09 {
+    font-style: normal;
+  }
+  .features-feature-content3 {
+    gap: var(--dl-space-space-halfunit);
+    flex-direction: row;
+  }
+  .features-image3 {
+    width: 32px;
+    height: 32px;
+  }
+  .features-text10 {
+    color: var(--dl-color-gray-600);
+    font-size: 23px;
+    font-family: Poppins;
+    line-height: 120%;
+  }
+  .features-text11 {
+    font-style: normal;
+    font-weight: 500;
+  }
+  .features-frame6 {
+    align-self: flex-start;
+  }
+  .features-text13 {
+    color: var(--dl-color-default-white);
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 150%;
+    text-decoration: none;
+  }
+}
+@media(max-width: 1200px) {
+  .features-emotion {
+    display: none;
+  }
+  .features-container1 {
+    left: 192px;
+    margin: auto;
+  }
 }
 </style>
