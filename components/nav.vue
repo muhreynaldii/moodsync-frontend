@@ -22,7 +22,7 @@ export default {
   props: {
     Rectangle8_src: {
       type: String,
-      default: '/playground_assets/logo-200w.png',
+      default: '/assets/logo-200w.png',
     },
     Rectangle8_alt: {
       type: String,

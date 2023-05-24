@@ -15,7 +15,7 @@ export default {
     rootClassName: String,
     Bg_Bawah_src: {
       type: String,
-      default: '/playground_assets/pastedimage-jqvi.svg',
+      default: '/assets/pastedimage-jqvi.svg',
     },
   },
 }
