@@ -5,13 +5,13 @@
     <div class="index-container1">
       <img
         alt="pastedImage"
-        src="/playground_assets/pastedimage-x2a8.svg"
+        src="/assets/pastedimage-x2a8.svg"
         class="index-emotion"
       />
       <div class="index-container2">
         <img
           alt="pastedImage"
-          src="/playground_assets/pastedimage-sw6m.svg"
+          src="/assets/pastedimage-sw6m.svg"
           class="index-texture"
         />
         <div class="index-headline">
@@ -20,9 +20,9 @@
               <span>
                 <span>
                   Connect with Emotion:
-                  <span v-html="rawcin2"></span>
+                  <span v-html="rawkwsj"></span>
                 </span>
-                <span><span v-html="rawzf6y"></span></span>
+                <span><span v-html="rawn5fg"></span></span>
               </span>
             </span>
             <span class="index-text04 HeadlineType46">
@@ -61,8 +61,8 @@ export default {
   },
   data() {
     return {
-      rawcin2: ' ',
-      rawzf6y: ' ',
+      rawkwsj: ' ',
+      rawn5fg: ' ',
     }
   },
   head: {
@@ -191,5 +191,10 @@ export default {
   line-height: 150%;
   font-stretch: normal;
   text-decoration: none;
+}
+@media(max-width: 1200px) {
+  .index-emotion {
+    right: 323px;
+  }
 }
 </style>

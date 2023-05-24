@@ -3,36 +3,38 @@
     <bg-bawah rootClassName="bg-bawah-root-class-name5"></bg-bawah>
     <aside class="notification-side-bar-full">
       <div class="notification-side-bar">
-        <div class="notification-dashboard">
-          <img
-            alt="chartpie4162"
-            src="/playground_assets/chartpie4462-g92g.svg"
-            class="notification-chartpie"
-          />
-        </div>
-        <nuxt-link to="/vicon-started" class="notification-navlink">
+        <nuxt-link to="/dashboard-dosen" class="notification-navlink">
+          <div class="notification-dashboard">
+            <img
+              alt="chartpie4162"
+              src="/assets/chartpie4462-g92g.svg"
+              class="notification-chartpie"
+            />
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/vicon-started" class="notification-navlink1">
           <div class="notification-conference">
             <img
               alt="cash4162"
-              src="/playground_assets/cash4162-e06k.svg"
+              src="/assets/cash4162-e06k.svg"
               class="notification-cash"
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="notification-navlink1">
+        <nuxt-link to="/daftar-mahasiswa" class="notification-navlink2">
           <div class="notification-class">
             <img
               alt="usergroup4162"
-              src="/playground_assets/usergroup4162-5fld.svg"
+              src="/assets/usergroup4162-5fld.svg"
               class="notification-usergroup"
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/notification" class="notification-navlink2">
+        <nuxt-link to="/notification" class="notification-navlink3">
           <div class="notification-notif">
             <img
               alt="bell4162"
-              src="/playground_assets/bell4162-q9q.svg"
+              src="/assets/bell4162-q9q.svg"
               class="notification-bell"
             />
           </div>
@@ -40,14 +42,14 @@
         <div class="notification-chat">
           <img
             alt="chat4162"
-            src="/playground_assets/chat4162-5tzb.svg"
+            src="/assets/chat4162-5tzb.svg"
             class="notification-chat1"
           />
         </div>
       </div>
       <img
         alt="cog4162"
-        src="/playground_assets/cog4162-9gch.svg"
+        src="/assets/cog4162-9gch.svg"
         loading="lazy"
         class="notification-cog"
       />
@@ -96,10 +98,10 @@
       </div>
     </div>
     <header data-thq="thq-navbar" class="notification-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="notification-navlink3">
+      <nuxt-link to="/dashboard-dosen" class="notification-navlink4">
         <img
           alt="Rectangle84462"
-          src="/playground_assets/logo-200w.png"
+          src="/assets/logo-200w.png"
           class="notification-logo"
         />
       </nuxt-link>
@@ -118,7 +120,7 @@
               <div class="notification-content">
                 <img
                   alt="searchI416"
-                  src="/playground_assets/searchi416-d8ss.svg"
+                  src="/assets/searchi416-d8ss.svg"
                   class="notification-search1"
                 />
                 <span class="notification-text14 leadingTighttextSmfontNormal">
@@ -129,7 +131,7 @@
             <button class="notification-button">
               <img
                 alt="searchI416"
-                src="/playground_assets/searchi416-1gp7.svg"
+                src="/assets/searchi416-1gp7.svg"
                 class="notification-search2"
               />
             </button>
@@ -139,12 +141,12 @@
       <div class="notification-profile">
         <img
           alt="Rectangle254162"
-          src="/playground_assets/rectangle254162-743-200h.png"
+          src="/assets/rectangle254162-743-200h.png"
           class="notification-rectangle25"
         />
         <img
           alt="chevrondown4162"
-          src="/playground_assets/chevrondown4162-p2v.svg"
+          src="/assets/chevrondown4162-p2v.svg"
           class="notification-chevrondown"
         />
       </div>
@@ -205,6 +207,9 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
+.notification-navlink {
+  display: contents;
+}
 .notification-dashboard {
   width: 50px;
   height: 50px;
@@ -224,7 +229,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.notification-navlink {
+.notification-navlink1 {
   display: contents;
 }
 .notification-conference {
@@ -246,7 +251,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.notification-navlink1 {
+.notification-navlink2 {
   display: contents;
 }
 .notification-class {
@@ -268,7 +273,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.notification-navlink2 {
+.notification-navlink3 {
   display: contents;
 }
 .notification-notif {
@@ -520,7 +525,7 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.notification-navlink3 {
+.notification-navlink4 {
   display: contents;
 }
 .notification-logo {

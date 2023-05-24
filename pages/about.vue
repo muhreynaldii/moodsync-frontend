@@ -5,13 +5,13 @@
     <div class="about-main-content">
       <img
         alt="pastedImage"
-        src="/playground_assets/pastedimage-x2a8.svg"
+        src="/assets/pastedimage-x2a8.svg"
         class="about-emotion"
       />
       <div class="about-container1">
         <img
           alt="pastedImage"
-          src="/playground_assets/pastedimage-sw6m.svg"
+          src="/assets/pastedimage-sw6m.svg"
           class="about-texture"
         />
         <div class="about-headline">
