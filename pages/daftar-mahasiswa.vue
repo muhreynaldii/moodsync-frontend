@@ -3,36 +3,38 @@
     <bg-bawah rootClassName="bg-bawah-root-class-name2"></bg-bawah>
     <aside class="daftar-mahasiswa-side-bar-full">
       <div class="daftar-mahasiswa-side-bar">
-        <div class="daftar-mahasiswa-dashboard">
-          <img
-            alt="chartpie4162"
-            src="/playground_assets/chartpie4462-g92g.svg"
-            class="daftar-mahasiswa-chartpie"
-          />
-        </div>
-        <nuxt-link to="/vicon-started" class="daftar-mahasiswa-navlink">
+        <nuxt-link to="/dashboard-dosen" class="daftar-mahasiswa-navlink">
+          <div class="daftar-mahasiswa-dashboard">
+            <img
+              alt="chartpie4162"
+              src="/assets/chartpie4462-g92g.svg"
+              class="daftar-mahasiswa-chartpie"
+            />
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/vicon-started" class="daftar-mahasiswa-navlink1">
           <div class="daftar-mahasiswa-conference">
             <img
               alt="cash4162"
-              src="/playground_assets/cash4162-e06k.svg"
+              src="/assets/cash4162-e06k.svg"
               class="daftar-mahasiswa-cash"
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="daftar-mahasiswa-navlink1">
+        <nuxt-link to="/daftar-mahasiswa" class="daftar-mahasiswa-navlink2">
           <div class="daftar-mahasiswa-class">
             <img
               alt="usergroup4162"
-              src="/playground_assets/usergroup4502-ntd.svg"
+              src="/assets/usergroup4502-ntd.svg"
               class="daftar-mahasiswa-usergroup"
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/notification" class="daftar-mahasiswa-navlink2">
+        <nuxt-link to="/notification" class="daftar-mahasiswa-navlink3">
           <div class="daftar-mahasiswa-notif">
             <img
               alt="bell4162"
-              src="/playground_assets/bell4162-7mh8.svg"
+              src="/assets/bell4162-7mh8.svg"
               class="daftar-mahasiswa-bell"
             />
           </div>
@@ -40,14 +42,14 @@
         <div class="daftar-mahasiswa-chat">
           <img
             alt="chat4162"
-            src="/playground_assets/chat4162-5tzb.svg"
+            src="/assets/chat4162-5tzb.svg"
             class="daftar-mahasiswa-chat1"
           />
         </div>
       </div>
       <img
         alt="cog4162"
-        src="/playground_assets/cog4162-9gch.svg"
+        src="/assets/cog4162-9gch.svg"
         loading="lazy"
         class="daftar-mahasiswa-cog"
       />
@@ -56,7 +58,7 @@
       <span class="daftar-mahasiswa-text"><span>Daftar Mahasiswa</span></span>
       <div class="daftar-mahasiswa-daftar-mahasiswa1">
         <div class="daftar-mahasiswa-content-daftar-mahasiswa">
-          <nuxt-link to="/emotion-detail" class="daftar-mahasiswa-navlink3">
+          <nuxt-link to="/emotion-detail" class="daftar-mahasiswa-navlink4">
             <div class="daftar-mahasiswa-mahasiswa">
               <div class="daftar-mahasiswa-customer1">
                 <div class="daftar-mahasiswa-user">
@@ -171,10 +173,10 @@
       </div>
     </div>
     <header data-thq="thq-navbar" class="daftar-mahasiswa-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="daftar-mahasiswa-navlink4">
+      <nuxt-link to="/dashboard-dosen" class="daftar-mahasiswa-navlink5">
         <img
           alt="Rectangle84462"
-          src="/playground_assets/logo-200w.png"
+          src="/assets/logo-200w.png"
           class="daftar-mahasiswa-logo"
         />
       </nuxt-link>
@@ -193,7 +195,7 @@
               <div class="daftar-mahasiswa-content">
                 <img
                   alt="searchI416"
-                  src="/playground_assets/searchi416-d8ss.svg"
+                  src="/assets/searchi416-d8ss.svg"
                   class="daftar-mahasiswa-search1"
                 />
                 <span
@@ -206,7 +208,7 @@
             <button class="daftar-mahasiswa-button">
               <img
                 alt="searchI416"
-                src="/playground_assets/searchi416-1gp7.svg"
+                src="/assets/searchi416-1gp7.svg"
                 class="daftar-mahasiswa-search2"
               />
             </button>
@@ -216,12 +218,12 @@
       <div class="daftar-mahasiswa-profile">
         <img
           alt="Rectangle254162"
-          src="/playground_assets/rectangle254162-743-200h.png"
+          src="/assets/rectangle254162-743-200h.png"
           class="daftar-mahasiswa-rectangle25"
         />
         <img
           alt="chevrondown4162"
-          src="/playground_assets/chevrondown4162-p2v.svg"
+          src="/assets/chevrondown4162-p2v.svg"
           class="daftar-mahasiswa-chevrondown"
         />
       </div>
@@ -283,6 +285,9 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
+.daftar-mahasiswa-navlink {
+  display: contents;
+}
 .daftar-mahasiswa-dashboard {
   width: 50px;
   height: 50px;
@@ -302,7 +307,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.daftar-mahasiswa-navlink {
+.daftar-mahasiswa-navlink1 {
   display: contents;
 }
 .daftar-mahasiswa-conference {
@@ -324,7 +329,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.daftar-mahasiswa-navlink1 {
+.daftar-mahasiswa-navlink2 {
   display: contents;
 }
 .daftar-mahasiswa-class {
@@ -346,7 +351,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.daftar-mahasiswa-navlink2 {
+.daftar-mahasiswa-navlink3 {
   display: contents;
 }
 .daftar-mahasiswa-notif {
@@ -438,7 +443,7 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
-.daftar-mahasiswa-navlink3 {
+.daftar-mahasiswa-navlink4 {
   display: contents;
 }
 .daftar-mahasiswa-mahasiswa {
@@ -1012,7 +1017,7 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.daftar-mahasiswa-navlink4 {
+.daftar-mahasiswa-navlink5 {
   display: contents;
 }
 .daftar-mahasiswa-logo {

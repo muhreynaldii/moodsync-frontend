@@ -2,71 +2,71 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\about.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\moodsync-frontend\\\\pages\\\\about.vue",
     "chunkName": "pages/about",
-    "_name": "_5ffe935a"
+    "_name": "_3fb98c50"
   },
   {
     "name": "daftar-mahasiswa",
     "path": "/daftar-mahasiswa",
-    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\daftar-mahasiswa.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\moodsync-frontend\\\\pages\\\\daftar-mahasiswa.vue",
     "chunkName": "pages/daftar-mahasiswa",
-    "_name": "_b49ac6da"
+    "_name": "_1c231676"
   },
   {
     "name": "dashboard-dosen",
     "path": "/dashboard-dosen",
-    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\dashboard-dosen.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\moodsync-frontend\\\\pages\\\\dashboard-dosen.vue",
     "chunkName": "pages/dashboard-dosen",
-    "_name": "_4742c33e"
+    "_name": "_408bfe0a"
   },
   {
     "name": "emotion-detail",
     "path": "/emotion-detail",
-    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\emotion-detail.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\moodsync-frontend\\\\pages\\\\emotion-detail.vue",
     "chunkName": "pages/emotion-detail",
-    "_name": "_2ffaf7a6"
+    "_name": "_2efe1ad0"
   },
   {
     "name": "features",
     "path": "/features",
-    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\features.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\moodsync-frontend\\\\pages\\\\features.vue",
     "chunkName": "pages/features",
-    "_name": "_60dbca32"
+    "_name": "_062027ca"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\login.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\moodsync-frontend\\\\pages\\\\login.vue",
     "chunkName": "pages/login",
-    "_name": "_8d3f97a2"
+    "_name": "_29190a2c"
   },
   {
     "name": "notification",
     "path": "/notification",
-    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\notification.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\moodsync-frontend\\\\pages\\\\notification.vue",
     "chunkName": "pages/notification",
-    "_name": "_23f3c0d6"
+    "_name": "_39a5fa10"
   },
   {
     "name": "vicon",
     "path": "/vicon",
-    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\vicon.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\moodsync-frontend\\\\pages\\\\vicon.vue",
     "chunkName": "pages/vicon",
-    "_name": "_4b69a3b5"
+    "_name": "_89bb0c9c"
   },
   {
     "name": "vicon-started",
     "path": "/vicon-started",
-    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\vicon-started.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\moodsync-frontend\\\\pages\\\\vicon-started.vue",
     "chunkName": "pages/vicon-started",
-    "_name": "_1a486069"
+    "_name": "_6c042d34"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\Download\\\\Google Chrome\\\\skripsi webrtc - ui_ux-nuxt\\\\pages\\\\index.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\moodsync-frontend\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_208eddd0"
+    "_name": "_5f716715"
   }
 ]

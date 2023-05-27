@@ -6,7 +6,7 @@
         <div class="vicon-started-dashboard">
           <img
             alt="chartpie4162"
-            src="/playground_assets/chartpie4462-g92g.svg"
+            src="/assets/chartpie4462-g92g.svg"
             class="vicon-started-chartpie"
           />
         </div>
@@ -14,7 +14,7 @@
           <div class="vicon-started-conference">
             <img
               alt="cash4162"
-              src="/playground_assets/cash4462-gzxy.svg"
+              src="/assets/cash4462-gzxy.svg"
               class="vicon-started-cash"
             />
           </div>
@@ -23,7 +23,7 @@
           <div class="vicon-started-class">
             <img
               alt="usergroup4162"
-              src="/playground_assets/usergroup4162-5fld.svg"
+              src="/assets/usergroup4162-5fld.svg"
               class="vicon-started-usergroup"
             />
           </div>
@@ -32,7 +32,7 @@
           <div class="vicon-started-notif">
             <img
               alt="bell4162"
-              src="/playground_assets/bell4162-7mh8.svg"
+              src="/assets/bell4162-7mh8.svg"
               class="vicon-started-bell"
             />
           </div>
@@ -40,14 +40,14 @@
         <div class="vicon-started-chat">
           <img
             alt="chat4162"
-            src="/playground_assets/chat4162-5tzb.svg"
+            src="/assets/chat4162-5tzb.svg"
             class="vicon-started-chat1"
           />
         </div>
       </div>
       <img
         alt="cog4162"
-        src="/playground_assets/cog4162-9gch.svg"
+        src="/assets/cog4162-9gch.svg"
         loading="lazy"
         class="vicon-started-cog"
       />
@@ -63,7 +63,7 @@
         <div class="vicon-started-video-preview">
           <img
             alt="Rectangle14462"
-            src="/playground_assets/rectangle14462-2owv-600h.png"
+            src="/assets/rectangle14462-2owv-600h.png"
             class="vicon-started-rectangle1"
           />
           <div class="vicon-started-profile-card">
@@ -77,35 +77,35 @@
         <div class="vicon-started-frame26">
           <img
             alt="Volume4542"
-            src="/playground_assets/volume4542-g9ck.svg"
+            src="/assets/volume4542-g9ck.svg"
             class="vicon-started-volume"
           />
           <div class="vicon-started-action">
             <div class="vicon-started-group18">
               <img
                 alt="videocamera4462"
-                src="/playground_assets/videocamera4462-3wf.svg"
+                src="/assets/videocamera4462-3wf.svg"
                 class="vicon-started-videocamera"
               />
             </div>
             <div class="vicon-started-group19">
               <img
                 alt="microphone4462"
-                src="/playground_assets/microphone4462-f20b.svg"
+                src="/assets/microphone4462-f20b.svg"
                 class="vicon-started-microphone"
               />
             </div>
             <div class="vicon-started-group20">
               <img
                 alt="collection4462"
-                src="/playground_assets/collection4462-4hk9.svg"
+                src="/assets/collection4462-4hk9.svg"
                 class="vicon-started-collection"
               />
             </div>
             <div class="vicon-started-group21">
               <img
                 alt="dotshorizontal4462"
-                src="/playground_assets/dotshorizontal4462-8lo5.svg"
+                src="/assets/dotshorizontal4462-8lo5.svg"
                 class="vicon-started-dotshorizontal"
               />
             </div>
@@ -120,7 +120,7 @@
       <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink3">
         <img
           alt="Rectangle84462"
-          src="/playground_assets/logo-200w.png"
+          src="/assets/logo-200w.png"
           class="vicon-started-logo"
         />
       </nuxt-link>
@@ -139,7 +139,7 @@
               <div class="vicon-started-content">
                 <img
                   alt="searchI416"
-                  src="/playground_assets/searchi416-d8ss.svg"
+                  src="/assets/searchi416-d8ss.svg"
                   class="vicon-started-search1"
                 />
                 <span class="vicon-started-text08 leadingTighttextSmfontNormal">
@@ -150,7 +150,7 @@
             <button class="vicon-started-button1">
               <img
                 alt="searchI416"
-                src="/playground_assets/searchi416-1gp7.svg"
+                src="/assets/searchi416-1gp7.svg"
                 class="vicon-started-search2"
               />
             </button>
@@ -160,12 +160,12 @@
       <div class="vicon-started-profile">
         <img
           alt="Rectangle254162"
-          src="/playground_assets/rectangle254162-743-200h.png"
+          src="/assets/rectangle254162-743-200h.png"
           class="vicon-started-rectangle25"
         />
         <img
           alt="chevrondown4162"
-          src="/playground_assets/chevrondown4162-p2v.svg"
+          src="/assets/chevrondown4162-p2v.svg"
           class="vicon-started-chevrondown"
         />
       </div>

@@ -4,14 +4,13 @@
     <bg-atas rootClassName="bg-atas-root-class-name"></bg-atas>
     <img
       alt="pastedImage"
-      src="/playground_assets/pastedimage-sw6m.svg"
+      src="/assets/pastedimage-sw6m.svg"
       class="login-texture"
     />
-    <app-nav rootClassName="nav-root-class-name"></app-nav>
     <div class="login-container1">
       <img
         alt="pastedImage"
-        src="/playground_assets/pastedimage-6h5o.svg"
+        src="/assets/pastedimage-6h5o.svg"
         class="login-login-pic"
       />
       <form class="login-form">
@@ -20,7 +19,7 @@
             <span class="login-text HeadlineType23"><span>Welcome!</span></span>
             <img
               alt="Rectangle364091"
-              src="/playground_assets/rectangle364091-dmx9-200h.png"
+              src="/assets/rectangle364091-dmx9-200h.png"
               class="login-rectangle36"
             />
           </div>
@@ -31,17 +30,13 @@
                 <div class="login-content">
                   <img
                     alt="mailopenI409"
-                    src="/playground_assets/mailopeni409-37g.svg"
+                    src="/assets/mailopeni409-37g.svg"
                     class="login-mailopen"
                   />
                   <span class="login-text04">
                     <span>Enter your email address</span>
                   </span>
-                  <img
-                    alt="xI409"
-                    src="/playground_assets/xi409-jd2.svg"
-                    class="login-x"
-                  />
+                  <img alt="xI409" src="/assets/xi409-jd2.svg" class="login-x" />
                 </div>
               </div>
             </div>
@@ -51,13 +46,13 @@
                 <div class="login-content1">
                   <img
                     alt="lockclosedI409"
-                    src="/playground_assets/lockclosedi409-nyxk.svg"
+                    src="/assets/lockclosedi409-nyxk.svg"
                     class="login-lockclosed"
                   />
                   <span class="login-text08"><span>Password</span></span>
                   <img
                     alt="xI409"
-                    src="/playground_assets/xi409-30q4.svg"
+                    src="/assets/xi409-30q4.svg"
                     class="login-x1"
                   />
                 </div>
@@ -72,19 +67,19 @@
               </div>
             </div>
           </div>
-          <button id="ButtonLogin" type="submit" class="login-button">
+          <nuxt-link to="/dashboard-dosen" id="ButtonLogin" class="login-button">
             <span class="login-text12"><span>Login</span></span>
-          </button>
+          </nuxt-link>
           <div class="login-frame1423">
             <img
               alt="Rectangle304091"
-              src="/playground_assets/rectangle304091-d5ir-200h.png"
+              src="/assets/rectangle304091-d5ir-200h.png"
               class="login-rectangle30"
             />
             <span class="login-text14"><span>or</span></span>
             <img
               alt="Rectangle314132"
-              src="/playground_assets/rectangle314132-cpgr-200h.png"
+              src="/assets/rectangle314132-cpgr-200h.png"
               class="login-rectangle31"
             />
           </div>
@@ -92,21 +87,21 @@
             <div class="login-frame16">
               <img
                 alt="GoogleOriginal4091"
-                src="/playground_assets/googleoriginal4091-ili.svg"
+                src="/assets/googleoriginal4091-ili.svg"
                 class="login-google-original"
               />
             </div>
             <div class="login-frame17">
               <img
                 alt="FacebookOriginal4091"
-                src="/playground_assets/facebookoriginal4091-pmve.svg"
+                src="/assets/facebookoriginal4091-pmve.svg"
                 class="login-facebook-original"
               />
             </div>
             <div class="login-frame18">
               <img
                 alt="LinkedInOriginal4091"
-                src="/playground_assets/linkedinoriginal4091-ddfk.svg"
+                src="/assets/linkedinoriginal4091-ddfk.svg"
                 class="login-linked-in-original"
               />
             </div>
@@ -114,6 +109,7 @@
         </div>
       </form>
     </div>
+    <app-nav rootClassName="nav-root-class-name"></app-nav>
   </div>
 </template>
 

@@ -15,7 +15,7 @@
               </span>
               <img
                 alt="academiccap4162"
-                src="/playground_assets/academiccap4162-bp8.svg"
+                src="/assets/academiccap4162-bp8.svg"
                 class="dashboard-dosen-academiccap"
               />
               <span class="dashboard-dosen-text04">4</span>
@@ -27,7 +27,7 @@
             </span>
             <img
               alt="users4162"
-              src="/playground_assets/users4162-aaxl.svg"
+              src="/assets/users4162-aaxl.svg"
               class="dashboard-dosen-users"
             />
             <span class="dashboard-dosen-text07"><span>31</span></span>
@@ -68,49 +68,49 @@
                   <div class="dashboard-dosen-presensi1">
                     <img
                       alt="Rectangle514162"
-                      src="/playground_assets/rectangle514162-8qhj-200h.png"
+                      src="/assets/rectangle514162-8qhj-200h.png"
                       class="dashboard-dosen-rectangle51"
                     />
                   </div>
                   <div class="dashboard-dosen-presensi2">
                     <img
                       alt="Rectangle514162"
-                      src="/playground_assets/rectangle514162-rrmb-200h.png"
+                      src="/assets/rectangle514162-rrmb-200h.png"
                       class="dashboard-dosen-rectangle511"
                     />
                   </div>
                   <div class="dashboard-dosen-presensi3">
                     <img
                       alt="Rectangle514162"
-                      src="/playground_assets/rectangle514162-tw2-200h.png"
+                      src="/assets/rectangle514162-tw2-200h.png"
                       class="dashboard-dosen-rectangle512"
                     />
                   </div>
                   <div class="dashboard-dosen-presensi4">
                     <img
                       alt="Rectangle514162"
-                      src="/playground_assets/rectangle514162-yumr-200h.png"
+                      src="/assets/rectangle514162-yumr-200h.png"
                       class="dashboard-dosen-rectangle513"
                     />
                   </div>
                   <div class="dashboard-dosen-presensi5">
                     <img
                       alt="Rectangle514162"
-                      src="/playground_assets/rectangle514162-etqc-200h.png"
+                      src="/assets/rectangle514162-etqc-200h.png"
                       class="dashboard-dosen-rectangle514"
                     />
                   </div>
                   <div class="dashboard-dosen-presensi6">
                     <img
                       alt="Rectangle514162"
-                      src="/playground_assets/rectangle514162-lltc-200h.png"
+                      src="/assets/rectangle514162-lltc-200h.png"
                       class="dashboard-dosen-rectangle515"
                     />
                   </div>
                   <div class="dashboard-dosen-presensi7">
                     <img
                       alt="Rectangle514162"
-                      src="/playground_assets/rectangle514162-fo5s-200h.png"
+                      src="/assets/rectangle514162-fo5s-200h.png"
                       class="dashboard-dosen-rectangle516"
                     />
                   </div>
@@ -132,12 +132,12 @@
               </span>
               <img
                 alt="Polygon14162"
-                src="/playground_assets/polygon14162-q3h6.svg"
+                src="/assets/polygon14162-q3h6.svg"
                 class="dashboard-dosen-polygon1"
               />
               <img
                 alt="Star14162"
-                src="/playground_assets/star14162-a1qq.svg"
+                src="/assets/star14162-a1qq.svg"
                 class="dashboard-dosen-star1"
               />
               <span class="dashboard-dosen-text43"><span>Sedih</span></span>
@@ -154,7 +154,7 @@
       <nuxt-link to="/dashboard-dosen" class="dashboard-dosen-navlink">
         <img
           alt="Rectangle84462"
-          src="/playground_assets/logo-200w.png"
+          src="/assets/logo-200w.png"
           class="dashboard-dosen-logo"
         />
       </nuxt-link>
@@ -173,7 +173,7 @@
               <div class="dashboard-dosen-content">
                 <img
                   alt="searchI416"
-                  src="/playground_assets/searchi416-d8ss.svg"
+                  src="/assets/searchi416-d8ss.svg"
                   class="dashboard-dosen-search1"
                 />
                 <span class="dashboard-dosen-text53 leadingTighttextSmfontNormal">
@@ -184,7 +184,7 @@
             <button class="dashboard-dosen-button">
               <img
                 alt="searchI416"
-                src="/playground_assets/searchi416-1gp7.svg"
+                src="/assets/searchi416-1gp7.svg"
                 class="dashboard-dosen-search2"
               />
             </button>
@@ -194,12 +194,12 @@
       <div class="dashboard-dosen-profile">
         <img
           alt="Rectangle254162"
-          src="/playground_assets/rectangle254162-743-200h.png"
+          src="/assets/rectangle254162-743-200h.png"
           class="dashboard-dosen-rectangle25"
         />
         <img
           alt="chevrondown4162"
-          src="/playground_assets/chevrondown4162-p2v.svg"
+          src="/assets/chevrondown4162-p2v.svg"
           class="dashboard-dosen-chevrondown"
         />
       </div>

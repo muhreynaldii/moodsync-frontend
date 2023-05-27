@@ -10,7 +10,7 @@ export default {
   props: {
     Bg_Atas_src: {
       type: String,
-      default: '/playground_assets/pastedimage-7k7o.svg',
+      default: '/assets/pastedimage-7k7o.svg',
     },
     Bg_Atas_alt: {
       type: String,

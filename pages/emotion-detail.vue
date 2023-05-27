@@ -3,36 +3,38 @@
     <bg-bawah rootClassName="bg-bawah-root-class-name3"></bg-bawah>
     <aside class="emotion-detail-side-bar-full">
       <div class="emotion-detail-side-bar">
-        <div class="emotion-detail-dashboard">
-          <img
-            alt="chartpie4162"
-            src="/playground_assets/chartpie4462-g92g.svg"
-            class="emotion-detail-chartpie"
-          />
-        </div>
-        <nuxt-link to="/vicon-started" class="emotion-detail-navlink">
+        <nuxt-link to="/dashboard-dosen" class="emotion-detail-navlink">
+          <div class="emotion-detail-dashboard">
+            <img
+              alt="chartpie4162"
+              src="/assets/chartpie4462-g92g.svg"
+              class="emotion-detail-chartpie"
+            />
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/vicon-started" class="emotion-detail-navlink1">
           <div class="emotion-detail-conference">
             <img
               alt="cash4162"
-              src="/playground_assets/cash4162-e06k.svg"
+              src="/assets/cash4162-e06k.svg"
               class="emotion-detail-cash"
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="emotion-detail-navlink1">
+        <nuxt-link to="/daftar-mahasiswa" class="emotion-detail-navlink2">
           <div class="emotion-detail-class">
             <img
               alt="usergroup4162"
-              src="/playground_assets/usergroup4502-ntd.svg"
+              src="/assets/usergroup4502-ntd.svg"
               class="emotion-detail-usergroup"
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/notification" class="emotion-detail-navlink2">
+        <nuxt-link to="/notification" class="emotion-detail-navlink3">
           <div class="emotion-detail-notif">
             <img
               alt="bell4162"
-              src="/playground_assets/bell4162-7mh8.svg"
+              src="/assets/bell4162-7mh8.svg"
               class="emotion-detail-bell"
             />
           </div>
@@ -40,14 +42,14 @@
         <div class="emotion-detail-chat">
           <img
             alt="chat4162"
-            src="/playground_assets/chat4162-5tzb.svg"
+            src="/assets/chat4162-5tzb.svg"
             class="emotion-detail-chat1"
           />
         </div>
       </div>
       <img
         alt="cog4162"
-        src="/playground_assets/cog4162-9gch.svg"
+        src="/assets/cog4162-9gch.svg"
         loading="lazy"
         class="emotion-detail-cog"
       />
@@ -78,12 +80,12 @@
             <div class="emotion-detail-group30">
               <img
                 alt="Polygon14512"
-                src="/playground_assets/polygon14512-ritg.svg"
+                src="/assets/polygon14512-ritg.svg"
                 class="emotion-detail-polygon1"
               />
               <img
                 alt="Star14512"
-                src="/playground_assets/star14512-y.svg"
+                src="/assets/star14512-y.svg"
                 class="emotion-detail-star1"
               />
               <span class="emotion-detail-text08"><span>Sedih</span></span>
@@ -112,23 +114,23 @@
     </div>
     <header data-thq="thq-navbar" class="emotion-detail-navbar-interactive">
       <div class="emotion-detail-container1">
-        <nuxt-link to="/dashboard-dosen" class="emotion-detail-navlink3">
+        <nuxt-link to="/dashboard-dosen" class="emotion-detail-navlink4">
           <img
             alt="Rectangle84462"
-            src="/playground_assets/logo-200w.png"
+            src="/assets/logo-200w.png"
             class="emotion-detail-logo"
           />
         </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="emotion-detail-navlink4">
+        <nuxt-link to="/daftar-mahasiswa" class="emotion-detail-navlink5">
           <div class="emotion-detail-back button">
             <img
               alt="Rectangle164462"
-              src="/playground_assets/rectangle164462-vd7d-200h.png"
+              src="/assets/rectangle164462-vd7d-200h.png"
               class="emotion-detail-rectangle16"
             />
             <img
               alt="chevronleft4462"
-              src="/playground_assets/chevronleft4462-xmap.svg"
+              src="/assets/chevronleft4462-xmap.svg"
               class="emotion-detail-chevronleft"
             />
           </div>
@@ -149,7 +151,7 @@
               <div class="emotion-detail-content">
                 <img
                   alt="searchI416"
-                  src="/playground_assets/searchi416-d8ss.svg"
+                  src="/assets/searchi416-d8ss.svg"
                   class="emotion-detail-search1"
                 />
                 <span class="emotion-detail-text22 leadingTighttextSmfontNormal">
@@ -160,7 +162,7 @@
             <button class="emotion-detail-button">
               <img
                 alt="searchI416"
-                src="/playground_assets/searchi416-1gp7.svg"
+                src="/assets/searchi416-1gp7.svg"
                 class="emotion-detail-search2"
               />
             </button>
@@ -170,12 +172,12 @@
       <div class="emotion-detail-profile">
         <img
           alt="Rectangle254162"
-          src="/playground_assets/rectangle254162-743-200h.png"
+          src="/assets/rectangle254162-743-200h.png"
           class="emotion-detail-rectangle25"
         />
         <img
           alt="chevrondown4162"
-          src="/playground_assets/chevrondown4162-p2v.svg"
+          src="/assets/chevrondown4162-p2v.svg"
           class="emotion-detail-chevrondown"
         />
       </div>
@@ -236,6 +238,9 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
+.emotion-detail-navlink {
+  display: contents;
+}
 .emotion-detail-dashboard {
   width: 50px;
   height: 50px;
@@ -255,7 +260,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.emotion-detail-navlink {
+.emotion-detail-navlink1 {
   display: contents;
 }
 .emotion-detail-conference {
@@ -277,7 +282,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.emotion-detail-navlink1 {
+.emotion-detail-navlink2 {
   display: contents;
 }
 .emotion-detail-class {
@@ -299,7 +304,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.emotion-detail-navlink2 {
+.emotion-detail-navlink3 {
   display: contents;
 }
 .emotion-detail-notif {
@@ -633,7 +638,7 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.emotion-detail-navlink3 {
+.emotion-detail-navlink4 {
   display: contents;
 }
 .emotion-detail-logo {
@@ -641,7 +646,7 @@ export default {
   height: 50px;
   text-decoration: none;
 }
-.emotion-detail-navlink4 {
+.emotion-detail-navlink5 {
   display: contents;
 }
 .emotion-detail-back {

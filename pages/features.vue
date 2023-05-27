@@ -1,18 +1,17 @@
 <template>
   <div class="features-container">
-    <app-nav rootClassName="nav-root-class-name4"></app-nav>
     <bg-bawah rootClassName="bg-bawah-root-class-name11"></bg-bawah>
     <bg-atas rootClassName="bg-atas-root-class-name4"></bg-atas>
     <div class="features-main-content">
       <img
         alt="pastedImage"
-        src="/playground_assets/pastedimage-x2a8.svg"
+        src="/assets/pastedimage-x2a8.svg"
         class="features-emotion"
       />
       <div class="features-container1">
         <img
           alt="pastedImage"
-          src="/playground_assets/pastedimage-sw6m.svg"
+          src="/assets/pastedimage-sw6m.svg"
           class="features-texture"
         />
         <div class="features-headline">
@@ -20,8 +19,8 @@
           <div class="features-feature">
             <div class="features-feature-content">
               <img
-                src="/playground_assets/featuresicon4982-jkr4.svg"
                 alt="image"
+                src="/assets/featuresicon4982-jkr4.svg"
                 class="features-image"
               />
               <span class="features-text01">
@@ -31,8 +30,8 @@
             </div>
             <div class="features-feature-content1">
               <img
-                src="/playground_assets/featuresicon4982-jkr4.svg"
                 alt="image"
+                src="/assets/featuresicon4982-jkr4.svg"
                 class="features-image1"
               />
               <span class="features-text04">
@@ -42,8 +41,8 @@
             </div>
             <div class="features-feature-content2">
               <img
-                src="/playground_assets/featuresicon4982-jkr4.svg"
                 alt="image"
+                src="/assets/featuresicon4982-jkr4.svg"
                 class="features-image2"
               />
               <span class="features-text07">
@@ -53,8 +52,8 @@
             </div>
             <div class="features-feature-content3">
               <img
-                src="/playground_assets/featuresicon4982-jkr4.svg"
                 alt="image"
+                src="/assets/featuresicon4982-jkr4.svg"
                 class="features-image3"
               />
               <span class="features-text10">
@@ -71,20 +70,21 @@
         </div>
       </div>
     </div>
+    <app-nav rootClassName="nav-root-class-name4"></app-nav>
   </div>
 </template>
 
 <script>
-import AppNav from '../components/nav'
 import BgBawah from '../components/bg-bawah'
 import BgAtas from '../components/bg-atas'
+import AppNav from '../components/nav'
 
 export default {
   name: 'Features',
   components: {
-    AppNav,
     BgBawah,
     BgAtas,
+    AppNav,
   },
   head: {
     title: 'Features - exported project',

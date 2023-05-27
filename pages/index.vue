@@ -1,18 +1,17 @@
 <template>
   <div class="index-container">
-    <app-nav rootClassName="nav-root-class-name1"></app-nav>
     <bg-bawah rootClassName="bg-bawah-root-class-name7"></bg-bawah>
     <bg-atas rootClassName="bg-atas-root-class-name1"></bg-atas>
     <div class="index-container1">
       <img
         alt="pastedImage"
-        src="/playground_assets/pastedimage-x2a8.svg"
+        src="/assets/pastedimage-x2a8.svg"
         class="index-emotion"
       />
       <div class="index-container2">
         <img
           alt="pastedImage"
-          src="/playground_assets/pastedimage-sw6m.svg"
+          src="/assets/pastedimage-sw6m.svg"
           class="index-texture"
         />
         <div class="index-headline">
@@ -21,9 +20,9 @@
               <span>
                 <span>
                   Connect with Emotion:
-                  <span v-html="rawgbyr"></span>
+                  <span v-html="raw9wns"></span>
                 </span>
-                <span><span v-html="rawohh0"></span></span>
+                <span><span v-html="rawhfs2"></span></span>
               </span>
             </span>
             <span class="index-text04 HeadlineType46">
@@ -44,25 +43,26 @@
         </div>
       </div>
     </div>
+    <app-nav rootClassName="nav-root-class-name1"></app-nav>
   </div>
 </template>
 
 <script>
-import AppNav from '../components/nav'
 import BgBawah from '../components/bg-bawah'
 import BgAtas from '../components/bg-atas'
+import AppNav from '../components/nav'
 
 export default {
   name: 'Index',
   components: {
-    AppNav,
     BgBawah,
     BgAtas,
+    AppNav,
   },
   data() {
     return {
-      rawgbyr: ' ',
-      rawohh0: ' ',
+      raw9wns: ' ',
+      rawhfs2: ' ',
     }
   },
   head: {
@@ -191,5 +191,10 @@ export default {
   line-height: 150%;
   font-stretch: normal;
   text-decoration: none;
+}
+@media(max-width: 1200px) {
+  .index-emotion {
+    right: 323px;
+  }
 }
 </style>
