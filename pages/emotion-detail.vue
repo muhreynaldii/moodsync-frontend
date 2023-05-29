@@ -77,37 +77,11 @@
         <div class="emotion-detail-isi-content">
           <div class="emotion-detail-emosi-mahasiswa">
             <span class="emotion-detail-text06"><span>Overview</span></span>
-            <div class="emotion-detail-group30">
-              <img
-                alt="Polygon14512"
-                src="/assets/polygon14512-ritg.svg"
-                class="emotion-detail-polygon1"
-              />
-              <img
-                alt="Star14512"
-                src="/assets/star14512-y.svg"
-                class="emotion-detail-star1"
-              />
-              <span class="emotion-detail-text08"><span>Sedih</span></span>
-              <span class="emotion-detail-text10"><span>Bahagia</span></span>
-              <span class="emotion-detail-text12"><span>Marah</span></span>
-              <span class="emotion-detail-text14"><span>Bingung</span></span>
-              <span class="emotion-detail-text16"><span>Ketiduran</span></span>
-            </div>
+            <div class="emotion-detail-overview-content"></div>
           </div>
           <div class="emotion-detail-emosi-mahasiswa1">
-            <span class="emotion-detail-text18"><span>Kehadiran</span></span>
-            <span class="emotion-detail-text20"><span>90%</span></span>
-            <img
-              alt="Ellipse3964512"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/09e79a08-6e8b-4025-9c16-a270c7fd0ad9?org_if_sml=15780"
-              class="emotion-detail-ellipse396"
-            />
-            <img
-              alt="Ellipse3974512"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/fd62aac7-1259-4d6e-9027-7a02635a1a99?org_if_sml=15586"
-              class="emotion-detail-ellipse397"
-            />
+            <span class="emotion-detail-text08"><span>Kehadiran</span></span>
+            <div class="emotion-detail-kehadiran-content"></div>
           </div>
         </div>
       </div>
@@ -154,7 +128,7 @@
                   src="/assets/searchi416-d8ss.svg"
                   class="emotion-detail-search1"
                 />
-                <span class="emotion-detail-text22 leadingTighttextSmfontNormal">
+                <span class="emotion-detail-text10 leadingTighttextSmfontNormal">
                   <span>Search</span>
                 </span>
               </div>
@@ -453,9 +427,10 @@ export default {
   height: 426px;
   display: flex;
   position: relative;
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 0;
   border-radius: 20px;
+  justify-content: center;
   background-color: rgba(255, 255, 255, 1);
 }
 .emotion-detail-text06 {
@@ -473,102 +448,12 @@ export default {
   font-stretch: normal;
   text-decoration: none;
 }
-.emotion-detail-group30 {
-  top: 69px;
-  left: 55px;
-  width: 457px;
-  height: 307px;
+.emotion-detail-overview-content {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
   display: flex;
-  position: absolute;
   align-items: flex-start;
-  flex-shrink: 1;
-}
-.emotion-detail-polygon1 {
-  top: 19px;
-  left: 61px;
-  width: 314px;
-  height: 288px;
-  position: absolute;
-}
-.emotion-detail-star1 {
-  top: 38px;
-  left: 93px;
-  width: 251px;
-  height: 251px;
-  position: absolute;
-}
-.emotion-detail-text08 {
-  left: 195px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.emotion-detail-text10 {
-  top: 97px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.emotion-detail-text12 {
-  top: 288px;
-  left: 70px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.emotion-detail-text14 {
-  top: 288px;
-  left: 304px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.emotion-detail-text16 {
-  top: 97px;
-  left: 374px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
 }
 .emotion-detail-emosi-mahasiswa1 {
   width: 566px;
@@ -580,7 +465,7 @@ export default {
   border-radius: 20px;
   background-color: var(--dl-color-default-white);
 }
-.emotion-detail-text18 {
+.emotion-detail-text08 {
   top: 26px;
   left: 38px;
   color: rgba(0, 0, 0, 1);
@@ -595,34 +480,12 @@ export default {
   font-stretch: normal;
   text-decoration: none;
 }
-.emotion-detail-text20 {
-  top: 199px;
-  left: 259px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  position: absolute;
-  font-size: 23px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.emotion-detail-ellipse396 {
-  top: 98px;
-  left: 168px;
-  width: 231px;
-  height: 231px;
-  position: absolute;
-}
-.emotion-detail-ellipse397 {
-  top: 98px;
-  left: 168px;
-  width: 231px;
-  height: 231px;
-  position: absolute;
+.emotion-detail-kehadiran-content {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
 }
 .emotion-detail-navbar-interactive {
   width: 100%;
@@ -718,7 +581,7 @@ export default {
   width: 18px;
   height: 18px;
 }
-.emotion-detail-text22 {
+.emotion-detail-text10 {
   color: var(--dl-color-gray-500);
   height: auto;
   flex-grow: 1;

@@ -20,9 +20,9 @@
               <span>
                 <span>
                   Connect with Emotion:
-                  <span v-html="raw9wns"></span>
+                  <span v-html="rawoqgq"></span>
                 </span>
-                <span><span v-html="rawhfs2"></span></span>
+                <span><span v-html="rawiyas"></span></span>
               </span>
             </span>
             <span class="index-text04 HeadlineType46">
@@ -61,8 +61,8 @@ export default {
   },
   data() {
     return {
-      raw9wns: ' ',
-      rawhfs2: ' ',
+      rawoqgq: ' ',
+      rawiyas: ' ',
     }
   },
   head: {

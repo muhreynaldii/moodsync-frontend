@@ -423,7 +423,7 @@ export default {
   text-decoration: none;
 }
 .daftar-mahasiswa-daftar-mahasiswa1 {
-  width: 1198px;
+  width: 100%;
   height: 905px;
   display: flex;
   position: relative;
@@ -480,7 +480,7 @@ export default {
   flex-shrink: 0;
   border-radius: 148.38710021972656px;
   background-size: cover;
-  background-image: url("https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/8c1e596e-8478-41dd-8b1f-8ca1c8b59da9?org_if_sml=15106");
+  background-image: url("/assets/d2b0a181-4c1e-47cd-9554-b51021f1dd45-yadw-1500h.undefined");
 }
 .daftar-mahasiswa-name {
   width: 1039.0322265625px;
@@ -573,7 +573,7 @@ export default {
   flex-shrink: 0;
   border-radius: 148.38710021972656px;
   background-size: cover;
-  background-image: url("https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/3136c1e9-3d67-4410-b378-bc9bf35af220?org_if_sml=15219");
+  background-image: url("/assets/a271f711-b4fa-4578-b3d2-d724917e1d77-8inw-1500h.undefined");
 }
 .daftar-mahasiswa-name1 {
   width: 1074.6451416015625px;
@@ -640,7 +640,7 @@ export default {
   flex-shrink: 0;
   border-radius: 148.38710021972656px;
   background-size: cover;
-  background-image: url("https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/8c6a4278-ea9f-49fc-a5b2-23be7061bd4d?org_if_sml=15346");
+  background-image: url("/assets/10e7e5d2-87b7-487e-8070-5422f21c00e0-qa5-1500h.undefined");
 }
 .daftar-mahasiswa-name2 {
   width: 1074.6451416015625px;
@@ -707,7 +707,7 @@ export default {
   flex-shrink: 0;
   border-radius: 148.38710021972656px;
   background-size: cover;
-  background-image: url("https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/a9c3f55d-ccbc-474d-9bf9-b995d37acb18?org_if_sml=15279");
+  background-image: url("/assets/294e8028-6120-4587-b8a4-9477780552de-o9k-1500h.undefined");
 }
 .daftar-mahasiswa-name3 {
   width: 1074.6451416015625px;
@@ -774,7 +774,7 @@ export default {
   flex-shrink: 0;
   border-radius: 148.38710021972656px;
   background-size: cover;
-  background-image: url("https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/22d68c61-5569-4861-97ee-19960f01d4b7?org_if_sml=15101");
+  background-image: url("/assets/e8287a9f-b327-46b5-adce-9728c85943e0-12a-1500h.undefined");
 }
 .daftar-mahasiswa-name4 {
   width: 1074.6451416015625px;
@@ -841,7 +841,7 @@ export default {
   flex-shrink: 0;
   border-radius: 148.38710021972656px;
   background-size: cover;
-  background-image: url("https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/c0b6292c-7607-4beb-aec1-4118c4abfc81?org_if_sml=14674");
+  background-image: url("/assets/41bd60aa-58d3-4167-a774-3c19a754e367-2od-1500h.undefined");
 }
 .daftar-mahasiswa-name5 {
   width: 1074.6451416015625px;
@@ -908,7 +908,7 @@ export default {
   flex-shrink: 0;
   border-radius: 148.38710021972656px;
   background-size: cover;
-  background-image: url("https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/500b9311-b762-4b13-9fd5-fc06a63ff241?org_if_sml=15157");
+  background-image: url("/assets/5eefe9a0-a442-410c-b0d4-1d40b6b1e780-s84h-1500h.undefined");
 }
 .daftar-mahasiswa-name6 {
   width: 1074.6451416015625px;
@@ -975,7 +975,7 @@ export default {
   flex-shrink: 0;
   border-radius: 148.38710021972656px;
   background-size: cover;
-  background-image: url("https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/b79ef229-a028-472b-8ad2-19c92be5158e?org_if_sml=14477");
+  background-image: url("/assets/fef68c12-2f4d-49f4-8348-c9b526e433b7-43uk-1500h.undefined");
 }
 .daftar-mahasiswa-name7 {
   width: 1074.6451416015625px;
