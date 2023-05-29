@@ -215,27 +215,10 @@
           </div>
         </div>
       </div>
-      <div class="vicon-chat-dummy">
-        <img
-          alt="Rectangle234542"
-          src="/assets/rectangle234542-wmv-300w.png"
-          class="vicon-rectangle23"
-        />
-        <img
-          alt="Rectangle244542"
-          src="/assets/rectangle244542-2xpu-200h.png"
-          class="vicon-rectangle24"
-        />
-        <img
-          alt="Rectangle174542"
-          src="/assets/rectangle174542-swg-200h.png"
-          class="vicon-rectangle17"
-        />
-        <img
-          alt="Rectangle184542"
-          src="/assets/rectangle184542-go5m-200h.png"
-          class="vicon-rectangle18"
-        />
+      <div class="vicon-emotion-overview"></div>
+      <div >
+        <iframe class="vicon-gamevic" src="https://gamvic-client.vercel.app/" title="W3Schools Free Online Web Tutorials"></iframe>
+
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
@@ -474,13 +457,14 @@ export default {
   top: 114px;
   left: 0px;
   right: 0px;
-  width: 1351px;
+  width: 1505px;
   height: 874px;
   margin: auto;
   display: flex;
   position: absolute;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
+  justify-content: flex-start;
 }
 .vicon-vicon-content {
   gap: 27px;
@@ -1098,49 +1082,24 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-chat-dummy {
-  right: 3px;
-  width: 297px;
-  bottom: 15px;
-  height: 702px;
+.vicon-emotion-overview {
+  flex: 0 0 auto;
+  width: 445px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 128px;
   display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: 20px;
-  background-color: rgba(243, 244, 246, 1);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-.vicon-rectangle23 {
-  top: 105px;
-  left: 16.390727996826172px;
-  width: 264px;
-  height: 196px;
-  position: absolute;
-  border-radius: 33px;
-}
-.vicon-rectangle24 {
-  right: 15px;
-  width: 264px;
-  bottom: 29px;
-  height: 58px;
-  position: absolute;
-  border-radius: 33px;
-}
-.vicon-rectangle17 {
-  top: 21px;
-  left: 12.456954002380371px;
-  width: 131px;
-  height: 50px;
-  position: absolute;
-  border-radius: 33px;
-}
-.vicon-rectangle18 {
-  top: 21px;
-  left: 153.41722106933594px;
-  width: 131px;
-  height: 50px;
-  position: absolute;
-  border-radius: 33px;
+.vicon-gamevic {
+  width: 445px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 601px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .vicon-navbar-interactive {
   width: 100%;
