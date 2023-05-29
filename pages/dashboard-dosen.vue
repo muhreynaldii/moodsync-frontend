@@ -127,12 +127,6 @@
               </div>
             </div>
             <div class="dashboard-dosen-emosi-mahasiswa">
-              <div class="dashboard-dosen-code-embed">
-                <DangerousHTML
-                  html="<script src='https://cdn.commoninja.com/sdk/latest/commonninja.js' defer></script>
-  <div class='commonninja_component pid-882a21a7-411b-49ad-962d-442c773bf73e'></div>"
-                ></DangerousHTML>
-              </div>
               <span class="dashboard-dosen-text41">
                 <span>Emosi Mahasiswa</span>
               </span>
@@ -206,8 +200,6 @@
 </template>
 
 <script>
-import DangerousHTML from 'dangerous-html/dist/vue/lib.mjs'
-
 import BgBawah from '../components/bg-bawah'
 import SideBarFullDashActive from '../components/side-bar-full-dash-active'
 
@@ -216,7 +208,6 @@ export default {
   components: {
     BgBawah,
     SideBarFullDashActive,
-    DangerousHTML,
   },
   head: {
     title: 'Dashboard-Dosen - exported project',
@@ -423,7 +414,7 @@ export default {
 }
 .dashboard-dosen-frame1417 {
   gap: 10px;
-  top: 84px;
+  top: 85px;
   left: 0px;
   right: 0px;
   width: 647px;
@@ -717,12 +708,6 @@ export default {
   border-radius: 36.557621002197266px;
   justify-content: flex-start;
   background-color: var(--dl-color-default-white);
-}
-.dashboard-dosen-code-embed {
-  flex: 1;
-  width: 100%;
-  height: 100%;
-  align-self: center;
 }
 .dashboard-dosen-text41 {
   top: 26px;

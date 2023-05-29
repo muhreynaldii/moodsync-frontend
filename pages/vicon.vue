@@ -216,7 +216,10 @@
         </div>
       </div>
       <div class="vicon-emotion-overview"></div>
-      <div class="vicon-gamevic"></div>
+      <div >
+        <iframe class="vicon-gamevic" src="https://gamvic-client.vercel.app/" title="W3Schools Free Online Web Tutorials"></iframe>
+
+      </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
       <div class="vicon-container2">
