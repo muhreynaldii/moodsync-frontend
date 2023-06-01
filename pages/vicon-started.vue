@@ -3,14 +3,16 @@
     <bg-bawah rootClassName="bg-bawah-root-class-name1"></bg-bawah>
     <aside class="vicon-started-side-bar-full">
       <div class="vicon-started-side-bar">
-        <div class="vicon-started-dashboard">
-          <img
-            alt="chartpie4162"
-            src="/assets/chartpie4462-g92g.svg"
-            class="vicon-started-chartpie"
-          />
-        </div>
-        <nuxt-link to="/vicon-started" class="vicon-started-navlink">
+        <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink">
+          <div class="vicon-started-dashboard">
+            <img
+              alt="chartpie4162"
+              src="/assets/chartpie4462-g92g.svg"
+              class="vicon-started-chartpie"
+            />
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/vicon-started" class="vicon-started-navlink1">
           <div class="vicon-started-conference">
             <img
               alt="cash4162"
@@ -19,7 +21,7 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="vicon-started-navlink1">
+        <nuxt-link to="/daftar-mahasiswa" class="vicon-started-navlink2">
           <div class="vicon-started-class">
             <img
               alt="usergroup4162"
@@ -28,7 +30,7 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/notification" class="vicon-started-navlink2">
+        <nuxt-link to="/notification" class="vicon-started-navlink3">
           <div class="vicon-started-notif">
             <img
               alt="bell4162"
@@ -37,20 +39,16 @@
             />
           </div>
         </nuxt-link>
-        <div class="vicon-started-chat">
-          <img
-            alt="chat4162"
-            src="/assets/chat4162-5tzb.svg"
-            class="vicon-started-chat1"
-          />
-        </div>
+        <nuxt-link to="/gamvic" class="vicon-started-navlink4">
+          <div class="vicon-started-gamvic">
+            <img
+              alt="bell4162"
+              src="/assets/presentationchartbar5562-1s4d.svg"
+              class="vicon-started-gamvic1"
+            />
+          </div>
+        </nuxt-link>
       </div>
-      <img
-        alt="cog4162"
-        src="/assets/cog4162-9gch.svg"
-        loading="lazy"
-        class="vicon-started-cog"
-      />
     </aside>
     <div class="vicon-started-vicon">
       <div class="vicon-started-vicon-content">
@@ -117,7 +115,7 @@
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-started-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink3">
+      <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink5">
         <img
           alt="Rectangle84462"
           src="/assets/logo-200w.png"
@@ -214,8 +212,8 @@ export default {
   gap: 382px;
   top: 238px;
   left: 28px;
-  width: 50px;
-  height: 613px;
+  width: auto;
+  height: auto;
   display: flex;
   position: fixed;
   align-items: center;
@@ -226,6 +224,9 @@ export default {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+}
+.vicon-started-navlink {
+  display: contents;
 }
 .vicon-started-dashboard {
   width: 50px;
@@ -246,7 +247,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-started-navlink {
+.vicon-started-navlink1 {
   display: contents;
 }
 .vicon-started-conference {
@@ -268,7 +269,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-started-navlink1 {
+.vicon-started-navlink2 {
   display: contents;
 }
 .vicon-started-class {
@@ -290,7 +291,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-started-navlink2 {
+.vicon-started-navlink3 {
   display: contents;
 }
 .vicon-started-notif {
@@ -312,7 +313,10 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-started-chat {
+.vicon-started-navlink4 {
+  display: contents;
+}
+.vicon-started-gamvic {
   width: 50px;
   height: 50px;
   display: flex;
@@ -321,19 +325,13 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
 }
-.vicon-started-chat1 {
+.vicon-started-gamvic1 {
   top: 10px;
   left: 10px;
   width: 30px;
-  height: 30px;
-  position: absolute;
-}
-.vicon-started-cog {
-  left: 10px;
-  width: 30px;
-  bottom: 0px;
   height: 30px;
   position: absolute;
 }
@@ -575,7 +573,7 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.vicon-started-navlink3 {
+.vicon-started-navlink5 {
   display: contents;
 }
 .vicon-started-logo {

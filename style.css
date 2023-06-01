@@ -174,10 +174,7 @@
   color: var(--dl-color-gray-black);
   cursor: auto;
   padding: 0.5rem 1rem;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-gray-white);
+  background-color: var(--dl-color-gray-50);
 }
 .textarea {
   color: var(--dl-color-gray-black);
@@ -297,4 +294,32 @@
   font-style: normal;
   font-family: Poppins;
   font-weight: 400px;
+}
+.leadingNonetextSmfontNormal {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.leadingNonetextBasefontSemibold {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 700px;
+  font-stretch: normal;
+}
+.textSmfontNormal {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 400px;
+  font-stretch: normal;
+}
+.textSmfontMedium {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 500px;
+  font-stretch: normal;
 }

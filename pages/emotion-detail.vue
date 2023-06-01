@@ -39,20 +39,16 @@
             />
           </div>
         </nuxt-link>
-        <div class="emotion-detail-chat">
-          <img
-            alt="chat4162"
-            src="/assets/chat4162-5tzb.svg"
-            class="emotion-detail-chat1"
-          />
-        </div>
+        <nuxt-link to="/gamvic" class="emotion-detail-navlink4">
+          <div class="emotion-detail-gamvic">
+            <img
+              alt="bell4162"
+              src="/assets/presentationchartbar5562-1s4d.svg"
+              class="emotion-detail-gamvic1"
+            />
+          </div>
+        </nuxt-link>
       </div>
-      <img
-        alt="cog4162"
-        src="/assets/cog4162-9gch.svg"
-        loading="lazy"
-        class="emotion-detail-cog"
-      />
     </aside>
     <div class="emotion-detail-detail-profile">
       <span class="emotion-detail-text"><span>Neil</span></span>
@@ -88,14 +84,14 @@
     </div>
     <header data-thq="thq-navbar" class="emotion-detail-navbar-interactive">
       <div class="emotion-detail-container1">
-        <nuxt-link to="/dashboard-dosen" class="emotion-detail-navlink4">
+        <nuxt-link to="/dashboard-dosen" class="emotion-detail-navlink5">
           <img
             alt="Rectangle84462"
             src="/assets/logo-200w.png"
             class="emotion-detail-logo"
           />
         </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="emotion-detail-navlink5">
+        <nuxt-link to="/daftar-mahasiswa" class="emotion-detail-navlink6">
           <div class="emotion-detail-back button">
             <img
               alt="Rectangle164462"
@@ -199,8 +195,8 @@ export default {
   gap: 382px;
   top: 238px;
   left: 28px;
-  width: 50px;
-  height: 613px;
+  width: auto;
+  height: auto;
   display: flex;
   position: fixed;
   align-items: center;
@@ -300,7 +296,10 @@ export default {
   height: 30px;
   position: absolute;
 }
-.emotion-detail-chat {
+.emotion-detail-navlink4 {
+  display: contents;
+}
+.emotion-detail-gamvic {
   width: 50px;
   height: 50px;
   display: flex;
@@ -309,19 +308,13 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
 }
-.emotion-detail-chat1 {
+.emotion-detail-gamvic1 {
   top: 10px;
   left: 10px;
   width: 30px;
-  height: 30px;
-  position: absolute;
-}
-.emotion-detail-cog {
-  left: 10px;
-  width: 30px;
-  bottom: 0px;
   height: 30px;
   position: absolute;
 }
@@ -501,7 +494,7 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.emotion-detail-navlink4 {
+.emotion-detail-navlink5 {
   display: contents;
 }
 .emotion-detail-logo {
@@ -509,7 +502,7 @@ export default {
   height: 50px;
   text-decoration: none;
 }
-.emotion-detail-navlink5 {
+.emotion-detail-navlink6 {
   display: contents;
 }
 .emotion-detail-back {

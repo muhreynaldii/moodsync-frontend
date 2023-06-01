@@ -39,26 +39,22 @@
             />
           </div>
         </nuxt-link>
-        <div class="daftar-mahasiswa-chat">
-          <img
-            alt="chat4162"
-            src="/assets/chat4162-5tzb.svg"
-            class="daftar-mahasiswa-chat1"
-          />
-        </div>
+        <nuxt-link to="/gamvic" class="daftar-mahasiswa-navlink4">
+          <div class="daftar-mahasiswa-gamvic">
+            <img
+              alt="bell4162"
+              src="/assets/presentationchartbar5562-1s4d.svg"
+              class="daftar-mahasiswa-gamvic1"
+            />
+          </div>
+        </nuxt-link>
       </div>
-      <img
-        alt="cog4162"
-        src="/assets/cog4162-9gch.svg"
-        loading="lazy"
-        class="daftar-mahasiswa-cog"
-      />
     </aside>
     <div class="daftar-mahasiswa-daftar-mahasiswa">
       <span class="daftar-mahasiswa-text"><span>Daftar Mahasiswa</span></span>
       <div class="daftar-mahasiswa-daftar-mahasiswa1">
         <div class="daftar-mahasiswa-content-daftar-mahasiswa">
-          <nuxt-link to="/emotion-detail" class="daftar-mahasiswa-navlink4">
+          <nuxt-link to="/emotion-detail" class="daftar-mahasiswa-navlink5">
             <div class="daftar-mahasiswa-mahasiswa">
               <div class="daftar-mahasiswa-customer1">
                 <div class="daftar-mahasiswa-user">
@@ -173,7 +169,7 @@
       </div>
     </div>
     <header data-thq="thq-navbar" class="daftar-mahasiswa-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="daftar-mahasiswa-navlink5">
+      <nuxt-link to="/dashboard-dosen" class="daftar-mahasiswa-navlink6">
         <img
           alt="Rectangle84462"
           src="/assets/logo-200w.png"
@@ -272,8 +268,8 @@ export default {
   gap: 382px;
   top: 238px;
   left: 28px;
-  width: 50px;
-  height: 613px;
+  width: auto;
+  height: auto;
   display: flex;
   position: fixed;
   align-items: center;
@@ -373,7 +369,10 @@ export default {
   height: 30px;
   position: absolute;
 }
-.daftar-mahasiswa-chat {
+.daftar-mahasiswa-navlink4 {
+  display: contents;
+}
+.daftar-mahasiswa-gamvic {
   width: 50px;
   height: 50px;
   display: flex;
@@ -382,19 +381,13 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
 }
-.daftar-mahasiswa-chat1 {
+.daftar-mahasiswa-gamvic1 {
   top: 10px;
   left: 10px;
   width: 30px;
-  height: 30px;
-  position: absolute;
-}
-.daftar-mahasiswa-cog {
-  left: 10px;
-  width: 30px;
-  bottom: 0px;
   height: 30px;
   position: absolute;
 }
@@ -443,7 +436,7 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
-.daftar-mahasiswa-navlink4 {
+.daftar-mahasiswa-navlink5 {
   display: contents;
 }
 .daftar-mahasiswa-mahasiswa {
@@ -1013,11 +1006,12 @@ export default {
   width: 100%;
   display: flex;
   padding: var(--dl-space-space-twounits);
-  position: relative;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--dl-color-default-white);
 }
-.daftar-mahasiswa-navlink5 {
+.daftar-mahasiswa-navlink6 {
   display: contents;
 }
 .daftar-mahasiswa-logo {

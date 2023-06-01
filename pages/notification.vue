@@ -39,20 +39,16 @@
             />
           </div>
         </nuxt-link>
-        <div class="notification-chat">
-          <img
-            alt="chat4162"
-            src="/assets/chat4162-5tzb.svg"
-            class="notification-chat1"
-          />
-        </div>
+        <nuxt-link to="/gamvic" class="notification-navlink4">
+          <div class="notification-gamvic">
+            <img
+              alt="bell4162"
+              src="/assets/presentationchartbar5562-1s4d.svg"
+              class="notification-gamvic1"
+            />
+          </div>
+        </nuxt-link>
       </div>
-      <img
-        alt="cog4162"
-        src="/assets/cog4162-9gch.svg"
-        loading="lazy"
-        class="notification-cog"
-      />
     </aside>
     <div class="notification-nofication">
       <span class="notification-text"><span>Notification</span></span>
@@ -98,7 +94,7 @@
       </div>
     </div>
     <header data-thq="thq-navbar" class="notification-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="notification-navlink4">
+      <nuxt-link to="/dashboard-dosen" class="notification-navlink5">
         <img
           alt="Rectangle84462"
           src="/assets/logo-200w.png"
@@ -194,8 +190,8 @@ export default {
   gap: 382px;
   top: 238px;
   left: 28px;
-  width: 50px;
-  height: 613px;
+  width: auto;
+  height: auto;
   display: flex;
   position: fixed;
   align-items: center;
@@ -295,7 +291,10 @@ export default {
   height: 30px;
   position: absolute;
 }
-.notification-chat {
+.notification-navlink4 {
+  display: contents;
+}
+.notification-gamvic {
   width: 50px;
   height: 50px;
   display: flex;
@@ -304,19 +303,13 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
 }
-.notification-chat1 {
+.notification-gamvic1 {
   top: 10px;
   left: 10px;
   width: 30px;
-  height: 30px;
-  position: absolute;
-}
-.notification-cog {
-  left: 10px;
-  width: 30px;
-  bottom: 0px;
   height: 30px;
   position: absolute;
 }
@@ -521,11 +514,12 @@ export default {
   width: 100%;
   display: flex;
   padding: var(--dl-space-space-twounits);
-  position: relative;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--dl-color-default-white);
 }
-.notification-navlink4 {
+.notification-navlink5 {
   display: contents;
 }
 .notification-logo {
