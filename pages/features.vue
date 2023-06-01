@@ -1,18 +1,17 @@
 <template>
   <div class="features-container">
-    <app-nav rootClassName="nav-root-class-name4"></app-nav>
     <bg-bawah rootClassName="bg-bawah-root-class-name11"></bg-bawah>
     <bg-atas rootClassName="bg-atas-root-class-name4"></bg-atas>
     <div class="features-main-content">
       <img
         alt="pastedImage"
-        src="/playground_assets/pastedimage-x2a8.svg"
+        src="/assets/pastedimage-x2a8.svg"
         class="features-emotion"
       />
       <div class="features-container1">
         <img
           alt="pastedImage"
-          src="/playground_assets/pastedimage-sw6m.svg"
+          src="/assets/pastedimage-sw6m.svg"
           class="features-texture"
         />
         <div class="features-headline">
@@ -20,8 +19,8 @@
           <div class="features-feature">
             <div class="features-feature-content">
               <img
-                src="/playground_assets/featuresicon4982-jkr4.svg"
                 alt="image"
+                src="/assets/featuresicon4982-jkr4.svg"
                 class="features-image"
               />
               <span class="features-text01">
@@ -31,8 +30,8 @@
             </div>
             <div class="features-feature-content1">
               <img
-                src="/playground_assets/featuresicon4982-jkr4.svg"
                 alt="image"
+                src="/assets/featuresicon4982-jkr4.svg"
                 class="features-image1"
               />
               <span class="features-text04">
@@ -42,8 +41,8 @@
             </div>
             <div class="features-feature-content2">
               <img
-                src="/playground_assets/featuresicon4982-jkr4.svg"
                 alt="image"
+                src="/assets/featuresicon4982-jkr4.svg"
                 class="features-image2"
               />
               <span class="features-text07">
@@ -53,8 +52,8 @@
             </div>
             <div class="features-feature-content3">
               <img
-                src="/playground_assets/featuresicon4982-jkr4.svg"
                 alt="image"
+                src="/assets/featuresicon4982-jkr4.svg"
                 class="features-image3"
               />
               <span class="features-text10">
@@ -71,20 +70,21 @@
         </div>
       </div>
     </div>
+    <app-nav rootClassName="nav-root-class-name4"></app-nav>
   </div>
 </template>
 
 <script>
-import AppNav from '../components/nav'
 import BgBawah from '../components/bg-bawah'
 import BgAtas from '../components/bg-atas'
+import AppNav from '../components/nav'
 
 export default {
   name: 'Features',
   components: {
-    AppNav,
     BgBawah,
     BgAtas,
+    AppNav,
   },
   head: {
     title: 'Features - exported project',
@@ -128,8 +128,8 @@ export default {
   position: absolute;
 }
 .features-container1 {
-  top: 150px;
-  left: 0px;
+  top: 276px;
+  left: 70px;
   width: 787px;
   height: 387.5625px;
   display: flex;
@@ -165,17 +165,20 @@ export default {
   text-decoration: none;
 }
 .features-feature {
+  gap: var(--dl-space-space-halfunit);
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
 .features-feature-content {
+  gap: var(--dl-space-space-halfunit);
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
 }
 .features-image {
-  width: 100px;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
 .features-text01 {
@@ -189,12 +192,14 @@ export default {
   line-height: 120.00000476837158%;
 }
 .features-feature-content1 {
+  gap: var(--dl-space-space-halfunit);
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
 }
 .features-image1 {
-  width: 100px;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
 .features-text04 {
@@ -208,12 +213,14 @@ export default {
   line-height: 120.00000476837158%;
 }
 .features-feature-content2 {
+  gap: var(--dl-space-space-halfunit);
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
 }
 .features-image2 {
-  width: 100px;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
 .features-text07 {
@@ -227,12 +234,14 @@ export default {
   line-height: 120.00000476837158%;
 }
 .features-feature-content3 {
+  gap: var(--dl-space-space-halfunit);
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
 }
 .features-image3 {
-  width: 100px;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
 .features-text10 {

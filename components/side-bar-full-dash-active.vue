@@ -103,7 +103,7 @@ export default {
     rootClassName: String,
     cog_src: {
       type: String,
-      default: '/playground_assets/cog4162-9gch.svg',
+      default: '/assets/cog4162-9gch.svg',
     },
     chartpie_alt: {
       type: String,
@@ -111,7 +111,7 @@ export default {
     },
     bell_src: {
       type: String,
-      default: '/playground_assets/bell4162-7mh8.svg',
+      default: '/assets/bell4162-7mh8.svg',
     },
   },
 }

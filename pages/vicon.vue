@@ -6,7 +6,7 @@
         <div class="vicon-dashboard">
           <img
             alt="chartpie4162"
-            src="/playground_assets/chartpie4462-g92g.svg"
+            src="/assets/chartpie4462-g92g.svg"
             class="vicon-chartpie"
           />
         </div>
@@ -14,7 +14,7 @@
           <div class="vicon-conference">
             <img
               alt="cash4162"
-              src="/playground_assets/cash4462-gzxy.svg"
+              src="/assets/cash4462-gzxy.svg"
               class="vicon-cash"
             />
           </div>
@@ -23,7 +23,7 @@
           <div class="vicon-class">
             <img
               alt="usergroup4162"
-              src="/playground_assets/usergroup4162-5fld.svg"
+              src="/assets/usergroup4162-5fld.svg"
               class="vicon-usergroup"
             />
           </div>
@@ -32,7 +32,7 @@
           <div class="vicon-notif">
             <img
               alt="bell4162"
-              src="/playground_assets/bell4162-7mh8.svg"
+              src="/assets/bell4162-7mh8.svg"
               class="vicon-bell"
             />
           </div>
@@ -40,14 +40,14 @@
         <div class="vicon-chat">
           <img
             alt="chat4162"
-            src="/playground_assets/chat4162-5tzb.svg"
+            src="/assets/chat4162-5tzb.svg"
             class="vicon-chat1"
           />
         </div>
       </div>
       <img
         alt="cog4162"
-        src="/playground_assets/cog4162-9gch.svg"
+        src="/assets/cog4162-9gch.svg"
         loading="lazy"
         class="vicon-cog"
       />
@@ -58,7 +58,7 @@
           <div class="vicon-lecturer">
             <img
               alt="Lecturer4542"
-              src="/playground_assets/lecturer4542-9s9o-1500w.png"
+              src="/assets/lecturer4542-9s9o-1500w.png"
               class="vicon-lecturer1"
             />
             <div class="vicon-profile-card">
@@ -73,7 +73,7 @@
             <div class="vicon-group27">
               <img
                 alt="Rectangle194542"
-                src="/playground_assets/rectangle194542-92dd-200w.png"
+                src="/assets/rectangle194542-92dd-200w.png"
                 class="vicon-rectangle19"
               />
               <div class="vicon-profile-card1">
@@ -86,7 +86,7 @@
               <div class="vicon-group17">
                 <img
                   alt="microphone4542"
-                  src="/playground_assets/microphone4542-y3l.svg"
+                  src="/assets/microphone4542-y3l.svg"
                   class="vicon-microphone"
                 />
               </div>
@@ -95,7 +95,7 @@
             <div class="vicon-group26">
               <img
                 alt="Rectangle204542"
-                src="/playground_assets/rectangle204542-45gt-200w.png"
+                src="/assets/rectangle204542-45gt-200w.png"
                 class="vicon-rectangle20"
               />
               <div class="vicon-profile-card2">
@@ -108,7 +108,7 @@
               <div class="vicon-group16">
                 <img
                   alt="microphone4542"
-                  src="/playground_assets/microphone4542-2y4.svg"
+                  src="/assets/microphone4542-2y4.svg"
                   class="vicon-microphone1"
                 />
               </div>
@@ -117,7 +117,7 @@
             <div class="vicon-group25">
               <img
                 alt="Rectangle214542"
-                src="/playground_assets/rectangle214542-ods6-200w.png"
+                src="/assets/rectangle214542-ods6-200w.png"
                 class="vicon-rectangle21"
               />
               <div class="vicon-profile-card3">
@@ -130,7 +130,7 @@
               <div class="vicon-group15">
                 <img
                   alt="microphone4542"
-                  src="/playground_assets/microphone4542-r69l.svg"
+                  src="/assets/microphone4542-r69l.svg"
                   class="vicon-microphone2"
                 />
               </div>
@@ -139,7 +139,7 @@
             <div class="vicon-group24">
               <img
                 alt="Rectangle224542"
-                src="/playground_assets/rectangle224542-wy2-200w.png"
+                src="/assets/rectangle224542-wy2-200w.png"
                 class="vicon-rectangle22"
               />
               <div class="vicon-profile-card4">
@@ -152,7 +152,7 @@
               <div class="vicon-group14">
                 <img
                   alt="microphone4542"
-                  src="/playground_assets/microphone4542-nfj7.svg"
+                  src="/assets/microphone4542-nfj7.svg"
                   class="vicon-microphone3"
                 />
               </div>
@@ -161,47 +161,47 @@
           </div>
           <img
             alt="arrowsexpand4542"
-            src="/playground_assets/arrowsexpand4542-jlcd.svg"
+            src="/assets/arrowsexpand4542-jlcd.svg"
             class="vicon-arrowsexpand"
           />
         </div>
         <img
           alt="Seperator4542"
-          src="/playground_assets/seperator4542-o5xk.svg"
+          src="/assets/seperator4542-o5xk.svg"
           class="vicon-seperator"
         />
         <div class="vicon-action-bar">
           <img
             alt="Volume4542"
-            src="/playground_assets/volume4542-g9ck.svg"
+            src="/assets/volume4542-g9ck.svg"
             class="vicon-volume"
           />
           <button class="vicon-action-button">
             <div class="vicon-camera">
               <img
                 alt="videocamera4542"
-                src="/playground_assets/videocamera4542-5fat.svg"
+                src="/assets/videocamera4542-5fat.svg"
                 class="vicon-videocamera"
               />
             </div>
             <div class="vicon-mic">
               <img
                 alt="microphone4542"
-                src="/playground_assets/microphone4542-ky9m.svg"
+                src="/assets/microphone4542-ky9m.svg"
                 class="vicon-microphone4"
               />
             </div>
             <div class="vicon-share-screen">
               <img
                 alt="collection4542"
-                src="/playground_assets/collection4542-2vsm.svg"
+                src="/assets/collection4542-2vsm.svg"
                 class="vicon-collection"
               />
             </div>
             <div class="vicon-menu">
               <img
                 alt="dotshorizontal4542"
-                src="/playground_assets/dotshorizontal4542-l31o.svg"
+                src="/assets/dotshorizontal4542-l31o.svg"
                 class="vicon-dotshorizontal"
               />
             </div>
@@ -209,33 +209,16 @@
           <div class="vicon-disconnect">
             <img
               alt="phonemissedcall4542"
-              src="/playground_assets/phonemissedcall4542-galo.svg"
+              src="/assets/phonemissedcall4542-galo.svg"
               class="vicon-phonemissedcall"
             />
           </div>
         </div>
       </div>
-      <div class="vicon-chat-dummy">
-        <img
-          alt="Rectangle234542"
-          src="/playground_assets/rectangle234542-wmv-300w.png"
-          class="vicon-rectangle23"
-        />
-        <img
-          alt="Rectangle244542"
-          src="/playground_assets/rectangle244542-2xpu-200h.png"
-          class="vicon-rectangle24"
-        />
-        <img
-          alt="Rectangle174542"
-          src="/playground_assets/rectangle174542-swg-200h.png"
-          class="vicon-rectangle17"
-        />
-        <img
-          alt="Rectangle184542"
-          src="/playground_assets/rectangle184542-go5m-200h.png"
-          class="vicon-rectangle18"
-        />
+      <div class="vicon-emotion-overview"></div>
+      <div >
+        <iframe class="vicon-gamevic" src="https://gamvic-client.vercel.app/" title="W3Schools Free Online Web Tutorials"></iframe>
+
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
@@ -243,7 +226,7 @@
         <nuxt-link to="/dashboard-dosen" class="vicon-navlink3">
           <img
             alt="Rectangle84462"
-            src="/playground_assets/logo-200w.png"
+            src="/assets/logo-200w.png"
             class="vicon-logo"
           />
         </nuxt-link>
@@ -251,12 +234,12 @@
           <div class="vicon-back button">
             <img
               alt="Rectangle164462"
-              src="/playground_assets/rectangle164462-vd7d-200h.png"
+              src="/assets/rectangle164462-vd7d-200h.png"
               class="vicon-rectangle16"
             />
             <img
               alt="chevronleft4462"
-              src="/playground_assets/chevronleft4462-xmap.svg"
+              src="/assets/chevronleft4462-xmap.svg"
               class="vicon-chevronleft"
             />
           </div>
@@ -273,7 +256,7 @@
             <div class="vicon-content">
               <img
                 alt="searchI416"
-                src="/playground_assets/searchi416-d8ss.svg"
+                src="/assets/searchi416-d8ss.svg"
                 class="vicon-search1"
               />
               <span class="vicon-text18 leadingTighttextSmfontNormal">
@@ -284,7 +267,7 @@
           <button class="vicon-button">
             <img
               alt="searchI416"
-              src="/playground_assets/searchi416-1gp7.svg"
+              src="/assets/searchi416-1gp7.svg"
               class="vicon-search2"
             />
           </button>
@@ -292,12 +275,12 @@
         <div class="vicon-profile">
           <img
             alt="Rectangle254162"
-            src="/playground_assets/rectangle254162-743-200h.png"
+            src="/assets/rectangle254162-743-200h.png"
             class="vicon-rectangle25"
           />
           <img
             alt="chevrondown4162"
-            src="/playground_assets/chevrondown4162-p2v.svg"
+            src="/assets/chevrondown4162-p2v.svg"
             class="vicon-chevrondown"
           />
         </div>
@@ -474,13 +457,14 @@ export default {
   top: 114px;
   left: 0px;
   right: 0px;
-  width: 1351px;
+  width: 1505px;
   height: 874px;
   margin: auto;
   display: flex;
   position: absolute;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
+  justify-content: flex-start;
 }
 .vicon-vicon-content {
   gap: 27px;
@@ -1098,49 +1082,24 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-chat-dummy {
-  top: 0px;
-  right: 0px;
-  width: 297px;
-  height: 100%;
+.vicon-emotion-overview {
+  flex: 0 0 auto;
+  width: 445px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 128px;
   display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: 20px;
-  background-color: rgba(243, 244, 246, 1);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-.vicon-rectangle23 {
-  top: 105px;
-  left: 16.390727996826172px;
-  width: 264px;
-  height: 196px;
-  position: absolute;
-  border-radius: 33px;
-}
-.vicon-rectangle24 {
-  top: 786px;
-  left: 16.390727996826172px;
-  width: 264px;
-  height: 58px;
-  position: absolute;
-  border-radius: 33px;
-}
-.vicon-rectangle17 {
-  top: 21px;
-  left: 12.456954002380371px;
-  width: 131px;
-  height: 50px;
-  position: absolute;
-  border-radius: 33px;
-}
-.vicon-rectangle18 {
-  top: 21px;
-  left: 153.41722106933594px;
-  width: 131px;
-  height: 50px;
-  position: absolute;
-  border-radius: 33px;
+.vicon-gamevic {
+  width: 445px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 601px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .vicon-navbar-interactive {
   width: 100%;

@@ -15,7 +15,7 @@ export default {
     rootClassName: String,
     Bg_Bawah_src: {
       type: String,
-      default: '/playground_assets/pastedimage-jqvi.svg',
+      default: '/assets/pastedimage-jqvi.svg',
     },
   },
 }
@@ -84,6 +84,11 @@ export default {
   position: absolute;
 }
 .bg-bawah-root-class-name10 {
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+}
+.bg-bawah-root-class-name11 {
   right: 0px;
   bottom: 0px;
   position: absolute;

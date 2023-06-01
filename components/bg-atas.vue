@@ -10,7 +10,7 @@ export default {
   props: {
     Bg_Atas_src: {
       type: String,
-      default: '/playground_assets/pastedimage-7k7o.svg',
+      default: '/assets/pastedimage-7k7o.svg',
     },
     Bg_Atas_alt: {
       type: String,
@@ -47,6 +47,11 @@ export default {
   position: absolute;
 }
 .bg-atas-root-class-name3 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+.bg-atas-root-class-name4 {
   top: 0px;
   left: 0px;
   position: absolute;
