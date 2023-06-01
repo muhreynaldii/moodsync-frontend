@@ -4,14 +4,16 @@
     v-bind:class="rootClassName"
   >
     <div class="side-bar-full-dash-active-side-bar">
-      <div class="side-bar-full-dash-active-dashboard">
-        <img
-          :alt="chartpie_alt"
-          :src="chartpie_src"
-          class="side-bar-full-dash-active-chartpie"
-        />
-      </div>
-      <nuxt-link to="/vicon-started" class="side-bar-full-dash-active-navlink">
+      <nuxt-link to="/dashboard-dosen" class="side-bar-full-dash-active-navlink">
+        <div class="side-bar-full-dash-active-dashboard">
+          <img
+            :alt="chartpie_alt"
+            :src="chartpie_src"
+            class="side-bar-full-dash-active-chartpie"
+          />
+        </div>
+      </nuxt-link>
+      <nuxt-link to="/vicon-started" class="side-bar-full-dash-active-navlink1">
         <div class="side-bar-full-dash-active-conference">
           <img
             :alt="cash_alt"
@@ -22,7 +24,7 @@
       </nuxt-link>
       <nuxt-link
         to="/daftar-mahasiswa"
-        class="side-bar-full-dash-active-navlink1"
+        class="side-bar-full-dash-active-navlink2"
       >
         <div class="side-bar-full-dash-active-class">
           <img
@@ -32,27 +34,25 @@
           />
         </div>
       </nuxt-link>
-      <div class="side-bar-full-dash-active-notif">
-        <img
-          :alt="bell_alt"
-          :src="bell_src"
-          class="side-bar-full-dash-active-bell"
-        />
-      </div>
-      <div class="side-bar-full-dash-active-chat">
-        <img
-          :alt="chat_alt"
-          :src="chat_src"
-          class="side-bar-full-dash-active-chat1"
-        />
-      </div>
+      <nuxt-link to="/notification" class="side-bar-full-dash-active-navlink3">
+        <div class="side-bar-full-dash-active-notif">
+          <img
+            :alt="bell_alt"
+            :src="bell_src"
+            class="side-bar-full-dash-active-bell"
+          />
+        </div>
+      </nuxt-link>
+      <nuxt-link to="/gamvic" class="side-bar-full-dash-active-navlink4">
+        <div class="side-bar-full-dash-active-gamvic">
+          <img
+            :alt="Gamvic_alt"
+            :src="Gamvic_src"
+            class="side-bar-full-dash-active-gamvic1"
+          />
+        </div>
+      </nuxt-link>
     </div>
-    <img
-      :alt="cog_alt"
-      :src="cog_src"
-      loading="lazy"
-      class="side-bar-full-dash-active-cog"
-    />
   </aside>
 </template>
 
@@ -103,7 +103,8 @@ export default {
     rootClassName: String,
     cog_src: {
       type: String,
-      default: '/assets/cog4162-9gch.svg',
+      default:
+        'https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/3215bc06-55da-4b4a-85b8-b3b65455a780/9355a510-36c6-4031-aceb-becbaac96513?org_if_sml=12288',
     },
     chartpie_alt: {
       type: String,
@@ -113,6 +114,14 @@ export default {
       type: String,
       default: '/assets/bell4162-7mh8.svg',
     },
+    Gamvic_src: {
+      type: String,
+      default: '/assets/presentationchartbar5562-1s4d.svg',
+    },
+    Gamvic_alt: {
+      type: String,
+      default: 'bell4162',
+    },
   },
 }
 </script>
@@ -120,8 +129,8 @@ export default {
 <style scoped>
 .side-bar-full-dash-active-side-bar-full {
   gap: 382px;
-  width: 50px;
-  height: 613px;
+  width: auto;
+  height: auto;
   display: flex;
   position: relative;
   align-items: center;
@@ -133,6 +142,9 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
+.side-bar-full-dash-active-navlink {
+  display: contents;
+}
 .side-bar-full-dash-active-dashboard {
   width: 50px;
   height: 50px;
@@ -142,6 +154,7 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(225, 239, 254, 1);
 }
 .side-bar-full-dash-active-chartpie {
@@ -151,7 +164,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.side-bar-full-dash-active-navlink {
+.side-bar-full-dash-active-navlink1 {
   display: contents;
 }
 .side-bar-full-dash-active-conference {
@@ -173,7 +186,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.side-bar-full-dash-active-navlink1 {
+.side-bar-full-dash-active-navlink2 {
   display: contents;
 }
 .side-bar-full-dash-active-class {
@@ -195,6 +208,9 @@ export default {
   height: 30px;
   position: absolute;
 }
+.side-bar-full-dash-active-navlink3 {
+  display: contents;
+}
 .side-bar-full-dash-active-notif {
   width: 50px;
   height: 50px;
@@ -204,6 +220,7 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
 }
 .side-bar-full-dash-active-bell {
@@ -213,7 +230,10 @@ export default {
   height: 30px;
   position: absolute;
 }
-.side-bar-full-dash-active-chat {
+.side-bar-full-dash-active-navlink4 {
+  display: contents;
+}
+.side-bar-full-dash-active-gamvic {
   width: 50px;
   height: 50px;
   display: flex;
@@ -222,19 +242,13 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
 }
-.side-bar-full-dash-active-chat1 {
+.side-bar-full-dash-active-gamvic1 {
   top: 10px;
   left: 10px;
   width: 30px;
-  height: 30px;
-  position: absolute;
-}
-.side-bar-full-dash-active-cog {
-  left: 10px;
-  width: 30px;
-  bottom: 0px;
   height: 30px;
   position: absolute;
 }
