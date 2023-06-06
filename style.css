@@ -206,11 +206,25 @@
   font-family: Poppins;
   font-weight: 400px;
 }
+.textSmfontMedium {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 500px;
+  font-stretch: normal;
+}
 .HeadlineType46 {
   font-size: 46px;
   font-style: normal;
   font-family: Poppins;
   font-weight: 400px;
+}
+.leadingNonetextSmfontNormal {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 400px;
+  font-stretch: normal;
 }
 .HeadlineType23 {
   font-size: 23px;
@@ -245,6 +259,13 @@
   font-weight: 400px;
   font-stretch: normal;
 }
+.leadingNonetextBasefontSemibold {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 700px;
+  font-stretch: normal;
+}
 .ButtonType13 {
   font-size: 13px;
   font-style: normal;
@@ -275,6 +296,13 @@
   font-family: Poppins;
   font-weight: 400px;
 }
+.textSmfontNormal {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 400px;
+  font-stretch: normal;
+}
 .HeadlineType16 {
   font-size: 16px;
   font-style: normal;
@@ -294,32 +322,4 @@
   font-style: normal;
   font-family: Poppins;
   font-weight: 400px;
-}
-.leadingNonetextSmfontNormal {
-  font-size: 14px;
-  font-style: normal;
-  font-family: Inter;
-  font-weight: 400px;
-  font-stretch: normal;
-}
-.leadingNonetextBasefontSemibold {
-  font-size: 16px;
-  font-style: normal;
-  font-family: Inter;
-  font-weight: 700px;
-  font-stretch: normal;
-}
-.textSmfontNormal {
-  font-size: 14px;
-  font-style: normal;
-  font-family: Inter;
-  font-weight: 400px;
-  font-stretch: normal;
-}
-.textSmfontMedium {
-  font-size: 14px;
-  font-style: normal;
-  font-family: Inter;
-  font-weight: 500px;
-  font-stretch: normal;
 }

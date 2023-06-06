@@ -130,6 +130,9 @@
               <span class="dashboard-dosen-text41">
                 <span>Emosi Mahasiswa</span>
               </span>
+              <div class="dashboard-dosen-chart">
+                <RadarChart></RadarChart>
+              </div>
             </div>
           </div>
         </div>
@@ -202,13 +205,20 @@
 <script>
 import BgBawah from '../components/bg-bawah'
 import SideBarFullDashActive from '../components/side-bar-full-dash-active'
+//ini chartjs.
+import Chart from '../components/chart.vue';
+import RadarChart from '../components/RadarChart.vue';
+
 
 export default {
   name: 'DashboardDosen',
   components: {
     BgBawah,
     SideBarFullDashActive,
-  },
+    //ini chartjs.
+    Chart,
+    RadarChart,
+},
   head: {
     title: 'Dashboard-Dosen - exported project',
     meta: [
@@ -705,8 +715,9 @@ export default {
   box-shadow: 5px 5px 10px 0px #d4d4d4;
   align-items: center;
   flex-shrink: 0;
+  padding-top: var(--dl-space-space-fourunits);
   border-radius: 36.557621002197266px;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: var(--dl-color-default-white);
 }
 .dashboard-dosen-text41 {
@@ -723,6 +734,15 @@ export default {
   line-height: 120.00000476837158%;
   font-stretch: normal;
   text-decoration: none;
+}
+.dashboard-dosen-chart {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 367px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
 }
 .dashboard-dosen-navbar-interactive {
   width: 100%;

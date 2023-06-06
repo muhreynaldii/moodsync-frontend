@@ -64,6 +64,10 @@ export default {
       type: String,
       default: 'chat4162',
     },
+    Gamvic_alt: {
+      type: String,
+      default: 'bell4162',
+    },
     cash_src: {
       type: String,
       default:
@@ -85,6 +89,10 @@ export default {
     bell_alt: {
       type: String,
       default: 'bell4162',
+    },
+    Gamvic_src: {
+      type: String,
+      default: '/assets/presentationchartbar5562-1s4d.svg',
     },
     chat_src: {
       type: String,
@@ -113,14 +121,6 @@ export default {
     bell_src: {
       type: String,
       default: '/assets/bell4162-7mh8.svg',
-    },
-    Gamvic_src: {
-      type: String,
-      default: '/assets/presentationchartbar5562-1s4d.svg',
-    },
-    Gamvic_alt: {
-      type: String,
-      default: 'bell4162',
     },
   },
 }

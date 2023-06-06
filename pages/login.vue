@@ -34,9 +34,9 @@
                 />
                 <input
                   type="email"
-                  placeholder="Enter your email address"
                   required
                   autofocus
+                  placeholder="Enter your email address"
                   autocomplete="email"
                   class="login-textinput input"
                 />
@@ -53,10 +53,10 @@
                   />
                   <input
                     type="password"
-                    placeholder="Password"
+                    size="16"
                     required
                     minlength="8"
-                    size="16"
+                    placeholder="Password"
                     class="login-textinput1 input"
                   />
                 </div>
@@ -264,7 +264,7 @@ export default {
   margin-left: var(--dl-space-space-halfunit);
 }
 .login-textinput {
-  border-width: 0px;
+  width: 100%;
 }
 .login-input-field1 {
   gap: 8px;
@@ -316,7 +316,8 @@ export default {
   margin-left: var(--dl-space-space-halfunit);
 }
 .login-textinput1 {
-  border-width: 0px;
+  width: 100%;
+  height: auto;
 }
 .login-frame1421 {
   gap: 12px;
