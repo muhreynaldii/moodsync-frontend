@@ -22,25 +22,27 @@
         this.chart = new Chart(ctx, {
           type: 'radar',
           data: {
-            labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'],
+            labels: ['Neutral', 'Happy', 'Sad', 'Angry', 'Fearful','Disgusted','Surprised'],
             datasets: [
               {
-                label: 'Dataset 1',
-                backgroundColor: 'rgba(220, 220, 220, 0.5)',
-                borderColor: 'rgba(220, 220, 220, 1)',
-                data: [65, 59, 90, 81, 56],
-              },
-              {
-                label: 'Dataset 2',
-                backgroundColor: 'rgba(151, 187, 205, 0.5)',
-                borderColor: 'rgba(151, 187, 205, 1)',
-                data: [28, 48, 40, 19, 96],
+                label: 'Emosi Mahasiswa',
+                backgroundColor: 'rgba(164, 202, 254, 50%)',
+                borderColor: 'rgba(28, 100, 242, 70%)',
+                data: [65, 59, 90, 81, 56, 44, 22],
               },
             ],
           },
           options: {
             responsive: true,
             maintainAspectRatio: true,
+            scale: {
+              pointLabels: {
+              fontSize: 16 // Ukuran font pada label titik pada Radar Chart
+              },
+              angleLines: {
+              display: false
+              },
+            }
           },
         });
       },

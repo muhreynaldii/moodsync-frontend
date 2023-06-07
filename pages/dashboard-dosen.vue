@@ -131,7 +131,7 @@
                 <span>Emosi Mahasiswa</span>
               </span>
               <div class="dashboard-dosen-chart">
-                <RadarChart></RadarChart>
+                <RadarChart style="width: 100%; height: 100%;"></RadarChart>
               </div>
             </div>
           </div>
