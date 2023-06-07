@@ -83,16 +83,47 @@
         </nav>
       </div>
       <div class="gamvic-profile">
-        <img
-          alt="Rectangle254162"
-          src="/assets/rectangle254162-743-200h.png"
-          class="gamvic-rectangle25"
-        />
-        <img
-          alt="chevrondown4162"
-          src="/assets/chevrondown4162-p2v.svg"
-          class="gamvic-chevrondown"
-        />
+        <div data-thq="thq-dropdown" class="gamvic-thq-dropdown list-item">
+          <div data-thq="thq-dropdown-toggle" class="gamvic-dropdown-toggle">
+            <img
+              alt="Rectangle254162"
+              src="/assets/rectangle254162-743-200h.png"
+              class="gamvic-rectangle25"
+            />
+            <img
+              alt="chevrondown4162"
+              src="/assets/chevrondown4162-p2v.svg"
+              class="gamvic-chevrondown"
+            />
+          </div>
+          <ul data-thq="thq-dropdown-list" class="gamvic-dropdown-list">
+            <li data-thq="thq-dropdown" class="gamvic-dropdown list-item">
+              <div data-thq="thq-dropdown-toggle" class="gamvic-dropdown-toggle1">
+                <img
+                  src="/assets/user5862-kh17n.svg"
+                  alt="user5862"
+                  class="gamvic-user"
+                />
+                <span class="gamvic-profile1 BodyType16">Profile</span>
+              </div>
+            </li>
+            <li data-thq="thq-dropdown" class="gamvic-dropdown1 list-item">
+              <nuxt-link to="/login">
+                <div
+                  data-thq="thq-dropdown-toggle"
+                  class="gamvic-dropdown-toggle2"
+                >
+                  <img
+                    src="/assets/logout5862-woq.svg"
+                    alt="logout5862"
+                    class="gamvic-logout"
+                  />
+                  <span class="gamvic-logout1 BodyType16">Logout</span>
+                </div>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
       </div>
       <div data-thq="thq-burger-menu" class="gamvic-burger-menu">
         <svg viewBox="0 0 1024 1024" class="gamvic-icon">
@@ -347,6 +378,24 @@ export default {
   display: flex;
   align-items: center;
 }
+.gamvic-thq-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.gamvic-dropdown-toggle {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius2);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+}
 .gamvic-rectangle25 {
   width: 50px;
   height: 50px;
@@ -355,6 +404,93 @@ export default {
 .gamvic-chevrondown {
   width: 30px;
   height: 30px;
+}
+.gamvic-dropdown-list {
+  left: 0%;
+  width: max-content;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  min-width: 100%;
+  transition: 0.3s;
+  align-items: stretch;
+  border-color: #D9D9D9;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius4);
+  flex-direction: column;
+  list-style-type: none;
+  background-color: var(--dl-color-gray-white);
+  list-style-position: inside;
+}
+.gamvic-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.gamvic-dropdown-toggle1 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: flex-start;
+}
+.gamvic-dropdown-toggle1:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-blue-600);
+}
+.gamvic-user {
+  width: 20px;
+  height: 20px;
+}
+.gamvic-profile1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.gamvic-dropdown1 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.gamvic-dropdown-toggle2 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  text-decoration: none;
+}
+.gamvic-dropdown-toggle2:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-red-400);
+}
+.gamvic-logout {
+  width: 20px;
+  height: 20px;
+}
+.gamvic-logout1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .gamvic-burger-menu {
   display: none;

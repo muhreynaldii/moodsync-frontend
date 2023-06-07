@@ -180,16 +180,62 @@
         </nav>
       </div>
       <div class="dashboard-dosen-profile">
-        <img
-          alt="Rectangle254162"
-          src="/assets/rectangle254162-743-200h.png"
-          class="dashboard-dosen-rectangle25"
-        />
-        <img
-          alt="chevrondown4162"
-          src="/assets/chevrondown4162-p2v.svg"
-          class="dashboard-dosen-chevrondown"
-        />
+        <div
+          data-thq="thq-dropdown"
+          class="dashboard-dosen-thq-dropdown list-item"
+        >
+          <div
+            data-thq="thq-dropdown-toggle"
+            class="dashboard-dosen-dropdown-toggle"
+          >
+            <img
+              alt="Rectangle254162"
+              src="/assets/rectangle254162-743-200h.png"
+              class="dashboard-dosen-rectangle25"
+            />
+            <img
+              alt="chevrondown4162"
+              src="/assets/chevrondown4162-p2v.svg"
+              class="dashboard-dosen-chevrondown"
+            />
+          </div>
+          <ul data-thq="thq-dropdown-list" class="dashboard-dosen-dropdown-list">
+            <li
+              data-thq="thq-dropdown"
+              class="dashboard-dosen-dropdown list-item"
+            >
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="dashboard-dosen-dropdown-toggle1"
+              >
+                <img
+                  src="/assets/user5862-kh17n.svg"
+                  alt="user5862"
+                  class="dashboard-dosen-user"
+                />
+                <span class="dashboard-dosen-profile1 BodyType16">Profile</span>
+              </div>
+            </li>
+            <li
+              data-thq="thq-dropdown"
+              class="dashboard-dosen-dropdown1 list-item"
+            >
+              <nuxt-link to="/login">
+                <div
+                  data-thq="thq-dropdown-toggle"
+                  class="dashboard-dosen-dropdown-toggle2"
+                >
+                  <img
+                    src="/assets/logout5862-woq.svg"
+                    alt="logout5862"
+                    class="dashboard-dosen-logout"
+                  />
+                  <span class="dashboard-dosen-logout1 BodyType16">Logout</span>
+                </div>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
       </div>
       <div data-thq="thq-burger-menu" class="dashboard-dosen-burger-menu">
         <svg viewBox="0 0 1024 1024" class="dashboard-dosen-icon">
@@ -209,16 +255,15 @@ import SideBarFullDashActive from '../components/side-bar-full-dash-active'
 import Chart from '../components/chart.vue';
 import RadarChart from '../components/RadarChart.vue';
 
-
 export default {
   name: 'DashboardDosen',
   components: {
     BgBawah,
     SideBarFullDashActive,
-    //ini chartjs.
+     //ini chartjs.
     Chart,
     RadarChart,
-},
+  },
   head: {
     title: 'Dashboard-Dosen - exported project',
     meta: [
@@ -738,7 +783,7 @@ export default {
 .dashboard-dosen-chart {
   flex: 0 0 auto;
   width: 100%;
-  height: 367px;
+  height: 100%;
   display: flex;
   align-self: center;
   align-items: center;
@@ -818,7 +863,7 @@ export default {
   box-sizing: content-box;
   align-items: center;
   flex-shrink: 0;
-  border-color: rgba(28, 100, 242, 1);
+  border-color: #95b3f3;
   border-style: solid;
   border-width: 1px;
   border-radius: 8px;
@@ -834,6 +879,24 @@ export default {
   display: flex;
   align-items: center;
 }
+.dashboard-dosen-thq-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.dashboard-dosen-dropdown-toggle {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius2);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+}
 .dashboard-dosen-rectangle25 {
   width: 50px;
   height: 50px;
@@ -842,6 +905,93 @@ export default {
 .dashboard-dosen-chevrondown {
   width: 30px;
   height: 30px;
+}
+.dashboard-dosen-dropdown-list {
+  left: 0%;
+  width: max-content;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  min-width: 100%;
+  transition: 0.3s;
+  align-items: stretch;
+  border-color: #D9D9D9;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius4);
+  flex-direction: column;
+  list-style-type: none;
+  background-color: var(--dl-color-gray-white);
+  list-style-position: inside;
+}
+.dashboard-dosen-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.dashboard-dosen-dropdown-toggle1 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: flex-start;
+}
+.dashboard-dosen-dropdown-toggle1:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-blue-600);
+}
+.dashboard-dosen-user {
+  width: 20px;
+  height: 20px;
+}
+.dashboard-dosen-profile1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.dashboard-dosen-dropdown1 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.dashboard-dosen-dropdown-toggle2 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  text-decoration: none;
+}
+.dashboard-dosen-dropdown-toggle2:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-red-400);
+}
+.dashboard-dosen-logout {
+  width: 20px;
+  height: 20px;
+}
+.dashboard-dosen-logout1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .dashboard-dosen-burger-menu {
   display: none;

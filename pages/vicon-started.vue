@@ -156,16 +156,53 @@
         </nav>
       </div>
       <div class="vicon-started-profile">
-        <img
-          alt="Rectangle254162"
-          src="/assets/rectangle254162-743-200h.png"
-          class="vicon-started-rectangle25"
-        />
-        <img
-          alt="chevrondown4162"
-          src="/assets/chevrondown4162-p2v.svg"
-          class="vicon-started-chevrondown"
-        />
+        <div data-thq="thq-dropdown" class="vicon-started-thq-dropdown list-item">
+          <div
+            data-thq="thq-dropdown-toggle"
+            class="vicon-started-dropdown-toggle"
+          >
+            <img
+              alt="Rectangle254162"
+              src="/assets/rectangle254162-743-200h.png"
+              class="vicon-started-rectangle25"
+            />
+            <img
+              alt="chevrondown4162"
+              src="/assets/chevrondown4162-p2v.svg"
+              class="vicon-started-chevrondown"
+            />
+          </div>
+          <ul data-thq="thq-dropdown-list" class="vicon-started-dropdown-list">
+            <li data-thq="thq-dropdown" class="vicon-started-dropdown list-item">
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="vicon-started-dropdown-toggle1"
+              >
+                <img
+                  src="/assets/user5862-kh17n.svg"
+                  alt="user5862"
+                  class="vicon-started-user"
+                />
+                <span class="vicon-started-profile1 BodyType16">Profile</span>
+              </div>
+            </li>
+            <li data-thq="thq-dropdown" class="vicon-started-dropdown1 list-item">
+              <nuxt-link to="/login">
+                <div
+                  data-thq="thq-dropdown-toggle"
+                  class="vicon-started-dropdown-toggle2"
+                >
+                  <img
+                    src="/assets/logout5862-woq.svg"
+                    alt="logout5862"
+                    class="vicon-started-logout"
+                  />
+                  <span class="vicon-started-logout1 BodyType16">Logout</span>
+                </div>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
       </div>
       <div data-thq="thq-burger-menu" class="vicon-started-burger-menu">
         <svg viewBox="0 0 1024 1024" class="vicon-started-icon">
@@ -655,6 +692,24 @@ export default {
   display: flex;
   align-items: center;
 }
+.vicon-started-thq-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.vicon-started-dropdown-toggle {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius2);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+}
 .vicon-started-rectangle25 {
   width: 50px;
   height: 50px;
@@ -663,6 +718,93 @@ export default {
 .vicon-started-chevrondown {
   width: 30px;
   height: 30px;
+}
+.vicon-started-dropdown-list {
+  left: 0%;
+  width: max-content;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  min-width: 100%;
+  transition: 0.3s;
+  align-items: stretch;
+  border-color: #D9D9D9;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius4);
+  flex-direction: column;
+  list-style-type: none;
+  background-color: var(--dl-color-gray-white);
+  list-style-position: inside;
+}
+.vicon-started-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.vicon-started-dropdown-toggle1 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: flex-start;
+}
+.vicon-started-dropdown-toggle1:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-blue-600);
+}
+.vicon-started-user {
+  width: 20px;
+  height: 20px;
+}
+.vicon-started-profile1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.vicon-started-dropdown1 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.vicon-started-dropdown-toggle2 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  text-decoration: none;
+}
+.vicon-started-dropdown-toggle2:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-red-400);
+}
+.vicon-started-logout {
+  width: 20px;
+  height: 20px;
+}
+.vicon-started-logout1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .vicon-started-burger-menu {
   display: none;
