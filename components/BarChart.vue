@@ -22,25 +22,24 @@
         this.chart = new Chart(ctx, {
           type: 'bar',
           data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['Pertemuan 1', 'Pertemuan 2', 'Pertemuan 3', 'Pertemuan 4'],
             datasets: [
               {
-                label: 'Data 1',
+                label: 'Kehadiran Mahasiswa',
                 backgroundColor: 'rgba(220, 220, 220, 0.5)',
                 borderColor: 'rgba(220, 220, 220, 1)',
-                data: [65, 59, 80, 81, 56, 55, 40],
-              },
-              {
-                label: 'Data 2',
-                backgroundColor: 'rgba(151, 187, 205, 0.5)',
-                borderColor: 'rgba(151, 187, 205, 1)',
-                data: [28, 48, 40, 19, 86, 27, 90],
+                data: [31 , 15, 27, 24],
               },
             ],
           },
           options: {
             responsive: true,
             maintainAspectRatio: false,
+            scales:{
+              y:{
+                beginAtZero: true
+              }
+            }
           },
         });
       },

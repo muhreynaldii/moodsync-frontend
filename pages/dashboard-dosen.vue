@@ -252,7 +252,7 @@
 import BgBawah from '../components/bg-bawah'
 import SideBarFullDashActive from '../components/side-bar-full-dash-active'
 //ini chartjs.
-import Chart from '../components/chart.vue';
+import Chart from '../components/BarChart.vue';
 import RadarChart from '../components/RadarChart.vue';
 
 export default {
