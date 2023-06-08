@@ -327,11 +327,15 @@
 
 <script>
 import BgBawah from '../components/bg-bawah'
+//ini chartjs.
+import PieChart from '../components/BarChart.vue';
 
 export default {
   name: 'Vicon',
   components: {
     BgBawah,
+    //ini chartjs.
+    BarChart,
   },
   head: {
     title: 'Vicon - exported project',
