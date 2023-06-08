@@ -38,7 +38,7 @@ export default {
                 'rgb(255, 205, 86)',
                 'rgb(75, 192, 192)',
               ],
-              data: [28, 25, 27, 24],
+              data: [28, 25, 27, 24, 0],
               borderWidth: 1
             },
           ],

@@ -28,7 +28,7 @@
                 label: 'Emosi Mahasiswa',
                 backgroundColor: 'rgba(164, 202, 254, 50%)',
                 borderColor: 'rgba(28, 100, 242, 70%)',
-                data: [65, 59, 90, 81, 56, 44, 22],
+                data: [65, 59, 90, 81, 56, 44, 22, 0],
               },
             ],
           },

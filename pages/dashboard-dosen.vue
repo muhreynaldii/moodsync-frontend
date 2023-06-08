@@ -167,20 +167,10 @@
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
-import SideBarFullDashActive from '../components/side-bar-full-dash-active'
-//ini chartjs.
-import BarChart from '../components/BarChart.vue';
-import RadarChart from '../components/RadarChart.vue';
 
 export default {
   name: 'DashboardDosen',
   components: {
-    BgBawah,
-    SideBarFullDashActive,
-    //ini chartjs.
-    BarChart,
-    RadarChart,
   },
   head: {
     title: 'Dashboard-Dosen - exported project',

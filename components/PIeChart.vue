@@ -15,7 +15,7 @@
       renderChart() {
         const ctx = this.$refs.chartCanvas.getContext('2d');
         new Chart(ctx, {
-          type: 'pie',
+          type: 'doughnut',
           data: {
             labels: ['Label 1', 'Label 2', 'Label 3'],
             datasets: [
