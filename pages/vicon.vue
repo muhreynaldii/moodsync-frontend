@@ -213,8 +213,17 @@
           </div>
         </div>
       </div>
-      <div class="vicon-emotion-overview"></div>
-      <div class="vicon-gamevic"></div>
+      <div>
+        <p class="text-center w-full font-medium text-[#1C64F2] text-[18px]">Overall Class Emotion</p>
+        <div class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-between px-[18px]">
+          <EllipseGraph :progress="40" emotion="Sad"/>
+          <EllipseGraph :progress="30" emotion="Happy"/>
+          <EllipseGraph :progress="20" emotion="Angry"/>
+        </div>
+      </div>
+      <div>
+        <iframe class="vicon-gamevic" src="https://gamvic-client.vercel.app/" title="Gamvic"></iframe>
+      </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
       <div class="vicon-container2">
@@ -326,17 +335,10 @@
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
-//ini chartjs.
-import PieChart from '../components/BarChart.vue';
+
 
 export default {
   name: 'Vicon',
-  components: {
-    BgBawah,
-    //ini chartjs.
-    BarChart,
-  },
   head: {
     title: 'Vicon - exported project',
     meta: [
@@ -1123,17 +1125,18 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: bet;
 }
 .vicon-gamevic {
   width: 445px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 601px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
+
 .vicon-navbar-interactive {
   width: 100%;
   display: flex;
