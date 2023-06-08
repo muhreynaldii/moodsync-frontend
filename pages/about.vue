@@ -16,8 +16,8 @@
         />
         <div class="about-headline">
           <span class="about-text HeadlineType65">About Us</span>
-          <span class="about-text1">
-            <span class="about-text2 HeadlineType23">
+          <span class="about-text1 HeadlineType23">
+            <span class="HeadlineType23">
               Aplikasi Video Conference dengan Emotion Recognition adalah sebuah
               platform komunikasi jarak jauh yang dirancang khusus untuk
               meningkatkan pengalaman pengguna dalam konferensi video. Salah satu
@@ -26,7 +26,7 @@
             </span>
             <br class="HeadlineType23" />
             <br class="HeadlineType23" />
-            <span class="about-text5 HeadlineType23">
+            <span class="HeadlineType23">
               Dengan menggunakan teknologi pengenalan emosi yang canggih, aplikasi
               ini dapat menganalisis ekspresi wajah pengguna dalam waktu nyata.
               Algoritma yang terintegrasi dengan aplikasi akan mengidentifikasi
@@ -35,7 +35,7 @@
               untuk mendapatkan pemahaman yang lebih mendalam tentang respons
               emosional satu sama lain, bahkan dalam komunikasi nonverbal
             </span>
-            <span class="about-text6 HeadlineType23">.</span>
+            <span class="HeadlineType23">.</span>
           </span>
           <div class="about-frame6">
             <nuxt-link to="/login" id="GetStarted" class="about-button button">
@@ -145,25 +145,10 @@ export default {
   height: auto;
   font-size: 23px;
   font-style: normal;
-  text-align: left;
+  text-align: justify;
   font-family: Poppins;
   font-weight: 400px;
   line-height: 120.00000476837158%;
-}
-.about-text2 {
-  width: 741px;
-  height: auto;
-  text-align: left;
-}
-.about-text5 {
-  width: 741px;
-  height: auto;
-  text-align: left;
-}
-.about-text6 {
-  width: 741px;
-  height: auto;
-  text-align: left;
 }
 .about-frame6 {
   gap: 40px;

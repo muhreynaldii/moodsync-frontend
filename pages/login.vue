@@ -27,33 +27,37 @@
             <div class="login-input-field">
               <span class="login-text02"><span>Email</span></span>
               <div class="login-input">
-                <div class="login-content">
-                  <img
-                    alt="mailopenI409"
-                    src="/assets/mailopeni409-37g.svg"
-                    class="login-mailopen"
-                  />
-                  <span class="login-text04">
-                    <span>Enter your email address</span>
-                  </span>
-                  <img alt="xI409" src="/assets/xi409-jd2.svg" class="login-x" />
-                </div>
+                <img
+                  alt="mailopenI409"
+                  src="/assets/mailopeni409-37g.svg"
+                  class="login-mailopen"
+                />
+                <input
+                  type="email"
+                  required
+                  autofocus
+                  placeholder="Enter your email address"
+                  autocomplete="email"
+                  class="login-textinput input"
+                />
               </div>
             </div>
             <div class="login-input-field1">
-              <span class="login-text06"><span>Password</span></span>
+              <span class="login-text04"><span>Password</span></span>
               <div class="login-input1">
-                <div class="login-content1">
+                <div class="login-content">
                   <img
                     alt="lockclosedI409"
                     src="/assets/lockclosedi409-nyxk.svg"
                     class="login-lockclosed"
                   />
-                  <span class="login-text08"><span>Password</span></span>
-                  <img
-                    alt="xI409"
-                    src="/assets/xi409-30q4.svg"
-                    class="login-x1"
+                  <input
+                    type="password"
+                    size="16"
+                    required
+                    minlength="8"
+                    placeholder="Password"
+                    class="login-textinput1 input"
                   />
                 </div>
               </div>
@@ -62,13 +66,13 @@
               <div class="login-checkbox">
                 <input type="checkbox" checked="true" />
                 <div class="login-labelhelpertext">
-                  <span class="login-text10"><span>Remember me</span></span>
+                  <span class="login-text06"><span>Remember me</span></span>
                 </div>
               </div>
             </div>
           </div>
           <nuxt-link to="/dashboard-dosen" id="ButtonLogin" class="login-button">
-            <span class="login-text12"><span>Login</span></span>
+            <span class="login-text08"><span>Login</span></span>
           </nuxt-link>
           <div class="login-frame1423">
             <img
@@ -76,7 +80,7 @@
               src="/assets/rectangle304091-d5ir-200h.png"
               class="login-rectangle30"
             />
-            <span class="login-text14"><span>or</span></span>
+            <span class="login-text10"><span>or</span></span>
             <img
               alt="Rectangle314132"
               src="/assets/rectangle314132-cpgr-200h.png"
@@ -186,8 +190,8 @@ export default {
 .login-login-form {
   gap: 20px;
   flex: 1;
-  width: 316px;
-  height: 457px;
+  width: auto;
+  height: auto;
   display: flex;
   align-self: stretch;
   align-items: center;
@@ -241,42 +245,26 @@ export default {
 .login-input {
   gap: 10px;
   display: flex;
-  padding: 12px 16px;
   align-self: stretch;
   align-items: center;
   flex-shrink: 0;
+  padding-top: var(--dl-space-space-halfunit);
   border-color: rgba(209, 213, 219, 1);
   border-style: solid;
   border-width: 1px;
+  padding-left: var(--dl-space-space-halfunit);
   border-radius: 8px;
+  padding-right: var(--dl-space-space-halfunit);
+  padding-bottom: var(--dl-space-space-halfunit);
   background-color: var(--dl-color-gray-50);
-}
-.login-content {
-  gap: 10px;
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
 }
 .login-mailopen {
   width: 16px;
   height: 16px;
+  margin-left: var(--dl-space-space-halfunit);
 }
-.login-text04 {
-  color: var(--dl-color-gray-5003);
-  height: auto;
-  flex-grow: 1;
-  font-size: 14px;
-  font-style: Regular;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 400;
-  line-height: 125%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.login-x {
-  width: 12px;
-  height: 12px;
+.login-textinput {
+  width: 100%;
 }
 .login-input-field1 {
   gap: 8px;
@@ -287,7 +275,7 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-.login-text06 {
+.login-text04 {
   color: var(--dl-color-gray-9003);
   height: auto;
   font-size: 14px;
@@ -303,17 +291,20 @@ export default {
 .login-input1 {
   gap: 10px;
   display: flex;
-  padding: 12px 16px;
   align-self: stretch;
   align-items: center;
   flex-shrink: 0;
+  padding-top: var(--dl-space-space-halfunit);
   border-color: rgba(209, 213, 219, 1);
   border-style: solid;
   border-width: 1px;
+  padding-left: var(--dl-space-space-halfunit);
   border-radius: 8px;
+  padding-right: var(--dl-space-space-halfunit);
+  padding-bottom: var(--dl-space-space-halfunit);
   background-color: var(--dl-color-gray-50);
 }
-.login-content1 {
+.login-content {
   gap: 10px;
   display: flex;
   flex-grow: 1;
@@ -322,23 +313,11 @@ export default {
 .login-lockclosed {
   width: 16px;
   height: 16px;
+  margin-left: var(--dl-space-space-halfunit);
 }
-.login-text08 {
-  color: var(--dl-color-gray-5003);
+.login-textinput1 {
+  width: 100%;
   height: auto;
-  flex-grow: 1;
-  font-size: 14px;
-  font-style: Regular;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 400;
-  line-height: 125%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.login-x1 {
-  width: 12px;
-  height: 12px;
 }
 .login-frame1421 {
   gap: 12px;
@@ -360,7 +339,7 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
-.login-text10 {
+.login-text06 {
   color: var(--dl-color-gray-9003);
   height: auto;
   font-size: 14px;
@@ -385,7 +364,7 @@ export default {
   text-decoration: none;
   background-color: var(--dl-color-blue-600);
 }
-.login-text12 {
+.login-text08 {
   color: var(--dl-color-default-white);
   height: auto;
   font-size: 16px;
@@ -410,7 +389,7 @@ export default {
   flex-grow: 1;
   border-radius: 32.999996185302734px;
 }
-.login-text14 {
+.login-text10 {
   color: rgba(0, 0, 0, 1);
   height: auto;
   font-size: 14px;
