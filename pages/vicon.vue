@@ -288,8 +288,8 @@
                   class="vicon-dropdown-toggle1"
                 >
                   <img
-                    src="/assets/user5862-kh17n.svg"
                     alt="user5862"
+                    src="/assets/user5862-kh17n.svg"
                     class="vicon-user"
                   />
                   <span class="vicon-profile1 BodyType16">Profile</span>
@@ -302,8 +302,8 @@
                     class="vicon-dropdown-toggle2"
                   >
                     <img
-                      src="/assets/logout5862-woq.svg"
                       alt="logout5862"
+                      src="/assets/logout5862-woq.svg"
                       class="vicon-logout"
                     />
                     <span class="vicon-logout1 BodyType16">Logout</span>

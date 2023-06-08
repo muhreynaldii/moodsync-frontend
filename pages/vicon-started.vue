@@ -155,7 +155,7 @@
           </div>
         </nav>
       </div>
-      <div class="vicon-started-profile">
+      <nav class="vicon-started-profile">
         <div data-thq="thq-dropdown" class="vicon-started-thq-dropdown list-item">
           <div
             data-thq="thq-dropdown-toggle"
@@ -179,8 +179,8 @@
                 class="vicon-started-dropdown-toggle1"
               >
                 <img
-                  src="/assets/user5862-kh17n.svg"
                   alt="user5862"
+                  src="/assets/user5862-kh17n.svg"
                   class="vicon-started-user"
                 />
                 <span class="vicon-started-profile1 BodyType16">Profile</span>
@@ -193,8 +193,8 @@
                   class="vicon-started-dropdown-toggle2"
                 >
                   <img
-                    src="/assets/logout5862-woq.svg"
                     alt="logout5862"
+                    src="/assets/logout5862-woq.svg"
                     class="vicon-started-logout"
                   />
                   <span class="vicon-started-logout1 BodyType16">Logout</span>
@@ -203,7 +203,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
       <div data-thq="thq-burger-menu" class="vicon-started-burger-menu">
         <svg viewBox="0 0 1024 1024" class="vicon-started-icon">
           <path

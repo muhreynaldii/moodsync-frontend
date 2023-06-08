@@ -241,8 +241,8 @@
                 class="daftar-mahasiswa-dropdown-toggle1"
               >
                 <img
-                  src="/assets/user5862-kh17n.svg"
                   alt="user5862"
+                  src="/assets/user5862-kh17n.svg"
                   class="daftar-mahasiswa-user8"
                 />
                 <span class="daftar-mahasiswa-profile1 BodyType16">Profile</span>
@@ -258,8 +258,8 @@
                   class="daftar-mahasiswa-dropdown-toggle2"
                 >
                   <img
-                    src="/assets/logout5862-woq.svg"
                     alt="logout5862"
+                    src="/assets/logout5862-woq.svg"
                     class="daftar-mahasiswa-logout"
                   />
                   <span class="daftar-mahasiswa-logout1 BodyType16">Logout</span>

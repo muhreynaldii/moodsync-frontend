@@ -40,97 +40,15 @@
               <span class="dashboard-dosen-text11">
                 <span>Presensi Mahasiswa</span>
               </span>
-              <div class="dashboard-dosen-frame1417">
-                <div class="dashboard-dosen-frame1414">
-                  <span class="dashboard-dosen-text13 HeadlineType23">
-                    <span>Jessica</span>
-                  </span>
-                  <span class="dashboard-dosen-text15 HeadlineType23">
-                    <span>Roy</span>
-                  </span>
-                  <span class="dashboard-dosen-text17 HeadlineType23">
-                    <span>Ramon</span>
-                  </span>
-                  <span class="dashboard-dosen-text19 HeadlineType23">
-                    <span>Jess</span>
-                  </span>
-                  <span class="dashboard-dosen-text21 HeadlineType23">
-                    <span>Dori</span>
-                  </span>
-                  <span class="dashboard-dosen-text23 HeadlineType23">
-                    <span>Magen</span>
-                  </span>
-                  <span class="dashboard-dosen-text25 HeadlineType23">
-                    <span>Dobleh</span>
-                  </span>
-                </div>
-                <div class="dashboard-dosen-frame1415">
-                  <div class="dashboard-dosen-presensi1">
-                    <img
-                      alt="Rectangle514162"
-                      src="/assets/rectangle514162-8qhj-200h.png"
-                      class="dashboard-dosen-rectangle51"
-                    />
-                  </div>
-                  <div class="dashboard-dosen-presensi2">
-                    <img
-                      alt="Rectangle514162"
-                      src="/assets/rectangle514162-rrmb-200h.png"
-                      class="dashboard-dosen-rectangle511"
-                    />
-                  </div>
-                  <div class="dashboard-dosen-presensi3">
-                    <img
-                      alt="Rectangle514162"
-                      src="/assets/rectangle514162-tw2-200h.png"
-                      class="dashboard-dosen-rectangle512"
-                    />
-                  </div>
-                  <div class="dashboard-dosen-presensi4">
-                    <img
-                      alt="Rectangle514162"
-                      src="/assets/rectangle514162-yumr-200h.png"
-                      class="dashboard-dosen-rectangle513"
-                    />
-                  </div>
-                  <div class="dashboard-dosen-presensi5">
-                    <img
-                      alt="Rectangle514162"
-                      src="/assets/rectangle514162-etqc-200h.png"
-                      class="dashboard-dosen-rectangle514"
-                    />
-                  </div>
-                  <div class="dashboard-dosen-presensi6">
-                    <img
-                      alt="Rectangle514162"
-                      src="/assets/rectangle514162-lltc-200h.png"
-                      class="dashboard-dosen-rectangle515"
-                    />
-                  </div>
-                  <div class="dashboard-dosen-presensi7">
-                    <img
-                      alt="Rectangle514162"
-                      src="/assets/rectangle514162-fo5s-200h.png"
-                      class="dashboard-dosen-rectangle516"
-                    />
-                  </div>
-                </div>
-                <div class="dashboard-dosen-frame1416">
-                  <span class="dashboard-dosen-text27"><span>100%</span></span>
-                  <span class="dashboard-dosen-text29"><span>90%</span></span>
-                  <span class="dashboard-dosen-text31"><span>90%</span></span>
-                  <span class="dashboard-dosen-text33"><span>70%</span></span>
-                  <span class="dashboard-dosen-text35"><span>50%</span></span>
-                  <span class="dashboard-dosen-text37"><span>50%</span></span>
-                  <span class="dashboard-dosen-text39"><span>10%</span></span>
-                </div>
+              <div class="dashboard-dosen-chart">
+                <BarChart style="width: 100%; height: 100%;"></BarChart>
               </div>
             </div>
             <div class="dashboard-dosen-emosi-mahasiswa">
-              <span class="dashboard-dosen-text41">
+              <span class="dashboard-dosen-text13">
                 <span>Emosi Mahasiswa</span>
               </span>
-              <div class="dashboard-dosen-chart">
+              <div class="dashboard-dosen-chart1">
                 <RadarChart style="width: 100%; height: 100%;"></RadarChart>
               </div>
             </div>
@@ -164,7 +82,7 @@
                   src="/assets/searchi416-d8ss.svg"
                   class="dashboard-dosen-search1"
                 />
-                <span class="dashboard-dosen-text43 leadingTighttextSmfontNormal">
+                <span class="dashboard-dosen-text15 leadingTighttextSmfontNormal">
                   <span>Search</span>
                 </span>
               </div>
@@ -209,8 +127,8 @@
                 class="dashboard-dosen-dropdown-toggle1"
               >
                 <img
-                  src="/assets/user5862-kh17n.svg"
                   alt="user5862"
+                  src="/assets/user5862-kh17n.svg"
                   class="dashboard-dosen-user"
                 />
                 <span class="dashboard-dosen-profile1 BodyType16">Profile</span>
@@ -226,8 +144,8 @@
                   class="dashboard-dosen-dropdown-toggle2"
                 >
                   <img
-                    src="/assets/logout5862-woq.svg"
                     alt="logout5862"
+                    src="/assets/logout5862-woq.svg"
                     class="dashboard-dosen-logout"
                   />
                   <span class="dashboard-dosen-logout1 BodyType16">Logout</span>
@@ -252,7 +170,7 @@
 import BgBawah from '../components/bg-bawah'
 import SideBarFullDashActive from '../components/side-bar-full-dash-active'
 //ini chartjs.
-import Chart from '../components/BarChart.vue';
+import BarChart from '../components/BarChart.vue';
 import RadarChart from '../components/RadarChart.vue';
 
 export default {
@@ -260,8 +178,8 @@ export default {
   components: {
     BgBawah,
     SideBarFullDashActive,
-     //ini chartjs.
-    Chart,
+    //ini chartjs.
+    BarChart,
     RadarChart,
   },
   head: {
@@ -449,6 +367,7 @@ export default {
   box-shadow: 5px 5px 10px 0px #d4d4d4;
   align-items: flex-start;
   flex-shrink: 0;
+  padding-top: var(--dl-space-space-fourunits);
   border-radius: 36.557621002197266px;
   background-color: var(--dl-color-default-white);
 }
@@ -467,290 +386,14 @@ export default {
   font-stretch: normal;
   text-decoration: none;
 }
-.dashboard-dosen-frame1417 {
-  gap: 10px;
-  top: 85px;
-  left: 0px;
-  right: 0px;
-  width: 647px;
-  margin: auto;
+.dashboard-dosen-chart {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
   display: flex;
-  position: absolute;
   align-self: center;
   align-items: center;
   justify-content: center;
-}
-.dashboard-dosen-frame1414 {
-  gap: 18px;
-  width: 139px;
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 0;
-  flex-direction: column;
-}
-.dashboard-dosen-text13 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  text-align: left;
-  line-height: 120.00000476837158%;
-}
-.dashboard-dosen-text15 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  text-align: left;
-  line-height: 120.00000476837158%;
-}
-.dashboard-dosen-text17 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  text-align: left;
-  line-height: 120.00000476837158%;
-}
-.dashboard-dosen-text19 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  text-align: left;
-  line-height: 120.00000476837158%;
-}
-.dashboard-dosen-text21 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  text-align: left;
-  line-height: 120.00000476837158%;
-}
-.dashboard-dosen-text23 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  text-align: left;
-  line-height: 120.00000476837158%;
-}
-.dashboard-dosen-text25 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  text-align: left;
-  line-height: 120.00000476837158%;
-}
-.dashboard-dosen-frame1415 {
-  gap: 30px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.dashboard-dosen-presensi1 {
-  width: 435px;
-  height: 16px;
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: rgba(195, 221, 253, 1);
-}
-.dashboard-dosen-rectangle51 {
-  top: 0px;
-  left: 0px;
-  width: 435px;
-  height: 16px;
-  position: absolute;
-  border-radius: 20px;
-}
-.dashboard-dosen-presensi2 {
-  width: 435px;
-  height: 16px;
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: rgba(195, 221, 253, 1);
-}
-.dashboard-dosen-rectangle511 {
-  top: 0px;
-  left: 0px;
-  width: 402px;
-  height: 16px;
-  position: absolute;
-  border-radius: 20px;
-}
-.dashboard-dosen-presensi3 {
-  width: 435px;
-  height: 16px;
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: rgba(195, 221, 253, 1);
-}
-.dashboard-dosen-rectangle512 {
-  top: 0px;
-  left: 0px;
-  width: 402px;
-  height: 16px;
-  position: absolute;
-  border-radius: 20px;
-}
-.dashboard-dosen-presensi4 {
-  width: 435px;
-  height: 16px;
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: rgba(195, 221, 253, 1);
-}
-.dashboard-dosen-rectangle513 {
-  top: 0px;
-  left: 0px;
-  width: 295px;
-  height: 16px;
-  position: absolute;
-  border-radius: 20px;
-}
-.dashboard-dosen-presensi5 {
-  width: 435px;
-  height: 16px;
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: rgba(195, 221, 253, 1);
-}
-.dashboard-dosen-rectangle514 {
-  top: 0px;
-  left: 0px;
-  width: 231px;
-  height: 16px;
-  position: absolute;
-  border-radius: 20px;
-}
-.dashboard-dosen-presensi6 {
-  width: 435px;
-  height: 16px;
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: rgba(195, 221, 253, 1);
-}
-.dashboard-dosen-rectangle515 {
-  top: 0px;
-  left: 0px;
-  width: 231px;
-  height: 16px;
-  position: absolute;
-  border-radius: 20px;
-}
-.dashboard-dosen-presensi7 {
-  width: 435px;
-  height: 16px;
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: rgba(195, 221, 253, 1);
-}
-.dashboard-dosen-rectangle516 {
-  top: 0px;
-  left: 0px;
-  width: 39px;
-  height: 16px;
-  position: absolute;
-  border-radius: 20px;
-}
-.dashboard-dosen-frame1416 {
-  gap: 27px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.dashboard-dosen-text27 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dosen-text29 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dosen-text31 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dosen-text33 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dosen-text35 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dosen-text37 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dosen-text39 {
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: 120.00000476837158%;
-  font-stretch: normal;
-  text-decoration: none;
 }
 .dashboard-dosen-emosi-mahasiswa {
   width: 606px;
@@ -765,7 +408,7 @@ export default {
   justify-content: center;
   background-color: var(--dl-color-default-white);
 }
-.dashboard-dosen-text41 {
+.dashboard-dosen-text13 {
   top: 26px;
   left: 38px;
   color: rgba(0, 0, 0, 1);
@@ -780,7 +423,7 @@ export default {
   font-stretch: normal;
   text-decoration: none;
 }
-.dashboard-dosen-chart {
+.dashboard-dosen-chart1 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -847,7 +490,7 @@ export default {
   width: 18px;
   height: 18px;
 }
-.dashboard-dosen-text43 {
+.dashboard-dosen-text15 {
   color: var(--dl-color-gray-500);
   height: auto;
   flex-grow: 1;

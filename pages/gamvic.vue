@@ -100,8 +100,8 @@
             <li data-thq="thq-dropdown" class="gamvic-dropdown list-item">
               <div data-thq="thq-dropdown-toggle" class="gamvic-dropdown-toggle1">
                 <img
-                  src="/assets/user5862-kh17n.svg"
                   alt="user5862"
+                  src="/assets/user5862-kh17n.svg"
                   class="gamvic-user"
                 />
                 <span class="gamvic-profile1 BodyType16">Profile</span>
@@ -114,8 +114,8 @@
                   class="gamvic-dropdown-toggle2"
                 >
                   <img
-                    src="/assets/logout5862-woq.svg"
                     alt="logout5862"
+                    src="/assets/logout5862-woq.svg"
                     class="gamvic-logout"
                   />
                   <span class="gamvic-logout1 BodyType16">Logout</span>

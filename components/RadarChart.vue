@@ -35,12 +35,21 @@
           options: {
             responsive: true,
             maintainAspectRatio: true,
+            legend: {
+              display: false // Menghapus legend pada Bar Chart
+            },
             scale: {
               pointLabels: {
               fontSize: 16 // Ukuran font pada label titik pada Radar Chart
               },
               angleLines: {
               display: false
+              },
+              r: {
+                ticks:{
+                  suggestedMin: 0 ,// Memulai skala dari 0 pada Radar Chart
+                  beginAtZero: true // Memulai skala dari 0 pada Radar Chart
+                }
               },
             }
           },

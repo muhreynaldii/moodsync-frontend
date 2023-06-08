@@ -26,21 +26,37 @@
             datasets: [
               {
                 label: 'Kehadiran Mahasiswa',
-                backgroundColor: 'rgba(220, 220, 220, 0.5)',
-                borderColor: 'rgba(220, 220, 220, 1)',
-                data: [31 , 15, 27, 24],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 205, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+              ],
+                borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                ],
+                data: [28 , 25, 27, 24],
+                borderWidth: 1
               },
             ],
           },
           options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales:{
+            scales: {
               y:{
-                beginAtZero: true
+                ticks:{
+                  beginAtZero: true
+                }
               }
-            }
-          },
+            },
+            legend: {
+              display: false // Menghapus legend pada Bar Chart
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+          }
         });
       },
     },

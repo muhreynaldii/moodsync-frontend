@@ -158,8 +158,8 @@
                 class="notification-dropdown-toggle1"
               >
                 <img
-                  src="/assets/user5862-kh17n.svg"
                   alt="user5862"
+                  src="/assets/user5862-kh17n.svg"
                   class="notification-user2"
                 />
                 <span class="notification-profile1 BodyType16">Profile</span>
@@ -172,8 +172,8 @@
                   class="notification-dropdown-toggle2"
                 >
                   <img
-                    src="/assets/logout5862-woq.svg"
                     alt="logout5862"
+                    src="/assets/logout5862-woq.svg"
                     class="notification-logout"
                   />
                   <span class="notification-logout1 BodyType16">Logout</span>

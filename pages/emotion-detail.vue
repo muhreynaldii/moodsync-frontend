@@ -166,8 +166,8 @@
                 class="emotion-detail-dropdown-toggle1"
               >
                 <img
-                  src="/assets/user5862-kh17n.svg"
                   alt="user5862"
+                  src="/assets/user5862-kh17n.svg"
                   class="emotion-detail-user"
                 />
                 <span class="emotion-detail-profile1 BodyType16">Profile</span>
@@ -183,8 +183,8 @@
                   class="emotion-detail-dropdown-toggle2"
                 >
                   <img
-                    src="/assets/logout5862-woq.svg"
                     alt="logout5862"
+                    src="/assets/logout5862-woq.svg"
                     class="emotion-detail-logout"
                   />
                   <span class="emotion-detail-logout1 BodyType16">Logout</span>
