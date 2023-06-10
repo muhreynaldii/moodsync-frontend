@@ -54,18 +54,21 @@
       <div class="vicon-vicon-content">
         <div class="vicon-vicon">
           <div class="vicon-lecturer">
-            <img
+            <!-- <img
               alt="Lecturer4542"
               src="/assets/lecturer4542-9s9o-1500w.png"
               class="vicon-lecturer1"
-            />
-            <div class="vicon-profile-card">
+            /> -->
+            <div id="main-video" class="col-md-6">
+              <user-video :stream-manager="mainStreamManager" />
+            </div>
+            <!-- <div class="vicon-profile-card">
               <div class="vicon-persinal-info">
                 <div class="vicon-name">
                   <span class="vicon-text">Dr. Dre</span>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="vicon-audience">
             <div class="vicon-group27">
@@ -214,15 +217,23 @@
         </div>
       </div>
       <div>
-        <p class="text-center w-full font-medium text-[#1C64F2] text-[18px]">Overall Class Emotion</p>
-        <div class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-between px-[18px]">
-          <EllipseGraph :progress="40" emotion="Sad"/>
-          <EllipseGraph :progress="30" emotion="Happy"/>
-          <EllipseGraph :progress="20" emotion="Angry"/>
+        <p class="w-full text-center text-[18px] font-medium text-[#1C64F2]">
+          Overall Class Emotion
+        </p>
+        <div
+          class="flex h-[128px] w-[445px] flex-[0_0_auto] flex-row items-center justify-between px-[18px]"
+        >
+          <EllipseGraph :progress="40" emotion="Sad" />
+          <EllipseGraph :progress="30" emotion="Happy" />
+          <EllipseGraph :progress="20" emotion="Angry" />
         </div>
       </div>
       <div>
-        <iframe class="vicon-gamevic" src="https://gamvic-client.vercel.app/" title="Gamvic"></iframe>
+        <iframe
+          class="vicon-gamevic"
+          src="https://gamvic-client.vercel.app/"
+          title="Gamvic"
+        ></iframe>
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
@@ -335,20 +346,168 @@
 </template>
 
 <script>
+import { OpenVidu } from "openvidu-browser";
 
+const APPLICATION_SERVER_URL =
+  process.env.NODE_ENV === "production" ? "" : "http://localhost:5000/";
 
 export default {
-  name: 'Vicon',
-  head: {
-    title: 'Vicon - exported project',
-    meta: [
-      {
-        property: 'og:title',
-        content: 'Vicon - exported project',
-      },
-    ],
+  name: "App",
+
+  mounted() {
+    this.joinSession();
   },
-}
+  data() {
+    return {
+      // OpenVidu objects
+      OV: undefined,
+      session: undefined,
+      mainStreamManager: undefined,
+      publisher: undefined,
+      subscribers: [],
+
+      // Join form
+      mySessionId: "SessionA",
+      myUserName: "Participant" + Math.floor(Math.random() * 100),
+    };
+  },
+
+  methods: {
+    joinSession() {
+      // --- 1) Get an OpenVidu object ---
+      this.OV = new OpenVidu();
+
+      // --- 2) Init a session ---
+      this.session = this.OV.initSession();
+
+      // --- 3) Specify the actions when events take place in the session ---
+
+      // On every new Stream received...
+      this.session.on("streamCreated", ({ stream }) => {
+        const subscriber = this.session.subscribe(stream);
+        this.subscribers.push(subscriber);
+      });
+
+      // On every Stream destroyed...
+      this.session.on("streamDestroyed", ({ stream }) => {
+        const index = this.subscribers.indexOf(stream.streamManager, 0);
+        if (index >= 0) {
+          this.subscribers.splice(index, 1);
+        }
+      });
+
+      // On every asynchronous exception...
+      this.session.on("exception", ({ exception }) => {
+        console.warn(exception);
+      });
+
+      // --- 4) Connect to the session with a valid user token ---
+
+      // Get a token from the OpenVidu deployment
+      this.getToken(this.mySessionId).then((token) => {
+        // First param is the token. Second param can be retrieved by every user on event
+        // 'streamCreated' (property Stream.connection.data), and will be appended to DOM as the user's nickname
+        this.session
+          .connect(token, { clientData: this.myUserName })
+          .then(() => {
+            // --- 5) Get your own camera stream with the desired properties ---
+
+            // Init a publisher passing undefined as targetElement (we don't want OpenVidu to insert a video
+            // element: we will manage it on our own) and with the desired properties
+            let publisher = this.OV.initPublisher(undefined, {
+              audioSource: undefined, // The source of audio. If undefined default microphone
+              videoSource: undefined, // The source of video. If undefined default webcam
+              publishAudio: true, // Whether you want to start publishing with your audio unmuted or not
+              publishVideo: true, // Whether you want to start publishing with your video enabled or not
+              resolution: "640x480", // The resolution of your video
+              frameRate: 30, // The frame rate of your video
+              insertMode: "APPEND", // How the video is inserted in the target element 'video-container'
+              mirror: false, // Whether to mirror your local video or not
+            });
+
+            // Set the main video in the page to display our webcam and store our Publisher
+            this.mainStreamManager = publisher;
+            this.publisher = publisher;
+
+            // --- 6) Publish your stream ---
+
+            this.session.publish(this.publisher);
+          })
+          .catch((error) => {
+            console.log(
+              "There was an error connecting to the session:",
+              error.code,
+              error.message
+            );
+          });
+      });
+
+      window.addEventListener("beforeunload", this.leaveSession);
+    },
+
+    leaveSession() {
+      // --- 7) Leave the session by calling 'disconnect' method over the Session object ---
+      if (this.session) this.session.disconnect();
+
+      // Empty all properties...
+      this.session = undefined;
+      this.mainStreamManager = undefined;
+      this.publisher = undefined;
+      this.subscribers = [];
+      this.OV = undefined;
+
+      // Remove beforeunload listener
+      window.removeEventListener("beforeunload", this.leaveSession);
+    },
+
+    updateMainVideoStreamManager(stream) {
+      if (this.mainStreamManager === stream) return;
+      this.mainStreamManager = stream;
+    },
+
+    /**
+     * --------------------------------------------
+     * GETTING A TOKEN FROM YOUR APPLICATION SERVER
+     * --------------------------------------------
+     * The methods below request the creation of a Session and a Token to
+     * your application server. This keeps your OpenVidu deployment secure.
+     *
+     * In this sample code, there is no user control at all. Anybody could
+     * access your application server endpoints! In a real production
+     * environment, your application server must identify the user to allow
+     * access to the endpoints.
+     *
+     * Visit https://docs.openvidu.io/en/stable/application-server to learn
+     * more about the integration of OpenVidu in your application server.
+     */
+    async getToken(mySessionId) {
+      const sessionId = await this.createSession(mySessionId);
+      return await this.createToken(sessionId);
+    },
+
+    async createSession(sessionId) {
+      const response = await this.$axios.post(
+        APPLICATION_SERVER_URL + "api/sessions",
+        { customSessionId: sessionId },
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      return response.data; // The sessionId
+    },
+
+    async createToken(sessionId) {
+      const response = await this.$axios.post(
+        APPLICATION_SERVER_URL + "api/sessions/" + sessionId + "/connections",
+        {},
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      return response.data; // The token
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -550,7 +709,8 @@ export default {
   padding: 22.51118278503418px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 11.25559139251709px 22.51118278503418px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 11.25559139251709px 22.51118278503418px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 4.502236366271973px;
@@ -622,7 +782,8 @@ export default {
   padding: 8.948545455932617px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 1.7897090911865234px;
@@ -719,7 +880,8 @@ export default {
   padding: 8.948545455932617px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 1.7897090911865234px;
@@ -816,7 +978,8 @@ export default {
   padding: 8.948545455932617px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 1.7897090911865234px;
@@ -913,7 +1076,8 @@ export default {
   padding: 8.948545455932617px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 1.7897090911865234px;
@@ -1305,7 +1469,7 @@ export default {
   min-width: 100%;
   transition: 0.3s;
   align-items: stretch;
-  border-color: #D9D9D9;
+  border-color: #d9d9d9;
   border-width: 1px;
   border-radius: var(--dl-radius-radius-radius4);
   flex-direction: column;
@@ -1392,7 +1556,7 @@ export default {
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
-@media(max-width: 1600px) {
+@media (max-width: 1600px) {
   .vicon-container1 {
     width: 1354px;
   }
@@ -1420,12 +1584,12 @@ export default {
     position: static;
   }
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .vicon-search {
     width: var(--dl-size-size-xlarge);
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .vicon-navbar-interactive {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
@@ -1437,7 +1601,7 @@ export default {
     display: flex;
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .vicon-navbar-interactive {
     padding: var(--dl-space-space-unit);
   }
