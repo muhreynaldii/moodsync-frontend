@@ -24,6 +24,10 @@
   },
   "dependencies": {
     "@braid/vue-formulate": "^2.5.3",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
     "@lottiefiles/vue-lottie-player": "1.0.4",
     "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/auth-next": "^5.0.0-1667386184.dfbbb54",
