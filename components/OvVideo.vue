@@ -1,5 +1,5 @@
 <template>
-  <video autoplay />
+  <video class="vicon-lecturer" autoplay />
 </template>
 
 <script>
@@ -15,3 +15,18 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.vicon-lecturer {
+  top: 0px;
+  left: 0px;
+  width: 970.75px;
+  height: 726px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: 33px;
+}
+
+</style>

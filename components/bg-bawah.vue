@@ -1,9 +1,9 @@
 <template>
-  <div class="relative flex" v-bind:class="rootClassName">
+  <div class="flex relative" v-bind:class="rootClassName">
     <img
       :alt="Bg_Bawah_alt"
       :src="Bg_Bawah_src"
-      class="relative w-[729px] self-end"
+      class="w-[729px] bottom-0 right-0 m-auto fixed self-end"
     />
   </div>
 </template>
