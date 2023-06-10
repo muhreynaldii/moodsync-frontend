@@ -15,22 +15,22 @@
       renderChart() {
         const ctx = this.$refs.chartCanvas.getContext('2d');
         new Chart(ctx, {
-          type: 'doughnut',
+          type: 'pie',
           data: {
-            labels: ['Label 1', 'Label 2', 'Label 3'],
+            labels: ['Hadir', 'Tidak Hadir'],
             datasets: [
               {
-                data: [30, 40, 20],
-                backgroundColor: ['red', 'blue', 'green'],
+                data: [3, 1],
+                backgroundColor: ['#76A9FA', '#F98080'],
                 borderWidth: 1,
               },
             ],
           },
           options: {
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: true,
             legend: {
-              display: false // Menghapus legend pada Bar Chart
+              display: true // opsi legend pada Chart
             },
           },
         });

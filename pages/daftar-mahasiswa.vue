@@ -39,15 +39,6 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/gamvic" class="daftar-mahasiswa-navlink4">
-          <div class="daftar-mahasiswa-gamvic">
-            <img
-              alt="bell4162"
-              src="/assets/presentationchartbar5562-1s4d.svg"
-              class="daftar-mahasiswa-gamvic1"
-            />
-          </div>
-        </nuxt-link>
       </div>
     </aside>
     <div class="daftar-mahasiswa-daftar-mahasiswa">

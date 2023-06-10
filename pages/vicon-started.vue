@@ -39,15 +39,6 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/gamvic" class="vicon-started-navlink4">
-          <div class="vicon-started-gamvic">
-            <img
-              alt="bell4162"
-              src="/assets/presentationchartbar5562-1s4d.svg"
-              class="vicon-started-gamvic1"
-            />
-          </div>
-        </nuxt-link>
       </div>
     </aside>
     <div class="vicon-started-vicon">

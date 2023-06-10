@@ -39,15 +39,6 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/gamvic" class="vicon-navlink4">
-          <div class="vicon-gamvic">
-            <img
-              alt="bell4162"
-              src="/assets/presentationchartbar5562-1s4d.svg"
-              class="vicon-gamvic1"
-            />
-          </div>
-        </nuxt-link>
       </div>
     </aside>
     <div class="vicon-container1">
@@ -217,23 +208,18 @@
         </div>
       </div>
       <div>
-        <p class="w-full text-center text-[18px] font-medium text-[#1C64F2]">
+        <p class="text-center w-full font-medium text-[#1C64F2] text-[18px]">
           Overall Class Emotion
         </p>
         <div
-          class="flex h-[128px] w-[445px] flex-[0_0_auto] flex-row items-center justify-between px-[18px]"
-        >
+          class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-between px-[18px]">
           <EllipseGraph :progress="40" emotion="Sad" />
           <EllipseGraph :progress="30" emotion="Happy" />
           <EllipseGraph :progress="20" emotion="Angry" />
         </div>
-      </div>
-      <div>
-        <iframe
-          class="vicon-gamevic"
-          src="https://gamvic-client.vercel.app/"
-          title="Gamvic"
-        ></iframe>
+        <div class="chat-component">
+          <ChatBox class="chat-messages" />
+        </div>
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
@@ -511,6 +497,22 @@ export default {
 </script>
 
 <style scoped>
+.chat-component {
+  width: 445px;
+  height: 601px;
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  border: #595959;
+  border-radius: 8px;
+}
+
+.chat-messages {
+  overflow-y: scroll;
+  border: #595959;
+  border-radius: 8px;
+  /* Ganti dengan properti CSS lain sesuai kebutuhan */
+}
 .vicon-container {
   width: 100%;
   display: flex;
@@ -629,16 +631,16 @@ export default {
   display: contents;
 }
 .vicon-gamvic {
-  width: 50px;
-  height: 50px;
-  display: flex;
+  width: 100%;
+  height: 100%;
+  display: block;
   position: relative;
   box-shadow: 5px 5px 10px 0px #d4d4d4;
   align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: var(--dl-radius-radius-round);
+  border-radius: 8px;
   text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
+  justify-content: space-between;
 }
 .vicon-gamvic1 {
   top: 10px;
