@@ -1,32 +1,40 @@
 <template>
-  <div class="about-container">
+  <div class="flex min-h-screen w-full flex-col items-center overflow-auto">
     <bg-bawah rootClassName="bg-bawah-root-class-name9"></bg-bawah>
     <bg-atas rootClassName="bg-atas-root-class-name2"></bg-atas>
-    <div class="about-main-content">
+    <div
+      class="absolute left-0 right-0 top-0 m-auto flex h-[1002px] w-[1600px] flex-col items-center self-center"
+    >
       <img
         alt="pastedImage"
         src="/assets/pastedimage-x2a8.svg"
-        class="about-emotion"
+        class="absolute right-0 top-0 h-[1002px] w-[608px]"
       />
-      <div class="about-container1">
+      <div
+        class="absolute left-0 top-[150px] flex h-[387px] w-[787px] flex-col items-start justify-start"
+      >
         <img
           alt="pastedImage"
           src="/assets/pastedimage-sw6m.svg"
-          class="about-texture"
+          class="absolute left-0 top-0 h-[110px] w-[158px]"
         />
-        <div class="about-headline">
-          <span class="about-text HeadlineType65">About Us</span>
-          <span class="about-text1 HeadlineType23">
-            <span class="HeadlineType23">
+        <div
+          class="absolute left-[46px] top-[40px] flex h-auto w-[741px] flex-col items-start gap-[26px]"
+        >
+          <h1 class="h-auto w-[741px] text-[65px] leading-[120%] text-black">
+            About Us
+          </h1>
+          <span
+            class="h-auto w-[741px] text-justify text-[23px] leading-[120%] text-gray-600"
+          >
+            <p class="mb-[46px] text-[23px]">
               Aplikasi Video Conference dengan Emotion Recognition adalah sebuah
               platform komunikasi jarak jauh yang dirancang khusus untuk
               meningkatkan pengalaman pengguna dalam konferensi video. Salah
               satu fitur utama dari aplikasi ini adalah kemampuannya untuk
               mendeteksi emosi pengguna selama panggilan video.
-            </span>
-            <br class="HeadlineType23" />
-            <br class="HeadlineType23" />
-            <span class="HeadlineType23">
+            </p>
+            <span class="text-[23px]">
               Dengan menggunakan teknologi pengenalan emosi yang canggih,
               aplikasi ini dapat menganalisis ekspresi wajah pengguna dalam
               waktu nyata. Algoritma yang terintegrasi dengan aplikasi akan
@@ -36,11 +44,17 @@
               mendalam tentang respons emosional satu sama lain, bahkan dalam
               komunikasi nonverbal
             </span>
-            <span class="HeadlineType23">.</span>
+            <span class="text-[23px]">.</span>
           </span>
-          <div class="about-frame6">
-            <nuxt-link to="/login" id="GetStarted" class="about-button button">
-              <span class="about-text7">Lets Try!</span>
+          <div class="flex items-start gap-10">
+            <nuxt-link
+              to="/login"
+              id="GetStarted"
+              class="flex w-[203px] shrink-0 items-center justify-center gap-2 rounded-lg bg-[#1A56DB] px-[24px] py-[14px]"
+            >
+              <span class="h-auto font-medium leading-[150%] text-white"
+                >Lets Try!</span
+              >
             </nuxt-link>
           </div>
         </div>
@@ -54,154 +68,15 @@
 export default {
   name: "About",
   head: {
-    title: "About - exported project",
+    title: "About | Moodsync",
     meta: [
       {
         property: "og:title",
-        content: "About - exported project",
+        content: "About | Moodsync",
       },
     ],
   },
 };
 </script>
 
-<style scoped>
-.about-container {
-  width: 100%;
-  display: flex;
-  overflow: auto;
-  min-height: 100vh;
-  align-items: center;
-  flex-direction: column;
-}
-.about-main-content {
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  width: 1600px;
-  height: 1002px;
-  margin: auto;
-  display: flex;
-  position: absolute;
-  align-self: center;
-  align-items: center;
-  flex-direction: column;
-}
-.about-emotion {
-  top: 0px;
-  right: 0px;
-  width: 608px;
-  height: 1002px;
-  position: absolute;
-}
-.about-container1 {
-  top: 150px;
-  left: 0px;
-  width: 787px;
-  height: 387.5625px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.about-texture {
-  top: 0px;
-  left: 0px;
-  width: 158px;
-  height: 110px;
-  position: absolute;
-}
-.about-headline {
-  gap: 26px;
-  top: 40px;
-  left: 46px;
-  width: 741px;
-  height: auto;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.about-text {
-  color: var(--dl-color-default-black);
-  width: 741px;
-  height: auto;
-  text-align: left;
-  line-height: 120.00000476837158%;
-  text-decoration: none;
-}
-.about-text1 {
-  color: var(--dl-color-gray-600);
-  width: 741px;
-  height: auto;
-  font-size: 23px;
-  font-style: normal;
-  text-align: justify;
-  font-family: Poppins;
-  font-weight: 400px;
-  line-height: 120.00000476837158%;
-}
-.about-frame6 {
-  gap: 40px;
-  display: flex;
-  align-items: flex-start;
-}
-.about-button {
-  gap: 8px;
-  width: 203px;
-  display: flex;
-  padding: 14px 24px;
-  overflow: hidden;
-  align-items: center;
-  flex-shrink: 0;
-  border-width: 0px;
-  border-radius: 8px;
-  justify-content: center;
-  text-decoration: none;
-  background-color: var(--dl-color-primary-7002);
-}
-.about-text7 {
-  color: var(--dl-color-default-white);
-  height: auto;
-  font-size: 16px;
-  font-style: Medium;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 500;
-  line-height: 150%;
-  font-stretch: normal;
-  text-decoration: none;
-}
-@media (max-width: 1600px) {
-  .about-emotion {
-    top: 0px;
-    right: 0px;
-  }
-  .about-container1 {
-    top: 172px;
-    left: 0px;
-    height: 681px;
-  }
-  .about-frame6 {
-    align-self: flex-start;
-  }
-  .about-text7 {
-    color: var(--dl-color-default-white);
-    font-size: 16px;
-    font-family: Poppins;
-    font-weight: 500;
-    line-height: 150%;
-    text-decoration: none;
-  }
-}
-@media (max-width: 1200px) {
-  .about-emotion {
-    display: none;
-  }
-  .about-container1 {
-    left: 192px;
-    margin: auto;
-  }
-}
-</style>
+<style scoped></style>
