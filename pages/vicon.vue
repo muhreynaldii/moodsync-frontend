@@ -205,13 +205,18 @@
         </div>
       </div>
       <div>
-        <p class="text-center w-full font-medium text-[#1C64F2] text-[18px]">Overall Class Emotion</p>
-        <div class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-between px-[18px]">
-          <EllipseGraph :progress="40" emotion="Sad"/>
-          <EllipseGraph :progress="30" emotion="Happy"/>
-          <EllipseGraph :progress="20" emotion="Angry"/>
+        <p class="text-center w-full font-medium text-[#1C64F2] text-[18px]">
+          Overall Class Emotion
+        </p>
+        <div
+          class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-between px-[18px]">
+          <EllipseGraph :progress="40" emotion="Sad" />
+          <EllipseGraph :progress="30" emotion="Happy" />
+          <EllipseGraph :progress="20" emotion="Angry" />
         </div>
-        <ChatBox class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-between px-[18px]"/>
+        <div class="chat-component">
+          <ChatBox class="chat-messages" />
+        </div>
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
@@ -324,31 +329,36 @@
 </template>
 
 <script>
-
-
 export default {
-  name: 'Vicon',
+  name: "Vicon",
   head: {
-    title: 'Vicon - exported project',
+    title: "Vicon - exported project",
     meta: [
       {
-        property: 'og:title',
-        content: 'Vicon - exported project',
+        property: "og:title",
+        content: "Vicon - exported project",
       },
     ],
   },
-}
+};
 </script>
 
 <style scoped>
-.video-conference {
-  display: flex;
-  height: 100vh;
+.chat-component {
+  width: 445px;
+  height: 601px;
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  border: #595959;
+  border-radius: 8px;
 }
 
-.video-container {
-  flex-grow: 1;
-  /* CSS untuk tampilan video conference */
+.chat-messages {
+  overflow-y: scroll;
+  border: #595959;
+  border-radius: 8px;
+  /* Ganti dengan properti CSS lain sesuai kebutuhan */
 }
 .vicon-container {
   width: 100%;
@@ -548,7 +558,8 @@ export default {
   padding: 22.51118278503418px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 11.25559139251709px 22.51118278503418px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 11.25559139251709px 22.51118278503418px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 4.502236366271973px;
@@ -620,7 +631,8 @@ export default {
   padding: 8.948545455932617px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 1.7897090911865234px;
@@ -717,7 +729,8 @@ export default {
   padding: 8.948545455932617px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 1.7897090911865234px;
@@ -814,7 +827,8 @@ export default {
   padding: 8.948545455932617px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 1.7897090911865234px;
@@ -911,7 +925,8 @@ export default {
   padding: 8.948545455932617px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 4.474272727966309px 8.948545455932617px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 1.7897090911865234px;
@@ -1303,7 +1318,7 @@ export default {
   min-width: 100%;
   transition: 0.3s;
   align-items: stretch;
-  border-color: #D9D9D9;
+  border-color: #d9d9d9;
   border-width: 1px;
   border-radius: var(--dl-radius-radius-radius4);
   flex-direction: column;
@@ -1390,7 +1405,7 @@ export default {
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
-@media(max-width: 1600px) {
+@media (max-width: 1600px) {
   .vicon-container1 {
     width: 1354px;
   }
@@ -1418,12 +1433,12 @@ export default {
     position: static;
   }
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .vicon-search {
     width: var(--dl-size-size-xlarge);
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .vicon-navbar-interactive {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
@@ -1435,7 +1450,7 @@ export default {
     display: flex;
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .vicon-navbar-interactive {
     padding: var(--dl-space-space-unit);
   }
