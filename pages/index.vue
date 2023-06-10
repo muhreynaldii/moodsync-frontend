@@ -57,7 +57,7 @@ export default {
     };
   },
   head: {
-    title: "exported project",
+    title: "Moodsync",
   },
 };
 </script>

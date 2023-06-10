@@ -165,22 +165,22 @@
   --dl-space-space-oneandhalfunits: 24px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0.38vw;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   /* border-radius: 0.75vw; */
   border-radius: 6px;
   box-shadow: inset 0 0 0.5px rgba(0, 0, 0, 0);
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   /* border-radius: 0.25vw; */
   border-radius: 6px;
   background-color: rgba(28, 100, 242, 1);
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background-color: rgb(12, 79, 209);
 }
 
@@ -226,7 +226,6 @@
 .BodyType13 {
   font-size: 13px;
   font-style: normal;
-  font-family: Poppins;
   font-weight: 400px;
 }
 .textSmfontMedium {
@@ -239,7 +238,6 @@
 .HeadlineType46 {
   font-size: 46px;
   font-style: normal;
-  font-family: Poppins;
   font-weight: 400px;
 }
 .leadingNonetextSmfontNormal {
@@ -248,12 +246,6 @@
   font-family: Inter;
   font-weight: 400px;
   font-stretch: normal;
-}
-.HeadlineType23 {
-  font-size: 23px;
-  font-style: normal;
-  font-family: Poppins;
-  font-weight: 400px;
 }
 .Content {
   font-size: 16px;
@@ -266,13 +258,11 @@
 .BodyType16 {
   font-size: 16px;
   font-style: normal;
-  font-family: Poppins;
   font-weight: 400px;
 }
 .HeadlineType33 {
   font-size: 33px;
   font-style: normal;
-  font-family: Poppins;
   font-weight: 400px;
 }
 .leadingTighttextSmfontNormal {
@@ -292,31 +282,21 @@
 .ButtonType13 {
   font-size: 13px;
   font-style: normal;
-  font-family: Poppins;
   font-weight: 500px;
 }
 .SubtitleType13 {
   font-size: 13px;
   font-style: normal;
-  font-family: Poppins;
   font-weight: 400px;
 }
 .HeadlineType92 {
   font-size: 92px;
   font-style: normal;
-  font-family: Poppins;
   font-weight: 400px;
 }
 .SubtitleType16 {
   font-size: 16px;
   font-style: normal;
-  font-family: Poppins;
-  font-weight: 400px;
-}
-.HeadlineType65 {
-  font-size: 65px;
-  font-style: normal;
-  font-family: Poppins;
   font-weight: 400px;
 }
 .textSmfontNormal {
@@ -329,7 +309,6 @@
 .HeadlineType16 {
   font-size: 16px;
   font-style: normal;
-  font-family: Poppins;
   font-weight: 400px;
 }
 .Heading {
@@ -343,6 +322,5 @@
 .CaptionType13 {
   font-size: 13px;
   font-style: normal;
-  font-family: Poppins;
   font-weight: 400px;
 }

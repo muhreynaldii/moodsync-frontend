@@ -2,64 +2,15 @@
   <div class="vicon-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name6"></bg-bawah>
     <aside class="vicon-side-bar-full">
-      <div class="vicon-side-bar">
-        <nuxt-link to="/dashboard-dosen" class="vicon-navlink">
-          <div class="vicon-dashboard">
-            <img
-              alt="chartpie4162"
-              src="/assets/chartpie4462-g92g.svg"
-              class="vicon-chartpie"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/vicon-started" class="vicon-navlink1">
-          <div class="vicon-conference">
-            <img
-              alt="cash4162"
-              src="/assets/cash4462-gzxy.svg"
-              class="vicon-cash"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="vicon-navlink2">
-          <div class="vicon-class">
-            <img
-              alt="usergroup4162"
-              src="/assets/usergroup4162-5fld.svg"
-              class="vicon-usergroup"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/notification" class="vicon-navlink3">
-          <div class="vicon-notif">
-            <img
-              alt="bell4162"
-              src="/assets/bell4162-7mh8.svg"
-              class="vicon-bell"
-            />
-          </div>
-        </nuxt-link>
-      </div>
+      <sidebar />
     </aside>
     <div class="vicon-container1">
       <div class="vicon-vicon-content">
         <div class="vicon-vicon">
           <div class="vicon-lecturer">
-            <!-- <img
-              alt="Lecturer4542"
-              src="/assets/lecturer4542-9s9o-1500w.png"
-              class="vicon-lecturer1"
-            /> -->
             <div id="main-video" class="col-md-6">
               <user-video :stream-manager="mainStreamManager" />
             </div>
-            <!-- <div class="vicon-profile-card">
-              <div class="vicon-persinal-info">
-                <div class="vicon-name">
-                  <span class="vicon-text">Dr. Dre</span>
-                </div>
-              </div>
-            </div> -->
           </div>
           <div class="vicon-audience">
             <div class="vicon-group27">

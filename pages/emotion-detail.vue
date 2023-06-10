@@ -1,46 +1,7 @@
 <template>
   <div class="emotion-detail-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name3"></bg-bawah>
-    <aside class="emotion-detail-side-bar-full">
-      <div class="emotion-detail-side-bar">
-        <nuxt-link to="/dashboard-dosen" class="emotion-detail-navlink">
-          <div class="emotion-detail-dashboard">
-            <img
-              alt="chartpie4162"
-              src="/assets/chartpie4462-g92g.svg"
-              class="emotion-detail-chartpie"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/vicon-started" class="emotion-detail-navlink1">
-          <div class="emotion-detail-conference">
-            <img
-              alt="cash4162"
-              src="/assets/cash4162-e06k.svg"
-              class="emotion-detail-cash"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="emotion-detail-navlink2">
-          <div class="emotion-detail-class">
-            <img
-              alt="usergroup4162"
-              src="/assets/usergroup4502-ntd.svg"
-              class="emotion-detail-usergroup"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/notification" class="emotion-detail-navlink3">
-          <div class="emotion-detail-notif">
-            <img
-              alt="bell4162"
-              src="/assets/bell4162-7mh8.svg"
-              class="emotion-detail-bell"
-            />
-          </div>
-        </nuxt-link>
-      </div>
-    </aside>
+    <sidebar />
     <div class="emotion-detail-detail-profile">
       <span class="emotion-detail-text"><span>Neil</span></span>
       <div class="emotion-detail-profil-content">
@@ -63,15 +24,17 @@
         </div>
         <div class="emotion-detail-isi-content">
           <div class="emotion-detail-overview-emotion">
-            <span class="emotion-detail-text06"><span>Overview Emotion</span></span>
+            <span class="emotion-detail-text06"
+              ><span>Overview Emotion</span></span
+            >
             <div class="emotion-detail-chart">
-              <RadarChart style="width: 100%; height: 100%;"></RadarChart>
+              <RadarChart style="width: 100%; height: 100%"></RadarChart>
             </div>
           </div>
           <div class="emotion-detail-emosi-baik-dan-buruk">
             <span class="emotion-detail-text08"><span>Kehadiran</span></span>
             <div class="emotion-detail-chart1">
-              <PieChart style="width: 100%; height: 100%;"></PieChart>
+              <PieChart style="width: 100%; height: 100%"></PieChart>
             </div>
           </div>
         </div>
