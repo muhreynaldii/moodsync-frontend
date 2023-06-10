@@ -172,10 +172,10 @@
           Overall Class Emotion
         </p>
         <div
-          class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-between px-[18px]">
-          <EllipseGraph :progress="40" emotion="Sad" />
-          <EllipseGraph :progress="30" emotion="Happy" />
-          <EllipseGraph :progress="20" emotion="Angry" />
+        class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-center ">
+          <EllipseGraph class="p-10" :progress="40" emotion="Sad" />
+          <EllipseGraph class="p-10" :progress="30" emotion="Happy" />
+          <EllipseGraph class="p-10" :progress="20" emotion="Angry" />
         </div>
         <div class="chat-component">
           <ChatBox class="chat-messages" />
