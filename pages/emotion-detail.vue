@@ -119,7 +119,9 @@
                   src="/assets/searchi416-d8ss.svg"
                   class="emotion-detail-search1"
                 />
-                <span class="emotion-detail-text10 leadingTighttextSmfontNormal">
+                <span
+                  class="emotion-detail-text10 leadingTighttextSmfontNormal"
+                >
                   <span>Search</span>
                 </span>
               </div>
@@ -155,7 +157,10 @@
             />
           </div>
           <ul data-thq="thq-dropdown-list" class="emotion-detail-dropdown-list">
-            <li data-thq="thq-dropdown" class="emotion-detail-dropdown list-item">
+            <li
+              data-thq="thq-dropdown"
+              class="emotion-detail-dropdown list-item"
+            >
               <div
                 data-thq="thq-dropdown-toggle"
                 class="emotion-detail-dropdown-toggle1"
@@ -201,23 +206,18 @@
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
-
 export default {
-  name: 'EmotionDetail',
-  components: {
-    BgBawah,
-  },
+  name: "EmotionDetail",
   head: {
-    title: 'Emotion-Detail - exported project',
+    title: "Emotion-Detail - exported project",
     meta: [
       {
-        property: 'og:title',
-        content: 'Emotion-Detail - exported project',
+        property: "og:title",
+        content: "Emotion-Detail - exported project",
       },
     ],
   },
-}
+};
 </script>
 
 <style scoped>
@@ -688,7 +688,7 @@ export default {
   min-width: 100%;
   transition: 0.3s;
   align-items: stretch;
-  border-color: #D9D9D9;
+  border-color: #d9d9d9;
   border-width: 1px;
   border-radius: var(--dl-radius-radius-radius4);
   flex-direction: column;
@@ -775,7 +775,7 @@ export default {
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
-@media(max-width: 1600px) {
+@media (max-width: 1600px) {
   .emotion-detail-container1 {
     width: 137px;
   }
@@ -785,12 +785,12 @@ export default {
     position: static;
   }
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .emotion-detail-search {
     width: 787px;
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .emotion-detail-navbar-interactive {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
@@ -802,7 +802,7 @@ export default {
     display: flex;
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .emotion-detail-navbar-interactive {
     padding: var(--dl-space-space-unit);
   }

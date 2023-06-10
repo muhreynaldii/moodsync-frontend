@@ -1,39 +1,31 @@
 <template>
-  <div class="bg-bawah-container" v-bind:class="rootClassName">
-    <img :alt="Bg_Bawah_alt" :src="Bg_Bawah_src" class="bg-bawah-bg-bawah" />
+  <div class="relative flex" v-bind:class="rootClassName">
+    <img
+      :alt="Bg_Bawah_alt"
+      :src="Bg_Bawah_src"
+      class="relative w-[729px] self-end"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BgBawah',
+  name: "BgBawah",
   props: {
     Bg_Bawah_alt: {
       type: String,
-      default: 'pastedImage',
+      default: "pastedImage",
     },
     rootClassName: String,
     Bg_Bawah_src: {
       type: String,
-      default: '/assets/pastedimage-jqvi.svg',
+      default: "/assets/pastedimage-jqvi.svg",
     },
   },
-}
+};
 </script>
 
 <style scoped>
-.bg-bawah-container {
-  display: flex;
-  position: relative;
-}
-.bg-bawah-bg-bawah {
-  width: 729px;
-  bottom: 0px;
-  right: 0px;
-  margin: auto;
-  position: fixed;
-  align-self: flex-end;
-}
 .bg-bawah-root-class-name {
   right: 0px;
   bottom: 0px;
