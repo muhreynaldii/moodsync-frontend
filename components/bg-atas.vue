@@ -1,6 +1,10 @@
 <template>
-  <div class="bg-atas-container" v-bind:class="rootClassName">
-    <img :alt="Bg_Atas_alt" :src="Bg_Atas_src" class="bg-atas-bg-atas" />
+  <div class="relative flex" v-bind:class="rootClassName">
+    <img
+      :alt="Bg_Atas_alt"
+      :src="Bg_Atas_src"
+      class="relative h-[467px] w-[842px]"
+    />
   </div>
 </template>
 
@@ -22,15 +26,6 @@ export default {
 </script>
 
 <style scoped>
-.bg-atas-container {
-  display: flex;
-  position: relative;
-}
-.bg-atas-bg-atas {
-  width: 842px;
-  height: 467px;
-  position: relative;
-}
 .bg-atas-root-class-name {
   top: 0px;
   left: 0px;

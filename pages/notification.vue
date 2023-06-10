@@ -62,7 +62,9 @@
                     <span class="notification-text02">
                       <span>Dasar Pemrograman Pertemuan 2</span>
                     </span>
-                    <span class="notification-text04"><span>Sekarang</span></span>
+                    <span class="notification-text04"
+                      ><span>Sekarang</span></span
+                    >
                   </div>
                   <span class="notification-text06">
                     <span>Jessica menunjukan emosi kebingungan</span>
@@ -135,7 +137,10 @@
         </nav>
       </div>
       <div class="notification-profile">
-        <div data-thq="thq-dropdown" class="notification-thq-dropdown list-item">
+        <div
+          data-thq="thq-dropdown"
+          class="notification-thq-dropdown list-item"
+        >
           <div
             data-thq="thq-dropdown-toggle"
             class="notification-dropdown-toggle"
@@ -165,7 +170,10 @@
                 <span class="notification-profile1 BodyType16">Profile</span>
               </div>
             </li>
-            <li data-thq="thq-dropdown" class="notification-dropdown1 list-item">
+            <li
+              data-thq="thq-dropdown"
+              class="notification-dropdown1 list-item"
+            >
               <nuxt-link to="/login">
                 <div
                   data-thq="thq-dropdown-toggle"
@@ -195,23 +203,18 @@
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
-
 export default {
-  name: 'Notification',
-  components: {
-    BgBawah,
-  },
+  name: "Notification",
   head: {
-    title: 'Notification - exported project',
+    title: "Notification - exported project",
     meta: [
       {
-        property: 'og:title',
-        content: 'Notification - exported project',
+        property: "og:title",
+        content: "Notification - exported project",
       },
     ],
   },
-}
+};
 </script>
 
 <style scoped>
@@ -674,7 +677,7 @@ export default {
   min-width: 100%;
   transition: 0.3s;
   align-items: stretch;
-  border-color: #D9D9D9;
+  border-color: #d9d9d9;
   border-width: 1px;
   border-radius: var(--dl-radius-radius-radius4);
   flex-direction: column;
@@ -761,19 +764,19 @@ export default {
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
-@media(max-width: 1600px) {
+@media (max-width: 1600px) {
   .notification-profile {
     top: 29px;
     right: 92px;
     position: static;
   }
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .notification-search {
     width: 787px;
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .notification-navbar-interactive {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
@@ -785,7 +788,7 @@ export default {
     display: flex;
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .notification-navbar-interactive {
     padding: var(--dl-space-space-unit);
   }

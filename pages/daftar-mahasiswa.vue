@@ -60,7 +60,9 @@
                 <div class="daftar-mahasiswa-user">
                   <div class="daftar-mahasiswa-avatar"></div>
                   <div class="daftar-mahasiswa-name">
-                    <span class="daftar-mahasiswa-text02"><span>Neil</span></span>
+                    <span class="daftar-mahasiswa-text02"
+                      ><span>Neil</span></span
+                    >
                     <span class="daftar-mahasiswa-text04">
                       <span>email@example.com</span>
                     </span>
@@ -77,7 +79,9 @@
               <div class="daftar-mahasiswa-user1">
                 <div class="daftar-mahasiswa-avatar1"></div>
                 <div class="daftar-mahasiswa-name1">
-                  <span class="daftar-mahasiswa-text07"><span>Ramon</span></span>
+                  <span class="daftar-mahasiswa-text07"
+                    ><span>Ramon</span></span
+                  >
                   <span class="daftar-mahasiswa-text09">
                     <span>email@example.com</span>
                   </span>
@@ -105,7 +109,9 @@
               <div class="daftar-mahasiswa-user3">
                 <div class="daftar-mahasiswa-avatar3"></div>
                 <div class="daftar-mahasiswa-name3">
-                  <span class="daftar-mahasiswa-text15"><span>Dobleh</span></span>
+                  <span class="daftar-mahasiswa-text15"
+                    ><span>Dobleh</span></span
+                  >
                   <span class="daftar-mahasiswa-text17">
                     <span>email@example.com</span>
                   </span>
@@ -118,7 +124,9 @@
               <div class="daftar-mahasiswa-user4">
                 <div class="daftar-mahasiswa-avatar4"></div>
                 <div class="daftar-mahasiswa-name4">
-                  <span class="daftar-mahasiswa-text19"><span>Jonson</span></span>
+                  <span class="daftar-mahasiswa-text19"
+                    ><span>Jonson</span></span
+                  >
                   <span class="daftar-mahasiswa-text21">
                     <span>email@example.com</span>
                   </span>
@@ -131,7 +139,9 @@
               <div class="daftar-mahasiswa-user5">
                 <div class="daftar-mahasiswa-avatar5"></div>
                 <div class="daftar-mahasiswa-name5">
-                  <span class="daftar-mahasiswa-text23"><span>Xavier</span></span>
+                  <span class="daftar-mahasiswa-text23"
+                    ><span>Xavier</span></span
+                  >
                   <span class="daftar-mahasiswa-text25">
                     <span>email@example.com</span>
                   </span>
@@ -144,7 +154,9 @@
               <div class="daftar-mahasiswa-user6">
                 <div class="daftar-mahasiswa-avatar6"></div>
                 <div class="daftar-mahasiswa-name6">
-                  <span class="daftar-mahasiswa-text27"><span>Estes</span></span>
+                  <span class="daftar-mahasiswa-text27"
+                    ><span>Estes</span></span
+                  >
                   <span class="daftar-mahasiswa-text29">
                     <span>email@example.com</span>
                   </span>
@@ -157,7 +169,9 @@
               <div class="daftar-mahasiswa-user7">
                 <div class="daftar-mahasiswa-avatar7"></div>
                 <div class="daftar-mahasiswa-name7">
-                  <span class="daftar-mahasiswa-text31"><span>Komang</span></span>
+                  <span class="daftar-mahasiswa-text31"
+                    ><span>Komang</span></span
+                  >
                   <span class="daftar-mahasiswa-text33">
                     <span>email@example.com</span>
                   </span>
@@ -231,7 +245,10 @@
               class="daftar-mahasiswa-chevrondown"
             />
           </div>
-          <ul data-thq="thq-dropdown-list" class="daftar-mahasiswa-dropdown-list">
+          <ul
+            data-thq="thq-dropdown-list"
+            class="daftar-mahasiswa-dropdown-list"
+          >
             <li
               data-thq="thq-dropdown"
               class="daftar-mahasiswa-dropdown list-item"
@@ -245,7 +262,9 @@
                   src="/assets/user5862-kh17n.svg"
                   class="daftar-mahasiswa-user8"
                 />
-                <span class="daftar-mahasiswa-profile1 BodyType16">Profile</span>
+                <span class="daftar-mahasiswa-profile1 BodyType16"
+                  >Profile</span
+                >
               </div>
             </li>
             <li
@@ -262,7 +281,9 @@
                     src="/assets/logout5862-woq.svg"
                     class="daftar-mahasiswa-logout"
                   />
-                  <span class="daftar-mahasiswa-logout1 BodyType16">Logout</span>
+                  <span class="daftar-mahasiswa-logout1 BodyType16"
+                    >Logout</span
+                  >
                 </div>
               </nuxt-link>
             </li>
@@ -281,23 +302,18 @@
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
-
 export default {
-  name: 'DaftarMahasiswa',
-  components: {
-    BgBawah,
-  },
+  name: "DaftarMahasiswa",
   head: {
-    title: 'Daftar-Mahasiswa - exported project',
+    title: "Daftar-Mahasiswa - exported project",
     meta: [
       {
-        property: 'og:title',
-        content: 'Daftar-Mahasiswa - exported project',
+        property: "og:title",
+        content: "Daftar-Mahasiswa - exported project",
       },
     ],
   },
-}
+};
 </script>
 
 <style scoped>
@@ -1175,7 +1191,7 @@ export default {
   min-width: 100%;
   transition: 0.3s;
   align-items: stretch;
-  border-color: #D9D9D9;
+  border-color: #d9d9d9;
   border-width: 1px;
   border-radius: var(--dl-radius-radius-radius4);
   flex-direction: column;
@@ -1262,19 +1278,19 @@ export default {
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
-@media(max-width: 1600px) {
+@media (max-width: 1600px) {
   .daftar-mahasiswa-profile {
     top: 29px;
     right: 92px;
     position: static;
   }
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .daftar-mahasiswa-search {
     width: 787px;
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .daftar-mahasiswa-navbar-interactive {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
@@ -1286,7 +1302,7 @@ export default {
     display: flex;
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .daftar-mahasiswa-navbar-interactive {
     padding: var(--dl-space-space-unit);
   }

@@ -109,7 +109,9 @@
             </div>
           </div>
           <nuxt-link to="/vicon" class="vicon-started-button">
-            <span class="vicon-started-text06"><span>Join Conference</span></span>
+            <span class="vicon-started-text06"
+              ><span>Join Conference</span></span
+            >
           </nuxt-link>
         </div>
       </div>
@@ -156,7 +158,10 @@
         </nav>
       </div>
       <nav class="vicon-started-profile">
-        <div data-thq="thq-dropdown" class="vicon-started-thq-dropdown list-item">
+        <div
+          data-thq="thq-dropdown"
+          class="vicon-started-thq-dropdown list-item"
+        >
           <div
             data-thq="thq-dropdown-toggle"
             class="vicon-started-dropdown-toggle"
@@ -173,7 +178,10 @@
             />
           </div>
           <ul data-thq="thq-dropdown-list" class="vicon-started-dropdown-list">
-            <li data-thq="thq-dropdown" class="vicon-started-dropdown list-item">
+            <li
+              data-thq="thq-dropdown"
+              class="vicon-started-dropdown list-item"
+            >
               <div
                 data-thq="thq-dropdown-toggle"
                 class="vicon-started-dropdown-toggle1"
@@ -186,7 +194,10 @@
                 <span class="vicon-started-profile1 BodyType16">Profile</span>
               </div>
             </li>
-            <li data-thq="thq-dropdown" class="vicon-started-dropdown1 list-item">
+            <li
+              data-thq="thq-dropdown"
+              class="vicon-started-dropdown1 list-item"
+            >
               <nuxt-link to="/login">
                 <div
                   data-thq="thq-dropdown-toggle"
@@ -216,23 +227,18 @@
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
-
 export default {
-  name: 'ViconStarted',
-  components: {
-    BgBawah,
-  },
+  name: "ViconStarted",
   head: {
-    title: 'Vicon-Started - exported project',
+    title: "Vicon-Started - exported project",
     meta: [
       {
-        property: 'og:title',
-        content: 'Vicon-Started - exported project',
+        property: "og:title",
+        content: "Vicon-Started - exported project",
       },
     ],
   },
-}
+};
 </script>
 
 <style scoped>
@@ -446,7 +452,8 @@ export default {
   padding: 22.51118278503418px;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 11.25559139251709px 22.51118278503418px 0px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0px 11.25559139251709px 22.51118278503418px 0px
+    rgba(0, 0, 0, 0.25);
   align-items: center;
   flex-shrink: 0;
   border-radius: 4.502236366271973px;
@@ -728,7 +735,7 @@ export default {
   min-width: 100%;
   transition: 0.3s;
   align-items: stretch;
-  border-color: #D9D9D9;
+  border-color: #d9d9d9;
   border-width: 1px;
   border-radius: var(--dl-radius-radius-radius4);
   flex-direction: column;
@@ -815,19 +822,19 @@ export default {
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
-@media(max-width: 1600px) {
+@media (max-width: 1600px) {
   .vicon-started-profile {
     top: 29px;
     right: 92px;
     position: static;
   }
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .vicon-started-search {
     width: 787px;
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .vicon-started-navbar-interactive {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
@@ -839,7 +846,7 @@ export default {
     display: flex;
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .vicon-started-navbar-interactive {
     padding: var(--dl-space-space-unit);
   }

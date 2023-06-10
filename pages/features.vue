@@ -63,39 +63,34 @@
             </div>
           </div>
           <div class="features-frame6">
-            <nuxt-link to="/login" id="GetStarted" class="features-button button">
+            <nuxt-link
+              to="/login"
+              id="GetStarted"
+              class="features-button button"
+            >
               <span class="features-text13">Lets Try!</span>
             </nuxt-link>
           </div>
         </div>
       </div>
     </div>
-    <app-nav rootClassName="nav-root-class-name4"></app-nav>
+    <app-nav></app-nav>
   </div>
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
-import BgAtas from '../components/bg-atas'
-import AppNav from '../components/nav'
-
 export default {
-  name: 'Features',
-  components: {
-    BgBawah,
-    BgAtas,
-    AppNav,
-  },
+  name: "Features",
   head: {
-    title: 'Features - exported project',
+    title: "Features - exported project",
     meta: [
       {
-        property: 'og:title',
-        content: 'Features - exported project',
+        property: "og:title",
+        content: "Features - exported project",
       },
     ],
   },
-}
+};
 </script>
 
 <style scoped>
@@ -285,7 +280,7 @@ export default {
   font-stretch: normal;
   text-decoration: none;
 }
-@media(max-width: 1600px) {
+@media (max-width: 1600px) {
   .features-emotion {
     top: 0px;
     right: 69px;
@@ -376,7 +371,7 @@ export default {
     text-decoration: none;
   }
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .features-emotion {
     display: none;
   }
