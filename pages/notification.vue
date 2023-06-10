@@ -39,15 +39,6 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/gamvic" class="notification-navlink4">
-          <div class="notification-gamvic">
-            <img
-              alt="bell4162"
-              src="/assets/presentationchartbar5562-1s4d.svg"
-              class="notification-gamvic1"
-            />
-          </div>
-        </nuxt-link>
       </div>
     </aside>
     <div class="notification-nofication">

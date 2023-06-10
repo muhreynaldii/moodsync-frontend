@@ -39,15 +39,6 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/gamvic" class="vicon-navlink4">
-          <div class="vicon-gamvic">
-            <img
-              alt="bell4162"
-              src="/assets/presentationchartbar5562-1s4d.svg"
-              class="vicon-gamvic1"
-            />
-          </div>
-        </nuxt-link>
       </div>
     </aside>
     <div class="vicon-container1">
@@ -220,9 +211,7 @@
           <EllipseGraph :progress="30" emotion="Happy"/>
           <EllipseGraph :progress="20" emotion="Angry"/>
         </div>
-      </div>
-      <div>
-        <iframe class="vicon-gamevic" src="https://gamvic-client.vercel.app/" title="Gamvic"></iframe>
+        <ChatBox class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-between px-[18px]"/>
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
@@ -352,6 +341,15 @@ export default {
 </script>
 
 <style scoped>
+.video-conference {
+  display: flex;
+  height: 100vh;
+}
+
+.video-container {
+  flex-grow: 1;
+  /* CSS untuk tampilan video conference */
+}
 .vicon-container {
   width: 100%;
   display: flex;
@@ -470,16 +468,16 @@ export default {
   display: contents;
 }
 .vicon-gamvic {
-  width: 50px;
-  height: 50px;
-  display: flex;
+  width: 100%;
+  height: 100%;
+  display: block;
   position: relative;
   box-shadow: 5px 5px 10px 0px #d4d4d4;
   align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: var(--dl-radius-radius-round);
+  border-radius: 8px;
   text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
+  justify-content: space-between;
 }
 .vicon-gamvic1 {
   top: 10px;

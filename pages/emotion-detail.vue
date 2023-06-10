@@ -39,15 +39,6 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/gamvic" class="emotion-detail-navlink4">
-          <div class="emotion-detail-gamvic">
-            <img
-              alt="bell4162"
-              src="/assets/presentationchartbar5562-1s4d.svg"
-              class="emotion-detail-gamvic1"
-            />
-          </div>
-        </nuxt-link>
       </div>
     </aside>
     <div class="emotion-detail-detail-profile">
@@ -72,12 +63,16 @@
         </div>
         <div class="emotion-detail-isi-content">
           <div class="emotion-detail-overview-emotion">
-            <span class="emotion-detail-text06"><span>Overview</span></span>
-            <div class="emotion-detail-chart"></div>
+            <span class="emotion-detail-text06"><span>Overview Emotion</span></span>
+            <div class="emotion-detail-chart">
+              <RadarChart style="width: 100%; height: 100%;"></RadarChart>
+            </div>
           </div>
           <div class="emotion-detail-emosi-baik-dan-buruk">
             <span class="emotion-detail-text08"><span>Kehadiran</span></span>
-            <div class="emotion-detail-chart1"></div>
+            <div class="emotion-detail-chart1">
+              <PieChart style="width: 100%; height: 100%;"></PieChart>
+            </div>
           </div>
         </div>
       </div>
