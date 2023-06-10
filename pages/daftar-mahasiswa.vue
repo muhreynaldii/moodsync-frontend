@@ -1,46 +1,10 @@
 <template>
-  <div class="daftar-mahasiswa-container">
+  <div
+    class="flex min-h-screen w-full flex-col items-center justify-start overflow-auto"
+  >
     <bg-bawah rootClassName="bg-bawah-root-class-name2"></bg-bawah>
-    <aside class="daftar-mahasiswa-side-bar-full">
-      <div class="daftar-mahasiswa-side-bar">
-        <nuxt-link to="/dashboard-dosen" class="daftar-mahasiswa-navlink">
-          <div class="daftar-mahasiswa-dashboard">
-            <img
-              alt="chartpie4162"
-              src="/assets/chartpie4462-g92g.svg"
-              class="daftar-mahasiswa-chartpie"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/vicon-started" class="daftar-mahasiswa-navlink1">
-          <div class="daftar-mahasiswa-conference">
-            <img
-              alt="cash4162"
-              src="/assets/cash4162-e06k.svg"
-              class="daftar-mahasiswa-cash"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="daftar-mahasiswa-navlink2">
-          <div class="daftar-mahasiswa-class">
-            <img
-              alt="usergroup4162"
-              src="/assets/usergroup4502-ntd.svg"
-              class="daftar-mahasiswa-usergroup"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/notification" class="daftar-mahasiswa-navlink3">
-          <div class="daftar-mahasiswa-notif">
-            <img
-              alt="bell4162"
-              src="/assets/bell4162-7mh8.svg"
-              class="daftar-mahasiswa-bell"
-            />
-          </div>
-        </nuxt-link>
-      </div>
-    </aside>
+    <!-- sidebar -->
+    <sidebar />
     <div class="daftar-mahasiswa-daftar-mahasiswa">
       <span class="daftar-mahasiswa-text"><span>Daftar Mahasiswa</span></span>
       <div class="daftar-mahasiswa-daftar-mahasiswa1">
@@ -285,7 +249,7 @@ export default {
 </script>
 
 <style scoped>
-.daftar-mahasiswa-container {
+/* .daftar-mahasiswa-container {
   width: 100%;
   display: flex;
   overflow: auto;
@@ -293,8 +257,8 @@ export default {
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-}
-.daftar-mahasiswa-side-bar-full {
+} */
+/* .daftar-mahasiswa-side-bar-full {
   gap: 382px;
   top: 238px;
   left: 28px;
@@ -304,14 +268,14 @@ export default {
   position: fixed;
   align-items: center;
   flex-direction: column;
-}
-.daftar-mahasiswa-side-bar {
+} */
+/* .daftar-mahasiswa-side-bar {
   gap: 21px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-}
-.daftar-mahasiswa-navlink {
+} */
+/* .daftar-mahasiswa-navlink {
   display: contents;
 }
 .daftar-mahasiswa-dashboard {
@@ -325,18 +289,18 @@ export default {
   border-radius: var(--dl-radius-radius-round);
   text-decoration: none;
   background-color: var(--dl-color-default-white);
-}
-.daftar-mahasiswa-chartpie {
+} */
+/* .daftar-mahasiswa-chartpie {
   top: 10px;
   left: 10px;
   width: 30px;
   height: 30px;
   position: absolute;
-}
-.daftar-mahasiswa-navlink1 {
+} */
+/* .daftar-mahasiswa-navlink1 {
   display: contents;
-}
-.daftar-mahasiswa-conference {
+} */
+/* .daftar-mahasiswa-conference {
   width: 50px;
   height: 50px;
   display: flex;
@@ -354,8 +318,8 @@ export default {
   width: 30px;
   height: 30px;
   position: absolute;
-}
-.daftar-mahasiswa-navlink2 {
+} */
+/* .daftar-mahasiswa-navlink2 {
   display: contents;
 }
 .daftar-mahasiswa-class {
@@ -369,8 +333,8 @@ export default {
   border-radius: var(--dl-radius-radius-round);
   text-decoration: none;
   background-color: var(--dl-color-blue-100);
-}
-.daftar-mahasiswa-usergroup {
+} */
+/* .daftar-mahasiswa-usergroup {
   top: 9px;
   left: 10px;
   width: 30px;
@@ -401,7 +365,7 @@ export default {
 }
 .daftar-mahasiswa-navlink4 {
   display: contents;
-}
+} */
 .daftar-mahasiswa-gamvic {
   width: 50px;
   height: 50px;

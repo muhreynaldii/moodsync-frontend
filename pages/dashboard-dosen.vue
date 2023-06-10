@@ -1,9 +1,7 @@
 <template>
   <div class="dashboard-dosen-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name8"></bg-bawah>
-    <side-bar-full-dash-active
-      rootClassName="side-bar-full-dash-active-root-class-name1"
-    ></side-bar-full-dash-active>
+    <sidebar />
     <div class="dashboard-dosen-dashboard">
       <span class="dashboard-dosen-text"><span>Dashboard</span></span>
       <div class="dashboard-dosen-dashboard-content">
@@ -72,8 +70,8 @@
         <nav
           data-thq="thq-navbar-nav-links"
           data-role="Nav"
-          class="dashboard-dosen-nav">
-        </nav>
+          class="dashboard-dosen-nav"
+        ></nav>
       </div>
       <div class="dashboard-dosen-profile">
         <div

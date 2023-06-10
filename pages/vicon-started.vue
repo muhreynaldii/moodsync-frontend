@@ -1,46 +1,7 @@
 <template>
   <div class="vicon-started-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name1"></bg-bawah>
-    <aside class="vicon-started-side-bar-full">
-      <div class="vicon-started-side-bar">
-        <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink">
-          <div class="vicon-started-dashboard">
-            <img
-              alt="chartpie4162"
-              src="/assets/chartpie4462-g92g.svg"
-              class="vicon-started-chartpie"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/vicon-started" class="vicon-started-navlink1">
-          <div class="vicon-started-conference">
-            <img
-              alt="cash4162"
-              src="/assets/cash4462-gzxy.svg"
-              class="vicon-started-cash"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="vicon-started-navlink2">
-          <div class="vicon-started-class">
-            <img
-              alt="usergroup4162"
-              src="/assets/usergroup4162-5fld.svg"
-              class="vicon-started-usergroup"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/notification" class="vicon-started-navlink3">
-          <div class="vicon-started-notif">
-            <img
-              alt="bell4162"
-              src="/assets/bell4162-7mh8.svg"
-              class="vicon-started-bell"
-            />
-          </div>
-        </nuxt-link>
-      </div>
-    </aside>
+    <sidebar />
     <div class="vicon-started-vicon">
       <div class="vicon-started-vicon-content">
         <div class="vicon-started-frame1408">
