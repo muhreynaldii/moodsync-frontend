@@ -1,16 +1,25 @@
 <template>
   <div class="vicon-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name6"></bg-bawah>
-    <aside class="vicon-side-bar-full">
-      <sidebar />
-    </aside>
     <div class="vicon-container1">
       <div class="vicon-vicon-content">
         <div class="vicon-vicon">
           <div class="vicon-lecturer">
+            <!-- <img
+              alt="Lecturer4542"
+              src="/assets/lecturer4542-9s9o-1500w.png"
+              class="vicon-lecturer1"
+            /> -->
             <div id="main-video" class="col-md-6">
               <user-video :stream-manager="mainStreamManager" />
             </div>
+            <!-- <div class="vicon-profile-card">
+              <div class="vicon-persinal-info">
+                <div class="vicon-name">
+                  <span class="vicon-text">Dr. Dre</span>
+                </div>
+              </div>
+            </div> -->
           </div>
           <div class="vicon-audience">
             <div class="vicon-group27">
@@ -159,12 +168,11 @@
         </div>
       </div>
       <div>
-        <p class="w-full text-center text-[18px] font-medium text-[#1C64F2]">
+        <p class="text-center w-full font-medium text-[#1C64F2] text-[18px]">
           Overall Class Emotion
         </p>
         <div
-          class="flex h-[128px] w-[445px] flex-[0_0_auto] flex-row items-center justify-between px-[18px]"
-        >
+          class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-between px-[18px]">
           <EllipseGraph :progress="40" emotion="Sad" />
           <EllipseGraph :progress="30" emotion="Happy" />
           <EllipseGraph :progress="20" emotion="Angry" />
@@ -176,14 +184,14 @@
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
       <div class="vicon-container2">
-        <nuxt-link to="/dashboard-dosen" class="vicon-navlink5">
+        <nuxt-link to="/vicon-started-student" class="vicon-navlink5">
           <img
             alt="Rectangle84462"
             src="/assets/logo-200w.png"
             class="vicon-logo"
           />
         </nuxt-link>
-        <nuxt-link to="/vicon-started" class="vicon-navlink6">
+        <nuxt-link to="/vicon-started-student" class="vicon-navlink6">
           <div class="vicon-back button">
             <img
               alt="Rectangle164462"
@@ -1292,29 +1300,7 @@ export default {
   align-items: center;
   flex-direction: row;
 }
-.vicon-text18 {
-  color: var(--dl-color-gray-500);
-  height: auto;
-  flex-grow: 1;
-  text-align: left;
-  line-height: 125%;
-}
-.vicon-button {
-  width: auto;
-  height: auto;
-  display: flex;
-  padding: 8px;
-  align-self: center;
-  box-sizing: content-box;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: rgba(28, 100, 242, 1);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 8px;
-  justify-content: center;
-  background-color: var(--dl-color-primary-600);
-}
+
 .vicon-profile {
   gap: 2px;
   display: flex;

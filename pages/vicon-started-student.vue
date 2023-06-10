@@ -1,7 +1,6 @@
 <template>
   <div class="vicon-started-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name1"></bg-bawah>
-    <sidebar />
     <div class="vicon-started-vicon">
       <div class="vicon-started-vicon-content">
         <div class="vicon-started-frame1408">
@@ -60,16 +59,15 @@
               />
             </div>
           </div>
-          <nuxt-link to="/vicon" class="vicon-started-button">
+          <nuxt-link to="/vicon-student" class="vicon-started-button">
             <span class="vicon-started-text06"
-              ><span>Join Conference</span></span
-            >
+              ><span>Join Conference</span></span>
           </nuxt-link>
         </div>
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-started-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink5">
+      <nuxt-link to="/vicon-started-student" class="vicon-started-navlink5">
         <img
           alt="Rectangle84462"
           src="/assets/logo-200w.png"
@@ -158,13 +156,13 @@
 
 <script>
 export default {
-  name: "ViconStarted",
+  name: "ViconStartedStudent",
   head: {
-    title: "Vicon-Started - exported project",
+    title: "MoodSync",
     meta: [
       {
         property: "og:title",
-        content: "Vicon-Started - exported project",
+        content: "MoodSync",
       },
     ],
   },
@@ -564,13 +562,49 @@ export default {
   align-items: center;
   flex-direction: row;
 }
-
+.vicon-started-input {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 12px 16px;
+  align-self: center;
+  box-sizing: content-box;
+  align-items: center;
+  border-color: rgba(209, 213, 219, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: var(--dl-color-gray-50);
+}
+.vicon-started-content {
+  gap: 8px;
+  display: flex;
+  flex-grow: 1;
+  align-self: center;
+  align-items: center;
+}
 .vicon-started-text08 {
   color: var(--dl-color-gray-500);
   height: auto;
   flex-grow: 1;
   text-align: left;
   line-height: 125%;
+}
+.vicon-started-button1 {
+  width: auto;
+  height: auto;
+  display: flex;
+  padding: 8px;
+  align-self: center;
+  box-sizing: content-box;
+  align-items: center;
+  flex-shrink: 0;
+  border-color: rgba(28, 100, 242, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  justify-content: center;
+  background-color: var(--dl-color-primary-600);
 }
 .vicon-started-profile {
   gap: 2px;

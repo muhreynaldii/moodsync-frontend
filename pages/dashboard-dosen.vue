@@ -71,31 +71,7 @@
           data-thq="thq-navbar-nav-links"
           data-role="Nav"
           class="dashboard-dosen-nav"
-        >
-          <div class="dashboard-dosen-search">
-            <div class="dashboard-dosen-input">
-              <div class="dashboard-dosen-content">
-                <img
-                  alt="searchI416"
-                  src="/assets/searchi416-d8ss.svg"
-                  class="dashboard-dosen-search1"
-                />
-                <span
-                  class="dashboard-dosen-text15 leadingTighttextSmfontNormal"
-                >
-                  <span>Search</span>
-                </span>
-              </div>
-            </div>
-            <button class="dashboard-dosen-button">
-              <img
-                alt="searchI416"
-                src="/assets/searchi416-1gp7.svg"
-                class="dashboard-dosen-search2"
-              />
-            </button>
-          </div>
-        </nav>
+        ></nav>
       </div>
       <div class="dashboard-dosen-profile">
         <div
@@ -448,66 +424,6 @@ export default {
   align-items: center;
   flex-direction: row;
 }
-.dashboard-dosen-search {
-  gap: 10px;
-  width: 995px;
-  display: flex;
-  align-self: center;
-  align-items: flex-start;
-  flex-shrink: 0;
-}
-.dashboard-dosen-input {
-  width: 100%;
-  height: auto;
-  display: flex;
-  padding: 12px 16px;
-  align-self: center;
-  box-sizing: content-box;
-  align-items: center;
-  border-color: rgba(209, 213, 219, 1);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 8px;
-  background-color: var(--dl-color-gray-50);
-}
-.dashboard-dosen-content {
-  gap: 8px;
-  display: flex;
-  flex-grow: 1;
-  align-self: center;
-  align-items: center;
-}
-.dashboard-dosen-search1 {
-  width: 18px;
-  height: 18px;
-}
-.dashboard-dosen-text15 {
-  color: var(--dl-color-gray-500);
-  height: auto;
-  flex-grow: 1;
-  text-align: left;
-  line-height: 125%;
-}
-.dashboard-dosen-button {
-  width: auto;
-  height: auto;
-  display: flex;
-  padding: 8px;
-  align-self: center;
-  box-sizing: content-box;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: #95b3f3;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 8px;
-  justify-content: center;
-  background-color: var(--dl-color-primary-600);
-}
-.dashboard-dosen-search2 {
-  width: 20px;
-  height: 20px;
-}
 .dashboard-dosen-profile {
   gap: 2px;
   display: flex;
@@ -655,9 +571,6 @@ export default {
   .dashboard-dosen-statistic {
     align-items: center;
     flex-direction: column;
-  }
-  .dashboard-dosen-search {
-    width: 787px;
   }
 }
 @media (max-width: 767px) {
