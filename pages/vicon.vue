@@ -1340,46 +1340,6 @@ export default {
   align-items: center;
   flex-direction: row;
 }
-.vicon-search-and-profile {
-  width: 523px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.vicon-search {
-  gap: 10px;
-  width: 320px;
-  display: flex;
-  align-self: center;
-  align-items: flex-start;
-  flex-shrink: 0;
-  justify-content: center;
-}
-.vicon-input {
-  width: 100%;
-  height: auto;
-  display: flex;
-  padding: 12px 16px;
-  align-self: center;
-  box-sizing: content-box;
-  align-items: center;
-  border-color: rgba(209, 213, 219, 1);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 8px;
-  background-color: var(--dl-color-gray-50);
-}
-.vicon-content {
-  gap: 8px;
-  display: flex;
-  flex-grow: 1;
-  align-self: center;
-  align-items: center;
-}
-.vicon-search1 {
-  width: 18px;
-  height: 18px;
-}
 .vicon-text18 {
   color: var(--dl-color-gray-500);
   height: auto;
@@ -1402,10 +1362,6 @@ export default {
   border-radius: 8px;
   justify-content: center;
   background-color: var(--dl-color-primary-600);
-}
-.vicon-search2 {
-  width: 20px;
-  height: 20px;
 }
 .vicon-profile {
   gap: 2px;
@@ -1551,21 +1507,10 @@ export default {
   .vicon-text17 {
     color: var(--dl-color-primary-600);
   }
-  .vicon-search-and-profile {
-    width: 372px;
-  }
-  .vicon-search {
-    width: 250px;
-  }
   .vicon-profile {
     top: 29px;
     right: 92px;
     position: static;
-  }
-}
-@media (max-width: 1200px) {
-  .vicon-search {
-    width: var(--dl-size-size-xlarge);
   }
 }
 @media (max-width: 767px) {
