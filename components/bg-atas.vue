@@ -6,19 +6,19 @@
 
 <script>
 export default {
-  name: 'BgAtas',
+  name: "BgAtas",
   props: {
     Bg_Atas_src: {
       type: String,
-      default: '/assets/pastedimage-7k7o.svg',
+      default: "/assets/pastedimage-7k7o.svg",
     },
     Bg_Atas_alt: {
       type: String,
-      default: 'pastedImage',
+      default: "pastedImage",
     },
     rootClassName: String,
   },
-}
+};
 </script>
 
 <style scoped>

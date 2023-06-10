@@ -14,103 +14,74 @@
         class="login-login-pic"
       />
       <form class="login-form">
-        <div class="login-login-form">
-          <div class="login-frame1419">
-            <span class="login-text HeadlineType23"><span>Welcome!</span></span>
-            <img
-              alt="Rectangle364091"
-              src="/assets/rectangle364091-dmx9-200h.png"
-              class="login-rectangle36"
+        <FormulateForm class="mt-[32px] flex flex-col" @submit="submitLogin">
+          <h1 class="text-center text-[23px] text-[#1C64F2]">Welcome!</h1>
+          <!-- Email -->
+          <FormulateInput
+            name="email"
+            type="email"
+            label="Email"
+            input-class="h-[42px] w-[300px] sm:w-[414px] rounded-lg border-2 border-primary600 p-5 text-black"
+            class="mt-[16px]"
+            placeholder="Enter your email address"
+            validation="required"
+            error-class="text-red-700 text-xs mb-1"
+            :validation-messages="{
+              required: 'Email harus diisi',
+            }"
+            error-behavior="submit"
+          />
+          <!-- Password -->
+          <div class="relative">
+            <FormulateInput
+              :type="showPassword ? 'text' : 'password'"
+              name="password"
+              label="Password"
+              input-class="h-[42px] w-[300px] sm:w-[414px] rounded-lg border-2 border-primary600 p-5 text-black"
+              class="mt-[16px]"
+              placeholder="Password"
+              validation="required"
+              validation-name="Password"
+              error-class="text-red-700 text-xs mb-1"
+              :validation-messages="{
+                required: 'Password harus diisi',
+              }"
+              error-behavior="submit"
             />
-          </div>
-          <div class="login-frame1420">
-            <div class="login-input-field">
-              <span class="login-text02"><span>Email</span></span>
-              <div class="login-input">
-                <img
-                  alt="mailopenI409"
-                  src="/assets/mailopeni409-37g.svg"
-                  class="login-mailopen"
+            <div @click="toggleShow" class="absolute right-3 top-[52px]">
+              <svg
+                v-if="showPassword"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M1.181 12C2.121 6.88 6.608 3 12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9zM12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-2a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
                 />
-                <input
-                  type="email"
-                  required
-                  autofocus
-                  placeholder="Enter your email address"
-                  autocomplete="email"
-                  class="login-textinput input"
+              </svg>
+              <svg
+                v-if="!showPassword"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M4.52 5.934L1.393 2.808l1.415-1.415 19.799 19.8-1.415 1.414-3.31-3.31A10.949 10.949 0 0 1 12 21c-5.392 0-9.878-3.88-10.819-9a10.982 10.982 0 0 1 3.34-6.066zm10.237 10.238l-1.464-1.464a3 3 0 0 1-4.001-4.001L7.828 9.243a5 5 0 0 0 6.929 6.929zM7.974 3.76C9.221 3.27 10.58 3 12 3c5.392 0 9.878 3.88 10.819 9a10.947 10.947 0 0 1-2.012 4.592l-3.86-3.86a5 5 0 0 0-5.68-5.68L7.974 3.761z"
                 />
-              </div>
-            </div>
-            <div class="login-input-field1">
-              <span class="login-text04"><span>Password</span></span>
-              <div class="login-input1">
-                <div class="login-content">
-                  <img
-                    alt="lockclosedI409"
-                    src="/assets/lockclosedi409-nyxk.svg"
-                    class="login-lockclosed"
-                  />
-                  <input
-                    type="password"
-                    size="16"
-                    required
-                    minlength="8"
-                    placeholder="Password"
-                    class="login-textinput1 input"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="login-frame1421">
-              <div class="login-checkbox">
-                <input type="checkbox" checked="true" />
-                <div class="login-labelhelpertext">
-                  <span class="login-text06"><span>Remember me</span></span>
-                </div>
-              </div>
+              </svg>
             </div>
           </div>
-          <nuxt-link to="/dashboard-dosen" id="ButtonLogin" class="login-button">
-            <span class="login-text08"><span>Login</span></span>
-          </nuxt-link>
-          <div class="login-frame1423">
-            <img
-              alt="Rectangle304091"
-              src="/assets/rectangle304091-d5ir-200h.png"
-              class="login-rectangle30"
-            />
-            <span class="login-text10"><span>or</span></span>
-            <img
-              alt="Rectangle314132"
-              src="/assets/rectangle314132-cpgr-200h.png"
-              class="login-rectangle31"
-            />
-          </div>
-          <div class="login-frame12">
-            <div class="login-frame16">
-              <img
-                alt="GoogleOriginal4091"
-                src="/assets/googleoriginal4091-ili.svg"
-                class="login-google-original"
-              />
-            </div>
-            <div class="login-frame17">
-              <img
-                alt="FacebookOriginal4091"
-                src="/assets/facebookoriginal4091-pmve.svg"
-                class="login-facebook-original"
-              />
-            </div>
-            <div class="login-frame18">
-              <img
-                alt="LinkedInOriginal4091"
-                src="/assets/linkedinoriginal4091-ddfk.svg"
-                class="login-linked-in-original"
-              />
-            </div>
-          </div>
-        </div>
+          <FormulateInput
+            type="submit"
+            name="Login"
+            input-class="h-[50px] w-[300px] sm:w-[414px] self-center rounded-lg bg-[#1C64F2] font-bold text-white"
+            class="mt-[28px]"
+          />
+        </FormulateForm>
       </form>
     </div>
     <app-nav rootClassName="nav-root-class-name"></app-nav>
@@ -118,27 +89,32 @@
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
-import BgAtas from '../components/bg-atas'
-import AppNav from '../components/nav'
+import BgBawah from "../components/bg-bawah";
+import BgAtas from "../components/bg-atas";
+import AppNav from "../components/nav";
 
 export default {
-  name: 'Login',
+  name: "Login",
+  data() {
+    return {
+      showPassword: false,
+    };
+  },
   components: {
     BgBawah,
     BgAtas,
     AppNav,
   },
   head: {
-    title: 'Login - exported project',
+    title: "Login | Moodsync",
     meta: [
       {
-        property: 'og:title',
-        content: 'Login - exported project',
+        property: "og:title",
+        content: "Login | Moodsync",
       },
     ],
   },
-}
+};
 </script>
 
 <style scoped>
