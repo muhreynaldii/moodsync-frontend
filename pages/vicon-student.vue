@@ -211,54 +211,50 @@
           <span class="HeadlineType33 vicon-text17">Dasar Pemrograman</span>
         </nav>
       </div>
-      <div class="vicon-search-and-profile">
-        <div class="vicon-search">
-        </div>
-        <div class="vicon-profile">
-          <div data-thq="thq-dropdown" class="vicon-thq-dropdown list-item">
-            <div data-thq="thq-dropdown-toggle" class="vicon-dropdown-toggle">
-              <img
-                alt="Rectangle254162"
-                src="/assets/rectangle254162-743-200h.png"
-                class="vicon-rectangle25"
-              />
-              <img
-                alt="chevrondown4162"
-                src="/assets/chevrondown4162-p2v.svg"
-                class="vicon-chevrondown"
-              />
-            </div>
-            <ul data-thq="thq-dropdown-list" class="vicon-dropdown-list">
-              <li data-thq="thq-dropdown" class="vicon-dropdown list-item">
+      <div class="vicon-profile">
+        <div data-thq="thq-dropdown" class="vicon-thq-dropdown list-item">
+          <div data-thq="thq-dropdown-toggle" class="vicon-dropdown-toggle">
+            <img
+              alt="Rectangle254162"
+              src="/assets/rectangle254162-743-200h.png"
+              class="vicon-rectangle25"
+            />
+            <img
+              alt="chevrondown4162"
+              src="/assets/chevrondown4162-p2v.svg"
+              class="vicon-chevrondown"
+            />
+          </div>
+          <ul data-thq="thq-dropdown-list" class="vicon-dropdown-list">
+            <li data-thq="thq-dropdown" class="vicon-dropdown list-item">
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="vicon-dropdown-toggle1"
+              >
+                <img
+                  alt="user5862"
+                  src="/assets/user5862-kh17n.svg"
+                  class="vicon-user"
+                />
+                <span class="vicon-profile1 BodyType16">Profile</span>
+              </div>
+            </li>
+            <li data-thq="thq-dropdown" class="vicon-dropdown1 list-item">
+              <nuxt-link to="/login">
                 <div
                   data-thq="thq-dropdown-toggle"
-                  class="vicon-dropdown-toggle1"
+                  class="vicon-dropdown-toggle2"
                 >
                   <img
-                    alt="user5862"
-                    src="/assets/user5862-kh17n.svg"
-                    class="vicon-user"
+                    alt="logout5862"
+                    src="/assets/logout5862-woq.svg"
+                    class="vicon-logout"
                   />
-                  <span class="vicon-profile1 BodyType16">Profile</span>
+                  <span class="vicon-logout1 BodyType16">Logout</span>
                 </div>
-              </li>
-              <li data-thq="thq-dropdown" class="vicon-dropdown1 list-item">
-                <nuxt-link to="/login">
-                  <div
-                    data-thq="thq-dropdown-toggle"
-                    class="vicon-dropdown-toggle2"
-                  >
-                    <img
-                      alt="logout5862"
-                      src="/assets/logout5862-woq.svg"
-                      class="vicon-logout"
-                    />
-                    <span class="vicon-logout1 BodyType16">Logout</span>
-                  </div>
-                </nuxt-link>
-              </li>
-            </ul>
-          </div>
+              </nuxt-link>
+            </li>
+          </ul>
         </div>
       </div>
       <div data-thq="thq-burger-menu" class="vicon-burger-menu">

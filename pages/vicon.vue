@@ -251,8 +251,6 @@
           <span class="HeadlineType33 vicon-text17">Dasar Pemrograman</span>
         </nav>
       </div>
-      <div class="vicon-search">
-      </div>
       <div class="vicon-profile">
         <div data-thq="thq-dropdown" class="vicon-thq-dropdown list-item">
           <div data-thq="thq-dropdown-toggle" class="vicon-dropdown-toggle">
