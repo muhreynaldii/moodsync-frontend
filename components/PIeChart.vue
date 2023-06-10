@@ -21,14 +21,14 @@
             datasets: [
               {
                 data: [3, 1],
-                backgroundColor: ['rgba(63, 131, 248)', 'rgb(240, 82, 82)'],
+                backgroundColor: ['#76A9FA', '#F98080'],
                 borderWidth: 1,
               },
             ],
           },
           options: {
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: true,
             legend: {
               display: true // opsi legend pada Chart
             },
