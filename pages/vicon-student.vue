@@ -1,46 +1,6 @@
 <template>
   <div class="vicon-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name6"></bg-bawah>
-    <aside class="vicon-side-bar-full">
-      <div class="vicon-side-bar">
-        <nuxt-link to="/dashboard-dosen" class="vicon-navlink">
-          <div class="vicon-dashboard">
-            <img
-              alt="chartpie4162"
-              src="/assets/chartpie4462-g92g.svg"
-              class="vicon-chartpie"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/vicon-started" class="vicon-navlink1">
-          <div class="vicon-conference">
-            <img
-              alt="cash4162"
-              src="/assets/cash4462-gzxy.svg"
-              class="vicon-cash"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="vicon-navlink2">
-          <div class="vicon-class">
-            <img
-              alt="usergroup4162"
-              src="/assets/usergroup4162-5fld.svg"
-              class="vicon-usergroup"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/notification" class="vicon-navlink3">
-          <div class="vicon-notif">
-            <img
-              alt="bell4162"
-              src="/assets/bell4162-7mh8.svg"
-              class="vicon-bell"
-            />
-          </div>
-        </nuxt-link>
-      </div>
-    </aside>
     <div class="vicon-container1">
       <div class="vicon-vicon-content">
         <div class="vicon-vicon">
@@ -224,14 +184,14 @@
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
       <div class="vicon-container2">
-        <nuxt-link to="/dashboard-dosen" class="vicon-navlink5">
+        <nuxt-link to="/vicon-started-student" class="vicon-navlink5">
           <img
             alt="Rectangle84462"
             src="/assets/logo-200w.png"
             class="vicon-logo"
           />
         </nuxt-link>
-        <nuxt-link to="/vicon-started" class="vicon-navlink6">
+        <nuxt-link to="/vicon-started-student" class="vicon-navlink6">
           <div class="vicon-back button">
             <img
               alt="Rectangle164462"

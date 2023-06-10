@@ -41,7 +41,7 @@
                 <span>Presensi Mahasiswa</span>
               </span>
               <div class="dashboard-dosen-chart">
-                <BarChart style="width: 100%; height: 100%;"></BarChart>
+                <BarChart style="width: 100%; height: 100%"></BarChart>
               </div>
             </div>
             <div class="dashboard-dosen-emosi-mahasiswa">
@@ -49,7 +49,7 @@
                 <span>Emosi Mahasiswa</span>
               </span>
               <div class="dashboard-dosen-chart1">
-                <RadarChart style="width: 100%; height: 100%;"></RadarChart>
+                <RadarChart style="width: 100%; height: 100%"></RadarChart>
               </div>
             </div>
           </div>
@@ -72,29 +72,7 @@
         <nav
           data-thq="thq-navbar-nav-links"
           data-role="Nav"
-          class="dashboard-dosen-nav"
-        >
-          <div class="dashboard-dosen-search">
-            <div class="dashboard-dosen-input">
-              <div class="dashboard-dosen-content">
-                <img
-                  alt="searchI416"
-                  src="/assets/searchi416-d8ss.svg"
-                  class="dashboard-dosen-search1"
-                />
-                <span class="dashboard-dosen-text15 leadingTighttextSmfontNormal">
-                  <span>Search</span>
-                </span>
-              </div>
-            </div>
-            <button class="dashboard-dosen-button">
-              <img
-                alt="searchI416"
-                src="/assets/searchi416-1gp7.svg"
-                class="dashboard-dosen-search2"
-              />
-            </button>
-          </div>
+          class="dashboard-dosen-nav">
         </nav>
       </div>
       <div class="dashboard-dosen-profile">
@@ -117,7 +95,10 @@
               class="dashboard-dosen-chevrondown"
             />
           </div>
-          <ul data-thq="thq-dropdown-list" class="dashboard-dosen-dropdown-list">
+          <ul
+            data-thq="thq-dropdown-list"
+            class="dashboard-dosen-dropdown-list"
+          >
             <li
               data-thq="thq-dropdown"
               class="dashboard-dosen-dropdown list-item"
@@ -167,21 +148,19 @@
 </template>
 
 <script>
-
 export default {
-  name: 'DashboardDosen',
-  components: {
-  },
+  name: "DashboardDosen",
+  components: {},
   head: {
-    title: 'Dashboard-Dosen - exported project',
+    title: "Dashboard-Dosen - exported project",
     meta: [
       {
-        property: 'og:title',
-        content: 'Dashboard-Dosen - exported project',
+        property: "og:title",
+        content: "Dashboard-Dosen - exported project",
       },
     ],
   },
-}
+};
 </script>
 
 <style scoped>
@@ -548,7 +527,7 @@ export default {
   min-width: 100%;
   transition: 0.3s;
   align-items: stretch;
-  border-color: #D9D9D9;
+  border-color: #d9d9d9;
   border-width: 1px;
   border-radius: var(--dl-radius-radius-radius4);
   flex-direction: column;
@@ -635,14 +614,14 @@ export default {
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
-@media(max-width: 1600px) {
+@media (max-width: 1600px) {
   .dashboard-dosen-profile {
     top: 29px;
     right: 92px;
     position: static;
   }
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .dashboard-dosen-dashboard {
     top: 153px;
     flex: 1;
@@ -659,7 +638,7 @@ export default {
     width: 787px;
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .dashboard-dosen-navbar-interactive {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
@@ -671,7 +650,7 @@ export default {
     display: flex;
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .dashboard-dosen-navbar-interactive {
     padding: var(--dl-space-space-unit);
   }

@@ -102,29 +102,7 @@
         <nav
           data-thq="thq-navbar-nav-links"
           data-role="Nav"
-          class="notification-nav"
-        >
-          <div class="notification-search">
-            <div class="notification-input">
-              <div class="notification-content">
-                <img
-                  alt="searchI416"
-                  src="/assets/searchi416-d8ss.svg"
-                  class="notification-search1"
-                />
-                <span class="notification-text14 leadingTighttextSmfontNormal">
-                  <span>Search</span>
-                </span>
-              </div>
-            </div>
-            <button class="notification-button">
-              <img
-                alt="searchI416"
-                src="/assets/searchi416-1gp7.svg"
-                class="notification-search2"
-              />
-            </button>
-          </div>
+          class="notification-nav">
         </nav>
       </div>
       <div class="notification-profile">

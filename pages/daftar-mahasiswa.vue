@@ -189,31 +189,8 @@
         <nav
           data-thq="thq-navbar-nav-links"
           data-role="Nav"
-          class="daftar-mahasiswa-nav"
-        >
-          <div class="daftar-mahasiswa-search">
-            <div class="daftar-mahasiswa-input">
-              <div class="daftar-mahasiswa-content">
-                <img
-                  alt="searchI416"
-                  src="/assets/searchi416-d8ss.svg"
-                  class="daftar-mahasiswa-search1"
-                />
-                <span
-                  class="daftar-mahasiswa-text35 leadingTighttextSmfontNormal"
-                >
-                  <span>Search</span>
-                </span>
-              </div>
-            </div>
-            <button class="daftar-mahasiswa-button">
-              <img
-                alt="searchI416"
-                src="/assets/searchi416-1gp7.svg"
-                class="daftar-mahasiswa-search2"
-              />
-            </button>
-          </div>
+          class="daftar-mahasiswa-nav">
+
         </nav>
       </div>
       <div class="daftar-mahasiswa-profile">

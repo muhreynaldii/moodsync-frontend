@@ -1,46 +1,6 @@
 <template>
   <div class="vicon-started-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name1"></bg-bawah>
-    <aside class="vicon-started-side-bar-full">
-      <div class="vicon-started-side-bar">
-        <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink">
-          <div class="vicon-started-dashboard">
-            <img
-              alt="chartpie4162"
-              src="/assets/chartpie4462-g92g.svg"
-              class="vicon-started-chartpie"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/vicon-started" class="vicon-started-navlink1">
-          <div class="vicon-started-conference">
-            <img
-              alt="cash4162"
-              src="/assets/cash4462-gzxy.svg"
-              class="vicon-started-cash"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="vicon-started-navlink2">
-          <div class="vicon-started-class">
-            <img
-              alt="usergroup4162"
-              src="/assets/usergroup4162-5fld.svg"
-              class="vicon-started-usergroup"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/notification" class="vicon-started-navlink3">
-          <div class="vicon-started-notif">
-            <img
-              alt="bell4162"
-              src="/assets/bell4162-7mh8.svg"
-              class="vicon-started-bell"
-            />
-          </div>
-        </nuxt-link>
-      </div>
-    </aside>
     <div class="vicon-started-vicon">
       <div class="vicon-started-vicon-content">
         <div class="vicon-started-frame1408">
@@ -99,16 +59,15 @@
               />
             </div>
           </div>
-          <nuxt-link to="/vicon" class="vicon-started-button">
+          <nuxt-link to="/vicon-student" class="vicon-started-button">
             <span class="vicon-started-text06"
-              ><span>Join Conference</span></span
-            >
+              ><span>Join Conference</span></span>
           </nuxt-link>
         </div>
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-started-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink5">
+      <nuxt-link to="/vicon-started-student" class="vicon-started-navlink5">
         <img
           alt="Rectangle84462"
           src="/assets/logo-200w.png"
@@ -197,13 +156,13 @@
 
 <script>
 export default {
-  name: "ViconStarted",
+  name: "ViconStartedStudent",
   head: {
-    title: "Vicon-Started - exported project",
+    title: "MoodSync",
     meta: [
       {
         property: "og:title",
-        content: "Vicon-Started - exported project",
+        content: "MoodSync",
       },
     ],
   },
@@ -603,14 +562,6 @@ export default {
   align-items: center;
   flex-direction: row;
 }
-.vicon-started-search {
-  gap: 10px;
-  width: 995px;
-  display: flex;
-  align-self: center;
-  align-items: flex-start;
-  flex-shrink: 0;
-}
 .vicon-started-input {
   width: 100%;
   height: auto;
@@ -631,10 +582,6 @@ export default {
   flex-grow: 1;
   align-self: center;
   align-items: center;
-}
-.vicon-started-search1 {
-  width: 18px;
-  height: 18px;
 }
 .vicon-started-text08 {
   color: var(--dl-color-gray-500);
@@ -658,10 +605,6 @@ export default {
   border-radius: 8px;
   justify-content: center;
   background-color: var(--dl-color-primary-600);
-}
-.vicon-started-search2 {
-  width: 20px;
-  height: 20px;
 }
 .vicon-started-profile {
   gap: 2px;
@@ -796,11 +739,6 @@ export default {
     top: 29px;
     right: 92px;
     position: static;
-  }
-}
-@media (max-width: 1200px) {
-  .vicon-started-search {
-    width: 787px;
   }
 }
 @media (max-width: 767px) {
