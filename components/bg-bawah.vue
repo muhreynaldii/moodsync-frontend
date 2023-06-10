@@ -28,7 +28,10 @@ export default {
 }
 .bg-bawah-bg-bawah {
   width: 729px;
-  position: relative;
+  bottom: 0px;
+  right: 0px;
+  margin: auto;
+  position: fixed;
   align-self: flex-end;
 }
 .bg-bawah-root-class-name {

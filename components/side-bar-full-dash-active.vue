@@ -43,15 +43,6 @@
           />
         </div>
       </nuxt-link>
-      <nuxt-link to="/gamvic" class="side-bar-full-dash-active-navlink4">
-        <div class="side-bar-full-dash-active-gamvic">
-          <img
-            :alt="Gamvic_alt"
-            :src="Gamvic_src"
-            class="side-bar-full-dash-active-gamvic1"
-          />
-        </div>
-      </nuxt-link>
     </div>
   </aside>
 </template>
