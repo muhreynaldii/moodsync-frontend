@@ -3,14 +3,16 @@
     <bg-bawah rootClassName="bg-bawah-root-class-name1"></bg-bawah>
     <aside class="vicon-started-side-bar-full">
       <div class="vicon-started-side-bar">
-        <div class="vicon-started-dashboard">
-          <img
-            alt="chartpie4162"
-            src="/assets/chartpie4462-g92g.svg"
-            class="vicon-started-chartpie"
-          />
-        </div>
-        <nuxt-link to="/vicon-started" class="vicon-started-navlink">
+        <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink">
+          <div class="vicon-started-dashboard">
+            <img
+              alt="chartpie4162"
+              src="/assets/chartpie4462-g92g.svg"
+              class="vicon-started-chartpie"
+            />
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/vicon-started" class="vicon-started-navlink1">
           <div class="vicon-started-conference">
             <img
               alt="cash4162"
@@ -19,7 +21,7 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="vicon-started-navlink1">
+        <nuxt-link to="/daftar-mahasiswa" class="vicon-started-navlink2">
           <div class="vicon-started-class">
             <img
               alt="usergroup4162"
@@ -28,7 +30,7 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/notification" class="vicon-started-navlink2">
+        <nuxt-link to="/notification" class="vicon-started-navlink3">
           <div class="vicon-started-notif">
             <img
               alt="bell4162"
@@ -37,20 +39,16 @@
             />
           </div>
         </nuxt-link>
-        <div class="vicon-started-chat">
-          <img
-            alt="chat4162"
-            src="/assets/chat4162-5tzb.svg"
-            class="vicon-started-chat1"
-          />
-        </div>
+        <nuxt-link to="/gamvic" class="vicon-started-navlink4">
+          <div class="vicon-started-gamvic">
+            <img
+              alt="bell4162"
+              src="/assets/presentationchartbar5562-1s4d.svg"
+              class="vicon-started-gamvic1"
+            />
+          </div>
+        </nuxt-link>
       </div>
-      <img
-        alt="cog4162"
-        src="/assets/cog4162-9gch.svg"
-        loading="lazy"
-        class="vicon-started-cog"
-      />
     </aside>
     <div class="vicon-started-vicon">
       <div class="vicon-started-vicon-content">
@@ -117,7 +115,7 @@
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-started-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink3">
+      <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink5">
         <img
           alt="Rectangle84462"
           src="/assets/logo-200w.png"
@@ -157,18 +155,55 @@
           </div>
         </nav>
       </div>
-      <div class="vicon-started-profile">
-        <img
-          alt="Rectangle254162"
-          src="/assets/rectangle254162-743-200h.png"
-          class="vicon-started-rectangle25"
-        />
-        <img
-          alt="chevrondown4162"
-          src="/assets/chevrondown4162-p2v.svg"
-          class="vicon-started-chevrondown"
-        />
-      </div>
+      <nav class="vicon-started-profile">
+        <div data-thq="thq-dropdown" class="vicon-started-thq-dropdown list-item">
+          <div
+            data-thq="thq-dropdown-toggle"
+            class="vicon-started-dropdown-toggle"
+          >
+            <img
+              alt="Rectangle254162"
+              src="/assets/rectangle254162-743-200h.png"
+              class="vicon-started-rectangle25"
+            />
+            <img
+              alt="chevrondown4162"
+              src="/assets/chevrondown4162-p2v.svg"
+              class="vicon-started-chevrondown"
+            />
+          </div>
+          <ul data-thq="thq-dropdown-list" class="vicon-started-dropdown-list">
+            <li data-thq="thq-dropdown" class="vicon-started-dropdown list-item">
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="vicon-started-dropdown-toggle1"
+              >
+                <img
+                  alt="user5862"
+                  src="/assets/user5862-kh17n.svg"
+                  class="vicon-started-user"
+                />
+                <span class="vicon-started-profile1 BodyType16">Profile</span>
+              </div>
+            </li>
+            <li data-thq="thq-dropdown" class="vicon-started-dropdown1 list-item">
+              <nuxt-link to="/login">
+                <div
+                  data-thq="thq-dropdown-toggle"
+                  class="vicon-started-dropdown-toggle2"
+                >
+                  <img
+                    alt="logout5862"
+                    src="/assets/logout5862-woq.svg"
+                    class="vicon-started-logout"
+                  />
+                  <span class="vicon-started-logout1 BodyType16">Logout</span>
+                </div>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <div data-thq="thq-burger-menu" class="vicon-started-burger-menu">
         <svg viewBox="0 0 1024 1024" class="vicon-started-icon">
           <path
@@ -214,8 +249,8 @@ export default {
   gap: 382px;
   top: 238px;
   left: 28px;
-  width: 50px;
-  height: 613px;
+  width: auto;
+  height: auto;
   display: flex;
   position: fixed;
   align-items: center;
@@ -226,6 +261,9 @@ export default {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+}
+.vicon-started-navlink {
+  display: contents;
 }
 .vicon-started-dashboard {
   width: 50px;
@@ -246,7 +284,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-started-navlink {
+.vicon-started-navlink1 {
   display: contents;
 }
 .vicon-started-conference {
@@ -268,7 +306,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-started-navlink1 {
+.vicon-started-navlink2 {
   display: contents;
 }
 .vicon-started-class {
@@ -290,7 +328,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-started-navlink2 {
+.vicon-started-navlink3 {
   display: contents;
 }
 .vicon-started-notif {
@@ -312,7 +350,10 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-started-chat {
+.vicon-started-navlink4 {
+  display: contents;
+}
+.vicon-started-gamvic {
   width: 50px;
   height: 50px;
   display: flex;
@@ -321,19 +362,13 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
 }
-.vicon-started-chat1 {
+.vicon-started-gamvic1 {
   top: 10px;
   left: 10px;
   width: 30px;
-  height: 30px;
-  position: absolute;
-}
-.vicon-started-cog {
-  left: 10px;
-  width: 30px;
-  bottom: 0px;
   height: 30px;
   position: absolute;
 }
@@ -575,7 +610,7 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.vicon-started-navlink3 {
+.vicon-started-navlink5 {
   display: contents;
 }
 .vicon-started-logo {
@@ -657,6 +692,24 @@ export default {
   display: flex;
   align-items: center;
 }
+.vicon-started-thq-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.vicon-started-dropdown-toggle {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius2);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+}
 .vicon-started-rectangle25 {
   width: 50px;
   height: 50px;
@@ -665,6 +718,93 @@ export default {
 .vicon-started-chevrondown {
   width: 30px;
   height: 30px;
+}
+.vicon-started-dropdown-list {
+  left: 0%;
+  width: max-content;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  min-width: 100%;
+  transition: 0.3s;
+  align-items: stretch;
+  border-color: #D9D9D9;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius4);
+  flex-direction: column;
+  list-style-type: none;
+  background-color: var(--dl-color-gray-white);
+  list-style-position: inside;
+}
+.vicon-started-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.vicon-started-dropdown-toggle1 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: flex-start;
+}
+.vicon-started-dropdown-toggle1:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-blue-600);
+}
+.vicon-started-user {
+  width: 20px;
+  height: 20px;
+}
+.vicon-started-profile1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.vicon-started-dropdown1 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.vicon-started-dropdown-toggle2 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  text-decoration: none;
+}
+.vicon-started-dropdown-toggle2:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-red-400);
+}
+.vicon-started-logout {
+  width: 20px;
+  height: 20px;
+}
+.vicon-started-logout1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .vicon-started-burger-menu {
   display: none;

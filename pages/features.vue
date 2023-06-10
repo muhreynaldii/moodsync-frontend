@@ -293,7 +293,7 @@ export default {
   .features-container1 {
     top: 318px;
     left: 134px;
-    height: 360px;
+    height: 396px;
   }
   .features-feature {
     gap: var(--dl-space-space-halfunit);

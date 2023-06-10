@@ -1,9 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
- 
- :root {
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
   --dl-color-red-50: rgba(253, 242, 242, 1);
   --dl-color-blue-50: rgba(235, 245, 255, 1);
   --dl-color-gray-50: rgba(249, 250, 251, 1);
@@ -35,7 +38,7 @@
   --dl-color-gray-600: rgba(75, 85, 99, 1);
   --dl-color-gray-700: #999999;
   --dl-color-gray-800: rgba(31, 42, 55, 1);
-  --dl-color-gray-900: #D9D9D9;
+  --dl-color-gray-900: #d9d9d9;
   --dl-color-green-50: rgba(243, 250, 247, 1);
   --dl-color-pink-100: rgba(252, 232, 243, 1);
   --dl-color-pink-200: rgba(250, 209, 232, 1);
@@ -77,11 +80,11 @@
   --dl-color-yellow-50: rgba(253, 253, 234, 1);
   --dl-size-size-large: 144px;
   --dl-size-size-small: 48px;
-  --dl-color-danger-300: #A22020;
-  --dl-color-danger-500: #BF2626;
-  --dl-color-danger-700: #E14747;
+  --dl-color-danger-300: #a22020;
+  --dl-color-danger-500: #bf2626;
+  --dl-color-danger-700: #e14747;
   --dl-color-gray-black: #000000;
-  --dl-color-gray-white: #FFFFFF;
+  --dl-color-gray-white: #ffffff;
   --dl-color-indigo-100: rgba(229, 237, 255, 1);
   --dl-color-indigo-200: rgba(205, 219, 254, 1);
   --dl-color-indigo-300: rgba(180, 198, 252, 1);
@@ -123,18 +126,18 @@
   --dl-size-size-xlarge: 192px;
   --dl-size-size-xsmall: 16px;
   --dl-space-space-unit: 16px;
-  --dl-color-primary-100: #003EB3;
+  --dl-color-primary-100: #003eb3;
   --dl-color-primary-200: rgba(195, 221, 253, 1);
-  --dl-color-primary-300: #0074F0;
+  --dl-color-primary-300: #0074f0;
   --dl-color-primary-400: rgba(118, 169, 250, 1);
-  --dl-color-primary-500: #14A9FF;
+  --dl-color-primary-500: #14a9ff;
   --dl-color-primary-600: rgba(28, 100, 242, 1);
-  --dl-color-primary-700: #85DCFF;
+  --dl-color-primary-700: #85dcff;
   --dl-color-primary-800: rgba(30, 66, 159, 1);
   --dl-color-primary-900: rgba(35, 56, 118, 1);
   --dl-color-success-300: #199033;
-  --dl-color-success-500: #32A94C;
-  --dl-color-success-700: #4CC366;
+  --dl-color-success-500: #32a94c;
+  --dl-color-success-700: #4cc366;
   --dl-size-size-xxlarge: 288px;
   --dl-color-primary-1001: rgba(225, 239, 254, 1);
   --dl-color-primary-3001: rgba(164, 202, 254, 1);
@@ -174,10 +177,7 @@
   color: var(--dl-color-gray-black);
   cursor: auto;
   padding: 0.5rem 1rem;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-gray-white);
+  background-color: var(--dl-color-gray-50);
 }
 .textarea {
   color: var(--dl-color-gray-black);
@@ -209,11 +209,25 @@
   font-family: Poppins;
   font-weight: 400px;
 }
+.textSmfontMedium {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 500px;
+  font-stretch: normal;
+}
 .HeadlineType46 {
   font-size: 46px;
   font-style: normal;
   font-family: Poppins;
   font-weight: 400px;
+}
+.leadingNonetextSmfontNormal {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 400px;
+  font-stretch: normal;
 }
 .HeadlineType23 {
   font-size: 23px;
@@ -248,6 +262,13 @@
   font-weight: 400px;
   font-stretch: normal;
 }
+.leadingNonetextBasefontSemibold {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 700px;
+  font-stretch: normal;
+}
 .ButtonType13 {
   font-size: 13px;
   font-style: normal;
@@ -277,6 +298,13 @@
   font-style: normal;
   font-family: Poppins;
   font-weight: 400px;
+}
+.textSmfontNormal {
+  font-size: 14px;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 400px;
+  font-stretch: normal;
 }
 .HeadlineType16 {
   font-size: 16px;

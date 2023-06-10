@@ -39,26 +39,22 @@
             />
           </div>
         </nuxt-link>
-        <div class="daftar-mahasiswa-chat">
-          <img
-            alt="chat4162"
-            src="/assets/chat4162-5tzb.svg"
-            class="daftar-mahasiswa-chat1"
-          />
-        </div>
+        <nuxt-link to="/gamvic" class="daftar-mahasiswa-navlink4">
+          <div class="daftar-mahasiswa-gamvic">
+            <img
+              alt="bell4162"
+              src="/assets/presentationchartbar5562-1s4d.svg"
+              class="daftar-mahasiswa-gamvic1"
+            />
+          </div>
+        </nuxt-link>
       </div>
-      <img
-        alt="cog4162"
-        src="/assets/cog4162-9gch.svg"
-        loading="lazy"
-        class="daftar-mahasiswa-cog"
-      />
     </aside>
     <div class="daftar-mahasiswa-daftar-mahasiswa">
       <span class="daftar-mahasiswa-text"><span>Daftar Mahasiswa</span></span>
       <div class="daftar-mahasiswa-daftar-mahasiswa1">
         <div class="daftar-mahasiswa-content-daftar-mahasiswa">
-          <nuxt-link to="/emotion-detail" class="daftar-mahasiswa-navlink4">
+          <nuxt-link to="/emotion-detail" class="daftar-mahasiswa-navlink5">
             <div class="daftar-mahasiswa-mahasiswa">
               <div class="daftar-mahasiswa-customer1">
                 <div class="daftar-mahasiswa-user">
@@ -173,7 +169,7 @@
       </div>
     </div>
     <header data-thq="thq-navbar" class="daftar-mahasiswa-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="daftar-mahasiswa-navlink5">
+      <nuxt-link to="/dashboard-dosen" class="daftar-mahasiswa-navlink6">
         <img
           alt="Rectangle84462"
           src="/assets/logo-200w.png"
@@ -216,16 +212,62 @@
         </nav>
       </div>
       <div class="daftar-mahasiswa-profile">
-        <img
-          alt="Rectangle254162"
-          src="/assets/rectangle254162-743-200h.png"
-          class="daftar-mahasiswa-rectangle25"
-        />
-        <img
-          alt="chevrondown4162"
-          src="/assets/chevrondown4162-p2v.svg"
-          class="daftar-mahasiswa-chevrondown"
-        />
+        <div
+          data-thq="thq-dropdown"
+          class="daftar-mahasiswa-thq-dropdown list-item"
+        >
+          <div
+            data-thq="thq-dropdown-toggle"
+            class="daftar-mahasiswa-dropdown-toggle"
+          >
+            <img
+              alt="Rectangle254162"
+              src="/assets/rectangle254162-743-200h.png"
+              class="daftar-mahasiswa-rectangle25"
+            />
+            <img
+              alt="chevrondown4162"
+              src="/assets/chevrondown4162-p2v.svg"
+              class="daftar-mahasiswa-chevrondown"
+            />
+          </div>
+          <ul data-thq="thq-dropdown-list" class="daftar-mahasiswa-dropdown-list">
+            <li
+              data-thq="thq-dropdown"
+              class="daftar-mahasiswa-dropdown list-item"
+            >
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="daftar-mahasiswa-dropdown-toggle1"
+              >
+                <img
+                  alt="user5862"
+                  src="/assets/user5862-kh17n.svg"
+                  class="daftar-mahasiswa-user8"
+                />
+                <span class="daftar-mahasiswa-profile1 BodyType16">Profile</span>
+              </div>
+            </li>
+            <li
+              data-thq="thq-dropdown"
+              class="daftar-mahasiswa-dropdown1 list-item"
+            >
+              <nuxt-link to="/login">
+                <div
+                  data-thq="thq-dropdown-toggle"
+                  class="daftar-mahasiswa-dropdown-toggle2"
+                >
+                  <img
+                    alt="logout5862"
+                    src="/assets/logout5862-woq.svg"
+                    class="daftar-mahasiswa-logout"
+                  />
+                  <span class="daftar-mahasiswa-logout1 BodyType16">Logout</span>
+                </div>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
       </div>
       <div data-thq="thq-burger-menu" class="daftar-mahasiswa-burger-menu">
         <svg viewBox="0 0 1024 1024" class="daftar-mahasiswa-icon">
@@ -272,8 +314,8 @@ export default {
   gap: 382px;
   top: 238px;
   left: 28px;
-  width: 50px;
-  height: 613px;
+  width: auto;
+  height: auto;
   display: flex;
   position: fixed;
   align-items: center;
@@ -373,7 +415,10 @@ export default {
   height: 30px;
   position: absolute;
 }
-.daftar-mahasiswa-chat {
+.daftar-mahasiswa-navlink4 {
+  display: contents;
+}
+.daftar-mahasiswa-gamvic {
   width: 50px;
   height: 50px;
   display: flex;
@@ -382,19 +427,13 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
 }
-.daftar-mahasiswa-chat1 {
+.daftar-mahasiswa-gamvic1 {
   top: 10px;
   left: 10px;
   width: 30px;
-  height: 30px;
-  position: absolute;
-}
-.daftar-mahasiswa-cog {
-  left: 10px;
-  width: 30px;
-  bottom: 0px;
   height: 30px;
   position: absolute;
 }
@@ -443,7 +482,7 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
-.daftar-mahasiswa-navlink4 {
+.daftar-mahasiswa-navlink5 {
   display: contents;
 }
 .daftar-mahasiswa-mahasiswa {
@@ -1013,11 +1052,12 @@ export default {
   width: 100%;
   display: flex;
   padding: var(--dl-space-space-twounits);
-  position: relative;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--dl-color-default-white);
 }
-.daftar-mahasiswa-navlink5 {
+.daftar-mahasiswa-navlink6 {
   display: contents;
 }
 .daftar-mahasiswa-logo {
@@ -1099,6 +1139,24 @@ export default {
   display: flex;
   align-items: center;
 }
+.daftar-mahasiswa-thq-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.daftar-mahasiswa-dropdown-toggle {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius2);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+}
 .daftar-mahasiswa-rectangle25 {
   width: 50px;
   height: 50px;
@@ -1107,6 +1165,93 @@ export default {
 .daftar-mahasiswa-chevrondown {
   width: 30px;
   height: 30px;
+}
+.daftar-mahasiswa-dropdown-list {
+  left: 0%;
+  width: max-content;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  min-width: 100%;
+  transition: 0.3s;
+  align-items: stretch;
+  border-color: #D9D9D9;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius4);
+  flex-direction: column;
+  list-style-type: none;
+  background-color: var(--dl-color-gray-white);
+  list-style-position: inside;
+}
+.daftar-mahasiswa-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.daftar-mahasiswa-dropdown-toggle1 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: flex-start;
+}
+.daftar-mahasiswa-dropdown-toggle1:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-blue-600);
+}
+.daftar-mahasiswa-user8 {
+  width: 20px;
+  height: 20px;
+}
+.daftar-mahasiswa-profile1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.daftar-mahasiswa-dropdown1 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.daftar-mahasiswa-dropdown-toggle2 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  text-decoration: none;
+}
+.daftar-mahasiswa-dropdown-toggle2:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-red-400);
+}
+.daftar-mahasiswa-logout {
+  width: 20px;
+  height: 20px;
+}
+.daftar-mahasiswa-logout1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .daftar-mahasiswa-burger-menu {
   display: none;

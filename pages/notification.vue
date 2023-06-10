@@ -39,20 +39,16 @@
             />
           </div>
         </nuxt-link>
-        <div class="notification-chat">
-          <img
-            alt="chat4162"
-            src="/assets/chat4162-5tzb.svg"
-            class="notification-chat1"
-          />
-        </div>
+        <nuxt-link to="/gamvic" class="notification-navlink4">
+          <div class="notification-gamvic">
+            <img
+              alt="bell4162"
+              src="/assets/presentationchartbar5562-1s4d.svg"
+              class="notification-gamvic1"
+            />
+          </div>
+        </nuxt-link>
       </div>
-      <img
-        alt="cog4162"
-        src="/assets/cog4162-9gch.svg"
-        loading="lazy"
-        class="notification-cog"
-      />
     </aside>
     <div class="notification-nofication">
       <span class="notification-text"><span>Notification</span></span>
@@ -98,7 +94,7 @@
       </div>
     </div>
     <header data-thq="thq-navbar" class="notification-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="notification-navlink4">
+      <nuxt-link to="/dashboard-dosen" class="notification-navlink5">
         <img
           alt="Rectangle84462"
           src="/assets/logo-200w.png"
@@ -139,16 +135,53 @@
         </nav>
       </div>
       <div class="notification-profile">
-        <img
-          alt="Rectangle254162"
-          src="/assets/rectangle254162-743-200h.png"
-          class="notification-rectangle25"
-        />
-        <img
-          alt="chevrondown4162"
-          src="/assets/chevrondown4162-p2v.svg"
-          class="notification-chevrondown"
-        />
+        <div data-thq="thq-dropdown" class="notification-thq-dropdown list-item">
+          <div
+            data-thq="thq-dropdown-toggle"
+            class="notification-dropdown-toggle"
+          >
+            <img
+              alt="Rectangle254162"
+              src="/assets/rectangle254162-743-200h.png"
+              class="notification-rectangle25"
+            />
+            <img
+              alt="chevrondown4162"
+              src="/assets/chevrondown4162-p2v.svg"
+              class="notification-chevrondown"
+            />
+          </div>
+          <ul data-thq="thq-dropdown-list" class="notification-dropdown-list">
+            <li data-thq="thq-dropdown" class="notification-dropdown list-item">
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="notification-dropdown-toggle1"
+              >
+                <img
+                  alt="user5862"
+                  src="/assets/user5862-kh17n.svg"
+                  class="notification-user2"
+                />
+                <span class="notification-profile1 BodyType16">Profile</span>
+              </div>
+            </li>
+            <li data-thq="thq-dropdown" class="notification-dropdown1 list-item">
+              <nuxt-link to="/login">
+                <div
+                  data-thq="thq-dropdown-toggle"
+                  class="notification-dropdown-toggle2"
+                >
+                  <img
+                    alt="logout5862"
+                    src="/assets/logout5862-woq.svg"
+                    class="notification-logout"
+                  />
+                  <span class="notification-logout1 BodyType16">Logout</span>
+                </div>
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
       </div>
       <div data-thq="thq-burger-menu" class="notification-burger-menu">
         <svg viewBox="0 0 1024 1024" class="notification-icon">
@@ -194,8 +227,8 @@ export default {
   gap: 382px;
   top: 238px;
   left: 28px;
-  width: 50px;
-  height: 613px;
+  width: auto;
+  height: auto;
   display: flex;
   position: fixed;
   align-items: center;
@@ -295,7 +328,10 @@ export default {
   height: 30px;
   position: absolute;
 }
-.notification-chat {
+.notification-navlink4 {
+  display: contents;
+}
+.notification-gamvic {
   width: 50px;
   height: 50px;
   display: flex;
@@ -304,19 +340,13 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
 }
-.notification-chat1 {
+.notification-gamvic1 {
   top: 10px;
   left: 10px;
   width: 30px;
-  height: 30px;
-  position: absolute;
-}
-.notification-cog {
-  left: 10px;
-  width: 30px;
-  bottom: 0px;
   height: 30px;
   position: absolute;
 }
@@ -521,11 +551,12 @@ export default {
   width: 100%;
   display: flex;
   padding: var(--dl-space-space-twounits);
-  position: relative;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--dl-color-default-white);
 }
-.notification-navlink4 {
+.notification-navlink5 {
   display: contents;
 }
 .notification-logo {
@@ -607,6 +638,24 @@ export default {
   display: flex;
   align-items: center;
 }
+.notification-thq-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.notification-dropdown-toggle {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius2);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+}
 .notification-rectangle25 {
   width: 50px;
   height: 50px;
@@ -615,6 +664,93 @@ export default {
 .notification-chevrondown {
   width: 30px;
   height: 30px;
+}
+.notification-dropdown-list {
+  left: 0%;
+  width: max-content;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  min-width: 100%;
+  transition: 0.3s;
+  align-items: stretch;
+  border-color: #D9D9D9;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius4);
+  flex-direction: column;
+  list-style-type: none;
+  background-color: var(--dl-color-gray-white);
+  list-style-position: inside;
+}
+.notification-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.notification-dropdown-toggle1 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: flex-start;
+}
+.notification-dropdown-toggle1:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-blue-600);
+}
+.notification-user2 {
+  width: 20px;
+  height: 20px;
+}
+.notification-profile1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.notification-dropdown1 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.notification-dropdown-toggle2 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  text-decoration: none;
+}
+.notification-dropdown-toggle2:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-red-400);
+}
+.notification-logout {
+  width: 20px;
+  height: 20px;
+}
+.notification-logout1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .notification-burger-menu {
   display: none;

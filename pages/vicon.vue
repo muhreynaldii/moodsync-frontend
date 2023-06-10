@@ -3,14 +3,16 @@
     <bg-bawah rootClassName="bg-bawah-root-class-name6"></bg-bawah>
     <aside class="vicon-side-bar-full">
       <div class="vicon-side-bar">
-        <div class="vicon-dashboard">
-          <img
-            alt="chartpie4162"
-            src="/assets/chartpie4462-g92g.svg"
-            class="vicon-chartpie"
-          />
-        </div>
-        <nuxt-link to="/vicon-started" class="vicon-navlink">
+        <nuxt-link to="/dashboard-dosen" class="vicon-navlink">
+          <div class="vicon-dashboard">
+            <img
+              alt="chartpie4162"
+              src="/assets/chartpie4462-g92g.svg"
+              class="vicon-chartpie"
+            />
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/vicon-started" class="vicon-navlink1">
           <div class="vicon-conference">
             <img
               alt="cash4162"
@@ -19,7 +21,7 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="vicon-navlink1">
+        <nuxt-link to="/daftar-mahasiswa" class="vicon-navlink2">
           <div class="vicon-class">
             <img
               alt="usergroup4162"
@@ -28,7 +30,7 @@
             />
           </div>
         </nuxt-link>
-        <nuxt-link to="/notification" class="vicon-navlink2">
+        <nuxt-link to="/notification" class="vicon-navlink3">
           <div class="vicon-notif">
             <img
               alt="bell4162"
@@ -37,20 +39,16 @@
             />
           </div>
         </nuxt-link>
-        <div class="vicon-chat">
-          <img
-            alt="chat4162"
-            src="/assets/chat4162-5tzb.svg"
-            class="vicon-chat1"
-          />
-        </div>
+        <nuxt-link to="/gamvic" class="vicon-navlink4">
+          <div class="vicon-gamvic">
+            <img
+              alt="bell4162"
+              src="/assets/presentationchartbar5562-1s4d.svg"
+              class="vicon-gamvic1"
+            />
+          </div>
+        </nuxt-link>
       </div>
-      <img
-        alt="cog4162"
-        src="/assets/cog4162-9gch.svg"
-        loading="lazy"
-        class="vicon-cog"
-      />
     </aside>
     <div class="vicon-container1">
       <div class="vicon-vicon-content">
@@ -215,22 +213,28 @@
           </div>
         </div>
       </div>
-      <div class="vicon-emotion-overview"></div>
-      <div >
-        <iframe class="vicon-gamevic" src="https://gamvic-client.vercel.app/" title="W3Schools Free Online Web Tutorials"></iframe>
-
+      <div>
+        <p class="text-center w-full font-medium text-[#1C64F2] text-[18px]">Overall Class Emotion</p>
+        <div class="w-[445px] h-[128px] flex items-center flex-row flex-[0_0_auto] justify-between px-[18px]">
+          <EllipseGraph :progress="40" emotion="Sad"/>
+          <EllipseGraph :progress="30" emotion="Happy"/>
+          <EllipseGraph :progress="20" emotion="Angry"/>
+        </div>
+      </div>
+      <div>
+        <iframe class="vicon-gamevic" src="https://gamvic-client.vercel.app/" title="Gamvic"></iframe>
       </div>
     </div>
     <header data-thq="thq-navbar" class="vicon-navbar-interactive">
       <div class="vicon-container2">
-        <nuxt-link to="/dashboard-dosen" class="vicon-navlink3">
+        <nuxt-link to="/dashboard-dosen" class="vicon-navlink5">
           <img
             alt="Rectangle84462"
             src="/assets/logo-200w.png"
             class="vicon-logo"
           />
         </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="vicon-navlink4">
+        <nuxt-link to="/vicon-started" class="vicon-navlink6">
           <div class="vicon-back button">
             <img
               alt="Rectangle164462"
@@ -273,16 +277,50 @@
           </button>
         </div>
         <div class="vicon-profile">
-          <img
-            alt="Rectangle254162"
-            src="/assets/rectangle254162-743-200h.png"
-            class="vicon-rectangle25"
-          />
-          <img
-            alt="chevrondown4162"
-            src="/assets/chevrondown4162-p2v.svg"
-            class="vicon-chevrondown"
-          />
+          <div data-thq="thq-dropdown" class="vicon-thq-dropdown list-item">
+            <div data-thq="thq-dropdown-toggle" class="vicon-dropdown-toggle">
+              <img
+                alt="Rectangle254162"
+                src="/assets/rectangle254162-743-200h.png"
+                class="vicon-rectangle25"
+              />
+              <img
+                alt="chevrondown4162"
+                src="/assets/chevrondown4162-p2v.svg"
+                class="vicon-chevrondown"
+              />
+            </div>
+            <ul data-thq="thq-dropdown-list" class="vicon-dropdown-list">
+              <li data-thq="thq-dropdown" class="vicon-dropdown list-item">
+                <div
+                  data-thq="thq-dropdown-toggle"
+                  class="vicon-dropdown-toggle1"
+                >
+                  <img
+                    alt="user5862"
+                    src="/assets/user5862-kh17n.svg"
+                    class="vicon-user"
+                  />
+                  <span class="vicon-profile1 BodyType16">Profile</span>
+                </div>
+              </li>
+              <li data-thq="thq-dropdown" class="vicon-dropdown1 list-item">
+                <nuxt-link to="/login">
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="vicon-dropdown-toggle2"
+                  >
+                    <img
+                      alt="logout5862"
+                      src="/assets/logout5862-woq.svg"
+                      class="vicon-logout"
+                    />
+                    <span class="vicon-logout1 BodyType16">Logout</span>
+                  </div>
+                </nuxt-link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div data-thq="thq-burger-menu" class="vicon-burger-menu">
@@ -297,13 +335,10 @@
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
+
 
 export default {
   name: 'Vicon',
-  components: {
-    BgBawah,
-  },
   head: {
     title: 'Vicon - exported project',
     meta: [
@@ -329,8 +364,8 @@ export default {
   gap: 382px;
   top: 238px;
   left: 28px;
-  width: 50px;
-  height: 613px;
+  width: auto;
+  height: auto;
   display: flex;
   position: fixed;
   align-items: center;
@@ -342,6 +377,9 @@ export default {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+}
+.vicon-navlink {
+  display: contents;
 }
 .vicon-dashboard {
   width: 50px;
@@ -362,7 +400,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-navlink {
+.vicon-navlink1 {
   display: contents;
 }
 .vicon-conference {
@@ -384,7 +422,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-navlink1 {
+.vicon-navlink2 {
   display: contents;
 }
 .vicon-class {
@@ -406,7 +444,7 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-navlink2 {
+.vicon-navlink3 {
   display: contents;
 }
 .vicon-notif {
@@ -428,7 +466,10 @@ export default {
   height: 30px;
   position: absolute;
 }
-.vicon-chat {
+.vicon-navlink4 {
+  display: contents;
+}
+.vicon-gamvic {
   width: 50px;
   height: 50px;
   display: flex;
@@ -437,19 +478,13 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: var(--dl-radius-radius-round);
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 1);
 }
-.vicon-chat1 {
+.vicon-gamvic1 {
   top: 10px;
   left: 10px;
   width: 30px;
-  height: 30px;
-  position: absolute;
-}
-.vicon-cog {
-  left: 10px;
-  width: 30px;
-  bottom: 0px;
   height: 30px;
   position: absolute;
 }
@@ -1089,18 +1124,19 @@ export default {
   height: 128px;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: bet;
 }
 .vicon-gamevic {
   width: 445px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 601px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
+
 .vicon-navbar-interactive {
   width: 100%;
   display: flex;
@@ -1115,7 +1151,7 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.vicon-navlink3 {
+.vicon-navlink5 {
   display: contents;
 }
 .vicon-logo {
@@ -1123,7 +1159,7 @@ export default {
   height: 50px;
   text-decoration: none;
 }
-.vicon-navlink4 {
+.vicon-navlink6 {
   display: contents;
 }
 .vicon-back {
@@ -1233,6 +1269,24 @@ export default {
   display: flex;
   align-items: center;
 }
+.vicon-thq-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.vicon-dropdown-toggle {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius2);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+}
 .vicon-rectangle25 {
   width: 50px;
   height: 50px;
@@ -1241,6 +1295,93 @@ export default {
 .vicon-chevrondown {
   width: 30px;
   height: 30px;
+}
+.vicon-dropdown-list {
+  left: 0%;
+  width: max-content;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  min-width: 100%;
+  transition: 0.3s;
+  align-items: stretch;
+  border-color: #D9D9D9;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius4);
+  flex-direction: column;
+  list-style-type: none;
+  background-color: var(--dl-color-gray-white);
+  list-style-position: inside;
+}
+.vicon-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.vicon-dropdown-toggle1 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: flex-start;
+}
+.vicon-dropdown-toggle1:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-blue-600);
+}
+.vicon-user {
+  width: 20px;
+  height: 20px;
+}
+.vicon-profile1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.vicon-dropdown1 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: var(--dl-radius-radius-radius2);
+}
+.vicon-dropdown-toggle2 {
+  fill: #595959;
+  color: #595959;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  text-decoration: none;
+}
+.vicon-dropdown-toggle2:hover {
+  fill: #fff;
+  color: #fff;
+  background-color: var(--dl-color-red-400);
+}
+.vicon-logout {
+  width: 20px;
+  height: 20px;
+}
+.vicon-logout1 {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .vicon-burger-menu {
   display: none;
@@ -1252,6 +1393,15 @@ export default {
   height: var(--dl-size-size-xsmall);
 }
 @media(max-width: 1600px) {
+  .vicon-container1 {
+    width: 1354px;
+  }
+  .vicon-emotion-overview {
+    width: 363px;
+  }
+  .vicon-gamevic {
+    width: 363px;
+  }
   .vicon-container2 {
     width: 137px;
   }
