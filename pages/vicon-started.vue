@@ -603,65 +603,13 @@ export default {
   align-items: center;
   flex-direction: row;
 }
-.vicon-started-search {
-  gap: 10px;
-  width: 995px;
-  display: flex;
-  align-self: center;
-  align-items: flex-start;
-  flex-shrink: 0;
-}
-.vicon-started-input {
-  width: 100%;
-  height: auto;
-  display: flex;
-  padding: 12px 16px;
-  align-self: center;
-  box-sizing: content-box;
-  align-items: center;
-  border-color: rgba(209, 213, 219, 1);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 8px;
-  background-color: var(--dl-color-gray-50);
-}
-.vicon-started-content {
-  gap: 8px;
-  display: flex;
-  flex-grow: 1;
-  align-self: center;
-  align-items: center;
-}
-.vicon-started-search1 {
-  width: 18px;
-  height: 18px;
-}
+
 .vicon-started-text08 {
   color: var(--dl-color-gray-500);
   height: auto;
   flex-grow: 1;
   text-align: left;
   line-height: 125%;
-}
-.vicon-started-button1 {
-  width: auto;
-  height: auto;
-  display: flex;
-  padding: 8px;
-  align-self: center;
-  box-sizing: content-box;
-  align-items: center;
-  flex-shrink: 0;
-  border-color: rgba(28, 100, 242, 1);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 8px;
-  justify-content: center;
-  background-color: var(--dl-color-primary-600);
-}
-.vicon-started-search2 {
-  width: 20px;
-  height: 20px;
 }
 .vicon-started-profile {
   gap: 2px;
@@ -796,11 +744,6 @@ export default {
     top: 29px;
     right: 92px;
     position: static;
-  }
-}
-@media (max-width: 1200px) {
-  .vicon-started-search {
-    width: 787px;
   }
 }
 @media (max-width: 767px) {
