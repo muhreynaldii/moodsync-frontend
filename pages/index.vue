@@ -48,27 +48,18 @@
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
-import BgAtas from '../components/bg-atas'
-import AppNav from '../components/nav'
-
 export default {
-  name: 'Index',
-  components: {
-    BgBawah,
-    BgAtas,
-    AppNav,
-  },
+  name: "Index",
   data() {
     return {
-      raws194: ' ',
-      rawaews: ' ',
-    }
+      raws194: " ",
+      rawaews: " ",
+    };
   },
   head: {
-    title: 'exported project',
+    title: "exported project",
   },
-}
+};
 </script>
 
 <style scoped>
@@ -192,7 +183,7 @@ export default {
   font-stretch: normal;
   text-decoration: none;
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .index-emotion {
     right: 323px;
   }

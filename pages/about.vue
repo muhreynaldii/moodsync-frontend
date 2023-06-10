@@ -20,20 +20,21 @@
             <span class="HeadlineType23">
               Aplikasi Video Conference dengan Emotion Recognition adalah sebuah
               platform komunikasi jarak jauh yang dirancang khusus untuk
-              meningkatkan pengalaman pengguna dalam konferensi video. Salah satu
-              fitur utama dari aplikasi ini adalah kemampuannya untuk mendeteksi
-              emosi pengguna selama panggilan video.
+              meningkatkan pengalaman pengguna dalam konferensi video. Salah
+              satu fitur utama dari aplikasi ini adalah kemampuannya untuk
+              mendeteksi emosi pengguna selama panggilan video.
             </span>
             <br class="HeadlineType23" />
             <br class="HeadlineType23" />
             <span class="HeadlineType23">
-              Dengan menggunakan teknologi pengenalan emosi yang canggih, aplikasi
-              ini dapat menganalisis ekspresi wajah pengguna dalam waktu nyata.
-              Algoritma yang terintegrasi dengan aplikasi akan mengidentifikasi
-              berbagai emosi seperti kegembiraan, kesedihan, kejutan, marah, atau
-              ketidakpuasan. Hal ini memungkinkan para peserta video conference
-              untuk mendapatkan pemahaman yang lebih mendalam tentang respons
-              emosional satu sama lain, bahkan dalam komunikasi nonverbal
+              Dengan menggunakan teknologi pengenalan emosi yang canggih,
+              aplikasi ini dapat menganalisis ekspresi wajah pengguna dalam
+              waktu nyata. Algoritma yang terintegrasi dengan aplikasi akan
+              mengidentifikasi berbagai emosi seperti kegembiraan, kesedihan,
+              kejutan, marah, atau ketidakpuasan. Hal ini memungkinkan para
+              peserta video conference untuk mendapatkan pemahaman yang lebih
+              mendalam tentang respons emosional satu sama lain, bahkan dalam
+              komunikasi nonverbal
             </span>
             <span class="HeadlineType23">.</span>
           </span>
@@ -50,27 +51,18 @@
 </template>
 
 <script>
-import BgBawah from '../components/bg-bawah'
-import BgAtas from '../components/bg-atas'
-import AppNav from '../components/nav'
-
 export default {
-  name: 'About',
-  components: {
-    BgBawah,
-    BgAtas,
-    AppNav,
-  },
+  name: "About",
   head: {
-    title: 'About - exported project',
+    title: "About - exported project",
     meta: [
       {
-        property: 'og:title',
-        content: 'About - exported project',
+        property: "og:title",
+        content: "About - exported project",
       },
     ],
   },
-}
+};
 </script>
 
 <style scoped>
@@ -181,7 +173,7 @@ export default {
   font-stretch: normal;
   text-decoration: none;
 }
-@media(max-width: 1600px) {
+@media (max-width: 1600px) {
   .about-emotion {
     top: 0px;
     right: 0px;
@@ -203,7 +195,7 @@ export default {
     text-decoration: none;
   }
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .about-emotion {
     display: none;
   }

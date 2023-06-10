@@ -89,21 +89,12 @@
 </template>
 
 <script>
-import BgBawah from "../components/bg-bawah";
-import BgAtas from "../components/bg-atas";
-import AppNav from "../components/nav";
-
 export default {
   name: "Login",
   data() {
     return {
       showPassword: false,
     };
-  },
-  components: {
-    BgBawah,
-    BgAtas,
-    AppNav,
   },
   head: {
     title: "Login | Moodsync",
