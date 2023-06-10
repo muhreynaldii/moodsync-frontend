@@ -1,46 +1,7 @@
 <template>
   <div class="notification-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name5"></bg-bawah>
-    <aside class="notification-side-bar-full">
-      <div class="notification-side-bar">
-        <nuxt-link to="/dashboard-dosen" class="notification-navlink">
-          <div class="notification-dashboard">
-            <img
-              alt="chartpie4162"
-              src="/assets/chartpie4462-g92g.svg"
-              class="notification-chartpie"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/vicon-started" class="notification-navlink1">
-          <div class="notification-conference">
-            <img
-              alt="cash4162"
-              src="/assets/cash4162-e06k.svg"
-              class="notification-cash"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/daftar-mahasiswa" class="notification-navlink2">
-          <div class="notification-class">
-            <img
-              alt="usergroup4162"
-              src="/assets/usergroup4162-5fld.svg"
-              class="notification-usergroup"
-            />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/notification" class="notification-navlink3">
-          <div class="notification-notif">
-            <img
-              alt="bell4162"
-              src="/assets/bell4162-q9q.svg"
-              class="notification-bell"
-            />
-          </div>
-        </nuxt-link>
-      </div>
-    </aside>
+    <sidebar />
     <div class="notification-nofication">
       <span class="notification-text"><span>Notification</span></span>
       <div class="notification-notification-content">
