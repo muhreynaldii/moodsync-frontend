@@ -109,31 +109,7 @@
         <nav
           data-thq="thq-navbar-nav-links"
           data-role="Nav"
-          class="emotion-detail-nav"
-        >
-          <div class="emotion-detail-search">
-            <div class="emotion-detail-input">
-              <div class="emotion-detail-content">
-                <img
-                  alt="searchI416"
-                  src="/assets/searchi416-d8ss.svg"
-                  class="emotion-detail-search1"
-                />
-                <span
-                  class="emotion-detail-text10 leadingTighttextSmfontNormal"
-                >
-                  <span>Search</span>
-                </span>
-              </div>
-            </div>
-            <button class="emotion-detail-button">
-              <img
-                alt="searchI416"
-                src="/assets/searchi416-1gp7.svg"
-                class="emotion-detail-search2"
-              />
-            </button>
-          </div>
+          class="emotion-detail-nav">
         </nav>
       </div>
       <div class="emotion-detail-profile">
