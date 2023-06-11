@@ -144,7 +144,7 @@
               />
             </div>
           </div>
-          <div class="vicon-disconnect">
+          <div class="vicon-disconnect" @click="leaveSession">
             <img
               alt="phonemissedcall4542"
               src="/assets/phonemissedcall4542-galo.svg"
@@ -370,6 +370,7 @@ export default {
       this.publisher = undefined;
       this.subscribers = [];
       this.OV = undefined;
+      this.$router.go(-1);
 
       // Remove beforeunload listener
       window.removeEventListener("beforeunload", this.leaveSession);
@@ -1283,7 +1284,11 @@ export default {
   flex-shrink: 0;
   border-radius: 18.610000610351562px;
   justify-content: flex-end;
+  cursor: pointer;
   background-color: var(--dl-color-red-500);
+}
+.vicon-disconnect:hover{
+  background-color: var(--dl-color-red-600);
 }
 .vicon-phonemissedcall {
   top: 13px;
