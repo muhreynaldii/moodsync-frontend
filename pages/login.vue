@@ -14,7 +14,7 @@
         class="login-login-pic"
       />
       <form class="login-form">
-        <FormulateForm class="mt-[32px] flex flex-col" @submit="submitLogin">
+        <FormulateForm class="mt-[32px] flex flex-col">
           <h1 class="text-center text-[23px] text-[#1C64F2]">Welcome!</h1>
           <!-- Email -->
           <FormulateInput
@@ -48,7 +48,7 @@
               }"
               error-behavior="submit"
             />
-            <div @click="toggleShow" class="absolute right-3 top-[52px]">
+            <div class="absolute right-3 top-[52px]">
               <svg
                 v-if="showPassword"
                 xmlns="http://www.w3.org/2000/svg"
