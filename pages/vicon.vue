@@ -1,9 +1,7 @@
 <template>
   <div class="vicon-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name6"></bg-bawah>
-    <aside class="vicon-side-bar-full">
       <sidebar />
-    </aside>
     <div class="vicon-container1">
       <div class="vicon-vicon-content">
         <div class="vicon-vicon">
@@ -119,27 +117,24 @@
             src="/assets/volume4542-g9ck.svg"
             class="vicon-volume"
           />
-          <button class="vicon-action-button">
-            <div class="vicon-camera">
-              <img
-                alt="videocamera4542"
-                src="/assets/videocamera4542-5fat.svg"
-                class="vicon-videocamera"
-              />
+          <div class="vicon-action-button">
+            <div class="borderViconButton">
+              <button class="ViconIconSize" @click="toggleCamera">
+                <font-awesome-icon :icon="cameraIcon" />
+              </button>
             </div>
-            <div class="vicon-mic">
-              <img
-                alt="microphone4542"
-                src="/assets/microphone4542-ky9m.svg"
-                class="vicon-microphone4"
-              />
+            <div class="borderViconButton">
+              <button class="ViconIconSize" @click="toggleMic">
+                <font-awesome-icon
+                  :icon="isMicOn ? 'microphone' : 'microphone-slash'"
+                />
+              </button>
             </div>
-            <div class="vicon-share-screen">
-              <img
-                alt="collection4542"
-                src="/assets/collection4542-2vsm.svg"
-                class="vicon-collection"
-              />
+            <div class="borderViconButton">
+              <button class="ViconIconSize" > <!--@click="toggleScreenSharing" -->
+                <font-awesome-icon icon="desktop"
+                />
+              </button>
             </div>
             <div class="vicon-menu">
               <img
@@ -148,7 +143,7 @@
                 class="vicon-dotshorizontal"
               />
             </div>
-          </button>
+          </div>
           <div class="vicon-disconnect">
             <img
               alt="phonemissedcall4542"
@@ -163,11 +158,11 @@
           Overall Class Emotion
         </p>
         <div
-          class="flex h-[128px] w-[445px] flex-[0_0_auto] flex-row items-center justify-between px-[18px]"
+          class="flex h-[128px] w-[445px] flex-[0_0_auto] flex-row items-center justify-center"
         >
-          <EllipseGraph :progress="40" emotion="Sad" />
-          <EllipseGraph :progress="30" emotion="Happy" />
-          <EllipseGraph :progress="20" emotion="Angry" />
+          <EllipseGraph class="p-10" :progress="40" emotion="Sad" />
+          <EllipseGraph class="p-10" :progress="30" emotion="Happy" />
+          <EllipseGraph class="p-10" :progress="20" emotion="Angry" />
         </div>
         <div class="chat-component">
           <ChatBox class="chat-messages" />
@@ -262,6 +257,8 @@
 
 <script>
 import { OpenVidu } from "openvidu-browser";
+import { faVideo, faVideoSlash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 const APPLICATION_SERVER_URL =
   process.env.NODE_ENV === "production" ? "" : "http://localhost:5000/";
@@ -280,6 +277,9 @@ export default {
       mainStreamManager: undefined,
       publisher: undefined,
       subscribers: [],
+      isCameraOn: true,
+      isMicOn: true,
+      isScreenSharing: false,
 
       // Join form
       mySessionId: "SessionA",
@@ -421,11 +421,90 @@ export default {
       );
       return response.data; // The token
     },
+    toggleCamera() {
+      // Mengaktifkan atau menonaktifkan kamera
+      if (this.isCameraOn) {
+        this.publisher.stream
+          .getMediaStream()
+          .getVideoTracks()[0].enabled = false;
+      } else {
+        this.publisher.stream
+          .getMediaStream()
+          .getVideoTracks()[0].enabled = true;
+      }
+      this.isCameraOn = !this.isCameraOn;
+    },
+    toggleMic() {
+      this.isMicOn = !this.isMicOn;
+      if (this.isMicOn) {
+        // Mengaktifkan microphone
+        this.publisher.publishAudio(true);
+      } else {
+        // Mematikan microphone
+        this.publisher.publishAudio(false);
+      }
+    },
+    createPublisher() {
+      this.publisher = new Publisher();
+      this.publisher.publishAudio(this.isMicOn);
+      this.session.publish(this.publisher);
+    },
+    toggleScreenSharing() {
+      if (this.isScreenSharing) {
+        // Hentikan screen sharing
+        this.stopScreenSharing();
+      } else {
+        // Mulai screen sharing
+        this.startScreenSharing();
+      }
+    },
+    startScreenSharing() {
+      if (!this.isScreenSharing) {
+        // Memulai screen sharing
+        this.publisher = this.session.publishScreen();
+        this.isScreenSharing = true;
+      }
+    },
+    stopScreenSharing() {
+      if (this.isScreenSharing) {
+        // Menghentikan screen sharing
+        this.publisher.dispose();
+        this.publisher = null;
+        this.isScreenSharing = false;
+      }
+    },
+  },
+  computed: {
+    cameraIcon() {
+      return this.isCameraOn ? faVideo : faVideoSlash;
+    },
   },
 };
 </script>
 
 <style scoped>
+.fa-desktop {
+  color: #1c64f2;
+}
+.fa-microphone {
+  color: #1c64f2;
+}
+.fa-microphone-slash {
+  color: #f05252;
+}
+.fa-video {
+  color: #1c64f2;
+}
+
+.fa-video-slash {
+  color: #f05252;
+}
+.ViconIconSize {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
 .chat-component {
   width: 445px;
   height: 601px;
@@ -1116,12 +1195,13 @@ export default {
   align-self: center;
   align-items: flex-start;
 }
-.vicon-camera {
+.borderViconButton {
   width: 59.20000076293945px;
   height: 56.38554382324219px;
   display: flex;
   position: relative;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   border-color: rgba(229, 231, 235, 1);
   border-style: solid;
