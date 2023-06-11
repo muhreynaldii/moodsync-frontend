@@ -32,6 +32,15 @@
 <script>
 export default {
   layout: "waves",
+  head: {
+    title: "Features | Moodsync",
+    meta: [
+      {
+        property: "og:title",
+        content: "Features | Moodsync",
+      },
+    ],
+  },
   data() {
     return {
       list: [
