@@ -1,9 +1,7 @@
 <template>
   <div class="vicon-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name6"></bg-bawah>
-    <aside class="vicon-side-bar-full">
       <sidebar />
-    </aside>
     <div class="vicon-container1">
       <div class="vicon-vicon-content">
         <div class="vicon-vicon">
