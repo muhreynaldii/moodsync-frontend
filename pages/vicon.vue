@@ -132,7 +132,7 @@
             </div>
             <div class="borderViconButton">
               <button class="ViconIconSize" > <!--@click="toggleScreenSharing" -->
-                <font-awesome-icon icon="share-square" style="color: #1c64f2;"
+                <font-awesome-icon icon="desktop"
                 />
               </button>
             </div>
@@ -483,6 +483,9 @@ export default {
 </script>
 
 <style scoped>
+.fa-desktop {
+  color: #1c64f2;
+}
 .fa-microphone {
   color: #1c64f2;
 }
