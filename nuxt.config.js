@@ -1,5 +1,13 @@
+import { resolve } from "path";
+
 export default {
   ssr: false,
+  alias: {
+    img: resolve(__dirname, "./assets/img"),
+    icons: resolve(__dirname, "./assets/icons"),
+    style: resolve(__dirname, "./assets/style"),
+    data: resolve(__dirname, "./assets/other/data"),
+  },
   head: {
     title: "Moodsync",
     htmlAttrs: {
