@@ -1,13 +1,13 @@
 <template>
   <div class="vicon-container">
     <bg-bawah rootClassName="bg-bawah-root-class-name6"></bg-bawah>
-      <sidebar />
+    <sidebar />
     <div class="vicon-container1">
       <div class="vicon-vicon-content">
         <div class="vicon-vicon">
           <div class="vicon-lecturer">
             <div id="main-video" class="col-md-6">
-              <user-video :stream-manager="mainStreamManager" />
+              <user-video :stream-manager="mainStreamManager" type="local" />
             </div>
           </div>
           <div class="vicon-audience">
@@ -112,7 +112,7 @@
           class="vicon-seperator"
         />
         <div class="vicon-action-bar">
-          <AudioSettings/>
+          <AudioSettings />
           <div class="vicon-action-button">
             <div class="borderViconButton">
               <button class="ViconIconSize" @click="toggleCamera">
@@ -127,9 +127,9 @@
               </button>
             </div>
             <div class="borderViconButton">
-              <button class="ViconIconSize" > <!--@click="toggleScreenSharing" -->
-                <font-awesome-icon icon="desktop"
-                />
+              <button class="ViconIconSize">
+                <!--@click="toggleScreenSharing" -->
+                <font-awesome-icon icon="desktop" />
               </button>
             </div>
             <div class="vicon-menu">
@@ -1277,7 +1277,7 @@ export default {
   cursor: pointer;
   background-color: var(--dl-color-red-500);
 }
-.vicon-disconnect:hover{
+.vicon-disconnect:hover {
   background-color: var(--dl-color-red-600);
 }
 .vicon-phonemissedcall {
