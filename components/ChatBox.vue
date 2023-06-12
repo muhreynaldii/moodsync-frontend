@@ -97,11 +97,13 @@ export default {
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .menu-button {
-  color: white;
-  width: 180px;
+  color: #b3b6bb;
+  width: 190px;
   display: flex;
   padding: 6px 24px;
   overflow: hidden;
@@ -111,11 +113,14 @@ export default {
   border-radius: 8px;
   justify-content: center;
   text-decoration: none;
-  background-color: #D1D5DB;
 }
-
+.menu-button:hover{
+  color: #9a9da1;
+}
+ 
 .menu-button.active {
   background-color: var(--dl-color-primary-7002);
+  color: white;
 }
 
 .chat {
@@ -194,7 +199,10 @@ export default {
   border-radius: 8px;
   justify-content: center;
   text-decoration: none;
-  background-color: var(--dl-color-primary-7002);
+  background-color: var(--dl-color-primary-600);
+}
+.send-button:hover{
+  background-color: var(--dl-color-primary-700);
 }
 
 .time {
