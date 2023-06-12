@@ -255,7 +255,6 @@
 import { OpenVidu } from "openvidu-browser";
 import { faVideo, faVideoSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import AudioSettings from "../components/AudioSettings.vue";
 
 const APPLICATION_SERVER_URL =
   process.env.NODE_ENV === "production" ? "" : "http://localhost:5000/";
@@ -264,7 +263,12 @@ export default {
   name: "App",
   mounted() {
     this.joinSession();
+     // this.audioObject.addEventListener('volumechange', this.updateVolumeSlider)
   },
+   // beforeDestroy() {
+    //   // Menghapus event listener sebelum komponen dihancurkan
+    //     this.audioObject.removeEventListener('volumechange', this.updateVolumeSlider);
+    // },
   data() {
     return {
       // OpenVidu objects
@@ -449,6 +453,12 @@ export default {
         this.isScreenSharing = false;
       }
     },
+    // updateVolumeSlider() {
+        //         // Mendapatkan nilai volume saat ini dari objek audio
+        //         const currentVolume = this.getAudioVolume();
+        //         // Mengupdate nilai volume pada properti data
+        //         this.volume = currentVolume;
+        // },
   },
   computed: {
     cameraIcon() {
