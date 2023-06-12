@@ -36,6 +36,12 @@ export default {
         autoprefixer: {},
       },
     },
+    extend(config, { isClient }) {
+      // Menambahkan konfigurasi alias untuk fs module hanya di lingkungan client (browser)
+      if (isClient) {
+        config.resolve.alias['fs'] = require.resolve('./plugins/fs.js');
+      }
+    },
   },
   components: true,
   plugins: [
