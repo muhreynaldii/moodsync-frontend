@@ -255,6 +255,7 @@
 import { OpenVidu } from "openvidu-browser";
 import { faVideo, faVideoSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import AudioSettings from "../components/AudioSettings.vue";
 
 const APPLICATION_SERVER_URL =
   process.env.NODE_ENV === "production" ? "" : "http://localhost:5000/";
