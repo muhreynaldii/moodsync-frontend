@@ -38,8 +38,10 @@ export default {
     },
   },
   components: true,
-  plugins: [{ src: "./plugins/elippse-progress.js", mode: "client" },
-            {src: './plugins/fontawesome.js', mode: 'client',},],
+  plugins: [
+    { src: "./plugins/elippse-progress.js", mode: "client" },
+    { src: "./plugins/fontawesome.js", mode: "client" },
+  ],
   modules: ["@nuxtjs/axios"],
   axios: {
     // Axios options

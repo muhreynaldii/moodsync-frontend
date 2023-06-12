@@ -3,7 +3,7 @@
     <video ref="videoElement" class="vicon-lecturer" autoplay></video>
     <p
       v-if="type === 'local'"
-      class="absolute top-14 left-4 bg-white rounded-full px-3 py-1 text-xl capitalize"
+      class="absolute left-4 top-14 rounded-full bg-white px-3 py-1 text-xl capitalize"
     >
       {{ currentPredict }}
     </p>
@@ -14,7 +14,7 @@
 import * as faceapi from "face-api.js";
 import { io } from "socket.io-client";
 
-const API_BASE_URL = "http://localhost:3005";
+const API_BASE_URL = "http://localhost:3000";
 const MODEL_URL =
   "https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights";
 
