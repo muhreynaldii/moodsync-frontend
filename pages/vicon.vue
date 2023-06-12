@@ -485,16 +485,26 @@ export default {
 
 <style scoped>
 .fa-desktop {
-  color: #1c64f2;
+  color: var(--dl-color-primary-600);
 }
+.fa-desktop:hover {
+  color: var(--dl-color-primary-700);
+}
+
 .fa-microphone {
-  color: #1c64f2;
+  color: var(--dl-color-primary-600);
+}
+.fa-microphone:hover {
+  color: var(--dl-color-primary-700);
 }
 .fa-microphone-slash {
   color: #f05252;
 }
 .fa-video {
-  color: #1c64f2;
+  color: var(--dl-color-primary-600);
+}
+.fa-video:hover {
+  color: var(--dl-color-primary-700);
 }
 
 .fa-video-slash {
