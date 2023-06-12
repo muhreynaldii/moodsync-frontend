@@ -264,7 +264,12 @@ export default {
     name: "App",
     mounted() {
         this.joinSession();
+        // this.audioObject.addEventListener('volumechange', this.updateVolumeSlider);
     },
+    // beforeDestroy() {
+    //   // Menghapus event listener sebelum komponen dihancurkan
+    //     this.audioObject.removeEventListener('volumechange', this.updateVolumeSlider);
+    // },
     data() {
         return {
             // OpenVidu objects
@@ -442,6 +447,12 @@ export default {
                 this.isScreenSharing = false;
             }
         },
+        // updateVolumeSlider() {
+        //         // Mendapatkan nilai volume saat ini dari objek audio
+        //         const currentVolume = this.getAudioVolume();
+        //         // Mengupdate nilai volume pada properti data
+        //         this.volume = currentVolume;
+        // },
     },
     computed: {
         cameraIcon() {
