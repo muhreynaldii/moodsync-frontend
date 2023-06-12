@@ -1,7 +1,5 @@
 <template>
   <div class="vicon-started-container">
-    <bg-bawah rootClassName="bg-bawah-root-class-name1"></bg-bawah>
-    <sidebar />
     <div class="vicon-started-vicon">
       <div class="vicon-started-vicon-content">
         <div class="vicon-started-frame1408">
@@ -68,103 +66,19 @@
         </div>
       </div>
     </div>
-    <header data-thq="thq-navbar" class="vicon-started-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="vicon-started-navlink5">
-        <img
-          alt="Rectangle84462"
-          src="/assets/logo-200w.png"
-          class="vicon-started-logo"
-        />
-      </nuxt-link>
-      <div
-        data-thq="thq-navbar-nav"
-        data-role="Nav"
-        class="vicon-started-desktop-menu"
-      >
-        <nav
-          data-thq="thq-navbar-nav-links"
-          data-role="Nav"
-          class="vicon-started-nav">
-        </nav>
-      </div>
-      <nav class="vicon-started-profile">
-        <div
-          data-thq="thq-dropdown"
-          class="vicon-started-thq-dropdown list-item"
-        >
-          <div
-            data-thq="thq-dropdown-toggle"
-            class="vicon-started-dropdown-toggle"
-          >
-            <img
-              alt="Rectangle254162"
-              src="/assets/rectangle254162-743-200h.png"
-              class="vicon-started-rectangle25"
-            />
-            <img
-              alt="chevrondown4162"
-              src="/assets/chevrondown4162-p2v.svg"
-              class="vicon-started-chevrondown"
-            />
-          </div>
-          <ul data-thq="thq-dropdown-list" class="vicon-started-dropdown-list">
-            <li
-              data-thq="thq-dropdown"
-              class="vicon-started-dropdown list-item"
-            >
-              <div
-                data-thq="thq-dropdown-toggle"
-                class="vicon-started-dropdown-toggle1"
-              >
-                <img
-                  alt="user5862"
-                  src="/assets/user5862-kh17n.svg"
-                  class="vicon-started-user"
-                />
-                <span class="vicon-started-profile1 BodyType16">Profile</span>
-              </div>
-            </li>
-            <li
-              data-thq="thq-dropdown"
-              class="vicon-started-dropdown1 list-item"
-            >
-              <nuxt-link to="/login">
-                <div
-                  data-thq="thq-dropdown-toggle"
-                  class="vicon-started-dropdown-toggle2"
-                >
-                  <img
-                    alt="logout5862"
-                    src="/assets/logout5862-woq.svg"
-                    class="vicon-started-logout"
-                  />
-                  <span class="vicon-started-logout1 BodyType16">Logout</span>
-                </div>
-              </nuxt-link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div data-thq="thq-burger-menu" class="vicon-started-burger-menu">
-        <svg viewBox="0 0 1024 1024" class="vicon-started-icon">
-          <path
-            d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-          ></path>
-        </svg>
-      </div>
-    </header>
   </div>
 </template>
 
 <script>
 export default {
   name: "ViconStarted",
+  layout: "side",
   head: {
-    title: "Vicon-Started - exported project",
+    title: "Vicon-Started | Moodsync",
     meta: [
       {
         property: "og:title",
-        content: "Vicon-Started - exported project",
+        content: "Vicon-Started | Moodsync",
       },
     ],
   },

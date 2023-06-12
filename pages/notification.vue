@@ -1,7 +1,5 @@
 <template>
   <div class="notification-container">
-    <bg-bawah rootClassName="bg-bawah-root-class-name5"></bg-bawah>
-    <sidebar />
     <div class="notification-nofication">
       <span class="notification-text"><span>Notification</span></span>
       <div class="notification-notification-content">
@@ -47,100 +45,19 @@
         </div>
       </div>
     </div>
-    <header data-thq="thq-navbar" class="notification-navbar-interactive">
-      <nuxt-link to="/dashboard-dosen" class="notification-navlink5">
-        <img
-          alt="Rectangle84462"
-          src="/assets/logo-200w.png"
-          class="notification-logo"
-        />
-      </nuxt-link>
-      <div
-        data-thq="thq-navbar-nav"
-        data-role="Nav"
-        class="notification-desktop-menu"
-      >
-        <nav
-          data-thq="thq-navbar-nav-links"
-          data-role="Nav"
-          class="notification-nav">
-        </nav>
-      </div>
-      <div class="notification-profile">
-        <div
-          data-thq="thq-dropdown"
-          class="notification-thq-dropdown list-item"
-        >
-          <div
-            data-thq="thq-dropdown-toggle"
-            class="notification-dropdown-toggle"
-          >
-            <img
-              alt="Rectangle254162"
-              src="/assets/rectangle254162-743-200h.png"
-              class="notification-rectangle25"
-            />
-            <img
-              alt="chevrondown4162"
-              src="/assets/chevrondown4162-p2v.svg"
-              class="notification-chevrondown"
-            />
-          </div>
-          <ul data-thq="thq-dropdown-list" class="notification-dropdown-list">
-            <li data-thq="thq-dropdown" class="notification-dropdown list-item">
-              <div
-                data-thq="thq-dropdown-toggle"
-                class="notification-dropdown-toggle1"
-              >
-                <img
-                  alt="user5862"
-                  src="/assets/user5862-kh17n.svg"
-                  class="notification-user2"
-                />
-                <span class="notification-profile1 BodyType16">Profile</span>
-              </div>
-            </li>
-            <li
-              data-thq="thq-dropdown"
-              class="notification-dropdown1 list-item"
-            >
-              <nuxt-link to="/login">
-                <div
-                  data-thq="thq-dropdown-toggle"
-                  class="notification-dropdown-toggle2"
-                >
-                  <img
-                    alt="logout5862"
-                    src="/assets/logout5862-woq.svg"
-                    class="notification-logout"
-                  />
-                  <span class="notification-logout1 BodyType16">Logout</span>
-                </div>
-              </nuxt-link>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div data-thq="thq-burger-menu" class="notification-burger-menu">
-        <svg viewBox="0 0 1024 1024" class="notification-icon">
-          <path
-            d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
-          ></path>
-        </svg>
-      </div>
-    </header>
   </div>
 </template>
 
 <script>
 export default {
   name: "Notification",
+  layout: "side",
   head: {
-    title: "Notification - exported project",
+    title: "Notification | Moodsync",
     meta: [
       {
         property: "og:title",
-        content: "Notification - exported project",
+        content: "Notification | Moodsync",
       },
     ],
   },
