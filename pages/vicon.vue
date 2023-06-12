@@ -263,12 +263,12 @@ export default {
   name: "App",
   mounted() {
     this.joinSession();
-     // this.audioObject.addEventListener('volumechange', this.updateVolumeSlider)
+    // this.audioObject.addEventListener('volumechange', this.updateVolumeSlider)
   },
-   // beforeDestroy() {
-    //   // Menghapus event listener sebelum komponen dihancurkan
-    //     this.audioObject.removeEventListener('volumechange', this.updateVolumeSlider);
-    // },
+  // beforeDestroy() {
+  //   // Menghapus event listener sebelum komponen dihancurkan
+  //     this.audioObject.removeEventListener('volumechange', this.updateVolumeSlider);
+  // },
   data() {
     return {
       // OpenVidu objects
@@ -454,18 +454,17 @@ export default {
       }
     },
     // updateVolumeSlider() {
-        //         // Mendapatkan nilai volume saat ini dari objek audio
-        //         const currentVolume = this.getAudioVolume();
-        //         // Mengupdate nilai volume pada properti data
-        //         this.volume = currentVolume;
-        // },
+    //         // Mendapatkan nilai volume saat ini dari objek audio
+    //         const currentVolume = this.getAudioVolume();
+    //         // Mengupdate nilai volume pada properti data
+    //         this.volume = currentVolume;
+    // },
   },
   computed: {
     cameraIcon() {
       return this.isCameraOn ? faVideo : faVideoSlash;
     },
   },
-  components: { AudioSettings },
 };
 </script>
 
