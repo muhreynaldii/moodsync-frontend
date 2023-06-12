@@ -135,6 +135,7 @@ export default {
 
 .messages {
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .message {
