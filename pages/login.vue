@@ -7,7 +7,7 @@
         </div>
       </aside>
       <section
-        class="mr-[38px] flex h-screen w-[40%] items-center justify-center 2xl:justify-center"
+        class="z-10 mr-[38px] flex h-screen w-[40%] items-center justify-center 2xl:justify-center"
       >
         <FormulateForm class="mt-[32px] flex flex-col">
           <h1 class="text-center text-[23px] text-[#1C64F2]">Welcome!</h1>
