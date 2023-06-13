@@ -37,7 +37,6 @@
 export default {
   name: "DashboardDosen",
   layout: "side",
-  components: {},
   head: {
     title: "Dashboard-Dosen | Moodsync",
     meta: [
