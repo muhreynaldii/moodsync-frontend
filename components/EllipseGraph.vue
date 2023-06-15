@@ -15,11 +15,11 @@
       fontColor="Black"
       :gap="10"
       dot="5 #0053F8"
-      fontSize="16px"
+      fontSize="18px"
       lineMode="normal"
     />
 
-    <p class="text-center text-[13px]">{{ emotion }}</p>
+    <p class="text-center text-[16px]">{{ emotion }}</p>
   </div>
 </template>
 

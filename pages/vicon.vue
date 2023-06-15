@@ -119,46 +119,100 @@
                 <font-awesome-icon :icon="cameraIcon" />
               </button>
             </div>
-            <div class="borderViconButton">
-              <button class="ViconIconSize" @click="toggleMic">
+            <div class="borderViconButton" @click="toggleMic">
+              <button class="ViconIconSize" >
                 <font-awesome-icon
                   :icon="isMicOn ? 'microphone' : 'microphone-slash'"
                 />
               </button>
             </div>
-            <div class="borderViconButton">
-              <button class="ViconIconSize">
-                <!--@click="toggleScreenSharing" -->
-                <font-awesome-icon icon="desktop" />
-              </button>
-            </div>
-            <div class="vicon-menu">
-              <img
-                alt="dotshorizontal4542"
-                src="/assets/dotshorizontal4542-l31o.svg"
-                class="vicon-dotshorizontal"
-              />
-            </div>
+            <button class="borderViconButton">
+              <!--@click="toggleScreenSharing" -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="var(--dl-color-primary-600)"
+                class="icon h-[30px] w-[30px]"
+              >
+                <path
+                  d="M5.566 4.657A4.505 4.505 0 016.75 4.5h10.5c.41 0 .806.055 1.183.157A3 3 0 0015.75 3h-7.5a3 3 0 00-2.684 1.657zM2.25 12a3 3 0 013-3h13.5a3 3 0 013 3v6a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-6zM5.25 7.5c-.41 0-.806.055-1.184.157A3 3 0 016.75 6h10.5a3 3 0 012.683 1.657A4.505 4.505 0 0018.75 7.5H5.25z"
+                  :class="{ hovered: isHovered }"
+                  />
+              </svg>
+            </button>
+            <button class="borderViconButton" @click="openChatbox">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="var(--dl-color-primary-600)"
+                class="icon h-[30px] w-[30px]"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                  clip-rule="evenodd"
+                  :class="{ hovered: isHovered }"
+                />
+              </svg>
+            </button>
+            <button class="borderViconButton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="var(--dl-color-primary-600)"
+                class="icon h-[30px] w-[30px]"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 6a3 3 0 013-3h2.25a3 3 0 013 3v2.25a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm9.75 0a3 3 0 013-3H18a3 3 0 013 3v2.25a3 3 0 01-3 3h-2.25a3 3 0 01-3-3V6zM3 15.75a3 3 0 013-3h2.25a3 3 0 013 3V18a3 3 0 01-3 3H6a3 3 0 01-3-3v-2.25zm9.75 0a3 3 0 013-3H18a3 3 0 013 3V18a3 3 0 01-3 3h-2.25a3 3 0 01-3-3v-2.25z"
+                  clip-rule="evenodd"
+                  :class="{ hovered: isHovered }"
+                />
+              </svg>
+            </button>
           </div>
           <div class="vicon-disconnect" @click="leaveSession">
-            <img
-              alt="phonemissedcall4542"
-              src="/assets/phonemissedcall4542-galo.svg"
-              class="vicon-phonemissedcall"
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="white"
+              class="h-[24px] w-[24px]"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15.22 3.22a.75.75 0 011.06 0L18 4.94l1.72-1.72a.75.75 0 111.06 1.06L19.06 6l1.72 1.72a.75.75 0 01-1.06 1.06L18 7.06l-1.72 1.72a.75.75 0 11-1.06-1.06L16.94 6l-1.72-1.72a.75.75 0 010-1.06zM1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
           </div>
         </div>
       </div>
-      <div>
-        <p class="w-full text-center text-[18px] font-medium text-[#1C64F2]">
+      <div
+        class="absolute right-1 top-4 flex h-[500px] w-[350px] flex-col items-center"
+      >
+        <p class="w-full text-center text-[23px] font-medium text-[#1C64F2]">
           Overall Class Emotion
         </p>
-        <div
-          class="flex h-[128px] w-[445px] flex-[0_0_auto] flex-row items-center justify-center"
-        >
-          <EllipseGraph class="p-10" :progress="40" emotion="Sad" />
-          <EllipseGraph class="p-10" :progress="30" emotion="Happy" />
-          <EllipseGraph class="p-10" :progress="20" emotion="Angry" />
+        <div class="flex h-[128px] w-[445px] flex-col items-center">
+          <EllipseGraph class="pt-4" :progress="50" emotion="Neutral" />
+          <div
+            class="flex h-[128px] w-[445px] flex-row items-center justify-center"
+          >
+            <EllipseGraph class="p-10" :progress="40" emotion="Happy" />
+            <EllipseGraph class="p-10" :progress="10" emotion="Sad" />
+          </div>
+          <div
+            class="flex h-[128px] w-[445px] flex-row items-center justify-center"
+          >
+            <EllipseGraph class="p-10" :progress="10" emotion="Angry" />
+            <EllipseGraph class="p-10" :progress="45" emotion="Fearful" />
+          </div>
+          <div
+            class="flex h-[128px] w-[445px] flex-row items-center justify-center"
+          >
+            <EllipseGraph class="p-10" :progress="5" emotion="Disgusted" />
+            <EllipseGraph class="p-10" :progress="10" emotion="Surprised" />
+          </div>
         </div>
         <div class="chat-component">
           <ChatBox class="chat-messages" />
@@ -255,6 +309,7 @@
 import { OpenVidu } from "openvidu-browser";
 import { faVideo, faVideoSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import EventBus from "../plugins/event-bus";
 
 const APPLICATION_SERVER_URL =
   process.env.NODE_ENV === "production" ? "" : "http://localhost:5000/";
@@ -280,6 +335,7 @@ export default {
       isCameraOn: true,
       isMicOn: true,
       isScreenSharing: false,
+      isHovered: false,
       // Join form
       mySessionId: "SessionA",
       myUserName: "Participant" + Math.floor(Math.random() * 100),
@@ -459,6 +515,9 @@ export default {
     //         // Mengupdate nilai volume pada properti data
     //         this.volume = currentVolume;
     // },
+    openChatbox() {
+      EventBus.$emit("openChatbox"); // Mengirim sinyal ke komponen chatbox
+    },
   },
   computed: {
     cameraIcon() {
@@ -469,31 +528,15 @@ export default {
 </script>
 
 <style scoped>
-.fa-desktop {
-  color: var(--dl-color-primary-600);
+.icon:hover {
+  fill: var(
+    --dl-color-primary-700
+  ); /* Ganti dengan warna yang diinginkan saat di hover */
 }
-.fa-desktop:hover {
-  color: var(--dl-color-primary-700);
-}
-
-.fa-microphone {
-  color: var(--dl-color-primary-600);
-}
-.fa-microphone:hover {
-  color: var(--dl-color-primary-700);
-}
-.fa-microphone-slash {
-  color: #f05252;
-}
-.fa-video {
-  color: var(--dl-color-primary-600);
-}
-.fa-video:hover {
-  color: var(--dl-color-primary-700);
-}
-
-.fa-video-slash {
-  color: #f05252;
+.hovered {
+  fill: var(
+    --dl-color-primary-700
+  ); /* Ganti dengan warna yang diinginkan saat di hover */
 }
 .ViconIconSize {
   background-color: transparent;
@@ -1275,10 +1318,10 @@ export default {
   height: 56.38554382324219px;
   display: flex;
   position: absolute;
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 0;
   border-radius: 18.610000610351562px;
-  justify-content: flex-end;
+  justify-content: center;
   cursor: pointer;
   background-color: var(--dl-color-red-500);
 }
