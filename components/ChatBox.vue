@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div :class="['chatbox', { open: isChatboxOpen }]">
     <div class="chat" style="background-color: #EBF5FF;">
       <div class="menu">
         <button
@@ -43,6 +43,8 @@
 </template>
 
 <script>
+import EventBus from '../plugins/event-bus';
+
 export default {
   data() {
     return {
@@ -51,11 +53,15 @@ export default {
       currentUser: null, // Informasi pengguna yang login
       showGroup: true, // Status tampilan grup chat (diatur sebagai default)
       showPrivate: false, // Status tampilan private chat
+      isChatboxOpen: false,
     };
   },
   created() {
     // Mengambil informasi pengguna yang login (dapat disesuaikan dengan sistem autentikasi yang digunakan)
     // Contoh menggunakan Vuex untuk mengambil informasi pengguna yang login
+  },
+  mounted() {
+    EventBus.$on('openChatbox', this.toggleChatbox); // Mendengarkan sinyal untuk membuka chatbox
   },
   methods: {
     sendMessage() {
@@ -81,18 +87,29 @@ export default {
       this.showPrivate = true;
       // Logika untuk menampilkan private chat
     },
+    toggleChatbox() {
+      this.isChatboxOpen = !this.isChatboxOpen;
+    }
   },
 };
 </script>
 
 <style scoped>
-.container {
-  height: 100%;
-  width: 100%;
+.chatbox {
+  width: 445px;
+  height: 80%;
+  position: fixed;
+  right: -500px;
+  top: 60%; /* Mengatur posisi vertikal chatbox */
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease; /* Animasi saat chatbox berpindah posisi */
 }
-
+.chatbox.open {
+  right: 0px; /* Mengatur posisi chatbox saat terbuka */
+}
 .menu {
   display: flex;
   justify-content: space-evenly;
@@ -169,6 +186,7 @@ export default {
   border-radius: 8px;
   border: 1px solid rgba(229, 231, 235, 1);
   padding: 10px;
+  background-color: white;
 }
 
 .chat-input {
