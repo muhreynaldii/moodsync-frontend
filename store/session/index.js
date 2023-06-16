@@ -5,13 +5,12 @@ export const state = () => ({
 
 export const actions = {
   login({ commit }, dataLogin) {
-    commit("setIsLoading", true);
-    this.$auth
-      .loginWith("local", { data: { user: dataLogin } })
-      .catch((err) => {
-        commit("setError", err.response.data.message);
-      })
-      .finally(() => commit("setIsLoading", false));
+    // commit("setIsLoading", true);
+    this.$auth.loginWith("local", { data: dataLogin }).catch((err) => {
+      // commit("setError", err.response.data.message);
+      alert(err);
+    });
+    // .finally(() => commit("setIsLoading", false));
   },
 };
 

@@ -11,7 +11,7 @@
       >
         <FormulateForm
           class="z-50 mt-[32px] flex flex-col"
-          @submit="submitLogin"
+          @submit="handleLogin"
         >
           <h1 class="text-center text-[23px] text-[#1C64F2]">Welcome!</h1>
           <FormulateInput
@@ -84,7 +84,7 @@
 </template>
 
 <script>
-// import { mapState, mapActions } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   name: "Login",
   layout: "waves",
@@ -103,20 +103,16 @@ export default {
     ],
   },
   methods: {
-    // ...mapActions("auth", ["login"]),
+    ...mapActions("session", ["login"]),
     toggleShow() {
       this.showPassword = !this.showPassword;
     },
-    async submitLogin(data) {
-      try {
-        await this.$auth.loginWith("local", { data: data });
-      } catch (error) {
-        alert(error);
-      }
+    handleLogin(data) {
+      this.login(data);
     },
   },
-  // computed: {
-  //   ...mapState("session", ["isLoading", "errors"]),
-  // },
+  computed: {
+    ...mapState("session", ["isLoading", "errors"]),
+  },
 };
 </script>
