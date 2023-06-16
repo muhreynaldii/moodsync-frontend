@@ -9,15 +9,18 @@
       <section
         class="z-10 mr-[38px] flex h-screen w-[40%] items-center justify-center 2xl:justify-center"
       >
-        <FormulateForm class="mt-[32px] flex flex-col">
+        <FormulateForm
+          class="z-50 mt-[32px] flex flex-col"
+          @submit="submitLogin"
+        >
           <h1 class="text-center text-[23px] text-[#1C64F2]">Welcome!</h1>
           <FormulateInput
-            name="email"
-            type="email"
-            label="Email"
+            name="username"
+            type="text"
+            label="Username"
             input-class="h-[42px] w-[300px] sm:w-[414px] rounded-lg border-2 border-primary600 p-5 text-black"
             class="mt-[16px]"
-            placeholder="Enter your email address"
+            placeholder="Username"
             validation="required"
             error-class="text-red-700 text-xs mb-1"
             :validation-messages="{
@@ -41,7 +44,7 @@
               }"
               error-behavior="submit"
             />
-            <div class="absolute right-3 top-[52px]">
+            <div @click="toggleShow" class="absolute right-3 top-[52px]">
               <svg
                 v-if="showPassword"
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,6 +84,7 @@
 </template>
 
 <script>
+// import { mapState, mapActions } from "vuex";
 export default {
   name: "Login",
   layout: "waves",
@@ -98,5 +102,21 @@ export default {
       },
     ],
   },
+  methods: {
+    // ...mapActions("auth", ["login"]),
+    toggleShow() {
+      this.showPassword = !this.showPassword;
+    },
+    async submitLogin(data) {
+      try {
+        await this.$auth.loginWith("local", { data: data });
+      } catch (error) {
+        alert(error);
+      }
+    },
+  },
+  // computed: {
+  //   ...mapState("session", ["isLoading", "errors"]),
+  // },
 };
 </script>

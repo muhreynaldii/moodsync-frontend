@@ -32,6 +32,7 @@
 export default {
   name: "ViconStarted",
   layout: "side",
+  middleware: "auth",
   head: {
     title: "Vicon-Started | Moodsync",
     meta: [

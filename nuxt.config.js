@@ -39,7 +39,7 @@ export default {
     extend(config, { isClient }) {
       // Menambahkan konfigurasi alias untuk fs module hanya di lingkungan client (browser)
       if (isClient) {
-        config.resolve.alias['fs'] = require.resolve('./plugins/fs.js');
+        config.resolve.alias["fs"] = require.resolve("./plugins/fs.js");
       }
     },
   },
@@ -48,13 +48,43 @@ export default {
     { src: "./plugins/elippse-progress.js", mode: "client" },
     { src: "./plugins/fontawesome.js", mode: "client" },
   ],
-  modules: ["@nuxtjs/axios"],
+  modules: ["@nuxtjs/axios", "@nuxtjs/dotenv", "@nuxtjs/auth-next"],
   axios: {
-    // Axios options
-    headers: {
-      post: {
-        "Content-Type": "application/json",
+    baseURL: process.env.API_BASE_URL,
+  },
+  auth: {
+    strategies: {
+      local: {
+        scheme: "refresh",
+        user: {
+          property: "username",
+        },
+        endpoints: {
+          login: { url: "api/auth/login", method: "post" },
+          refresh: { url: "/api/auth/refreshToken", method: "post" },
+          user: {
+            url: "api/users/me",
+            method: "get",
+          },
+          // user: false,
+          logout: false,
+        },
+        token: {
+          property: "accessToken",
+          required: true,
+          type: "Bearer",
+        },
+        refreshToken: {
+          property: "refreshToken",
+          data: "refreshToken",
+          maxAge: 60 * 60 * 24 * 30,
+        },
       },
+    },
+    redirect: {
+      login: "/login",
+      logout: "/login",
+      home: "/dashboard-dosen",
     },
   },
 };
