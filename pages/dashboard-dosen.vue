@@ -37,6 +37,7 @@
 export default {
   name: "DashboardDosen",
   layout: "side",
+  middleware: "auth",
   head: {
     title: "Dashboard-Dosen | Moodsync",
     meta: [

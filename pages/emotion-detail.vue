@@ -56,6 +56,7 @@
 export default {
   name: "EmotionDetail",
   layout: "side",
+  middleware: "auth",
   head: {
     title: "Emotion-Detail - exported project",
     meta: [

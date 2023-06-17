@@ -32,6 +32,7 @@
 export default {
   name: "Notification",
   layout: "side",
+  middleware: "auth",
   head: {
     title: "Notification | Moodsync",
     meta: [

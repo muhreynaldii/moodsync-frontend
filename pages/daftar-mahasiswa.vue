@@ -35,6 +35,7 @@ import userRamon from "../assets/img/user-ramon.png";
 export default {
   name: "DaftarMahasiswa",
   layout: "side",
+  middleware: "auth",
   head: {
     title: "Daftar-Mahasiswa | Moodsync",
     meta: [

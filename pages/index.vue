@@ -9,12 +9,20 @@
         <p class="w-[741px] py-[26px] text-[23px] leading-[120%] text-Gray-600">
           {{ description }}
         </p>
-        <nuxt-link
-          to="/login"
-          class="w-[203px] rounded-lg bg-[#1A56DB] px-[24px] py-[14px] text-center text-white"
-        >
-          Get Started!
-        </nuxt-link>
+        <div class="flex justify-start gap-10">
+          <nuxt-link
+            to="/login"
+            class="h-[52px] w-[203px] rounded-lg bg-[#1A56DB] px-[12px] py-[14px] text-center text-white"
+          >
+            Masuk Sebagai Dosen
+          </nuxt-link>
+          <nuxt-link
+            to="/login"
+            class="h-[52px] w-[203px] rounded-lg border border-Gray-200 bg-white px-[12px] py-[14px] text-center font-medium text-black"
+          >
+            Masuk Sebagai Siswa
+          </nuxt-link>
+        </div>
       </section>
       <aside
         class="mr-[38px] flex h-screen w-1/2 justify-end 2xl:justify-center"
