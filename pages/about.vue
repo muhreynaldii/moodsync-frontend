@@ -2,25 +2,29 @@
   <main class="h-screen overflow-hidden bg-white">
     <div class="flex">
       <section class="ml-24 mt-10 flex h-screen w-1/2 flex-col justify-center">
-        <heading-pages text="About" :dot="false" />
+        <heading-pages text="About Us" :dot="false" />
         <p
           v-for="(data, index) in description"
           :key="index"
-          class="w-[741px] py-[26px] text-justify text-[23px] leading-[120%] text-Gray-600"
+          class="py-[26px] text-justify leading-[120%] text-Gray-600 lg:w-[486.75px] lg:text-[17.25px] xl:w-[649px] xl:text-[23px] 2xl:w-[741px]"
         >
           {{ data.content }}
         </p>
         <nuxt-link
           to="/login"
-          class="w-[203px] rounded-lg bg-[#1A56DB] px-[24px] py-[14px] text-center text-white"
+          class="flex h-[39px] items-center justify-center rounded-lg bg-[#1A56DB] text-center text-[12px] text-white lg:w-[152.25px] xl:h-[52px] xl:w-[203px] xl:text-base"
         >
-          Lets Try!!
+          Get Started!
         </nuxt-link>
       </section>
       <aside
-        class="mr-[38px] flex h-screen w-1/2 justify-end 2xl:justify-center"
+        class="mr-[28.5px] flex h-screen w-1/2 justify-end xl:mr-[38px] 2xl:justify-center"
       >
-        <img src="~img/sad-fun-confused-light.png" alt="sad-fun-confused" />
+        <img
+          src="~img/sad-fun-confused-light.png"
+          alt="sad-fun-confused"
+          class="w-[456px] xl:w-[608px] 2xl:w-[613px]"
+        />
       </aside>
     </div>
   </main>
