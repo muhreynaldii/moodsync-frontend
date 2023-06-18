@@ -4,9 +4,9 @@
       <nuxt-link :to="link.to">
         <div
           :class="{
-            'relative flex h-[50px] w-[50px] shrink-0 items-start rounded-[50%] bg-[#e1effe] no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
+            'relative flex h-[50px] w-[50px] items-center rounded-[50%] bg-[#e1effe] no-underline shadow-[5px_5px_10px_0_#d4d4d4] justify-center':
               link.isActive,
-            'relative flex h-[50px] w-[50px] shrink-0 items-start rounded-[50%] bg-white no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
+            'relative flex h-[50px] w-[50px] items-center rounded-[50%] bg-white no-underline shadow-[5px_5px_10px_0_#d4d4d4] justify-center':
               !link.isActive,
           }"
         >

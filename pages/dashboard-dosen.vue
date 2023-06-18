@@ -2,9 +2,11 @@
   <main
     class="flex h-screen w-screen items-center justify-center overflow-hidden bg-white"
   >
-    <div class="flex h-fit w-fit flex-col justify-center">
+    <div class="flex h-fit w-fit flex-col justify-center scale-75 xl:scale-100 2xl:scale-[1.1]">
       <section class="mb-[30px]">
-        <h1 class="mb-2 text-start text-[33px] font-bold">Dashboard</h1>
+        <h1 class="mb-2 text-start text-[33px] font-bold">
+          Dashboard
+        </h1>
         <div class="flex justify-center gap-4">
           <div
             v-for="(item, index) in items"
@@ -17,14 +19,20 @@
         </div>
       </section>
       <section>
-        <h2 class="mb-2 text-[23px] font-bold">Statistic</h2>
+        <h2 class="m mb-2 text-[23px] font-bold">
+          Statistic
+        </h2>
         <div class="flex gap-4">
           <div class="h-[426px] w-[672px] rounded-[36px] px-6 py-2 shadow-lg">
-            <p class="text-[23px] font-bold">Presensi Mahasiswa</p>
+            <p class="text-[23px] font-bold lg:text-[17.25px]">
+              Presensi Mahasiswa
+            </p>
             <BarChart style="width: 100%; height: 100%" class="py-2" />
           </div>
           <div class="h-[426px] w-[672px] rounded-[36px] px-6 pt-2 shadow-lg">
-            <p class="text-[23px] font-bold">Emosi Mahasiswa</p>
+            <p class="text-[23px] font-bold lg:text-[17.25px]">
+              Emosi Mahasiswa
+            </p>
             <RadarChart style="width: 100%; height: 100%" class="py-2" />
           </div>
         </div>

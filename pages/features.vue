@@ -15,9 +15,9 @@
         </div>
         <nuxt-link
           to="/login"
-          class="w-[203px] rounded-lg bg-[#1A56DB] px-[24px] py-[14px] text-center text-white"
+          class="w-[203px]  rounded-lg bg-[#1A56DB] px-[24px] py-[14px] text-center text-white"
         >
-          Lets Try!!
+          Get Started!
         </nuxt-link>
       </section>
       <aside
