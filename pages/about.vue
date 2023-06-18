@@ -1,7 +1,9 @@
 <template>
   <main class="h-screen overflow-hidden bg-white">
-    <div class="flex">
-      <section class="ml-24 mt-10 flex h-screen w-1/2 flex-col justify-center">
+    <div class="flex flex-col lg:flex-row">
+      <section
+        class="ml-24 mt-[200px] flex h-full w-2/3 flex-col justify-center lg:w-1/2"
+      >
         <heading-pages text="About Us" :dot="false" />
         <p
           v-for="(data, index) in description"
@@ -18,12 +20,12 @@
         </nuxt-link>
       </section>
       <aside
-        class="mr-[28.5px] flex h-screen w-1/2 justify-end xl:mr-[38px] 2xl:justify-center"
+        class="mr-[28.5px] hidden h-screen w-1/2 justify-end lg:flex xl:mr-[38px] 2xl:justify-center"
       >
         <img
           src="~img/sad-fun-confused-light.png"
           alt="sad-fun-confused"
-          class="w-[456px] xl:w-[608px] 2xl:w-[613px]"
+          class="object-cover object-left lg:w-[400px] xl:w-[608px] 2xl:w-[613px]"
         />
       </aside>
     </div>

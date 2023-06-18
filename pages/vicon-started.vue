@@ -4,15 +4,21 @@
   >
     <div class="flex h-fit w-fit flex-col items-center justify-center">
       <section
-        class="mb-[30px] flex h-fit w-[1147px] flex-col items-center justify-center rounded-[20px] bg-Gray-50"
+        class="z-20 mb-[30px] mt-10 flex h-fit w-[860.25px] flex-col items-center justify-center rounded-[20px] bg-Gray-50 xl:w-[1147px]"
       >
-        <h1 class="text-center text-[65px] font-bold text-blue-600">
+        <h1
+          class="text-center text-[48.75px] font-bold text-blue-600 xl:text-[65px]"
+        >
           Get Started
         </h1>
-        <p class="mb-3 text-center text-[23px] text-Gray-400">
+        <p class="mb-3 text-center text-[17.25px] text-Gray-400 xl:text-[23px]">
           Setup your Audio and Video before Joining
         </p>
-        <img src="~img/dr-dre.png" alt="dr-dre" class="rounded-[33px]" />
+        <img
+          src="~img/dr-dre.png"
+          alt="dr-dre"
+          class="h-[400.5px] w-[715.5px] rounded-[33px] xl:h-fit xl:w-fit"
+        />
         <div class="my-[29px] flex w-full items-center justify-between px-24">
           <AudioSettings />
           <ActionBar />
