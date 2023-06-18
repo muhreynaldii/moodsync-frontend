@@ -6,7 +6,9 @@
       alt="dot-decoration"
       class="absolute -left-[57px] -top-[46px] h-fit w-fit"
     />
-    <h1 class="text-[65px] leading-[120%] text-black">{{ text }}</h1>
+    <h1 class="text-[48.75px] leading-[120%] text-black xl:text-[65px]">
+      {{ text }}
+    </h1>
   </div>
 </template>
 
