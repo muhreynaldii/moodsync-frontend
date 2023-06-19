@@ -13,12 +13,14 @@
           class="z-50 mt-[32px] flex flex-col"
           @submit="handleLogin"
         >
-          <h1 class="text-center text-[23px] text-[#1C64F2]">Welcome!</h1>
+          <h1 class="text-center text-[17.25px] text-[#1C64F2] xl:text-[23px]">
+            Welcome!
+          </h1>
           <FormulateInput
             name="username"
             type="text"
             label="Username"
-            input-class="h-[42px] w-[300px] sm:w-[414px] rounded-lg border-2 border-primary600 p-5 text-black"
+            input-class="h-[31px] w-[231px] xl:w-[308px] xl:h-[42px] rounded-md border border-Gray-300 py-[9px] px-3 mt-[6px] text-[10.5px] xl:text-[14px]"
             class="mt-[16px]"
             placeholder="Username"
             validation="required"
@@ -27,13 +29,14 @@
               required: 'Email harus diisi',
             }"
             error-behavior="submit"
+            label-class="font-medium text-[10.5px] xl:text-[14px] text-[#111928]"
           />
           <div class="relative">
             <FormulateInput
               :type="showPassword ? 'text' : 'password'"
               name="password"
               label="Password"
-              input-class="h-[42px] w-[300px] sm:w-[414px] rounded-lg border-2 border-primary600 p-5 text-black"
+              input-class="h-[31px] w-[231px] xl:w-[308px] xl:h-[42px] rounded-md border border-Gray-300 py-[9px] px-3 xl:py-3 xl:px-4 mt-[6px] text-[10.5px] xl:text-[14px]"
               class="mt-[16px]"
               placeholder="Password"
               validation="required"
@@ -43,8 +46,12 @@
                 required: 'Password harus diisi',
               }"
               error-behavior="submit"
+              label-class="font-medium text-[10.5px] xl:text-[14px] text-[#111928]"
             />
-            <div @click="toggleShow" class="absolute right-3 top-[52px]">
+            <div
+              @click="toggleShow"
+              class="absolute right-[6px] top-[51px] scale-75 xl:right-3 xl:top-[55px] xl:scale-100"
+            >
               <svg
                 v-if="showPassword"
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +81,7 @@
           <FormulateInput
             type="submit"
             name="Login"
-            input-class="h-[50px] w-[300px] sm:w-[414px] self-center rounded-lg bg-[#1C64F2] font-bold text-white"
+            input-class="h-[36px] w-[231px] xl:w-[308px] xl:h-[48px] self-center rounded-md bg-[#1C64F2] font-medium text-white text-[12px] xl:text-base"
             class="mt-[28px]"
           />
         </FormulateForm>
