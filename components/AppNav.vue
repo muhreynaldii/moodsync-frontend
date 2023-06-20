@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="absolute left-[100px] top-[38px] flex w-[320.25px] items-center justify-between xl:w-[427px]"
+    class="absolute left-[81px] top-[28.5px] flex w-[320.25px] items-center justify-between xl:left-[108px] xl:top-[38px] xl:w-[427px] 2xl:left-[148px]"
   >
     <div v-for="(link, index) in links" :key="index">
       <nuxt-link :to="link.to">

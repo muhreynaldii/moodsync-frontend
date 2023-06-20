@@ -1,6 +1,10 @@
 <template>
   <div>
-    <video ref="videoElement" class="vicon-lecturer" autoplay></video>
+    <video
+      ref="videoElement"
+      class="max-h-[717.53px] max-w-[1332px] rounded-[6px] object-cover"
+      autoplay
+    ></video>
     <p
       v-if="type === 'local'"
       class="absolute left-4 top-14 rounded-full bg-white px-3 py-1 text-xl capitalize"
@@ -108,7 +112,7 @@ export default {
 </script>
 
 <style scoped>
-.vicon-lecturer {
+/* .vicon-lecturer {
   top: 0px;
   left: 0px;
   width: 970.75px;
@@ -118,5 +122,5 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: 33px;
-}
+} */
 </style>
