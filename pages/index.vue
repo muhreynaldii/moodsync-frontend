@@ -1,7 +1,7 @@
 <template>
   <main class="h-screen overflow-hidden bg-white">
     <div class="flex">
-      <section class="ml-24 flex h-screen w-1/2 flex-col justify-center">
+      <section class="ml-24 flex h-screen xl:w-1/2 flex-col justify-center w-[40%]">
         <heading-pages
           text="Connect With Emotion:"
           class="lg:w-[555.75px] xl:w-[741px]"
@@ -32,12 +32,12 @@
         </div>
       </section>
       <aside
-        class="mr-[38px] flex h-screen w-1/2 justify-end 2xl:justify-center"
+        class="xl:mr-[38px] flex h-screen xl:w-1/2 justify-end 2xl:justify-center mr-[29px] w-[60%]"
       >
         <img
           src="~img/sad-fun-confused-light.png"
           alt="sad-fun-confused"
-          class="object-cover object-left"
+          class="object-cover object-center"
         />
       </aside>
     </div>

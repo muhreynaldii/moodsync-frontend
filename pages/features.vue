@@ -21,7 +21,7 @@
         </div>
         <nuxt-link
           to="/login"
-          class="w-[152.25px] rounded-lg bg-[#1A56DB] px-[24px] py-[14px] text-center text-[12px] text-white xl:w-[203px] xl:text-base"
+          class="w-[152.25px] rounded-lg bg-[#1A56DB] px-[24px] py-[14px] text-center text-[12px] text-white lg:h-[39px] lg:w-[152.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[203px] xl:px-[12px] xl:py-[14px] xl:text-base"
         >
           Get Started!
         </nuxt-link>

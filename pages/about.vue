@@ -14,7 +14,7 @@
         </p>
         <nuxt-link
           to="/login"
-          class="flex h-[39px] items-center justify-center rounded-lg bg-[#1A56DB] text-center text-[12px] text-white lg:w-[152.25px] xl:h-[52px] xl:w-[203px] xl:text-base"
+          class="flex h-[39px] items-center justify-center rounded-lg bg-[#1A56DB] text-center text-[12px] text-white lg:h-[39px] lg:w-[152.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[203px] xl:px-[12px] xl:py-[14px] xl:text-base"
         >
           Get Started!
         </nuxt-link>
@@ -53,7 +53,7 @@ export default {
         },
         {
           content:
-            "Dengan menggunakan teknologi pengenalan emosi yang canggih, aplikasi ini dapat menganalisis ekspresi wajah pengguna dalam waktu nyata. Algoritma yang terintegrasi dengan aplikasi akan mengidentifikasi berbagai emosi seperti kegembiraan, kesedihan, kejutan, marah, atau ketidakpuasan. Hal ini memungkinkan para peserta video conference untuk mendapatkan pemahaman yang lebih mendalam tentang respons emosional satu sama lain, bahkan dalam komunikasi nonverbal .",
+            "Dengan menggunakan teknologi pengenalan emosi yang canggih, aplikasi ini dapat menganalisis ekspresi wajah pengguna dalam waktu nyata. Algoritma yang terintegrasi dengan aplikasi akan mengidentifikasi berbagai emosi seperti kegembiraan, kesedihan, kejutan, marah, atau ketidakpuasan. Hal ini memungkinkan para peserta video conference untuk mendapatkan pemahaman yang lebih mendalam tentang respons emosional satu sama lain, bahkan dalam komunikasi nonverbal.",
         },
       ],
     };
