@@ -31,6 +31,11 @@
         </div>
       </section>
     </div>
+    <pop-up-join
+      v-show="showModal"
+      class="z-50"
+      @close-modal="showModal = false"
+    />
   </main>
 </template>
 
@@ -47,6 +52,11 @@ export default {
         content: "Vicon-Started | Moodsync",
       },
     ],
+  },
+  data() {
+    return {
+      showModal: true,
+    };
   },
 };
 </script>

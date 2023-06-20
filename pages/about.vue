@@ -2,19 +2,23 @@
   <main class="h-screen overflow-hidden bg-white">
     <div class="flex flex-col lg:flex-row">
       <section
-        class="ml-24 mt-[200px] flex h-full w-2/3 flex-col justify-center lg:w-1/2"
+        class="ml-[78.75px] mt-[158.25px] flex h-full w-2/3 flex-col justify-center lg:w-1/2 xl:ml-[105px] xl:mt-[211px] 2xl:ml-[145px]"
       >
-        <heading-pages text="About Us" :dot="false" />
+        <heading-pages
+          text="About Us"
+          :dot="false"
+          class="mb-[19.5px] xl:mb-[26px]"
+        />
         <p
           v-for="(data, index) in description"
           :key="index"
-          class="py-[26px] text-justify leading-[120%] text-Gray-600 lg:w-[486.75px] lg:text-[17.25px] xl:w-[649px] xl:text-[23px] 2xl:w-[741px]"
+          class="mb-[12px] text-justify leading-[20px] text-Gray-600 lg:w-[486.75px] lg:text-[17.25px] xl:mb-[18px] xl:w-[649px] xl:text-[23px] xl:leading-[27.6px]"
         >
           {{ data.content }}
         </p>
         <nuxt-link
           to="/login"
-          class="flex h-[39px] items-center justify-center rounded-lg bg-[#1A56DB] text-center text-[12px] text-white lg:w-[152.25px] xl:h-[52px] xl:w-[203px] xl:text-base"
+          class="mt-[0px] flex h-[39px] items-center justify-center rounded-lg bg-[#1A56DB] text-center text-[12px] text-white lg:w-[152.25px] xl:mt-[8px] xl:h-[52px] xl:w-[203px] xl:text-base"
         >
           Get Started!
         </nuxt-link>
