@@ -1,6 +1,6 @@
 <template>
   <div :class="['chatbox', { open: isChatboxOpen }]">
-    <div class="chat" style="background-color: #EBF5FF;">
+    <div class="chat" style="background-color: #ebf5ff">
       <div class="menu">
         <button
           :class="['menu-button', { active: showGroup }]"
@@ -19,7 +19,13 @@
       <!-- Daftar pesan chat -->
       <div class="messages">
         <div v-for="message in messages" :key="message.id" class="message">
-          <div :class="['bubble', {'right': message.isMe}, {'left': !message.isMe}]">
+          <div
+            :class="[
+              'bubble',
+              { right: message.isMe },
+              { left: !message.isMe },
+            ]"
+          >
             <div class="author-time">
               <span class="author">{{ message.author }}</span>
               <span class="time">{{ message.time }}</span>
@@ -31,25 +37,29 @@
     </div>
     <div class="input-container">
       <div class="chat-input">
-        <input v-model="newMessage" @keyup.enter="sendMessage" type="text" placeholder="Ketik pesan..." class="input" />
+        <input
+          v-model="newMessage"
+          @keyup.enter="sendMessage"
+          type="text"
+          placeholder="Ketik pesan..."
+          class="input"
+        />
       </div>
       <div class="send-button-container">
-        <button @click="sendMessage" class="send-button">
-          Kirim
-        </button>
+        <button @click="sendMessage" class="send-button">Kirim</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import EventBus from '../plugins/event-bus';
+import EventBus from "../plugins/event-bus";
 
 export default {
   data() {
     return {
       messages: [],
-      newMessage: '',
+      newMessage: "",
       currentUser: null, // Informasi pengguna yang login
       showGroup: true, // Status tampilan grup chat (diatur sebagai default)
       showPrivate: false, // Status tampilan private chat
@@ -61,20 +71,20 @@ export default {
     // Contoh menggunakan Vuex untuk mengambil informasi pengguna yang login
   },
   mounted() {
-    EventBus.$on('openChatbox', this.toggleChatbox); // Mendengarkan sinyal untuk membuka chatbox
+    EventBus.$on("openChatbox", this.toggleChatbox); // Mendengarkan sinyal untuk membuka chatbox
   },
   methods: {
     sendMessage() {
-      if (this.newMessage.trim() !== '') {
+      if (this.newMessage.trim() !== "") {
         const currentTime = new Date().toLocaleTimeString();
         this.messages.push({
           id: this.messages.length + 1,
-          author: this.currentUser ? this.currentUser.name : 'Anda', // Menggunakan nama pengguna yang login jika ada, jika tidak menggunakan "Anda"
+          author: this.currentUser ? this.currentUser.name : "Anda", // Menggunakan nama pengguna yang login jika ada, jika tidak menggunakan "Anda"
           text: this.newMessage,
           time: currentTime,
           isMe: true, // Menandai pesan sebagai pesan dari diri sendiri
         });
-        this.newMessage = '';
+        this.newMessage = "";
       }
     },
     showGroupChat() {
@@ -89,7 +99,7 @@ export default {
     },
     toggleChatbox() {
       this.isChatboxOpen = !this.isChatboxOpen;
-    }
+    },
   },
 };
 </script>
@@ -131,10 +141,10 @@ export default {
   justify-content: center;
   text-decoration: none;
 }
-.menu-button:hover{
+.menu-button:hover {
   color: #9a9da1;
 }
- 
+
 .menu-button.active {
   background-color: var(--dl-color-primary-7002);
   color: white;
@@ -165,7 +175,7 @@ export default {
   flex-direction: column;
   padding: 8px;
   border-radius: 8px;
-  border: 1px solid #D1D5DB;
+  border: 1px solid #d1d5db;
   background-color: #fbfcfd;
 }
 
@@ -201,7 +211,7 @@ export default {
   width: 100%;
   padding: 5px;
   border: none;
-  border-right: 1px solid #D1D5DB;
+  border-right: 1px solid #d1d5db;
   background-color: unset;
 }
 
@@ -220,7 +230,7 @@ export default {
   text-decoration: none;
   background-color: var(--dl-color-primary-600);
 }
-.send-button:hover{
+.send-button:hover {
   background-color: var(--dl-color-primary-700);
 }
 
