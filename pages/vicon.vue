@@ -8,7 +8,7 @@
     <div class="flex flex-col">
       <div class="h-[717.53px] w-[1332px]">
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-        <div class="flex flex-row flex-wrap justify-center gap-1">
+        <div class="flex flex-row flex-wrap justify-center gap-1" ref="videoContainer">
           <user-video
             :stream-manager="mainStreamManager"
             :meeting-id="meetingId"
