@@ -8,10 +8,14 @@
     <div class="flex flex-col">
       <div class="h-[717.53px] w-[1332px]">
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-        <div class="flex items-center justify-center min-h-[710px]" ref="videoContainer">
-          
-          <!-- <user-video :stream-manager="mainStreamManager" type="local" /> -->
+        <div class="flex flex-row flex-wrap justify-center gap-1">
           <user-video
+            :stream-manager="mainStreamManager"
+            :meeting-id="meetingId"
+            :user-id="userId"
+            type="local"
+          />
+          <!-- <user-video
             :stream-manager="publisher"
             @click.native="updateMainVideoStreamManager(publisher)"
           />
@@ -20,7 +24,7 @@
             :key="sub.stream.connection.connectionId"
             :stream-manager="sub"
             @click.native="updateMainVideoStreamManager(sub)"
-          />
+          /> -->
         </div>
       </div>
         <div class="flex w-full items-center justify-center">
@@ -30,9 +34,9 @@
           class="my-[29px] flex w-full items-center justify-between px-[19px]"
         >
           <AudioSettings />
-          <ActionBar @on-camera="toggleCamera" />
+          <ActionBar @on-camera="toggleCamera" @open-chat="openChatbox" />
           <div
-            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500"
+            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
             @click="leaveSession"
           >
             <svg
@@ -76,21 +80,18 @@
           <EllipseGraph class="p-10" :progress="10" emotion="Surprised" />
         </div>
       </div>
-      <div class="chat-component">
-        <ChatBox class="chat-messages" :isOpen="isOpened" />
-      </div>
+      <ChatBox />
     </div>
   </main>
 </template>
 
 <script>
 import { OpenVidu } from "openvidu-browser";
-import { faVideo, faVideoSlash } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import EventBus from "../plugins/event-bus";
+import { mapGetters } from "vuex";
 
 const APPLICATION_SERVER_URL =
-  process.env.NODE_ENV === "production" ? "" : "http://localhost:5000/";
+  process.env.NODE_ENV === "production" ? "" : "http://localhost:3005/";
 
 export default {
   name: "App",
@@ -102,7 +103,10 @@ export default {
   },
   // beforeDestroy() {
   //   // Menghapus event listener sebelum komponen dihancurkan
-  //     this.audioObject.removeEventListener('volumechange', this.updateVolumeSlider);
+  //   this.audioObject.removeEventListener(
+  //     "volumechange",
+  //     this.updateVolumeSlider
+  //   );
   // },
   data() {
     return {
@@ -119,11 +123,68 @@ export default {
       // Join form
       mySessionId: "SessionA",
       myUserName: "Participant" + Math.floor(Math.random() * 100),
-      isOpened: false,
+      meetingId: null,
+      userId: null,
+      participantIds: [],
     };
   },
   methods: {
-    joinSession() {
+    async joinSession() {
+      // Run for lecturer only
+      if (this.$auth.loggedIn) {
+        this.$axios
+          .$get(`/api/meeting/code/${this.mySessionId}`)
+          .then((result) => {
+            console.log("result", result);
+            this.meetingId = result._id;
+          })
+          .catch((error) => {
+            console.log("err", error);
+            this.$axios
+              .$post("/api/meeting", {
+                code: this.mySessionId,
+                description: `Description ${this.mySessionId}`,
+              })
+              .then((result) => {
+                console.log("result", result);
+                this.meetingId = result._id;
+              })
+              .catch((error) => {
+                console.log("err", error);
+              });
+          });
+      } else {
+        this.$axios
+          .$get(`/api/meeting/code/${this.mySessionId}`)
+          .then((result) => {
+            this.meetingId = result._id;
+          })
+          .catch((error) => {
+            console.log("err", error);
+          })
+          .then(() => {
+            this.$axios
+              .$get(`/api/users/username/${this.myUserName}`)
+              .then((result) => {
+                this.userId = result._id;
+              })
+              .catch((error) => {
+                console.log("err", error);
+                this.$axios
+                  .$post("/api/users/test", {
+                    username: this.myUserName,
+                    role: "student",
+                  })
+                  .then((result) => {
+                    console.log("result", result);
+                    this.userId = result._id;
+                  })
+                  .catch((error) => {
+                    console.log("err", error);
+                  });
+              });
+          });
+      }
       // --- 1) Get an OpenVidu object ---
       this.OV = new OpenVidu();
       // --- 2) Init a session ---
@@ -180,6 +241,19 @@ export default {
             this.publisher = publisher;
             // --- 6) Publish your stream ---
             this.session.publish(this.publisher);
+            if (this.$auth.loggedIn) {
+              this.$axios
+                .$put(`/api/recognition/${this.meetingId}`, {
+                  isStart: true,
+                  code: this.mainStreamManager.session.sessionId,
+                })
+                .then((result) => {
+                  console.log("result", result);
+                })
+                .catch((err) => {
+                  console.log("err", err);
+                });
+            }
           })
           .catch((error) => {
             console.log(
@@ -203,6 +277,17 @@ export default {
       this.$router.go(-1);
       // Remove beforeunload listener
       window.removeEventListener("beforeunload", this.leaveSession);
+      this.$axios
+        .$put(`/api/recognition/${this.meetingId}`, {
+          isStart: false,
+          code: this.mySessionId,
+        })
+        .then((result) => {
+          console.log("result", result);
+        })
+        .catch((err) => {
+          console.log("err", err);
+        });
     },
     updateMainVideoStreamManager(stream) {
       if (this.mainStreamManager === stream) return;
@@ -229,7 +314,7 @@ export default {
     },
     async createSession(sessionId) {
       const response = await this.$axios.post(
-        APPLICATION_SERVER_URL + "api/sessions",
+        APPLICATION_SERVER_URL + "api/session",
         { customSessionId: sessionId },
         {
           headers: { "Content-Type": "application/json" },
@@ -239,7 +324,7 @@ export default {
     },
     async createToken(sessionId) {
       const response = await this.$axios.post(
-        APPLICATION_SERVER_URL + "api/sessions/" + sessionId + "/connections",
+        APPLICATION_SERVER_URL + "api/session/" + sessionId + "/connections",
         {},
         {
           headers: { "Content-Type": "application/json" },
@@ -258,7 +343,6 @@ export default {
           .getMediaStream()
           .getVideoTracks()[0].enabled = false;
       }
-      console.log("hai");
     },
     toggleMic() {
       if (this.isMicOn) {
@@ -302,38 +386,38 @@ export default {
       }
     },
     // updateVolumeSlider() {
-    //         // Mendapatkan nilai volume saat ini dari objek audio
-    //         const currentVolume = this.getAudioVolume();
-    //         // Mengupdate nilai volume pada properti data
-    //         this.volume = currentVolume;
+    //   // Mendapatkan nilai volume saat ini dari objek audio
+    //   const currentVolume = this.getAudioVolume();
+    //   // Mengupdate nilai volume pada properti data
+    //   this.volume = currentVolume;
     // },
     openChatbox() {
       EventBus.$emit("openChatbox"); // Mengirim sinyal ke komponen chatbox
     },
   },
-  // computed: {
-  //   cameraIcon() {
-  //     return this.isCameraOn ? faVideo : faVideoSlash;
-  //   },
-  // },
+  computed: {
+    ...mapGetters("datetime", ["datetime"]),
+  },
+  watch: {
+    datetime(value, oldValue) {
+      setTimeout(() => {
+        this.$axios
+          .$get("/api/recognition/current", {
+            params: {
+              userId: this.participantIds.map((participant) => participant._id),
+              meetingId: this.meetingId,
+              createdAt: value,
+              // createdAt: oldValue,
+            },
+          })
+          .then((result) => {
+            console.log("result", result);
+          })
+          .catch((err) => {
+            console.log("err", err);
+          });
+      }, 1250); // Delay of 0.5 seconds (500 milliseconds)
+    },
+  },
 };
 </script>
-
-<style>
-.chat-component {
-  width: 445px;
-  height: 601px;
-  display: block;
-  flex-direction: column;
-  justify-content: space-between;
-  border: #595959;
-  border-radius: 8px;
-}
-
-.chat-messages {
-  overflow-y: scroll;
-  border: #595959;
-  border-radius: 8px;
-  /* Ganti dengan properti CSS lain sesuai kebutuhan */
-}
-</style>
