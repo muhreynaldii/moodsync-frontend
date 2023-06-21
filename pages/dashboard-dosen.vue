@@ -36,7 +36,7 @@
         >
           Statistic
         </h2>
-        <div class="flex gap-[13.5px] xl:gap-4">
+        <div class="flex gap-[13.5px] xl:gap-4 z-50">
           <div
             class="h-[319.5px] w-[484px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[672px] 2xl:h-[511.2px] 2xl:w-[806.4px]"
           >

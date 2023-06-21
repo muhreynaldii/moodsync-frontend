@@ -7,14 +7,15 @@
     </div>
     <div class="flex flex-col">
       <div class="h-[717.53px] w-[1332px]">
-        <div class="flex flex-row flex-wrap justify-center gap-1">
-          <user-video
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+        <div class="flex items-center justify-center min-h-[710px]" ref="videoContainer">
+          <!-- <user-video
             :stream-manager="mainStreamManager"
             :meeting-id="meetingId"
             :user-id="userId"
             type="local"
-          />
-          <!-- <user-video
+          /> -->
+          <user-video
             :stream-manager="publisher"
             @click.native="updateMainVideoStreamManager(publisher)"
           />
@@ -23,8 +24,9 @@
             :key="sub.stream.connection.connectionId"
             :stream-manager="sub"
             @click.native="updateMainVideoStreamManager(sub)"
-          /> -->
+          />
         </div>
+      </div>
         <div class="flex w-full items-center justify-center">
           <hr class="mt-[27px] w-[948px] border border-[#D1D5DB]" />
         </div>
@@ -34,7 +36,7 @@
           <AudioSettings />
           <ActionBar @on-camera="toggleCamera" @open-chat="openChatbox" />
           <div
-            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
+            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-600"
             @click="leaveSession"
           >
             <svg
@@ -215,12 +217,21 @@ export default {
             // --- 5) Get your own camera stream with the desired properties ---
             // Init a publisher passing undefined as targetElement (we don't want OpenVidu to insert a video
             // element: we will manage it on our own) and with the desired properties
-            let publisher = this.OV.initPublisher(undefined, {
+
+              // Dapatkan elemen container menggunakan $refs
+            const videoContainer = this.$refs.videoContainer;
+
+            // // Sesuaikan resolusi video dengan ukuran container
+            const containerWidth = videoContainer.clientWidth;
+            const containerHeight = videoContainer.clientHeight;
+            const resolution = `${containerWidth}x${containerHeight}`;
+
+            let publisher = this.OV.initPublisher(resolution, {
               audioSource: undefined,
               videoSource: undefined,
               publishAudio: true,
               publishVideo: true,
-              resolution: "640x480",
+              resolution: resolution,
               frameRate: 30,
               insertMode: "APPEND",
               mirror: false, // Whether to mirror your local video or not
@@ -341,6 +352,9 @@ export default {
         // Mematikan microphone
         this.publisher.publishAudio(false);
       }
+    },
+    toggleChat() {
+      this.isOpened = !this.isOpened;
     },
     createPublisher() {
       this.publisher = new Publisher();

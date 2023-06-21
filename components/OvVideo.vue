@@ -2,7 +2,7 @@
   <div>
     <video
       ref="videoElement"
-      class="max-h-[717.53px] max-w-[1332px] rounded-[6px] object-cover"
+      class="rounded-[6px] object-cover"
       autoplay
     ></video>
     <p
