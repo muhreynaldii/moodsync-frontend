@@ -8,7 +8,12 @@
     <div class="flex flex-col">
       <div class="h-[717.53px] w-[1332px]">
         <div class="flex flex-row flex-wrap justify-center gap-1">
-          <user-video :stream-manager="mainStreamManager" type="local" />
+          <user-video
+            :stream-manager="mainStreamManager"
+            :meeting-id="meetingId"
+            :user-id="userId"
+            type="local"
+          />
           <!-- <user-video
             :stream-manager="publisher"
             @click.native="updateMainVideoStreamManager(publisher)"
@@ -81,6 +86,7 @@
 <script>
 import { OpenVidu } from "openvidu-browser";
 import EventBus from "../plugins/event-bus";
+import { mapGetters } from "vuex";
 
 const APPLICATION_SERVER_URL =
   process.env.NODE_ENV === "production" ? "" : "http://localhost:3005/";
@@ -115,10 +121,68 @@ export default {
       // Join form
       mySessionId: "SessionA",
       myUserName: "Participant" + Math.floor(Math.random() * 100),
+      meetingId: null,
+      userId: null,
+      participantIds: [],
     };
   },
   methods: {
-    joinSession() {
+    async joinSession() {
+      // Run for lecturer only
+      if (this.$auth.loggedIn) {
+        this.$axios
+          .$get(`/api/meeting/code/${this.mySessionId}`)
+          .then((result) => {
+            console.log("result", result);
+            this.meetingId = result._id;
+          })
+          .catch((error) => {
+            console.log("err", error);
+            this.$axios
+              .$post("/api/meeting", {
+                code: this.mySessionId,
+                description: `Description ${this.mySessionId}`,
+              })
+              .then((result) => {
+                console.log("result", result);
+                this.meetingId = result._id;
+              })
+              .catch((error) => {
+                console.log("err", error);
+              });
+          });
+      } else {
+        this.$axios
+          .$get(`/api/meeting/code/${this.mySessionId}`)
+          .then((result) => {
+            this.meetingId = result._id;
+          })
+          .catch((error) => {
+            console.log("err", error);
+          })
+          .then(() => {
+            this.$axios
+              .$get(`/api/users/username/${this.myUserName}`)
+              .then((result) => {
+                this.userId = result._id;
+              })
+              .catch((error) => {
+                console.log("err", error);
+                this.$axios
+                  .$post("/api/users/test", {
+                    username: this.myUserName,
+                    role: "student",
+                  })
+                  .then((result) => {
+                    console.log("result", result);
+                    this.userId = result._id;
+                  })
+                  .catch((error) => {
+                    console.log("err", error);
+                  });
+              });
+          });
+      }
       // --- 1) Get an OpenVidu object ---
       this.OV = new OpenVidu();
       // --- 2) Init a session ---
@@ -166,6 +230,19 @@ export default {
             this.publisher = publisher;
             // --- 6) Publish your stream ---
             this.session.publish(this.publisher);
+            if (this.$auth.loggedIn) {
+              this.$axios
+                .$put(`/api/recognition/${this.meetingId}`, {
+                  isStart: true,
+                  code: this.mainStreamManager.session.sessionId,
+                })
+                .then((result) => {
+                  console.log("result", result);
+                })
+                .catch((err) => {
+                  console.log("err", err);
+                });
+            }
           })
           .catch((error) => {
             console.log(
@@ -189,6 +266,17 @@ export default {
       this.$router.go(-1);
       // Remove beforeunload listener
       window.removeEventListener("beforeunload", this.leaveSession);
+      this.$axios
+        .$put(`/api/recognition/${this.meetingId}`, {
+          isStart: false,
+          code: this.mySessionId,
+        })
+        .then((result) => {
+          console.log("result", result);
+        })
+        .catch((err) => {
+          console.log("err", err);
+        });
     },
     updateMainVideoStreamManager(stream) {
       if (this.mainStreamManager === stream) return;
@@ -244,7 +332,6 @@ export default {
           .getMediaStream()
           .getVideoTracks()[0].enabled = false;
       }
-      console.log("hai");
     },
     toggleMic() {
       if (this.isMicOn) {
@@ -292,6 +379,30 @@ export default {
     // },
     openChatbox() {
       EventBus.$emit("openChatbox"); // Mengirim sinyal ke komponen chatbox
+    },
+  },
+  computed: {
+    ...mapGetters("datetime", ["datetime"]),
+  },
+  watch: {
+    datetime(value, oldValue) {
+      setTimeout(() => {
+        this.$axios
+          .$get("/api/recognition/current", {
+            params: {
+              userId: this.participantIds.map((participant) => participant._id),
+              meetingId: this.meetingId,
+              createdAt: value,
+              // createdAt: oldValue,
+            },
+          })
+          .then((result) => {
+            console.log("result", result);
+          })
+          .catch((err) => {
+            console.log("err", err);
+          });
+      }, 1250); // Delay of 0.5 seconds (500 milliseconds)
     },
   },
 };
