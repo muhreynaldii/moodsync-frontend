@@ -8,14 +8,14 @@
     <div class="flex flex-col">
       <div class="h-[717.53px] w-[1332px]">
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-        <div class="flex flex-row flex-wrap justify-center gap-1" ref="videoContainer">
-          <user-video
+        <div class="flex items-center justify-center min-h-[710px]" ref="videoContainer">
+          <!-- <user-video
             :stream-manager="mainStreamManager"
             :meeting-id="meetingId"
             :user-id="userId"
             type="local"
-          />
-          <!-- <user-video
+          /> -->
+          <user-video
             :stream-manager="publisher"
             @click.native="updateMainVideoStreamManager(publisher)"
           />
@@ -24,7 +24,7 @@
             :key="sub.stream.connection.connectionId"
             :stream-manager="sub"
             @click.native="updateMainVideoStreamManager(sub)"
-          /> -->
+          />
         </div>
       </div>
         <div class="flex w-full items-center justify-center">
@@ -36,7 +36,7 @@
           <AudioSettings />
           <ActionBar @on-camera="toggleCamera" @open-chat="openChatbox" />
           <div
-            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
+            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-600"
             @click="leaveSession"
           >
             <svg

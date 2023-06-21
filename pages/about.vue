@@ -2,7 +2,7 @@
   <main class="h-screen overflow-hidden bg-white">
     <div class="flex flex-col lg:flex-row">
       <section
-        class="ml-[78.75px] mt-[158.25px] flex h-full w-2/3 flex-col justify-center lg:w-1/2 xl:ml-[105px] xl:mt-[211px] 2xl:ml-[145px]"
+        class="ml-[78.75px] mt-[158.25px] flex h-full w-[40%] flex-col justify-center lg:w-1/2 xl:ml-[105px] xl:mt-[211px] xl:w-1/2 2xl:ml-[145px]"
       >
         <heading-pages
           text="About Us"
@@ -24,12 +24,12 @@
         </nuxt-link>
       </section>
       <aside
-        class="mr-[28.5px] hidden h-screen w-1/2 justify-end lg:flex xl:mr-[38px] 2xl:justify-center"
+        class="mr-[29px] flex h-screen w-[60%] justify-end xl:mr-[38px] xl:w-1/2 2xl:justify-center"
       >
         <img
           src="~img/sad-fun-confused-light.png"
           alt="sad-fun-confused"
-          class="object-cover object-left lg:w-[400px] xl:w-[608px] 2xl:w-[613px]"
+          class="object-cover object-center"
         />
       </aside>
     </div>

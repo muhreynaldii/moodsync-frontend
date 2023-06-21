@@ -1,7 +1,7 @@
 <template>
   <main class="h-screen overflow-hidden bg-white">
     <div class="flex">
-      <section class="ml-24 flex h-screen xl:w-1/2 flex-col justify-center w-[40%]">
+      <section class="ml-[78.75px] xl:ml-[105px] 2xl:ml-[145px] flex h-screen xl:w-1/2 flex-col justify-center w-[40%]">
         <heading-pages
           text="Connect With Emotion:"
           class="lg:w-[555.75px] xl:w-[741px]"
