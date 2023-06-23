@@ -36,7 +36,7 @@
           <AudioSettings />
           <ActionBar @on-camera="toggleCamera" @open-chat="openChatbox" />
           <div
-            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-600"
+            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
             @click="leaveSession"
           >
             <svg
