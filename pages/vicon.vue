@@ -39,7 +39,7 @@
               :key="currentEmotion._id"
             >
               <p>Current Emotion</p>
-              <p>{{ currentEmotion.username }}: {{ currentEmotion.predict }}</p>
+              <p>{{ currentEmotion.userId }}: {{ currentEmotion.predict }}</p>
             </div>
           </div>
         </div>
