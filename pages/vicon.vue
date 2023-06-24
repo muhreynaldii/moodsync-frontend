@@ -7,26 +7,42 @@
     </div>
     <div class="flex flex-col">
       <div class="h-[717.53px] w-[1332px]">
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-        <div class="flex items-center justify-center min-h-[710px]" ref="videoContainer">
-          <!-- <user-video
+        <div
+          class="grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))"
+        >
+          <div
+            class="flex items-center justify-center min-h-[710px]"
+            ref="videoContainer"
+          >
+            <!-- <user-video
             :stream-manager="mainStreamManager"
             :meeting-id="meetingId"
             :user-id="userId"
             type="local"
           /> -->
-          <user-video
-            :stream-manager="publisher"
-            @click.native="updateMainVideoStreamManager(publisher)"
-          />
-          <user-video
-            v-for="sub in subscribers"
-            :key="sub.stream.connection.connectionId"
-            :stream-manager="sub"
-            @click.native="updateMainVideoStreamManager(sub)"
-          />
+            <user-video
+              :stream-manager="publisher"
+              :meeting-id="meetingId"
+              :user-id="userId"
+              type="local"
+              @click.native="updateMainVideoStreamManager(publisher)"
+            />
+            <user-video
+              v-for="sub in subscribers"
+              :key="sub.stream.connection.connectionId"
+              :stream-manager="sub"
+              @click.native="updateMainVideoStreamManager(sub)"
+            />
+            <div
+              v-for="currentEmotion in currentEmotions"
+              :key="currentEmotion._id"
+            >
+              <p>Current Emotion</p>
+              <p>{{ currentEmotion.userId }}: {{ currentEmotion.predict }}</p>
+            </div>
+          </div>
         </div>
-      </div>
         <div class="flex w-full items-center justify-center">
           <hr class="mt-[27px] w-[948px] border border-[#D1D5DB]" />
         </div>
@@ -95,7 +111,7 @@ const APPLICATION_SERVER_URL =
 
 export default {
   name: "App",
-  middleware: "auth",
+  // middleware: "auth",
   layout: "side",
   mounted() {
     this.joinSession();
@@ -126,6 +142,7 @@ export default {
       meetingId: null,
       userId: null,
       participantIds: [],
+      currentEmotions: [],
     };
   },
   methods: {
@@ -218,7 +235,7 @@ export default {
             // Init a publisher passing undefined as targetElement (we don't want OpenVidu to insert a video
             // element: we will manage it on our own) and with the desired properties
 
-              // Dapatkan elemen container menggunakan $refs
+            // Dapatkan elemen container menggunakan $refs
             const videoContainer = this.$refs.videoContainer;
 
             // // Sesuaikan resolusi video dengan ukuran container
@@ -226,12 +243,12 @@ export default {
             const containerHeight = videoContainer.clientHeight;
             const resolution = `${containerWidth}x${containerHeight}`;
 
-            let publisher = this.OV.initPublisher(resolution, {
+            let publisher = this.OV.initPublisher(undefined, {
               audioSource: undefined,
               videoSource: undefined,
               publishAudio: true,
               publishVideo: true,
-              resolution: resolution,
+              resolution: "640x480",
               frameRate: 30,
               insertMode: "APPEND",
               mirror: false, // Whether to mirror your local video or not
@@ -412,9 +429,11 @@ export default {
           })
           .then((result) => {
             console.log("result", result);
+            this.currentEmotions = result;
           })
           .catch((err) => {
             console.log("err", err);
+            this.currentEmotions = [];
           });
       }, 1250); // Delay of 0.5 seconds (500 milliseconds)
     },
