@@ -1,9 +1,13 @@
 <template>
   <div>
-    <video ref="videoElement" class="vicon-lecturer" autoplay></video>
+    <video
+      ref="videoElement"
+      class="rounded-[6px] object-cover"
+      autoplay
+    ></video>
     <p
       v-if="type === 'local'"
-      class="absolute top-14 left-4 bg-white rounded-full px-3 py-1 text-xl capitalize"
+      class="absolute left-4 top-14 rounded-full bg-white px-3 py-1 text-xl capitalize"
     >
       {{ currentPredict }}
     </p>
@@ -13,6 +17,7 @@
 <script>
 import * as faceapi from "face-api.js";
 import { io } from "socket.io-client";
+import { mapActions } from "vuex";
 
 const API_BASE_URL = "http://localhost:3005";
 const MODEL_URL =
@@ -23,22 +28,25 @@ export default {
   props: {
     streamManager: Object,
     type: String,
+    meetingId: String,
+    userId: String,
   },
   data() {
     return {
       currentPredict: null,
       intervalId: null,
       socketIo: null,
+      isBusy: false,
     };
   },
   async mounted() {
     this.streamManager.addVideoElement(this.$refs.videoElement);
     if (this.type === "local") {
-      if (!this.socketIo) this.initSocketIo();
       await this.loadModels();
-      this.intervalId = setInterval(() => {
-        this.detectFaces();
-      }, 2000);
+      if (!this.socketIo) this.initSocketIo();
+      // this.intervalId = setInterval(() => {
+      //   this.detectFaces();
+      // }, 2000);
     }
   },
   beforeDestroy() {
@@ -46,6 +54,7 @@ export default {
     if (this.socketIo) this.socketIo.disconnect();
   },
   methods: {
+    ...mapActions("datetime", ["changeDatetime"]),
     async loadModels() {
       await Promise.all([
         faceapi.loadTinyFaceDetectorModel(MODEL_URL),
@@ -58,7 +67,9 @@ export default {
         this.intervalId = null;
       }
     },
-    async detectFaces() {
+    async detectFaces({ datetime }) {
+      if (this.isBusy) return;
+      this.isBusy = true;
       try {
         const faceApiResult = await faceapi
           .detectAllFaces(
@@ -69,6 +80,7 @@ export default {
         if (!faceApiResult.length) {
           console.log("FER:: Face not detected");
           this.currentPredict = "Face not detected";
+          this.isBusy = false;
         } else {
           const expressions = faceApiResult[0].expressions;
           console.log("FER:: Result", {
@@ -76,6 +88,26 @@ export default {
             predict: this.getExpression(expressions),
           });
           this.currentPredict = this.getExpression(expressions);
+          const body = {
+            ...this.parseProbability(expressions),
+            predict: this.getExpression(expressions),
+            meetingId: this.meetingId,
+            userId: this.userId,
+            createdAt: datetime,
+            updatedAt: datetime,
+          };
+          console.log("body", body);
+          this.$axios
+            .$post("/api/recognition", body)
+            .then((result) => {
+              console.log("result", result);
+            })
+            .catch((err) => {
+              console.log("err", err);
+            })
+            .finally(() => {
+              this.isBusy = false;
+            });
         }
       } catch (error) {
         console.log("error", error);
@@ -96,19 +128,41 @@ export default {
       );
     },
     initSocketIo() {
+      console.log(
+        "first",
+        "join",
+        `student-${this.streamManager.session.sessionId}`
+      );
       this.socketIo = io(API_BASE_URL);
-      this.socketIo.emit("join", this.streamManager.session.sessionId);
-      this.socketIo.on("RECOGNITION_DATA_ADDED", (code) => {
-        console.log("event received at", code);
-        this.detectFaces();
+      this.socketIo.emit(
+        "join",
+        `student-${this.streamManager.session.sessionId}`
+      );
+      this.socketIo.on("SEND_RECOGNITION_DATA", ({ meetingId, datetime }) => {
+        console.log("event received at", meetingId, datetime);
+        this.changeDatetime({ datetime });
+        if (!this.$auth.loggedIn) {
+          this.detectFaces({ datetime });
+        } else {
+          console.log("do fetch data");
+          // this.fetchData()
+        }
       });
     },
+    // initSocketIo() {
+    //   this.socketIo = io(API_BASE_URL);
+    //   this.socketIo.emit("join", this.streamManager.session.sessionId);
+    //   this.socketIo.on("RECOGNITION_DATA_ADDED", (code) => {
+    //     console.log("event received at", code);
+    //     this.detectFaces();
+    //   });
+    // },
   },
 };
 </script>
 
 <style scoped>
-.vicon-lecturer {
+/* .vicon-lecturer {
   top: 0px;
   left: 0px;
   width: 970.75px;
@@ -118,5 +172,5 @@ export default {
   align-items: flex-start;
   flex-shrink: 1;
   border-radius: 33px;
-}
+} */
 </style>

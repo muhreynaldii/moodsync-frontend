@@ -1,26 +1,36 @@
 <template>
   <main class="h-screen overflow-hidden bg-white">
-    <div class="flex">
-      <section class="ml-24 mt-10 flex h-screen w-1/2 flex-col justify-center">
-        <heading-pages text="About" :dot="false" />
+    <div class="flex flex-col lg:flex-row">
+      <section
+        class="ml-[78.75px] mt-[158.25px] flex h-full w-[40%] flex-col justify-center lg:w-1/2 xl:ml-[105px] xl:mt-[211px] xl:w-1/2 2xl:ml-[145px]"
+      >
+        <heading-pages
+          text="About Us"
+          :dot="false"
+          class="mb-[19.5px] xl:mb-[26px]"
+        />
         <p
           v-for="(data, index) in description"
           :key="index"
-          class="w-[741px] py-[26px] text-justify text-[23px] leading-[120%] text-Gray-600"
+          class="mb-[12px] text-justify leading-[20px] text-Gray-600 lg:w-[486.75px] lg:text-[17.25px] xl:mb-[18px] xl:w-[649px] xl:text-[23px] xl:leading-[27.6px]"
         >
           {{ data.content }}
         </p>
         <nuxt-link
           to="/login"
-          class="w-[203px] rounded-lg bg-[#1A56DB] px-[24px] py-[14px] text-center text-white"
+          class="mt-[0px] flex h-[39px] items-center justify-center rounded-lg bg-[#1A56DB] text-center text-[12px] text-white lg:w-[152.25px] xl:mt-[8px] xl:h-[52px] xl:w-[203px] xl:text-base"
         >
-          Lets Try!!
+          Get Started!
         </nuxt-link>
       </section>
       <aside
-        class="mr-[38px] flex h-screen w-1/2 justify-end 2xl:justify-center"
+        class="mr-[29px] flex h-screen w-[60%] justify-end xl:mr-[38px] xl:w-1/2 2xl:justify-center"
       >
-        <img src="~img/sad-fun-confused-light.png" alt="sad-fun-confused" />
+        <img
+          src="~img/sad-fun-confused-light.png"
+          alt="sad-fun-confused"
+          class="object-cover object-center"
+        />
       </aside>
     </div>
   </main>
@@ -47,7 +57,7 @@ export default {
         },
         {
           content:
-            "Dengan menggunakan teknologi pengenalan emosi yang canggih, aplikasi ini dapat menganalisis ekspresi wajah pengguna dalam waktu nyata. Algoritma yang terintegrasi dengan aplikasi akan mengidentifikasi berbagai emosi seperti kegembiraan, kesedihan, kejutan, marah, atau ketidakpuasan. Hal ini memungkinkan para peserta video conference untuk mendapatkan pemahaman yang lebih mendalam tentang respons emosional satu sama lain, bahkan dalam komunikasi nonverbal .",
+            "Dengan menggunakan teknologi pengenalan emosi yang canggih, aplikasi ini dapat menganalisis ekspresi wajah pengguna dalam waktu nyata. Algoritma yang terintegrasi dengan aplikasi akan mengidentifikasi berbagai emosi seperti kegembiraan, kesedihan, kejutan, marah, atau ketidakpuasan. Hal ini memungkinkan para peserta video conference untuk mendapatkan pemahaman yang lebih mendalam tentang respons emosional satu sama lain, bahkan dalam komunikasi nonverbal.",
         },
       ],
     };
