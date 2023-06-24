@@ -7,26 +7,36 @@
     </div>
     <div class="flex flex-col">
       <div class="h-[717.53px] w-[1332px]">
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-        <div class="flex items-center justify-center min-h-[710px]" ref="videoContainer">
-          <!-- <user-video
+        <div
+          class="grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))"
+        >
+          <div
+            class="flex min-h-[710px] items-center justify-center"
+            ref="videoContainer"
+          >
+            <!-- <user-video
             :stream-manager="mainStreamManager"
             :meeting-id="meetingId"
             :user-id="userId"
             type="local"
           /> -->
-          <user-video
-            :stream-manager="publisher"
-            @click.native="updateMainVideoStreamManager(publisher)"
-          />
-          <user-video
-            v-for="sub in subscribers"
-            :key="sub.stream.connection.connectionId"
-            :stream-manager="sub"
-            @click.native="updateMainVideoStreamManager(sub)"
-          />
+            <user-video
+              :stream-manager="publisher"
+              @click.native="updateMainVideoStreamManager(publisher)"
+              :meeting-id="meetingId"
+              :user-id="userId"
+              type="local"
+            />
+            <user-video
+              v-for="sub in subscribers"
+              :key="sub.stream.connection.connectionId"
+              :stream-manager="sub"
+              @click.native="updateMainVideoStreamManager(sub)"
+              type="remote"
+            />
+          </div>
         </div>
-      </div>
         <div class="flex w-full items-center justify-center">
           <hr class="mt-[27px] w-[948px] border border-[#D1D5DB]" />
         </div>
@@ -218,7 +228,7 @@ export default {
             // Init a publisher passing undefined as targetElement (we don't want OpenVidu to insert a video
             // element: we will manage it on our own) and with the desired properties
 
-              // Dapatkan elemen container menggunakan $refs
+            // Dapatkan elemen container menggunakan $refs
             const videoContainer = this.$refs.videoContainer;
 
             // // Sesuaikan resolusi video dengan ukuran container
