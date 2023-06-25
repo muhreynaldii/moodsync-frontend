@@ -1,5 +1,5 @@
 <template>
-  <div v-if="streamManager">
+  <div v-if="streamManager" class="w-[100%] h-[100%] object-fill">
     <ov-video
       :stream-manager="streamManager"
       :meeting-id="meetingId"
