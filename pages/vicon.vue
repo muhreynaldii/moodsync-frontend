@@ -23,18 +23,24 @@
           /> -->
             <user-video
               :stream-manager="publisher"
-              @click.native="updateMainVideoStreamManager(publisher)"
               :meeting-id="meetingId"
               :user-id="userId"
               type="local"
+              @click.native="updateMainVideoStreamManager(publisher)"
             />
             <user-video
               v-for="sub in subscribers"
               :key="sub.stream.connection.connectionId"
               :stream-manager="sub"
               @click.native="updateMainVideoStreamManager(sub)"
-              type="remote"
             />
+            <div
+              v-for="currentEmotion in currentEmotions"
+              :key="currentEmotion._id"
+            >
+              <p>Current Emotion</p>
+              <p>{{ currentEmotion.username }}: {{ currentEmotion.predict }}</p>
+            </div>
           </div>
         </div>
         <div class="flex w-full items-center justify-center">
@@ -46,7 +52,7 @@
           <AudioSettings />
           <ActionBar @on-camera="toggleCamera" @open-chat="openChatbox" />
           <div
-            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-600"
+            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
             @click="leaveSession"
           >
             <svg
@@ -105,7 +111,7 @@ const APPLICATION_SERVER_URL =
 
 export default {
   name: "App",
-  middleware: "auth",
+  // middleware: "auth",
   layout: "side",
   mounted() {
     this.joinSession();
@@ -136,6 +142,7 @@ export default {
       meetingId: null,
       userId: null,
       participantIds: [],
+      currentEmotions: [],
     };
   },
   methods: {
@@ -236,12 +243,12 @@ export default {
             const containerHeight = videoContainer.clientHeight;
             const resolution = `${containerWidth}x${containerHeight}`;
 
-            let publisher = this.OV.initPublisher(resolution, {
+            let publisher = this.OV.initPublisher(undefined, {
               audioSource: undefined,
               videoSource: undefined,
               publishAudio: true,
               publishVideo: true,
-              resolution: resolution,
+              resolution: "640x480",
               frameRate: 30,
               insertMode: "APPEND",
               mirror: false, // Whether to mirror your local video or not
@@ -422,9 +429,11 @@ export default {
           })
           .then((result) => {
             console.log("result", result);
+            this.currentEmotions = result;
           })
           .catch((err) => {
             console.log("err", err);
+            this.currentEmotions = [];
           });
       }, 1250); // Delay of 0.5 seconds (500 milliseconds)
     },
