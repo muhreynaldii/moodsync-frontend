@@ -12,7 +12,7 @@
           :class="{
             'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-[#e1effe] no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
               link.isActive,
-            'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-white no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
+            'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] hover:bg-[#f5faff] bg-white no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
               !link.isActive,
           }"
         >
