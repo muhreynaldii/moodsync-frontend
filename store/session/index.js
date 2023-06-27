@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 export const state = () => ({
   errors: null,
   isLoading: false,
@@ -5,12 +7,26 @@ export const state = () => ({
 
 export const actions = {
   login({ commit }, dataLogin) {
-    // commit("setIsLoading", true);
-    this.$auth.loginWith("local", { data: dataLogin }).catch((err) => {
-      // commit("setError", err.response.data.message);
-      alert(err);
-    });
-    // .finally(() => commit("setIsLoading", false));
+    this.$auth
+      .loginWith("local", { data: dataLogin })
+      .then(() => {
+        Swal.fire({
+          position: "center",
+          type: "success",
+          title: "Berhasil Login",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      })
+      .catch(() => {
+        Swal.fire({
+          position: "center",
+          type: "error",
+          title: "Username atau Password salah",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
   },
 };
 

@@ -115,7 +115,25 @@ export default {
       this.showPassword = !this.showPassword;
     },
     handleLogin(data) {
-      this.login(data);
+      this.login(data)
+        .then(() => {
+          Swal.fire({
+            position: "center",
+            type: "success",
+            title: "Berhasil Login",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        })
+        .catch(() => {
+          Swal.fire({
+            position: "center",
+            type: "error",
+            title: "Gagal Login",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        });
     },
   },
   computed: {

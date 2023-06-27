@@ -48,7 +48,12 @@ export default {
     { src: "./plugins/elippse-progress.js", mode: "client" },
     { src: "./plugins/fontawesome.js", mode: "client" },
   ],
-  modules: ["@nuxtjs/axios", "@nuxtjs/dotenv", "@nuxtjs/auth-next"],
+  modules: [
+    "@nuxtjs/axios",
+    "@nuxtjs/dotenv",
+    "@nuxtjs/auth-next",
+    "nuxt-sweetalert2",
+  ],
   axios: {
     baseURL: process.env.API_BASE_URL,
   },
