@@ -24,9 +24,9 @@
             class="mt-[16px]"
             placeholder="Username"
             validation="required"
-            error-class="text-red-700 text-xs mb-1"
+            error-class="text-red-700 text-[10px] my-1"
             :validation-messages="{
-              required: 'Email harus diisi',
+              required: 'Username harus diisi',
             }"
             error-behavior="submit"
             label-class="font-medium text-[10.5px] xl:text-[14px] text-[#111928]"
@@ -41,7 +41,7 @@
               placeholder="Password"
               validation="required"
               validation-name="Password"
-              error-class="text-red-700 text-xs mb-1"
+              error-class="text-red-700 text-[10px] my-1"
               :validation-messages="{
                 required: 'Password harus diisi',
               }"
@@ -115,25 +115,7 @@ export default {
       this.showPassword = !this.showPassword;
     },
     handleLogin(data) {
-      this.login(data)
-        .then(() => {
-          Swal.fire({
-            position: "center",
-            type: "success",
-            title: "Berhasil Login",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        })
-        .catch(() => {
-          Swal.fire({
-            position: "center",
-            type: "error",
-            title: "Gagal Login",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        });
+      this.login(data);
     },
   },
   computed: {

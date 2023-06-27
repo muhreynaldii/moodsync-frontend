@@ -36,12 +36,12 @@
         >
           Statistic
         </h2>
-        <div class="flex gap-[13.5px] xl:gap-4 z-50">
+        <div class="z-50 flex gap-[13.5px] xl:gap-4">
           <div
             class="h-[319.5px] w-[484px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[672px] 2xl:h-[511.2px] 2xl:w-[806.4px]"
           >
             <p class="font-bold lg:text-[17.25px] xl:text-[23px]">
-              Presensi Mahasiswa
+              Emotion overview
             </p>
             <BarChart style="width: 100%; height: 100%" class="py-4" />
           </div>
@@ -49,7 +49,7 @@
             class="h-[319.5px] w-[434.5px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[622px] 2xl:h-[511.2px] 2xl:w-[727.2px]"
           >
             <p class="font-bold lg:text-[17.25px] xl:text-[23px]">
-              Emosi Mahasiswa
+              Emotion summary
             </p>
             <RadarChart style="width: 100%; height: 100%" class="py-4" />
           </div>
