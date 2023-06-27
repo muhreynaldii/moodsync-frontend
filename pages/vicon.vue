@@ -8,13 +8,10 @@
     </div>
     <div class="flex flex-col">
       <div class="h-[717.53px] w-[1332px]">
-        <div
-          class="grid"
-          style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))"
-        >
+        <div class="flex items-center justify-center">
           <div
-            class="flex min-h-[710px] items-center justify-center"
-            ref="videoContainer"
+            class="grid h-[710px] w-[1332px] items-center justify-center gap-1 object-fill"
+            :class="getGridClass(subscribers.length)"
           >
             <!-- <user-video
             :stream-manager="mainStreamManager"
@@ -28,19 +25,21 @@
               :user-id="userId"
               type="local"
               @click.native="updateMainVideoStreamManager(publisher)"
+              class="aspect-video"
             />
             <user-video
               v-for="sub in subscribers"
               :key="sub.stream.connection.connectionId"
               :stream-manager="sub"
               @click.native="updateMainVideoStreamManager(sub)"
+              class="aspect-video"
             />
             <div
               v-for="currentEmotion in currentEmotions"
               :key="currentEmotion._id"
             >
               <p>Current Emotion</p>
-              <p>{{ currentEmotion.username }}: {{ currentEmotion.predict }}</p>
+              <p>{{ currentEmotion.userId }}: {{ currentEmotion.predict }}</p>
             </div>
           </div>
         </div>
@@ -112,7 +111,7 @@ const APPLICATION_SERVER_URL =
 
 export default {
   name: "App",
-  // middleware: "auth",
+  middleware: "auth",
   layout: "side",
   // mounted() {
   //   this.joinSession();
@@ -233,14 +232,6 @@ export default {
             // --- 5) Get your own camera stream with the desired properties ---
             // Init a publisher passing undefined as targetElement (we don't want OpenVidu to insert a video
             // element: we will manage it on our own) and with the desired properties
-
-            // Dapatkan elemen container menggunakan $refs
-            const videoContainer = this.$refs.videoContainer;
-
-            // // Sesuaikan resolusi video dengan ukuran container
-            const containerWidth = videoContainer.clientWidth;
-            const containerHeight = videoContainer.clientHeight;
-            const resolution = `${containerWidth}x${containerHeight}`;
 
             let publisher = this.OV.initPublisher(undefined, {
               audioSource: undefined,
@@ -395,6 +386,27 @@ export default {
     openChatbox() {
       EventBus.$emit("openChatbox"); // Mengirim sinyal ke komponen chatbox
     },
+
+    // Grid untuk video conference
+    getGridClass(length) {
+      if (length === 1) {
+        return "grid-cols-2";
+      } else if (length === 2) {
+        return "grid-cols-4 grid-rows-2 tiga";
+      } else if (length === 3) {
+        return "grid-cols-2 grid-rows-2";
+      } else if (length === 4) {
+        return "grid-cols-6 grid-rows-2 lima";
+      } else if (length === 5) {
+        return "grid-cols-3 grid-rows-2";
+      } else if (length === 6) {
+        return "grid-cols-6 grid-rows-3 tujuh";
+      } else if (length === 7) {
+        return "grid-cols-6 grid-rows-3 delapan";
+      } else if (length === 8) {
+        return "grid-cols-3 grid-rows-3";
+      }
+    },
   },
   computed: {
     ...mapGetters("datetime", ["datetime"]),
@@ -424,3 +436,109 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.tiga > *:first-child {
+  grid-column: span 2 / span 2;
+}
+.tiga > *:nth-child(2) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+}
+.tiga > *:last-child {
+  grid-column: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.lima > *:first-child {
+  grid-column: span 2 / span 2;
+}
+.lima > *:nth-child(2) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+}
+.lima > *:nth-child(3) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.lima > *:nth-child(4) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+.lima > *:last-child {
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+.tujuh > *:first-child {
+  grid-column: span 2 / span 2;
+}
+.tujuh > *:nth-child(2) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+}
+.tujuh > *:nth-child(3) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.tujuh > *:nth-child(4) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+.tujuh > *:nth-child(5) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+.tujuh > *:nth-child(6) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 2;
+}
+.tujuh > *:last-child {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+.delapan > *:first-child {
+  grid-column: span 2 / span 2;
+}
+.delapan > *:nth-child(2) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+}
+.delapan > *:nth-child(3) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.delapan > *:nth-child(4) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+.delapan > *:nth-child(5) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+.delapan > *:nth-child(6) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 2;
+}
+.delapan > *:nth-child(7) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+.delapan > *:last-child {
+  grid-column: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+</style>

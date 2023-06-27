@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="h-[100%] w-[100%]">
     <video
       ref="videoElement"
-      class="rounded-[6px] object-cover"
+      class="h-[100%] w-[100%] rounded-[6px] object-cover"
       autoplay
     ></video>
     <p
