@@ -31,11 +31,11 @@
         </div>
       </section>
     </div>
-    <pop-up-join
+    <!-- <pop-up-join
       v-show="showModal"
       class="z-50"
       @close-modal="showModal = false"
-    />
+    /> -->
   </main>
 </template>
 

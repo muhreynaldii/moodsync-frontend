@@ -32,7 +32,7 @@ export default {
     return {
       linksData: [
         { to: "dashboard-dosen", icon: "icons-dashboard" },
-        { to: "vicon-started", icon: "icons-vicon" },
+        { to: "vicon", icon: "icons-vicon" },
         { to: "daftar-mahasiswa", icon: "icons-daftar" },
         { to: "notification", icon: "icons-notif" },
       ],

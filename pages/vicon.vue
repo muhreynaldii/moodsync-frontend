@@ -2,6 +2,7 @@
   <main
     class="ml-[161px] flex h-screen w-screen items-center justify-start overflow-hidden bg-white pr-[90px]"
   >
+    <pop-up-join v-show="showModal" class="z-50" @join-modal="joinSession" />
     <div class="absolute left-[22px] top-[21px] w-full">
       <h1 class="text-center text-[33px]">Dasar Pemrograman</h1>
     </div>
@@ -70,7 +71,7 @@
         </div>
       </div>
     </div>
-    <div class="h-[538.48px] w-[250px] pl-[87px]">
+    <div class="h-[538.48px] w-[250px] pl-[87px]" v-if="this.$auth.user">
       <p class="w-[250px] text-center text-[23px] font-medium text-[#1C64F2]">
         Overall Class Emotion
       </p>
@@ -110,12 +111,12 @@ const APPLICATION_SERVER_URL =
 
 export default {
   name: "App",
-  middleware: "auth",
+  // middleware: "auth",
   layout: "side",
-  mounted() {
-    this.joinSession();
-    // this.audioObject.addEventListener('volumechange', this.updateVolumeSlider)
-  },
+  // mounted() {
+  //   this.joinSession();
+  //   // this.audioObject.addEventListener('volumechange', this.updateVolumeSlider)
+  // },
   // beforeDestroy() {
   //   // Menghapus event listener sebelum komponen dihancurkan
   //   this.audioObject.removeEventListener(
@@ -131,25 +132,23 @@ export default {
       mainStreamManager: undefined,
       publisher: undefined,
       subscribers: [],
-      // isCameraOn: true,
-      // isMicOn: true,
       isScreenSharing: false,
       isHovered: false,
-      // Join form
-      mySessionId: "SessionA",
-      myUserName: "Participant" + Math.floor(Math.random() * 100),
+      // itsSessionId: "SessionA",
+      // itsUserName: "Participant" + Math.floor(Math.random() * 100),
       meetingId: null,
       userId: null,
       participantIds: [],
       currentEmotions: [],
+      showModal: true,
     };
   },
   methods: {
-    async joinSession() {
-      // Run for lecturer only
+    async joinSession(itsUserName, itsSessionId) {
+      this.showModal = false;
       if (this.$auth.loggedIn) {
         this.$axios
-          .$get(`/api/meeting/code/${this.mySessionId}`)
+          .$get(`/api/meeting/code/${itsSessionId}`)
           .then((result) => {
             console.log("result", result);
             this.meetingId = result._id;
@@ -158,8 +157,8 @@ export default {
             console.log("err", error);
             this.$axios
               .$post("/api/meeting", {
-                code: this.mySessionId,
-                description: `Description ${this.mySessionId}`,
+                code: itsSessionId,
+                description: `Description ${itsSessionId}`,
               })
               .then((result) => {
                 console.log("result", result);
@@ -171,7 +170,7 @@ export default {
           });
       } else {
         this.$axios
-          .$get(`/api/meeting/code/${this.mySessionId}`)
+          .$get(`/api/meeting/code/${itsSessionId}`)
           .then((result) => {
             this.meetingId = result._id;
           })
@@ -180,7 +179,7 @@ export default {
           })
           .then(() => {
             this.$axios
-              .$get(`/api/users/username/${this.myUserName}`)
+              .$get(`/api/users/username/${itsUserName}`)
               .then((result) => {
                 this.userId = result._id;
               })
@@ -188,7 +187,7 @@ export default {
                 console.log("err", error);
                 this.$axios
                   .$post("/api/users/test", {
-                    username: this.myUserName,
+                    username: itsUserName,
                     role: "student",
                   })
                   .then((result) => {
@@ -224,11 +223,11 @@ export default {
       });
       // --- 4) Connect to the session with a valid user token ---
       // Get a token from the OpenVidu deployment
-      this.getToken(this.mySessionId).then((token) => {
+      this.getToken(itsSessionId).then((token) => {
         // First param is the token. Second param can be retrieved by every user on event
         // 'streamCreated' (property Stream.connection.data), and will be appended to DOM as the user's nickname
         this.session
-          .connect(token, { clientData: this.myUserName })
+          .connect(token, { clientData: itsUserName })
           .then(() => {
             // --- 5) Get your own camera stream with the desired properties ---
             // Init a publisher passing undefined as targetElement (we don't want OpenVidu to insert a video
@@ -288,7 +287,7 @@ export default {
       this.$axios
         .$put(`/api/recognition/${this.meetingId}`, {
           isStart: false,
-          code: this.mySessionId,
+          code: itsSessionId,
         })
         .then((result) => {
           console.log("result", result);
@@ -301,23 +300,8 @@ export default {
       if (this.mainStreamManager === stream) return;
       this.mainStreamManager = stream;
     },
-    /**
-     * --------------------------------------------
-     * GETTING A TOKEN FROM YOUR APPLICATION SERVER
-     * --------------------------------------------
-     * The methods below request the creation of a Session and a Token to
-     * your application server. This keeps your OpenVidu deployment secure.
-     *
-     * In this sample code, there is no user control at all. Anybody could
-     * access your application server endpoints! In a real production
-     * environment, your application server must identify the user to allow
-     * access to the endpoints.
-     *
-     * Visit https://docs.openvidu.io/en/stable/application-server to learn
-     * more about the integration of OpenVidu in your application server.
-     */
-    async getToken(mySessionId) {
-      const sessionId = await this.createSession(mySessionId);
+    async getToken(itsSessionId) {
+      const sessionId = await this.createSession(itsSessionId);
       return await this.createToken(sessionId);
     },
     async createSession(sessionId) {
@@ -328,7 +312,7 @@ export default {
           headers: { "Content-Type": "application/json" },
         }
       );
-      return response.data; // The sessionId
+      return response.data;
     },
     async createToken(sessionId) {
       const response = await this.$axios.post(
@@ -338,7 +322,7 @@ export default {
           headers: { "Content-Type": "application/json" },
         }
       );
-      return response.data; // The token
+      return response.data;
     },
     toggleCamera(value) {
       // Mengaktifkan atau menonaktifkan kamera
