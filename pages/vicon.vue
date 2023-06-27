@@ -111,7 +111,7 @@ const APPLICATION_SERVER_URL =
 
 export default {
   name: "App",
-  middleware: "auth",
+  // middleware: "auth",
   layout: "side",
   // mounted() {
   //   this.joinSession();
