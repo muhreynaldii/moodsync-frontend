@@ -1,41 +1,82 @@
 <template>
-    <div>
-      <canvas ref="chartCanvas"></canvas>
-    </div>
-  </template>
-  
-  <script>
-  import Chart from 'chart.js';
-  
-  export default {
-    mounted() {
-      this.renderChart();
+  <Pie
+    :chart-options="chartOptions"
+    :chart-data="chartData"
+    :chart-id="chartId"
+    :dataset-id-key="datasetIdKey"
+    :plugins="plugins"
+    :css-classes="cssClasses"
+    :styles="styles"
+    :width="width"
+    :height="height"
+  />
+</template>
+
+<script>
+import { Pie } from "vue-chartjs/legacy";
+
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement,
+  CategoryScale,
+} from "chart.js";
+
+ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
+
+export default {
+  name: "PieChart",
+  components: {
+    Pie,
+  },
+  props: {
+    chartId: {
+      type: String,
+      default: "pie-chart",
     },
-    methods: {
-      renderChart() {
-        const ctx = this.$refs.chartCanvas.getContext('2d');
-        new Chart(ctx, {
-          type: 'pie',
-          data: {
-            labels: ['Hadir', 'Tidak Hadir'],
-            datasets: [
-              {
-                data: [3, 1],
-                backgroundColor: ['#76A9FA', '#F98080'],
-                borderWidth: 1,
-              },
-            ],
+    datasetIdKey: {
+      type: String,
+      default: "label",
+    },
+    width: {
+      type: Number,
+      default: 300,
+    },
+    height: {
+      type: Number,
+      default: 300,
+    },
+    cssClasses: {
+      default: "",
+      type: String,
+    },
+    styles: {
+      type: Object,
+      default: () => {},
+    },
+    plugins: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  data() {
+    return {
+      chartData: {
+        labels: ["VueJs", "EmberJs", "ReactJs", "AngularJs"],
+        datasets: [
+          {
+            backgroundColor: ["#41B883", "#E46651", "#00D8FF", "#DD1B16"],
+            data: [40, 20, 80, 10],
           },
-          options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            legend: {
-              display: true // opsi legend pada Chart
-            },
-          },
-        });
+        ],
       },
-    },
-  };
-  </script>
-  
+      chartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+    };
+  },
+};
+</script>

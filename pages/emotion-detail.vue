@@ -42,13 +42,13 @@
                 <p class="text-[17.25px] font-bold xl:text-[23px]">
                   Emosi Mahasiswa
                 </p>
-                <RadarChart style="width: 100%; height: 100%" class="py-2" />
+                <RadarChart class="py-2" />
               </div>
               <div
                 class="h-[319.5px] w-[424.5px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[672px]"
               >
                 <p class="text-[17.25px] font-bold xl:text-[23px]">Kehadiran</p>
-                <PieChart style="width: 100%; height: 100%" class="py-2" />
+                <PieChart class="py-2" />
               </div>
             </div>
           </section>
