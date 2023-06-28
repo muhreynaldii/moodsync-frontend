@@ -3,7 +3,7 @@
     class="fixed inset-0 flex h-screen w-screen items-center justify-center bg-[#242424]/50"
   >
     <div
-      class="relative flex h-[341.14px] w-[533.45px] flex-col items-center rounded-[13px] bg-white"
+      class="relative flex h-[360px] w-[533.45px] flex-col items-center rounded-[13px] bg-white"
       @click.stop=""
     >
       <form
@@ -16,7 +16,7 @@
         >
         <input
           v-model="itsUserName"
-          class="mb-4 h-[67.03px] w-[500.92px] rounded-[13px] border-2 border-[#D1D5DB] px-[26px] py-[19px] text-[22.77px]"
+          class="mb-4 h-[67.03px] w-[500.92px] focus:outline-none focus:border-blue-500 focus:ring-blue-500 rounded-[13px] border-2 border-[#D1D5DB] px-[26px] py-[19px] text-[22.77px]"
           type="text"
           placeholder="Masukkan Nama Lengkap"
           required
@@ -27,15 +27,15 @@
         >
         <input
           v-model="itsSessionId"
-          class="mb-4 h-[67.03px] w-[500.92px] rounded-[13px] border-2 border-[#D1D5DB] px-[26px] py-[19px] text-[22.77px]"
+          class="mb-4 h-[67.03px] w-[500.92px] focus:outline-none focus:border-blue-500 focus:ring-blue-500 rounded-[13px] border-2 border-[#D1D5DB] px-[26px] py-[19px] text-[22.77px]"
           type="text"
           placeholder="Masukkan Kode Ruangan"
           required
         />
         <p class="text-center">
-          <button
-            class="h-[48px] w-[119px] rounded-[8px] bg-[#1C64F2] text-white"
-          >
+          <button class="mx-2 h-[48px] w-[119px] rounded-[8px] border border-gray-200 bg-white hover:border-red-400 hover:bg-red-500 text-black hover:text-white mt-2" @click="goBack">Kembali</button>
+          <button 
+            class="mx-2 h-[48px] w-[119px] rounded-[8px] bg-blue-600 hover:bg-blue-700 text-white">
             Join!
           </button>
         </p>
@@ -55,6 +55,9 @@ export default {
   methods: {
     pushData() {
       this.$emit("join-modal", this.itsUserName, this.itsSessionId);
+    },
+    goBack() {
+      this.$router.go(-1); // Kembali ke halaman sebelumnya
     },
   },
   // props: {

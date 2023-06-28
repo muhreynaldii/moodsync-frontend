@@ -21,13 +21,13 @@
         <div class="flex justify-start gap-10">
           <nuxt-link
             to="/login"
-            class="rounded-lg bg-[#1A56DB] text-center text-white lg:h-[39px] lg:w-[152.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[203px] xl:px-[12px] xl:py-[14px] xl:text-base"
+            class="rounded-lg bg-blue-600 hover:bg-blue-700 text-center text-white lg:h-[39px] lg:w-[152.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[203px] xl:px-[12px] xl:py-[14px] xl:text-base"
           >
             Masuk Sebagai Dosen
           </nuxt-link>
           <nuxt-link
             to="/vicon"
-            class="rounded-lg border border-Gray-200 bg-white text-center font-medium text-black lg:h-[39px] lg:w-[152.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[203px] xl:px-[12px] xl:py-[14px] xl:text-base"
+            class="rounded-lg border border-Gray-200 bg-white hover:bg-slate-50 text-center font-medium text-black lg:h-[39px] lg:w-[152.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[203px] xl:px-[12px] xl:py-[14px] xl:text-base"
           >
             Masuk Sebagai Siswa
           </nuxt-link>

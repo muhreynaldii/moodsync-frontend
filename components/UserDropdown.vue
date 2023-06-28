@@ -15,7 +15,7 @@
     </div>
     <button
       v-show="isDropdownVisible"
-      class="mt-2 flex h-fit w-fit cursor-pointer items-center justify-center rounded-lg px-2 py-2 shadow-md hover:bg-slate-100"
+      class="mt-2 flex h-fit w-fit cursor-pointer items-center justify-center rounded-lg px-2 py-2 shadow-md hover:bg-red-50"
       @click="logout"
     >
       <icons-logout />
