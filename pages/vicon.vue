@@ -35,13 +35,13 @@
               @click.native="updateMainVideoStreamManager(sub)"
               class="aspect-video"
             />
-            <div
+            <!-- <div
               v-for="currentEmotion in currentEmotions"
               :key="currentEmotion._id"
             >
               <p>Current Emotion</p>
               <p>{{ currentEmotion.userId }}: {{ currentEmotion.predict }}</p>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="flex w-full items-center justify-center">
@@ -81,24 +81,52 @@
         Overall Class Emotion
       </p>
       <div class="flex h-[128px] w-[250px] flex-col items-center">
-        <EllipseGraph class="pt-4" :progress="50" emotion="Neutral" />
+        <EllipseGraph
+          class="pt-4"
+          :progress="totalEmotions.neutral"
+          emotion="Neutral"
+        />
         <div
           class="flex h-[128px] w-[250px] flex-row items-center justify-center"
         >
-          <EllipseGraph class="p-10" :progress="40" emotion="Happy" />
-          <EllipseGraph class="p-10" :progress="10" emotion="Sad" />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.happy"
+            emotion="Happy"
+          />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.sad"
+            emotion="Sad"
+          />
         </div>
         <div
           class="flex h-[128px] w-[250px] flex-row items-center justify-center"
         >
-          <EllipseGraph class="p-10" :progress="10" emotion="Angry" />
-          <EllipseGraph class="p-10" :progress="45" emotion="Fearful" />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.angry"
+            emotion="Angry"
+          />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.fearful"
+            emotion="Fearful"
+          />
         </div>
         <div
           class="flex h-[128px] w-[250px] flex-row items-center justify-center"
         >
-          <EllipseGraph class="p-10" :progress="5" emotion="Disgusted" />
-          <EllipseGraph class="p-10" :progress="10" emotion="Surprised" />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.disgusted"
+            emotion="Disgusted"
+          />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.surprised"
+            emotion="Surprised"
+          />
         </div>
       </div>
     </div>
@@ -145,6 +173,7 @@ export default {
       userId: null,
       participantIds: [],
       currentEmotions: [],
+      totalEmotions: {},
       showModal: true,
     };
   },
@@ -436,7 +465,7 @@ export default {
     datetime(value, oldValue) {
       setTimeout(() => {
         this.$axios
-          .$get("/api/recognition/current", {
+          .$get("/api/recognition/currentTotal", {
             params: {
               userId: this.participantIds.map((participant) => participant._id),
               meetingId: this.meetingId,
@@ -445,8 +474,10 @@ export default {
             },
           })
           .then((result) => {
-            console.log("result", result);
+            // console.log("result", result);
             this.currentEmotions = result;
+            this.totalEmotions = result.totalEmotions;
+            console.log("totalEmotion", this.totalEmotions);
           })
           .catch((err) => {
             console.log("err", err);

@@ -41,7 +41,7 @@ export default {
   computed: {
     mappedLinks() {
       return this.linksData.map((link) => ({
-        to: link.to,
+        to: `/${link.to}`,
         isActive: this.$route.name === link.to,
         icon: this.$route.name === link.to ? `${link.icon}-blue` : link.icon,
       }));

@@ -2,7 +2,7 @@
   <main
     class="flex h-screen w-screen items-end justify-center overflow-hidden bg-white"
   >
-    <section class="z-10 ml-[32.25px] flex h-fit w-fit flex-col absolute top-[100px]">
+    <section class="z-10 ml-[32.25px] mt-6 flex h-fit w-fit flex-col absolute top-[100px]">
       <h1 class="mb-2 text-start text-[24.75px] font-bold xl:text-[33px]">
         Daftar Mahasiswa
       </h1>
@@ -14,22 +14,15 @@
           <div
             v-for="(data, index) in users"
             :key="index"
-            class="mb-[20px] flex h-[83.5px] w-full items-center justify-between rounded-[15px] bg-white px-[11px] py-[15px] xl:h-[92px] xl:rounded-[21px]"
+            class="mb-[20px] flex h-[83.5px] w-full cursor-pointer items-center justify-between rounded-[15px] bg-white px-[11px] py-[15px] xl:h-[92px] xl:rounded-[21px]"
+            @click="goToDetail(data.username)"
           >
             <div class="flex items-center">
-              <img
-                :src="data.avatar"
-                alt="user-profile"
-                class="max-h-[36px] max-w-[36px] xl:h-fit xl:w-fit"
-              />
-              <div class="flex flex-col pl-3">
+              <button class="flex flex-col pl-3">
                 <p class="text-[15.58px] font-semibold xl:text-[21px]">
-                  {{ data.name }}
+                  {{ data.username }}
                 </p>
-                <p class="text-[15.58px] text-Gray-500 xl:text-[21px]">
-                  {{ data.email }}
-                </p>
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -39,9 +32,6 @@
 </template>
 
 <script>
-import userNeil from "../assets/img/user-neil.png";
-import userRamon from "../assets/img/user-ramon.png";
-
 export default {
   name: "DaftarMahasiswa",
   layout: "side",
@@ -55,21 +45,34 @@ export default {
       },
     ],
   },
+  mounted() {
+    this.getUsers();
+  },
   data() {
     return {
-      users: [
-        {
-          avatar: userNeil,
-          name: "Neil",
-          email: "email@example.com",
-        },
-        {
-          avatar: userRamon,
-          name: "Ramon",
-          email: "email@example.com",
-        },
-      ],
+      users: [],
     };
+  },
+  methods: {
+    async getUsers() {
+      try {
+        const res = await this.$axios({
+          method: "get",
+          url: "api/users",
+        });
+        if (res.status === 200) {
+          this.users = res.data;
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    goToDetail(username) {
+      this.$router.push({
+        path: `/daftar-mahasiswa/${username}`,
+        params: { username },
+      });
+    },
   },
 };
 </script>

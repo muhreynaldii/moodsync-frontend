@@ -1,76 +1,104 @@
 <template>
-  <div>
-    <canvas ref="chartCanvas"></canvas>
-  </div>
+  <Bar
+    :chart-options="chartOptions"
+    :chart-data="chartData"
+    :chart-id="chartId"
+    :dataset-id-key="datasetIdKey"
+    :plugins="plugins"
+    :css-classes="cssClasses"
+    :styles="styles"
+    :width="width"
+    :height="height"
+  />
 </template>
 
 <script>
-import Chart from 'chart.js';
+import { Bar } from "vue-chartjs/legacy";
+
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+} from "chart.js";
+
+ChartJS.register(
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+);
 
 export default {
-  data() {
-    return {
-      chart: null,
-    };
+  name: "BarChart",
+  components: {
+    Bar,
   },
-  mounted() {
-    this.renderChart();
-  },
-  methods: {
-    renderChart() {
-      const ctx = this.$refs.chartCanvas.getContext('2d');
-      this.chart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Pertemuan 1', 'Pertemuan 2', 'Pertemuan 3', 'Pertemuan 4'],
-          datasets: [
-            {
-              label: 'Kehadiran Mahasiswa',
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 205, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-              ],
-              borderColor: [
-                'rgb(255, 99, 132)',
-                'rgb(255, 159, 64)',
-                'rgb(255, 205, 86)',
-                'rgb(75, 192, 192)',
-              ],
-              data: [28, 25, 27, 24, 0],
-              borderWidth: 1
-            },
-          ],
-        },
-        options: {
-          scales: {
-            x: {
-              beginAtZero: true,
-              ticks: {
-                stepSize: 1, // Langkah antara nilai pada sumbu X
-              },
-            },
-            y: {
-              beginAtZero: true,
-              ticks: {
-                stepSize: 5, // Langkah antara nilai pada sumbu Y
-              },
-            },
-          },
-          responsive: true,
-          maintainAspectRatio: true,
-          legend: {
-              display: false // Menghapus legend pada Bar Chart
-            }
-        },
-      });
+  props: {
+    chartId: {
+      type: String,
+      default: "bar-chart",
+    },
+    datasetIdKey: {
+      type: String,
+      default: "label",
+    },
+    width: {
+      type: Number,
+      default: 400,
+    },
+    height: {
+      type: Number,
+      default: 400,
+    },
+    cssClasses: {
+      default: "",
+      type: String,
+    },
+    styles: {
+      type: Object,
+      default: () => {},
+    },
+    plugins: {
+      type: Array,
+      default: () => [],
     },
   },
-  beforeDestroy() {
-    if (this.chart) {
-      this.chart.destroy();
-    }
+  data() {
+    return {
+      chartData: {
+        labels: [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ],
+        datasets: [
+          {
+            label: "Data One",
+            backgroundColor: "#f87979",
+            data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11],
+          },
+        ],
+      },
+      chartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+    };
   },
 };
 </script>

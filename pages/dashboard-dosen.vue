@@ -36,22 +36,28 @@
         >
           Statistic
         </h2>
-        <div class="flex gap-[13.5px] xl:gap-4 z-50">
+        <div class="z-50 flex gap-[13.5px] xl:gap-4">
           <div
-            class="h-[319.5px] w-[484px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[672px] 2xl:h-[511.2px] 2xl:w-[806.4px]"
+            class="flex h-[319.5px] w-[484px] flex-col overflow-hidden rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[672px] 2xl:h-[511.2px] 2xl:w-[806.4px]"
           >
             <p class="font-bold lg:text-[17.25px] xl:text-[23px]">
-              Presensi Mahasiswa
+              Emotion summary
             </p>
-            <BarChart style="width: 100%; height: 100%" class="py-4" />
+            <DoughnutChart
+              class="self-center pb-4 xl:pt-4 2xl:pt-8"
+              :data="summary"
+            />
           </div>
           <div
-            class="h-[319.5px] w-[434.5px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[622px] 2xl:h-[511.2px] 2xl:w-[727.2px]"
+            class="flex h-[319.5px] w-[434.5px] flex-col overflow-hidden rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[622px] 2xl:h-[511.2px] 2xl:w-[727.2px]"
           >
             <p class="font-bold lg:text-[17.25px] xl:text-[23px]">
-              Emosi Mahasiswa
+              Emotion overview
             </p>
-            <RadarChart style="width: 100%; height: 100%" class="py-4" />
+            <RadarChart
+              class="self-center py-4 lg:h-[80%] lg:w-[80%] xl:h-[90%] xl:w-[90%]"
+              :data="overview"
+            />
           </div>
         </div>
       </section>
@@ -60,6 +66,8 @@
 </template>
 
 <script>
+// import { mapGetters, mapState } from "vuex";
+
 export default {
   name: "DashboardDosen",
   layout: "side",
@@ -79,7 +87,52 @@ export default {
         { title: "Pertemuan", value: "4" },
         { title: "Jumlah Mahasiswa", value: "31" },
       ],
+      overview: {},
+      summary: {},
     };
+  },
+  // computed: {
+  //   ...mapGetters("recognition", ["overview", "summary"]),
+  //   ...mapState("recognition", ["overview", "summary"]),
+  // },
+  mounted() {
+    // this.getOverview();
+    this.getOverview();
+    this.getSummary();
+  },
+  methods: {
+    async getOverview() {
+      await this.$store.dispatch("recognition/fetchOverview");
+    },
+    async getOverview() {
+      try {
+        const res = await this.$axios({
+          method: "get",
+          url: "api/recognition/overview",
+        });
+        if (res.status === 200) {
+          this.overview = res.data;
+        }
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      }
+    },
+    async getSummary() {
+      try {
+        const res = await this.$axios({
+          method: "get",
+          url: "api/recognition/summary",
+        });
+        if (res.status === 200) {
+          this.summary = res.data;
+          console.log(this.summary);
+        }
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      }
+    },
   },
 };
 </script>
