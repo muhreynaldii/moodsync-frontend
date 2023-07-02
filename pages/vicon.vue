@@ -20,6 +20,7 @@
             type="local"
           /> -->
             <user-video
+              controls
               :stream-manager="publisher"
               :meeting-id="meetingId"
               :user-id="userId"
@@ -50,7 +51,11 @@
           class="my-[29px] flex w-full items-center justify-between px-[19px]"
         >
           <AudioSettings />
-          <ActionBar @on-camera="toggleCamera" @open-chat="openChatbox" />
+          <ActionBar
+            @on-camera="toggleCamera"
+            @open-chat="openChatbox"
+            @share-Screen="toggleScreenSharing"
+          />
           <div
             class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
             @click="leaveSession"
@@ -96,8 +101,8 @@
           <EllipseGraph class="p-10" :progress="10" emotion="Surprised" />
         </div>
       </div>
-      <ChatBox />
     </div>
+    <ChatBox />
   </main>
 </template>
 
@@ -355,28 +360,44 @@ export default {
     },
     toggleScreenSharing() {
       if (this.isScreenSharing) {
-        // Hentikan screen sharing
         this.stopScreenSharing();
       } else {
-        // Mulai screen sharing
         this.startScreenSharing();
       }
     },
     startScreenSharing() {
-      if (!this.isScreenSharing) {
-        // Memulai screen sharing
-        this.publisher = this.session.publishScreen();
-        this.isScreenSharing = true;
-      }
+      this.previousMainStreamManager = this.mainStreamManager;
+      navigator.mediaDevices
+        .getDisplayMedia({ video: true })
+        .then((stream) => {
+          const videoTrack = stream.getVideoTracks()[0];
+          this.publisher
+            .replaceTrack(videoTrack)
+            .then(() => {
+              this.isScreenSharing = true;
+              this.updateMainVideoStreamManager(this.publisher);
+            })
+            .catch((error) => {
+              console.error("Failed to replace track:", error);
+            });
+        })
+        .catch((error) => {
+          console.error("Failed to get display media:", error);
+        });
     },
     stopScreenSharing() {
-      if (this.isScreenSharing) {
-        // Menghentikan screen sharing
-        this.publisher.dispose();
-        this.publisher = null;
-        this.isScreenSharing = false;
-      }
+      this.publisher
+        .replaceTrack(null)
+        .then(() => {
+          this.isScreenSharing = false;
+          this.mainStreamManager = this.previousMainStreamManager;
+          this.updateMainVideoStreamManager(this.mainStreamManager);
+        })
+        .catch((error) => {
+          console.error("Failed to replace track:", error);
+        });
     },
+
     // updateVolumeSlider() {
     //   // Mendapatkan nilai volume saat ini dari objek audio
     //   const currentVolume = this.getAudioVolume();

@@ -17,8 +17,8 @@
       </button>
       <button
         class="flex h-[60px] w-[60px] items-center justify-center rounded-[18px] border border-[#E5E7EB]"
+        @click="toggleScreenSharing"
       >
-        <!--@click="toggleScreenSharing" -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -74,6 +74,9 @@ export default {
     toggleIcon() {
       this.isMicOn = !this.isMicOn;
       console.log(this.isMicOn);
+    },
+    toggleScreenSharing() {
+      this.$emit("share-Screen", this.isScreenSharing);
     },
   },
   computed: {
