@@ -41,13 +41,6 @@
               <p>Current Emotion</p>
               <p>{{ currentEmotion.userId }}: {{ currentEmotion.predict }}</p>
             </div> -->
-            <div
-              v-for="currentEmotion in currentEmotions"
-              :key="currentEmotion._id"
-            >
-              <p>Current Emotion</p>
-              <p>{{ currentEmotion.userId }}: {{ currentEmotion.predict }}</p>
-            </div>
           </div>
         </div>
         <div class="flex w-full items-center justify-center">

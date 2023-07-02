@@ -3,7 +3,9 @@
     class="flex h-screen w-screen items-center justify-center overflow-hidden bg-white"
   >
     <section class="z-10 ml-10 flex h-fit w-fit flex-col">
-      <h1 class="mb-[135px] text-center text-[33px] font-bold">Neil</h1>
+      <h1 class="mb-[135px] text-center text-[33px] font-bold">
+        {{ userName }}
+      </h1>
       <div class="flex justify-start gap-4">
         <div
           id="container"
@@ -42,7 +44,7 @@
                 <p class="text-[17.25px] font-bold xl:text-[23px]">
                   Emosi Mahasiswa
                 </p>
-                <RadarChart class="py-2" />
+                <RadarChart class="py-2" :data="data" />
               </div>
               <div
                 class="h-[319.5px] w-[424.5px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[672px]"
@@ -71,6 +73,42 @@ export default {
         content: "Emotion-Detail - exported project",
       },
     ],
+  },
+  async mounted() {
+    await this.getUsersByUsername(this.$route.params.username);
+  },
+  data() {
+    return {
+      userName: "",
+      data: {
+        labels: [
+          "Neutral",
+          "Happy",
+          "Sad",
+          "Angry",
+          "Fearful",
+          "Disgusted",
+          "Surprised",
+        ],
+        datas: [73, 13, 4, 3, 1, 1, 5],
+      },
+    };
+  },
+  methods: {
+    async getUsersByUsername(username) {
+      try {
+        const res = await this.$axios({
+          method: "get",
+          url: `api/users/username/${username}`,
+        });
+        if (res.status === 200) {
+          this.userName = res.data.username;
+        }
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      }
+    },
   },
 };
 </script>

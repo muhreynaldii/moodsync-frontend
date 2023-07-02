@@ -15,13 +15,14 @@
             v-for="(data, index) in users"
             :key="index"
             class="mb-[20px] flex h-[83.5px] w-full cursor-pointer items-center justify-between rounded-[15px] bg-white px-[11px] py-[15px] xl:h-[92px] xl:rounded-[21px]"
+            @click="goToDetail(data.username)"
           >
             <div class="flex items-center">
-              <div class="flex flex-col pl-3">
+              <button class="flex flex-col pl-3">
                 <p class="text-[15.58px] font-semibold xl:text-[21px]">
                   {{ data.username }}
                 </p>
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -65,6 +66,12 @@ export default {
       } catch (error) {
         console.log(error);
       }
+    },
+    goToDetail(username) {
+      this.$router.push({
+        path: `/daftar-mahasiswa/${username}`,
+        params: { username },
+      });
     },
   },
 };
