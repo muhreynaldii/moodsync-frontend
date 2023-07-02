@@ -42,7 +42,7 @@
           @keyup.enter="sendMessage"
           type="text"
           placeholder="Ketik pesan..."
-          class="input"
+          class="input border focus:outline-none focus:border-blue-500 focus:ring-blue-500"
         />
       </div>
       <div class="send-button-container">

@@ -2,7 +2,7 @@
   <main
     class="flex h-screen w-screen items-end justify-center overflow-hidden bg-white"
   >
-    <section class="z-10 ml-[32.25px] flex h-fit w-fit flex-col">
+    <section class="z-10 ml-[32.25px] flex h-fit w-fit flex-col absolute top-[100px]">
       <h1 class="mb-2 text-start text-[24.75px] font-bold xl:text-[33px]">
         Notification
       </h1>
