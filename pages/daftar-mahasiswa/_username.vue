@@ -60,7 +60,7 @@
                 class="h-[319.5px] w-[424.5px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[672px]"
               >
                 <p class="text-[17.25px] font-bold xl:text-[23px]">
-                  Student Emotion Overview
+                  Student Emotion Summary
                 </p>
                 <DoughnutChart
                   v-if="isDisplayed"

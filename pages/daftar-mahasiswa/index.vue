@@ -58,7 +58,7 @@ export default {
       try {
         const res = await this.$axios({
           method: "get",
-          url: "api/users",
+          url: "api/users/student",
         });
         if (res.status === 200) {
           this.users = res.data;
