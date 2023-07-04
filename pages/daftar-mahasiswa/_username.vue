@@ -19,7 +19,7 @@
         <section class="mt-[56px]">
             <div class="mb-[26px] flex justify-around xl:mb-[36px]">
             </div>
-            <div class="flex gap-4 mt-[100px]">
+            <div class="flex gap-4 mt-[68px] xl:mt-[100px]">
               <div
                 class="h-[319.5px] w-[424.5px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[500px] xl:w-[672px]"
               >
