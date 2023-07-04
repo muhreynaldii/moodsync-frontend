@@ -48,14 +48,6 @@ export default {
       type: String,
       default: "label",
     },
-    width: {
-      type: Number,
-      default: 400,
-    },
-    height: {
-      type: Number,
-      default: 400,
-    },
     cssClasses: {
       default: "",
       type: String,
@@ -84,13 +76,13 @@ export default {
         datasets: [
           {
             label: "Emosi Mahasiswa",
-            backgroundColor: "rgba(164, 202, 254, 50%)",
-            borderColor: "rgba(28, 100, 242, 70%)",
-            pointBackgroundColor: "rgba(179,181,198,1)",
-            pointBorderColor: "#fff",
+            data: this.data?.datas,
+            backgroundColor: "rgba(164, 202, 254, 0.7)",
+            borderColor: "rgba(89, 142, 245, 0.7)",
+            pointBackgroundColor: "rgba(122, 170, 250)",
+            pointBorderColor: "rgba(89, 142, 245, 1)",
             pointHoverBackgroundColor: "#fff",
             pointHoverBorderColor: "rgba(179,181,198,1)",
-            data: this.data?.datas,
           },
         ],
       };
@@ -103,14 +95,21 @@ export default {
           legend: {
             display: false,
           },
-          // tooltip: {
-          //   callbacks: {
-          //     label({ formattedValue }) {
-          //       return `${formattedValue}%`;
-          //     },
-          //   },
-          //   displayColors: false,
-          // },
+        },
+        scales: {
+          r: {
+            beginAtZero: true,
+            pointLabels: {
+              font: {
+                size: 16, // Ubah ukuran font di sini
+              },
+            },
+            angleLines: {
+              display: true,
+              color: "rgba(0, 0, 0, 0.1)",
+              lineWidth: 1,
+            },
+          },
         },
       };
     },
