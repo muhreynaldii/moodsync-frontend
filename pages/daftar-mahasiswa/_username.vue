@@ -24,15 +24,37 @@
                 class="h-[319.5px] w-[424.5px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[500px] xl:w-[672px]"
               >
                 <p class="text-[17.25px] font-bold xl:text-[23px]">
-                  Emosi Mahasiswa
+                  Student Emotion Overview
                 </p>
-                <RadarChart class="py-2" :data="data" />
+                <RadarChart
+                  v-if="isDisplayed"
+                  class="self-center py-4 lg:h-[80%] lg:w-[80%] xl:h-[90%] xl:w-[90%]"
+                  :data="overview"
+                />
+                <p
+                  v-if="!isDisplayed"
+                  class="flex h-full items-center justify-center pb-4"
+                >
+                  Data Tidak Ditemukan
+                </p>
               </div>
               <div
                 class="h-[319.5px] w-[424.5px] rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[500px] xl:w-[672px]"
               >
-                <p class="text-[17.25px] font-bold xl:text-[23px]">Kehadiran</p>
-                <PieChart class="py-2" />
+                <p class="text-[17.25px] font-bold xl:text-[23px]">
+                  Student Emotion Summary
+                </p>
+                <DoughnutChart
+                  v-if="isDisplayed"
+                  class="self-center pb-4 xl:pt-4 2xl:pt-4"
+                  :data="summary"
+                />
+                <p
+                  v-if="!isDisplayed"
+                  class="flex h-full items-center justify-center pb-4"
+                >
+                  Data Tidak Ditemukan
+                </p>
               </div>
             </div>
           </section>
@@ -62,18 +84,10 @@ export default {
   data() {
     return {
       userName: "",
-      data: {
-        labels: [
-          "Neutral",
-          "Happy",
-          "Sad",
-          "Angry",
-          "Fearful",
-          "Disgusted",
-          "Surprised",
-        ],
-        datas: [73, 13, 4, 3, 1, 1, 5],
-      },
+      id: "",
+      overview: {},
+      summary: {},
+      isDisplayed: true,
     };
   },
   methods: {
@@ -85,11 +99,40 @@ export default {
         });
         if (res.status === 200) {
           this.userName = res.data.username;
+          // this.id = res.data._id;
+          this.getUsersOverview(res.data._id);
+          this.getUsersSummary(res.data._id);
         }
       } catch (error) {
         // eslint-disable-next-line no-console
         console.log(error);
       }
+    },
+    async getUsersOverview(id) {
+      this.$axios
+        .get(`api/users/${id}/overview`)
+        .then((res) => {
+          if (res.status === 200) {
+            this.overview = res.data;
+          }
+        })
+        .catch((error) => {
+          this.isDisplayed = false;
+          console.log(error);
+        });
+    },
+    async getUsersSummary(id) {
+      this.$axios
+        .get(`api/users/${id}/summary`)
+        .then((res) => {
+          if (res.status === 200) {
+            this.summary = res.data;
+          }
+        })
+        .catch((error) => {
+          this.isDisplayed = false;
+          console.log(error);
+        });
     },
   },
 };
