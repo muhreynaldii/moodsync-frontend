@@ -64,8 +64,8 @@
             <p class="font-bold lg:text-[17.25px] xl:text-[23px]">
               Emotion summary
             </p>
-            <DoughnutChart
-              class="self-center pb-4 xl:pt-4 2xl:pt-8"
+            <PieChart
+              class="self-center pb-5 xl:pt-4 2xl:pt-8"
               :data="summary"
             />
           </div>

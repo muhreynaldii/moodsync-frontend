@@ -8,7 +8,7 @@
       </h1>
       <div class="flex justify-start gap-4">
         <div
-          id="container"
+          id=""
           class="h-[633px] w-[898px] overflow-scroll rounded-[20px] bg-blue-50 p-[16.5px] shadow-lg xl:h-[844px] xl:w-[1198px] xl:p-[22px] 2xl:h-[905px] 2xl:w-[1598px]"
         >
           <div

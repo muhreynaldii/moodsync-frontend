@@ -1,15 +1,17 @@
 <template>
-  <Pie
-    :chart-options="chartOptions"
-    :chart-data="chartData"
-    :chart-id="chartId"
-    :dataset-id-key="datasetIdKey"
-    :plugins="plugins"
-    :css-classes="cssClasses"
-    :styles="styles"
-    :width="width"
-    :height="height"
-  />
+    <Pie
+      :chart-options="chartOptions"
+      :chart-data="chartData"
+      :chart-id="chartId"
+      :dataset-id-key="datasetIdKey"
+      :plugins="plugins"
+      :css-classes="cssClasses"
+      :styles="styles"
+      :width="width"
+      :height="height"
+
+      class="w-[100%] h-[100%]"
+    />
 </template>
 
 <script>
@@ -42,11 +44,11 @@ export default {
     },
     width: {
       type: Number,
-      default: 300,
+      default: 350,
     },
     height: {
       type: Number,
-      default: 300,
+      default: 350,
     },
     cssClasses: {
       default: "",
@@ -56,27 +58,47 @@ export default {
       type: Object,
       default: () => {},
     },
-    plugins: {
-      type: Array,
-      default: () => [],
+    // plugins: {
+    //   type: Array,
+    //   default: () => [],
+    // },
+    data: {
+      type: Object,
+      default: () => {},
     },
   },
-  data() {
-    return {
-      chartData: {
-        labels: ["VueJs", "EmberJs", "ReactJs", "AngularJs"],
+  computed: {
+    chartData() {
+      return {
+        labels: this.data?.labels,
         datasets: [
           {
-            backgroundColor: ["#41B883", "#E46651", "#00D8FF", "#DD1B16"],
-            data: [40, 20, 80, 10],
+            data: this.data?.datas,
+            backgroundColor: [
+              "rgba(118, 169, 250, 0.85)",
+              "rgba(249, 128, 128, 0.85)",
+            ],
           },
         ],
-      },
-      chartOptions: {
+      };
+    },
+    chartOptions() {
+      return {
         responsive: true,
         maintainAspectRatio: false,
-      },
-    };
+        aspectRatio: 1,
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: {
+              font: {
+                size: 16
+              }
+            }
+          }
+        },
+      };
+    },
   },
 };
 </script>

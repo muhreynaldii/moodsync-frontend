@@ -28,7 +28,7 @@
                 </p>
                 <RadarChart
                   v-if="isDisplayed"
-                  class="self-center py-4 lg:h-[80%] lg:w-[80%] xl:h-[90%] xl:w-[90%]"
+                  class="self-center py-6"
                   :data="overview"
                 />
                 <p
@@ -44,9 +44,9 @@
                 <p class="text-[17.25px] font-bold xl:text-[23px]">
                   Student Emotion Summary
                 </p>
-                <DoughnutChart
+                <PieChart
                   v-if="isDisplayed"
-                  class="self-center pb-4 xl:pt-4 2xl:pt-4"
+                  class="self-center pb-10 xl:pt-4 2xl:pt-4"
                   :data="summary"
                 />
                 <p
