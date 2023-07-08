@@ -3,7 +3,7 @@
     class="fixed inset-0 flex h-screen w-screen items-center justify-center bg-[#242424]/50"
   >
     <div
-      class="relative flex h-[360px] w-[533.45px] flex-col items-center rounded-[13px] bg-white"
+      class="relative flex h-auto w-[533.45px] flex-col items-center rounded-[13px] bg-white"
       @click.stop=""
     >
       <form
@@ -23,7 +23,19 @@
         />
         <label
           class="mb-[13px] text-center text-[22.77px] font-medium text-[#111928]"
-          >Room</label
+          >Nama Room</label
+        >
+        <!-- Tambahan Bu Asyifa -->
+        <input
+          v-model="itsRoomId"
+          class="mb-4 h-[67.03px] w-[500.92px] focus:outline-none focus:border-blue-500 focus:ring-blue-500 rounded-[13px] border-2 border-[#D1D5DB] px-[26px] py-[19px] text-[22.77px]"
+          type="text"
+          placeholder="Masukkan Nama Ruangan"
+          required
+        />
+        <label
+          class="mb-[13px] text-center text-[22.77px] font-medium text-[#111928]"
+          >Kode Room</label
         >
         <input
           v-model="itsSessionId"
