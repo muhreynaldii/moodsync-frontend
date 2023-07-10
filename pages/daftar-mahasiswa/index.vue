@@ -2,28 +2,50 @@
   <main
     class="flex h-screen w-screen items-end justify-center overflow-hidden bg-white"
   >
-    <section class="z-10 ml-[32.25px] flex h-fit w-fit flex-col absolute top-[100px]">
-      <h1 class="mb-2 text-start text-[24.75px] font-bold xl:text-[33px]">
-        Daftar Mahasiswa
+    <section
+      class="absolute top-[100px] z-10 ml-[32.25px] flex h-fit w-fit flex-col"
+    >
+      <h1
+        class="text-start text-[24.75px] font-bold text-blue-600 xl:text-[33px] 2xl:text-[39.6px]"
+      >
+        Student List
       </h1>
-      <div class="flex justify-start gap-4">
+      <h2
+        class="mb-2 text-start text-[13px] text-gray-400 xl:text-[16px] 2xl:text-[18px]"
+      >
+        List of All your students.
+      </h2>
+      <div
+        id="container"
+        class="relative flex h-[633px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll mb-7 xl:h-[844px] xl:w-[1198px] 2xl:h-[905px] 2xl:w-[1598px]"
+      >
         <div
-          id=""
-          class="h-[633px] w-[898px] overflow-scroll rounded-[20px] bg-blue-50 p-[16.5px] shadow-lg xl:h-[844px] xl:w-[1198px] xl:p-[22px] 2xl:h-[905px] 2xl:w-[1598px]"
+          v-for="(data, index) in users"
+          :key="index"
+          class="relative h-[94px] w-[388px] rounded-lg border border-blue-50 bg-white px-6 py-4 shadow-lg"
+          @click="goToDetail(data.username)"
         >
-          <div
-            v-for="(data, index) in users"
-            :key="index"
-            class="mb-[20px] flex h-[83.5px] w-full cursor-pointer items-center justify-between rounded-[15px] bg-white px-[11px] py-[15px] xl:h-[92px] xl:rounded-[21px]"
-            @click="goToDetail(data.username)"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="var(--dl-color-primary-50)"
+            class="absolute bottom-0 right-0 z-0 h-[100%] w-auto"
           >
-            <div class="flex items-center">
-              <button class="flex flex-col pl-3">
-                <p class="text-[15.58px] font-semibold xl:text-[21px]">
-                  {{ data.username }}
-                </p>
-              </button>
-            </div>
+            <path
+              fill-rule="evenodd"
+              d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <div class="flex flex-col items-start justify-center">
+            <button class="flex flex-col pl-3">
+              <p class="text-[16px] font-normal xl:text-[21px]">
+                {{ data.username }}
+              </p>
+              <p class="text-[16px] font-normal text-blue-600 hover:text-blue-800">
+                Emotion Details >
+              </p>
+            </button>
           </div>
         </div>
       </div>
