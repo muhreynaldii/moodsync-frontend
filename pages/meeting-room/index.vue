@@ -24,10 +24,9 @@
           v-for="(data, index) in meeting"
           :key="index"
           class="relative h-auto w-[388px] rounded-lg border border-blue-50 bg-white px-6 py-4 shadow-lg"
-          @click="goToDetail(data.username)"
+          @click="goToDetail(data.code)"
         >
           <!--  -->
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -72,7 +71,7 @@
                   />
                 </svg>
                 <!-- Ganti sama Tanggal Pembuatan Room -->
-                {{ data.createdAt }}
+                {{ $moment(data.createdAt).format("DD MMMM YYYY,  h:mm:ss a") }}
               </p>
               <p
                 class="text-[16px] font-normal text-blue-600 hover:text-blue-800"
@@ -118,15 +117,16 @@ export default {
         });
         if (res.status === 200) {
           this.meeting = res.data;
+          console.log(this.meeting);
         }
       } catch (error) {
         console.log(error);
       }
     },
-    goToDetail(username) {
+    goToDetail(code) {
       this.$router.push({
-        path: `/daftar-mahasiswa/${username}`,
-        params: { username },
+        path: `/meeting-room/${code}`,
+        params: { code },
       });
     },
   },

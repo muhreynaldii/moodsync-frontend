@@ -8,14 +8,12 @@
       <h1
         class="text-start text-[24.75px] font-bold text-blue-600 xl:text-[33px] 2xl:text-[39.6px]"
       >
-        Ganti
-        <!-- {{ data.description }} -->
+        {{ detailMeeting.description }}
       </h1>
       <h2
         class="mb-2 text-start text-[13px] text-gray-400 xl:text-[16px] 2xl:text-[18px]"
       >
-        Ganti
-        <!-- {{ data.code }} -->
+        {{ detailMeeting.code }}
       </h2>
       <p
         class="inline-flex items-center justify-start gap-2 text-[16px] font-normal"
@@ -35,8 +33,9 @@
             clip-rule="evenodd"
           />
         </svg>
-        Ganti
-        <!-- {{ data.createdAt }} -->
+        {{
+          $moment(detailMeeting.createdAt).format("DD MMMM YYYY,  h:mm:ss a")
+        }}
       </p>
       <ul class="inline-flex items-center justify-start">
         <li class="mr-2">
@@ -157,15 +156,38 @@ export default {
   mounted() {
     this.getMeeting();
     this.getUsers();
+    this.getMeetingByCode(this.$route.params.code);
   },
   data() {
     return {
       meeting: [],
+      detailMeeting: {
+        description: "",
+        code: "",
+        createdAt: "",
+      },
       activeTab: "recognition",
       users: [],
     };
   },
   methods: {
+    async getMeetingByCode(code) {
+      try {
+        const res = await this.$axios({
+          method: "get",
+          url: `api/meeting/code/${code}`,
+        });
+        if (res.status === 200) {
+          this.detailMeeting.description = res.data.description;
+          this.detailMeeting.code = res.data.code;
+          this.detailMeeting.createdAt = res.data.createdAt;
+        }
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      }
+    },
+
     async getMeeting() {
       try {
         const res = await this.$axios({
