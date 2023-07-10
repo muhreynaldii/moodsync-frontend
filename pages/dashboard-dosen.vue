@@ -26,7 +26,10 @@
             class="border border-blue-50 flex h-[319.5px] w-[484px] flex-col overflow-hidden rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[672px] 2xl:h-[511.2px] 2xl:w-[806.4px]"
           >
             <p class="font-bold lg:text-[17.25px] xl:text-[23px]">
-              Emotion summary
+              Emotion Summary
+            </p>
+            <p class="mb-0 text-start text-[10px] text-gray-400 xl:text-[14px] 2xl:text-[16px]">
+              Emotions divided between positive and negative.
             </p>
             <PieChart
               class="self-center pb-5 xl:pt-4 2xl:pt-8"
@@ -37,7 +40,10 @@
             class="border border-blue-50 flex h-[319.5px] w-[434.5px] flex-col overflow-hidden rounded-[36px] bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[622px] 2xl:h-[511.2px] 2xl:w-[727.2px]"
           >
             <p class="font-bold lg:text-[17.25px] xl:text-[23px]">
-              Emotion overview
+              Emotion Overview
+            </p>
+            <p class="mb-2 text-start text-[10px] text-gray-400 xl:text-[14px] 2xl:text-[16px]">
+              The emotion of the whole meeting.
             </p>
             <RadarChart
               class="self-center py-4 lg:h-[80%] lg:w-[80%] xl:h-[90%] xl:w-[90%]"

@@ -12,7 +12,7 @@
       >
         <label
           class="mb-[13px] text-center text-[22.77px] font-medium text-[#111928]"
-          >Nama</label
+          >Name</label
         >
         <input
           v-model="itsUserName"
@@ -24,7 +24,7 @@
         <label
           class="mb-[13px] text-center text-[22.77px] font-medium text-[#111928]"
           v-if="this.$auth.user"
-          >Nama Room</label
+          >Room Name</label
         >
         <input
           v-model="itsRoomId"
@@ -36,7 +36,7 @@
         />
         <label
           class="mb-[13px] text-center text-[22.77px] font-medium text-[#111928]"
-          >Kode Room</label
+          >Room Code</label
         >
         <input
           v-model="itsSessionId"
@@ -51,7 +51,7 @@
             type="reset"
             @click="goBack"
           >
-            Kembali
+            Back
           </button>
           <button
             class="mx-2 h-[48px] w-[119px] rounded-[8px] bg-blue-600 text-white hover:bg-blue-700"
