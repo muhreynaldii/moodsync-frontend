@@ -23,15 +23,16 @@
         />
         <label
           class="mb-[13px] text-center text-[22.77px] font-medium text-[#111928]"
+          v-if="this.$auth.user"
           >Nama Room</label
         >
-        <!-- Tambahan Bu Asyifa -->
         <input
           v-model="itsRoomId"
-          class="mb-4 h-[67.03px] w-[500.92px] focus:outline-none focus:border-blue-500 focus:ring-blue-500 rounded-[13px] border-2 border-[#D1D5DB] px-[26px] py-[19px] text-[22.77px]"
+          class="mb-4 h-[67.03px] w-[500.92px] rounded-[13px] border-2 border-[#D1D5DB] px-[26px] py-[19px] text-[22.77px] focus:border-blue-500 focus:outline-none focus:ring-blue-500"
           type="text"
           placeholder="Masukkan Nama Ruangan"
           required
+          v-if="this.$auth.user"
         />
         <label
           class="mb-[13px] text-center text-[22.77px] font-medium text-[#111928]"
@@ -44,19 +45,21 @@
           placeholder="Masukkan Kode Ruangan"
           required
         />
-        <p class="text-center">
+        <div class="flex items-center justify-center">
           <button
             class="mx-2 mt-2 h-[48px] w-[119px] rounded-[8px] border border-gray-200 bg-white text-black hover:border-red-400 hover:bg-red-500 hover:text-white"
+            type="reset"
             @click="goBack"
           >
             Kembali
           </button>
           <button
             class="mx-2 h-[48px] w-[119px] rounded-[8px] bg-blue-600 text-white hover:bg-blue-700"
+            type="submit"
           >
             Join!
           </button>
-        </p>
+        </div>
       </form>
     </div>
   </div>
@@ -65,20 +68,28 @@
 <script>
 export default {
   mounted() {
-    this.generateRandomMeetingCode();
+    if (this.$auth.user) {
+      this.generateRandomMeetingCode();
+    }
   },
   data() {
     return {
       itsUserName: this.$auth.user || "",
       itsSessionId: "",
+      itsRoomId: "",
     };
   },
   methods: {
     pushData() {
-      this.$emit("join-modal", this.itsUserName, this.itsSessionId);
+      this.$emit(
+        "join-modal",
+        this.itsUserName,
+        this.itsSessionId,
+        this.itsRoomId
+      );
     },
     goBack() {
-      this.$router.go(-1); // Kembali ke halaman sebelumnya
+      this.$router.go(-1);
     },
     generateRandomMeetingCode() {
       var characters = "abcdefghijklmnopqrstuvwxyz0123456789";

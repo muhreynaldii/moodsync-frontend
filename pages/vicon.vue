@@ -4,7 +4,7 @@
   >
     <pop-up-join v-show="showModal" class="z-50" @join-modal="joinSession" />
     <div class="absolute left-[22px] top-[21px] w-full">
-      <h1 class="text-center text-[33px]">Dasar Pemrograman</h1>
+      <h1 class="text-center text-[33px]">{{ roomName }}</h1>
     </div>
     <div class="flex flex-col">
       <div class="h-[717.53px] w-[1332px]">
@@ -35,13 +35,6 @@
               @click.native="updateMainVideoStreamManager(sub)"
               class="aspect-video"
             />
-            <!-- <div
-              v-for="currentEmotion in currentEmotions"
-              :key="currentEmotion._id"
-            >
-              <p>Current Emotion</p>
-              <p>{{ currentEmotion.userId }}: {{ currentEmotion.predict }}</p>
-            </div> -->
           </div>
         </div>
         <div class="flex w-full items-center justify-center">
@@ -175,10 +168,11 @@ export default {
       currentEmotions: [],
       totalEmotions: {},
       showModal: true,
+      roomName: "",
     };
   },
   methods: {
-    async joinSession(itsUserName, itsSessionId) {
+    async joinSession(itsUserName, itsSessionId, itsRoomId) {
       this.showModal = false;
       if (this.$auth.loggedIn) {
         this.$axios
@@ -192,11 +186,12 @@ export default {
             this.$axios
               .$post("/api/meeting", {
                 code: itsSessionId,
-                description: `Description ${itsSessionId}`,
+                description: itsRoomId,
               })
               .then((result) => {
                 console.log("result", result);
                 this.meetingId = result._id;
+                this.roomName = result.description;
               })
               .catch((error) => {
                 console.log("err", error);
@@ -207,6 +202,7 @@ export default {
           .$get(`/api/meeting/code/${itsSessionId}`)
           .then((result) => {
             this.meetingId = result._id;
+            this.roomName = result.description;
           })
           .catch((error) => {
             console.log("err", error);
