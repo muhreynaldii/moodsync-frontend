@@ -34,7 +34,7 @@ export default {
         { to: "dashboard-dosen", icon: "icons-dashboard" },
         { to: "vicon", icon: "icons-vicon" },
         { to: "daftar-mahasiswa", icon: "icons-daftar" },
-        { to: "notification", icon: "icons-notif" },
+        { to: "meeting-room", icon: "icons-room" },
       ],
     };
   },
