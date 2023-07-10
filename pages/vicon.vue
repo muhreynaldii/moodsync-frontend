@@ -7,11 +7,17 @@
       <h1 class="text-center text-[33px]">{{ roomName }}</h1>
     </div>
     <div class="flex flex-col">
-      <div class="h-[717.53px] w-[1332px]">
+      <div
+        class="h-[717.53px]"
+        :class="{
+          'w-[900px] xl:w-[1300px] 2xl:w-[1832px]': !this.$auth.user,
+          'w-[700px] xl:w-[1000] 2xl:w-[1332px]': this.$auth.user,
+        }"
+      >
         <div class="flex items-center justify-center">
           <div
-            class="grid h-[710px] w-[1332px] items-center justify-center gap-1 object-fill"
-            :class="getGridClass(subscribers.length)"
+            class="grid h-[710px] items-center justify-center gap-1 object-fill"
+            :class="[getGridClass(subscribers.length)]"
           >
             <!-- <user-video
             :stream-manager="mainStreamManager"
@@ -41,13 +47,14 @@
           <hr class="mt-[27px] w-[948px] border border-[#D1D5DB]" />
         </div>
         <div
-          class="my-[29px] flex w-full items-center justify-between px-[19px]"
+          class="relative my-[29px] flex w-full items-center justify-between px-[19px]"
         >
           <AudioSettings />
           <ActionBar
             @on-camera="toggleCamera"
             @open-chat="openChatbox"
             @share-Screen="toggleScreenSharing"
+            class="absolute -bottom-[24px] left-1/2 -translate-x-1/2 -translate-y-1/2"
           />
           <div
             class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
@@ -69,18 +76,18 @@
         </div>
       </div>
     </div>
-    <div class="h-[538.48px] w-[250px] pl-[87px]" v-if="this.$auth.user">
-      <p class="w-[250px] text-center text-[23px] font-medium text-[#1C64F2]">
+    <div class="h-[538.48px] w-[300px] pl-[87px]" v-if="this.$auth.user">
+      <p class="w-[300px] text-center text-[23px] font-medium text-[#1C64F2]">
         Overall Class Emotion
       </p>
-      <div class="flex h-[128px] w-[250px] flex-col items-center">
+      <div class="flex h-[128px] w-[300px] flex-col items-center">
         <EllipseGraph
           class="pt-4"
           :progress="totalEmotions.neutral"
           emotion="Neutral"
         />
         <div
-          class="flex h-[128px] w-[250px] flex-row items-center justify-center"
+          class="flex h-[128px] w-[300px] flex-row items-center justify-center"
         >
           <EllipseGraph
             class="p-10"
@@ -94,7 +101,7 @@
           />
         </div>
         <div
-          class="flex h-[128px] w-[250px] flex-row items-center justify-center"
+          class="flex h-[128px] w-[300px] flex-row items-center justify-center"
         >
           <EllipseGraph
             class="p-10"
@@ -108,7 +115,7 @@
           />
         </div>
         <div
-          class="flex h-[128px] w-[250px] flex-row items-center justify-center"
+          class="flex h-[128px] w-[300px] flex-row items-center justify-center"
         >
           <EllipseGraph
             class="p-10"

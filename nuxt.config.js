@@ -53,6 +53,7 @@ export default {
     "@nuxtjs/dotenv",
     "@nuxtjs/auth-next",
     "nuxt-sweetalert2",
+    "@nuxtjs/moment",
   ],
   axios: {
     baseURL: process.env.API_BASE_URL,
