@@ -26,9 +26,12 @@
                 <p class="text-[17.25px] font-bold xl:text-[23px]">
                   Student Emotion Overview
                 </p>
+                <p class="mb-0 text-start text-[10px] text-gray-400 xl:text-[14px] 2xl:text-[16px]">
+                  Student emotion of the whole meeting.
+                </p>
                 <RadarChart
                   v-if="isDisplayed"
-                  class="self-center py-6"
+                  class="items-center justify-center mt-[-20px] xl:mt-[-27px]"
                   :data="overview"
                 />
                 <p
@@ -44,9 +47,12 @@
                 <p class="text-[17.25px] font-bold xl:text-[23px]">
                   Student Emotion Summary
                 </p>
+                <p class="mb-[-8px] text-start text-[10px] text-gray-400 xl:text-[14px] 2xl:text-[16px]">
+                  Emotions divided between positive and negative.
+                </p>
                 <PieChart
                   v-if="isDisplayed"
-                  class="self-center pb-10 xl:pt-4 2xl:pt-4"
+                  class="self-center pb-10"
                   :data="summary"
                 />
                 <p
