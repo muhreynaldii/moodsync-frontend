@@ -12,7 +12,7 @@
           :class="{
             'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-[#e1effe] no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
               link.isActive,
-            'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-white no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
+            'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] hover:bg-[#f5faff] bg-white no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
               !link.isActive,
           }"
         >
@@ -32,16 +32,16 @@ export default {
     return {
       linksData: [
         { to: "dashboard-dosen", icon: "icons-dashboard" },
-        { to: "vicon-started", icon: "icons-vicon" },
+        { to: "vicon", icon: "icons-vicon" },
         { to: "daftar-mahasiswa", icon: "icons-daftar" },
-        { to: "notification", icon: "icons-notif" },
+        { to: "meeting-room", icon: "icons-room" },
       ],
     };
   },
   computed: {
     mappedLinks() {
       return this.linksData.map((link) => ({
-        to: link.to,
+        to: `/${link.to}`,
         isActive: this.$route.name === link.to,
         icon: this.$route.name === link.to ? `${link.icon}-blue` : link.icon,
       }));

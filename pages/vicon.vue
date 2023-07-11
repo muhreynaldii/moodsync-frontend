@@ -2,18 +2,22 @@
   <main
     class="ml-[161px] flex h-screen w-screen items-center justify-start overflow-hidden bg-white pr-[90px]"
   >
+    <pop-up-join v-show="showModal" class="z-50" @join-modal="joinSession" />
     <div class="absolute left-[22px] top-[21px] w-full">
-      <h1 class="text-center text-[33px]">Dasar Pemrograman</h1>
+      <h1 class="text-center text-[33px]">{{ roomName }}</h1>
     </div>
     <div class="flex flex-col">
-      <div class="h-[717.53px] w-[1332px]">
-        <div
-          class="grid"
-          style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))"
-        >
+      <div
+        class="h-[717.53px]"
+        :class="{
+          'w-[900px] xl:w-[1300px] 2xl:w-[1832px]': !this.$auth.user,
+          'w-[700px] xl:w-[1000] 2xl:w-[1332px]': this.$auth.user,
+        }"
+      >
+        <div class="flex items-center justify-center">
           <div
-            class="flex items-center justify-center min-h-[710px]"
-            ref="videoContainer"
+            class="grid h-[710px] items-center justify-center gap-1 object-fill"
+            :class="[getGridClass(subscribers.length)]"
           >
             <!-- <user-video
             :stream-manager="mainStreamManager"
@@ -22,37 +26,38 @@
             type="local"
           /> -->
             <user-video
+              controls
               :stream-manager="publisher"
               :meeting-id="meetingId"
               :user-id="userId"
               type="local"
               @click.native="updateMainVideoStreamManager(publisher)"
+              class="aspect-video"
             />
             <user-video
               v-for="sub in subscribers"
               :key="sub.stream.connection.connectionId"
               :stream-manager="sub"
               @click.native="updateMainVideoStreamManager(sub)"
+              class="aspect-video"
             />
-            <div
-              v-for="currentEmotion in currentEmotions"
-              :key="currentEmotion._id"
-            >
-              <p>Current Emotion</p>
-              <p>{{ currentEmotion.username }}: {{ currentEmotion.predict }}</p>
-            </div>
           </div>
         </div>
         <div class="flex w-full items-center justify-center">
           <hr class="mt-[27px] w-[948px] border border-[#D1D5DB]" />
         </div>
         <div
-          class="my-[29px] flex w-full items-center justify-between px-[19px]"
+          class="relative my-[29px] flex w-full items-center justify-between px-[19px]"
         >
           <AudioSettings />
-          <ActionBar @on-camera="toggleCamera" @open-chat="openChatbox" />
+          <ActionBar
+            @on-camera="toggleCamera"
+            @open-chat="openChatbox"
+            @share-Screen="toggleScreenSharing"
+            class="absolute -bottom-[24px] left-1/2 -translate-x-1/2 -translate-y-1/2"
+          />
           <div
-            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-600"
+            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
             @click="leaveSession"
           >
             <svg
@@ -71,33 +76,61 @@
         </div>
       </div>
     </div>
-    <div class="h-[538.48px] w-[250px] pl-[87px]">
-      <p class="w-[250px] text-center text-[23px] font-medium text-[#1C64F2]">
+    <div class="h-[538.48px] w-[300px] pl-[87px]" v-if="this.$auth.user">
+      <p class="w-[300px] text-center text-[23px] font-medium text-[#1C64F2]">
         Overall Class Emotion
       </p>
-      <div class="flex h-[128px] w-[250px] flex-col items-center">
-        <EllipseGraph class="pt-4" :progress="50" emotion="Neutral" />
+      <div class="flex h-[128px] w-[300px] flex-col items-center">
+        <EllipseGraph
+          class="pt-4"
+          :progress="totalEmotions.neutral"
+          emotion="Neutral"
+        />
         <div
-          class="flex h-[128px] w-[250px] flex-row items-center justify-center"
+          class="flex h-[128px] w-[300px] flex-row items-center justify-center"
         >
-          <EllipseGraph class="p-10" :progress="40" emotion="Happy" />
-          <EllipseGraph class="p-10" :progress="10" emotion="Sad" />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.happy"
+            emotion="Happy"
+          />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.sad"
+            emotion="Sad"
+          />
         </div>
         <div
-          class="flex h-[128px] w-[250px] flex-row items-center justify-center"
+          class="flex h-[128px] w-[300px] flex-row items-center justify-center"
         >
-          <EllipseGraph class="p-10" :progress="10" emotion="Angry" />
-          <EllipseGraph class="p-10" :progress="45" emotion="Fearful" />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.angry"
+            emotion="Angry"
+          />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.fearful"
+            emotion="Fearful"
+          />
         </div>
         <div
-          class="flex h-[128px] w-[250px] flex-row items-center justify-center"
+          class="flex h-[128px] w-[300px] flex-row items-center justify-center"
         >
-          <EllipseGraph class="p-10" :progress="5" emotion="Disgusted" />
-          <EllipseGraph class="p-10" :progress="10" emotion="Surprised" />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.disgusted"
+            emotion="Disgusted"
+          />
+          <EllipseGraph
+            class="p-10"
+            :progress="totalEmotions.surprised"
+            emotion="Surprised"
+          />
         </div>
       </div>
-      <ChatBox />
     </div>
+    <ChatBox />
   </main>
 </template>
 
@@ -113,10 +146,10 @@ export default {
   name: "App",
   // middleware: "auth",
   layout: "side",
-  mounted() {
-    this.joinSession();
-    // this.audioObject.addEventListener('volumechange', this.updateVolumeSlider)
-  },
+  // mounted() {
+  //   this.joinSession();
+  //   // this.audioObject.addEventListener('volumechange', this.updateVolumeSlider)
+  // },
   // beforeDestroy() {
   //   // Menghapus event listener sebelum komponen dihancurkan
   //   this.audioObject.removeEventListener(
@@ -132,25 +165,25 @@ export default {
       mainStreamManager: undefined,
       publisher: undefined,
       subscribers: [],
-      // isCameraOn: true,
-      // isMicOn: true,
       isScreenSharing: false,
       isHovered: false,
-      // Join form
-      mySessionId: "SessionA",
-      myUserName: "Participant" + Math.floor(Math.random() * 100),
+      // itsSessionId: "SessionA",
+      // itsUserName: "Participant" + Math.floor(Math.random() * 100),
       meetingId: null,
       userId: null,
       participantIds: [],
       currentEmotions: [],
+      totalEmotions: {},
+      showModal: true,
+      roomName: "",
     };
   },
   methods: {
-    async joinSession() {
-      // Run for lecturer only
+    async joinSession(itsUserName, itsSessionId, itsRoomId) {
+      this.showModal = false;
       if (this.$auth.loggedIn) {
         this.$axios
-          .$get(`/api/meeting/code/${this.mySessionId}`)
+          .$get(`/api/meeting/code/${itsSessionId}`)
           .then((result) => {
             console.log("result", result);
             this.meetingId = result._id;
@@ -159,12 +192,13 @@ export default {
             console.log("err", error);
             this.$axios
               .$post("/api/meeting", {
-                code: this.mySessionId,
-                description: `Description ${this.mySessionId}`,
+                code: itsSessionId,
+                description: itsRoomId,
               })
               .then((result) => {
                 console.log("result", result);
                 this.meetingId = result._id;
+                this.roomName = result.description;
               })
               .catch((error) => {
                 console.log("err", error);
@@ -172,16 +206,17 @@ export default {
           });
       } else {
         this.$axios
-          .$get(`/api/meeting/code/${this.mySessionId}`)
+          .$get(`/api/meeting/code/${itsSessionId}`)
           .then((result) => {
             this.meetingId = result._id;
+            this.roomName = result.description;
           })
           .catch((error) => {
             console.log("err", error);
           })
           .then(() => {
             this.$axios
-              .$get(`/api/users/username/${this.myUserName}`)
+              .$get(`/api/users/username/${itsUserName}`)
               .then((result) => {
                 this.userId = result._id;
               })
@@ -189,7 +224,7 @@ export default {
                 console.log("err", error);
                 this.$axios
                   .$post("/api/users/test", {
-                    username: this.myUserName,
+                    username: itsUserName,
                     role: "student",
                   })
                   .then((result) => {
@@ -225,23 +260,15 @@ export default {
       });
       // --- 4) Connect to the session with a valid user token ---
       // Get a token from the OpenVidu deployment
-      this.getToken(this.mySessionId).then((token) => {
+      this.getToken(itsSessionId).then((token) => {
         // First param is the token. Second param can be retrieved by every user on event
         // 'streamCreated' (property Stream.connection.data), and will be appended to DOM as the user's nickname
         this.session
-          .connect(token, { clientData: this.myUserName })
+          .connect(token, { clientData: itsUserName })
           .then(() => {
             // --- 5) Get your own camera stream with the desired properties ---
             // Init a publisher passing undefined as targetElement (we don't want OpenVidu to insert a video
             // element: we will manage it on our own) and with the desired properties
-
-            // Dapatkan elemen container menggunakan $refs
-            const videoContainer = this.$refs.videoContainer;
-
-            // // Sesuaikan resolusi video dengan ukuran container
-            const containerWidth = videoContainer.clientWidth;
-            const containerHeight = videoContainer.clientHeight;
-            const resolution = `${containerWidth}x${containerHeight}`;
 
             let publisher = this.OV.initPublisher(undefined, {
               audioSource: undefined,
@@ -297,7 +324,7 @@ export default {
       this.$axios
         .$put(`/api/recognition/${this.meetingId}`, {
           isStart: false,
-          code: this.mySessionId,
+          code: itsSessionId,
         })
         .then((result) => {
           console.log("result", result);
@@ -310,23 +337,8 @@ export default {
       if (this.mainStreamManager === stream) return;
       this.mainStreamManager = stream;
     },
-    /**
-     * --------------------------------------------
-     * GETTING A TOKEN FROM YOUR APPLICATION SERVER
-     * --------------------------------------------
-     * The methods below request the creation of a Session and a Token to
-     * your application server. This keeps your OpenVidu deployment secure.
-     *
-     * In this sample code, there is no user control at all. Anybody could
-     * access your application server endpoints! In a real production
-     * environment, your application server must identify the user to allow
-     * access to the endpoints.
-     *
-     * Visit https://docs.openvidu.io/en/stable/application-server to learn
-     * more about the integration of OpenVidu in your application server.
-     */
-    async getToken(mySessionId) {
-      const sessionId = await this.createSession(mySessionId);
+    async getToken(itsSessionId) {
+      const sessionId = await this.createSession(itsSessionId);
       return await this.createToken(sessionId);
     },
     async createSession(sessionId) {
@@ -337,7 +349,7 @@ export default {
           headers: { "Content-Type": "application/json" },
         }
       );
-      return response.data; // The sessionId
+      return response.data;
     },
     async createToken(sessionId) {
       const response = await this.$axios.post(
@@ -347,7 +359,7 @@ export default {
           headers: { "Content-Type": "application/json" },
         }
       );
-      return response.data; // The token
+      return response.data;
     },
     toggleCamera(value) {
       // Mengaktifkan atau menonaktifkan kamera
@@ -380,28 +392,44 @@ export default {
     },
     toggleScreenSharing() {
       if (this.isScreenSharing) {
-        // Hentikan screen sharing
         this.stopScreenSharing();
       } else {
-        // Mulai screen sharing
         this.startScreenSharing();
       }
     },
     startScreenSharing() {
-      if (!this.isScreenSharing) {
-        // Memulai screen sharing
-        this.publisher = this.session.publishScreen();
-        this.isScreenSharing = true;
-      }
+      this.previousMainStreamManager = this.mainStreamManager;
+      navigator.mediaDevices
+        .getDisplayMedia({ video: true })
+        .then((stream) => {
+          const videoTrack = stream.getVideoTracks()[0];
+          this.publisher
+            .replaceTrack(videoTrack)
+            .then(() => {
+              this.isScreenSharing = true;
+              this.updateMainVideoStreamManager(this.publisher);
+            })
+            .catch((error) => {
+              console.error("Failed to replace track:", error);
+            });
+        })
+        .catch((error) => {
+          console.error("Failed to get display media:", error);
+        });
     },
     stopScreenSharing() {
-      if (this.isScreenSharing) {
-        // Menghentikan screen sharing
-        this.publisher.dispose();
-        this.publisher = null;
-        this.isScreenSharing = false;
-      }
+      this.publisher
+        .replaceTrack(null)
+        .then(() => {
+          this.isScreenSharing = false;
+          this.mainStreamManager = this.previousMainStreamManager;
+          this.updateMainVideoStreamManager(this.mainStreamManager);
+        })
+        .catch((error) => {
+          console.error("Failed to replace track:", error);
+        });
     },
+
     // updateVolumeSlider() {
     //   // Mendapatkan nilai volume saat ini dari objek audio
     //   const currentVolume = this.getAudioVolume();
@@ -411,6 +439,27 @@ export default {
     openChatbox() {
       EventBus.$emit("openChatbox"); // Mengirim sinyal ke komponen chatbox
     },
+
+    // Grid untuk video conference
+    getGridClass(length) {
+      if (length === 1) {
+        return "grid-cols-2";
+      } else if (length === 2) {
+        return "grid-cols-4 grid-rows-2 tiga";
+      } else if (length === 3) {
+        return "grid-cols-2 grid-rows-2";
+      } else if (length === 4) {
+        return "grid-cols-6 grid-rows-2 lima";
+      } else if (length === 5) {
+        return "grid-cols-3 grid-rows-2";
+      } else if (length === 6) {
+        return "grid-cols-6 grid-rows-3 tujuh";
+      } else if (length === 7) {
+        return "grid-cols-6 grid-rows-3 delapan";
+      } else if (length === 8) {
+        return "grid-cols-3 grid-rows-3";
+      }
+    },
   },
   computed: {
     ...mapGetters("datetime", ["datetime"]),
@@ -419,7 +468,7 @@ export default {
     datetime(value, oldValue) {
       setTimeout(() => {
         this.$axios
-          .$get("/api/recognition/current", {
+          .$get("/api/recognition/currentTotal", {
             params: {
               userId: this.participantIds.map((participant) => participant._id),
               meetingId: this.meetingId,
@@ -428,8 +477,10 @@ export default {
             },
           })
           .then((result) => {
-            console.log("result", result);
+            // console.log("result", result);
             this.currentEmotions = result;
+            this.totalEmotions = result.totalEmotions;
+            console.log("totalEmotion", this.totalEmotions);
           })
           .catch((err) => {
             console.log("err", err);
@@ -440,3 +491,109 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.tiga > *:first-child {
+  grid-column: span 2 / span 2;
+}
+.tiga > *:nth-child(2) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+}
+.tiga > *:last-child {
+  grid-column: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.lima > *:first-child {
+  grid-column: span 2 / span 2;
+}
+.lima > *:nth-child(2) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+}
+.lima > *:nth-child(3) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.lima > *:nth-child(4) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+.lima > *:last-child {
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+.tujuh > *:first-child {
+  grid-column: span 2 / span 2;
+}
+.tujuh > *:nth-child(2) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+}
+.tujuh > *:nth-child(3) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.tujuh > *:nth-child(4) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+.tujuh > *:nth-child(5) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+.tujuh > *:nth-child(6) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 2;
+}
+.tujuh > *:last-child {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+.delapan > *:first-child {
+  grid-column: span 2 / span 2;
+}
+.delapan > *:nth-child(2) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+}
+.delapan > *:nth-child(3) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.delapan > *:nth-child(4) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+.delapan > *:nth-child(5) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+.delapan > *:nth-child(6) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 2;
+}
+.delapan > *:nth-child(7) {
+  grid-column: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+.delapan > *:last-child {
+  grid-column: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+</style>

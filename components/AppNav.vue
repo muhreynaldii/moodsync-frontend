@@ -3,7 +3,7 @@
     class="absolute left-[81px] top-[28.5px] flex w-[320.25px] items-center justify-between xl:left-[108px] xl:top-[38px] xl:w-[427px] 2xl:left-[148px]"
   >
     <div v-for="(link, index) in links" :key="index">
-      <nuxt-link :to="link.to">
+      <nuxt-link :to="link.to" exact-active-class="text-blue-600">
         <div class="flex h-fit w-fit items-center justify-center no-underline">
           <img
             v-if="link.img"
@@ -13,9 +13,8 @@
           />
           <span
             v-if="link.label"
-            class="h-auto cursor-pointer text-[12px] font-[600] text-black xl:text-[16px]"
-            >{{ link.label }}</span
-          >
+            class="h-auto cursor-pointer text-[12px] font-[600] disabled:text-black xl:text-[16px] hover:text-blue-600"
+            >{{ link.label }}</span>
         </div>
       </nuxt-link>
     </div>

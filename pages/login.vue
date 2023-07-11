@@ -13,20 +13,20 @@
           class="z-50 mt-[32px] flex flex-col"
           @submit="handleLogin"
         >
-          <h1 class="text-center text-[17.25px] text-[#1C64F2] xl:text-[23px]">
+          <h1 class="text-center text-[17.25px] text-blue-600 xl:text-[23px]">
             Welcome!
           </h1>
           <FormulateInput
             name="username"
             type="text"
             label="Username"
-            input-class="h-[31px] w-[231px] xl:w-[308px] xl:h-[42px] rounded-md border border-Gray-300 py-[9px] px-3 mt-[6px] text-[10.5px] xl:text-[14px]"
+            input-class="h-[31px] w-[231px] xl:w-[308px] xl:h-[42px] rounded-md border border-Gray-300 focus:outline-none focus:border-blue-500 focus:ring-blue-500 py-[9px] px-3 mt-[6px] text-[10.5px] xl:text-[14px]"
             class="mt-[16px]"
             placeholder="Username"
             validation="required"
-            error-class="text-red-700 text-xs mb-1"
+            error-class="text-red-700 text-[10px] my-1"
             :validation-messages="{
-              required: 'Email harus diisi',
+              required: 'Username harus diisi',
             }"
             error-behavior="submit"
             label-class="font-medium text-[10.5px] xl:text-[14px] text-[#111928]"
@@ -36,12 +36,12 @@
               :type="showPassword ? 'text' : 'password'"
               name="password"
               label="Password"
-              input-class="h-[31px] w-[231px] xl:w-[308px] xl:h-[42px] rounded-md border border-Gray-300 py-[9px] px-3 xl:py-3 xl:px-4 mt-[6px] text-[10.5px] xl:text-[14px]"
-              class="mt-[16px]"
+              input-class="h-[31px] w-[231px] xl:w-[308px] xl:h-[42px] rounded-md border border-Gray-300 focus:outline-none focus:border-blue-500 focus:ring-blue-500 py-[9px] px-3 xl:py-3 xl:px-4 mt-[6px] text-[10.5px] xl:text-[14px]"
+              class="mt-[16px] "
               placeholder="Password"
               validation="required"
               validation-name="Password"
-              error-class="text-red-700 text-xs mb-1"
+              error-class="text-red-700 text-[10px] my-1"
               :validation-messages="{
                 required: 'Password harus diisi',
               }"
@@ -50,7 +50,7 @@
             />
             <div
               @click="toggleShow"
-              class="absolute right-[6px] top-[51px] scale-75 xl:right-3 xl:top-[55px] xl:scale-100"
+              class="absolute right-[6px] top-[51px] scale-75 xl:right-3 xl:top-[55px] xl:scale-100 cursor-pointer"
             >
               <svg
                 v-if="showPassword"
@@ -58,6 +58,7 @@
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"
+                fill="var(--dl-color-primary-600)"
               >
                 <path fill="none" d="M0 0h24v24H0z" />
                 <path
@@ -70,6 +71,7 @@
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"
+                fill="var(--dl-color-primary-600)"
               >
                 <path fill="none" d="M0 0h24v24H0z" />
                 <path
@@ -81,7 +83,7 @@
           <FormulateInput
             type="submit"
             name="Login"
-            input-class="h-[36px] w-[231px] xl:w-[308px] xl:h-[48px] self-center rounded-md bg-[#1C64F2] font-medium text-white text-[12px] xl:text-base"
+            input-class="h-[36px] w-[231px] xl:w-[308px] xl:h-[48px] self-center rounded-md bg-blue-600 hover:bg-blue-700 font-medium text-white text-[12px] xl:text-base"
             class="mt-[28px]"
           />
         </FormulateForm>

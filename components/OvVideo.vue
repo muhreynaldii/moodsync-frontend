@@ -1,13 +1,14 @@
 <template>
-  <div>
+  <div class="h-[100%] w-[100%]">
     <video
-      ref="videoElement"
-      class="rounded-[6px] object-cover"
-      autoplay
+    ref="videoElement"
+    class="h-[100%] w-[100%] rounded-[6px] object-cover"
+    controls
+    autoplay
     ></video>
     <p
-      v-if="type === 'local'"
-      class="absolute left-4 top-14 rounded-full bg-white px-3 py-1 text-xl capitalize"
+      v-if="type === 'local' && !this.$auth.user"
+      class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xl capitalize"
     >
       {{ currentPredict }}
     </p>
