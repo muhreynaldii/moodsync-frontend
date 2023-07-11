@@ -126,7 +126,7 @@
             v-for="(data, index) in users"
             :key="index"
             class="relative h-[94px] w-[388px] rounded-lg border border-blue-50 bg-white px-6 py-4 shadow-lg"
-            @click="goToDetail(data.username)"
+            @click="goToDetail(data._id)"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -174,8 +174,7 @@ export default {
     ],
   },
   async mounted() {
-    await this.getUsers();
-    await this.getMeetingByCode(this.$route.params.code);
+    await this.getMeetingByCode(this.$route.params.meetingId);
     await this.getRecognitionById(this.detailMeeting.meetingId);
     await this.getUsersByMeetingId(this.detailMeeting.meetingId);
   },
@@ -196,11 +195,11 @@ export default {
     };
   },
   methods: {
-    async getMeetingByCode(code) {
+    async getMeetingByCode(id) {
       try {
         const res = await this.$axios({
           method: "get",
-          url: `api/meeting/code/${code}`,
+          url: `api/meeting/${id}`,
         });
         if (res.status === 200) {
           this.detailMeeting.description = res.data.description;
@@ -209,7 +208,6 @@ export default {
           this.detailMeeting.meetingId = res.data._id;
         }
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.log(error);
       }
     },
@@ -217,12 +215,11 @@ export default {
       try {
         const res = await this.$axios({
           method: "get",
-          url: `api//recognition/${meetingId}`,
+          url: `api/recognition/${meetingId}`,
         });
         if (res.status === 200) {
           this.overview = res.data.meeting.recognitionsOverview;
           this.summary = res.data.meeting.recognitionsSummary;
-          console.log(res.data);
         }
       } catch (error) {
         this.isDisplayed = false;
@@ -238,29 +235,16 @@ export default {
         });
         if (res.status === 200) {
           this.users = res.data;
-          console.log(res.data);
+          console.log(this.users);
         }
       } catch (error) {
         console.log(error);
       }
     },
-    async getUsers() {
-      try {
-        const res = await this.$axios({
-          method: "get",
-          url: "api/users/student",
-        });
-        if (res.status === 200) {
-          this.users = res.data;
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    },
-    goToDetail(username) {
+    goToDetail(userId) {
       this.$router.push({
-        path: `/daftar-mahasiswa/${username}`,
-        params: { username },
+        path: `/meeting-room/${this.$route.params.meetingId}/${userId}`,
+        params: { userId },
       });
     },
     changeTab(tab) {
