@@ -223,7 +223,7 @@ export default {
               .catch((error) => {
                 console.log("err", error);
                 this.$axios
-                  .$post("/api/users/test", {
+                  .$post("/api/users", {
                     username: itsUserName,
                     role: "student",
                   })
