@@ -17,8 +17,11 @@
       dot="5 #0053F8"
       fontSize="18px"
       lineMode="normal"
-    />
-
+    >
+      <template slot:legend-value>
+        <span slot="legend-value">%</span>
+      </template>
+    </vue-ellipse-progress>
     <p class="text-center text-[16px]">{{ emotion }}</p>
   </div>
 </template>
