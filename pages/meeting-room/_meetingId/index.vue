@@ -80,9 +80,16 @@
               Emotion summary
             </p>
             <PieChart
+              v-if="isDisplayed"
               class="self-center pb-5 xl:pt-4 2xl:pt-8"
               :data="summary"
             />
+            <p
+              v-if="!isDisplayed"
+              class="flex h-full items-center justify-center pb-4"
+            >
+              Data Tidak Ditemukan
+            </p>
           </div>
           <div
             class="flex h-[319.5px] w-[380px] flex-col overflow-hidden rounded-[36px] border border-blue-50 bg-white px-6 py-2 shadow-lg xl:h-[426px] xl:w-[566px] 2xl:h-[511.2px] 2xl:w-[727.2px]"
@@ -91,9 +98,16 @@
               Emotion overview
             </p>
             <RadarChart
+              v-if="isDisplayed"
               class="self-center py-4 lg:h-[80%] lg:w-[80%] xl:h-[90%] xl:w-[90%]"
               :data="overview"
             />
+            <p
+              v-if="!isDisplayed"
+              class="flex h-full items-center justify-center pb-4"
+            >
+              Data Tidak Ditemukan
+            </p>
           </div>
         </div>
 
@@ -103,10 +117,16 @@
           class="relative mb-7 flex h-[633px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll xl:h-[844px] xl:w-[1198px] 2xl:h-[905px] 2xl:w-[1598px]"
         >
           <div
+            v-if="!users.length"
+            class="absolute bottom-0 left-0 right-0 top-0 mx-auto my-auto h-[300px] text-center text-lg"
+          >
+            Data tidak ditemukan
+          </div>
+          <div
             v-for="(data, index) in users"
             :key="index"
             class="relative h-[94px] w-[388px] rounded-lg border border-blue-50 bg-white px-6 py-4 shadow-lg"
-            @click="goToDetail(data.username)"
+            @click="goToDetail(data._id)"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -153,10 +173,10 @@ export default {
       },
     ],
   },
-  mounted() {
-    this.getMeeting();
-    this.getUsers();
-    this.getMeetingByCode(this.$route.params.code);
+  async mounted() {
+    await this.getMeetingByCode(this.$route.params.meetingId);
+    await this.getRecognitionById(this.detailMeeting.meetingId);
+    await this.getUsersByMeetingId(this.detailMeeting.meetingId);
   },
   data() {
     return {
@@ -165,59 +185,66 @@ export default {
         description: "",
         code: "",
         createdAt: "",
+        meetingId: "",
       },
       activeTab: "recognition",
       users: [],
+      overview: {},
+      summary: {},
+      isDisplayed: true,
     };
   },
   methods: {
-    async getMeetingByCode(code) {
+    async getMeetingByCode(id) {
       try {
         const res = await this.$axios({
           method: "get",
-          url: `api/meeting/code/${code}`,
+          url: `api/meeting/${id}`,
         });
         if (res.status === 200) {
           this.detailMeeting.description = res.data.description;
           this.detailMeeting.code = res.data.code;
           this.detailMeeting.createdAt = res.data.createdAt;
+          this.detailMeeting.meetingId = res.data._id;
         }
       } catch (error) {
-        // eslint-disable-next-line no-console
+        console.log(error);
+      }
+    },
+    async getRecognitionById(meetingId) {
+      try {
+        const res = await this.$axios({
+          method: "get",
+          url: `api/recognition/${meetingId}`,
+        });
+        if (res.status === 200) {
+          this.overview = res.data.meeting.recognitionsOverview;
+          this.summary = res.data.meeting.recognitionsSummary;
+        }
+      } catch (error) {
+        this.isDisplayed = false;
         console.log(error);
       }
     },
 
-    async getMeeting() {
+    async getUsersByMeetingId(meetingId) {
       try {
         const res = await this.$axios({
           method: "get",
-          url: "api/meeting",
-        });
-        if (res.status === 200) {
-          this.meeting = res.data;
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    },
-    async getUsers() {
-      try {
-        const res = await this.$axios({
-          method: "get",
-          url: "api/users/student",
+          url: `api/users?meetingId=${meetingId}`,
         });
         if (res.status === 200) {
           this.users = res.data;
+          console.log(this.users);
         }
       } catch (error) {
         console.log(error);
       }
     },
-    goToDetail(username) {
+    goToDetail(userId) {
       this.$router.push({
-        path: `/daftar-mahasiswa/${username}`,
-        params: { username },
+        path: `/meeting-room/${this.$route.params.meetingId}/${userId}`,
+        params: { userId },
       });
     },
     changeTab(tab) {

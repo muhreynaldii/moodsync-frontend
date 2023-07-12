@@ -83,7 +83,7 @@
       <div class="flex h-[128px] w-[300px] flex-col items-center">
         <EllipseGraph
           class="pt-4"
-          :progress="totalEmotions.neutral"
+          :progress="totalEmotionsPercentage.neutral"
           emotion="Neutral"
         />
         <div
@@ -91,12 +91,12 @@
         >
           <EllipseGraph
             class="p-10"
-            :progress="totalEmotions.happy"
+            :progress="totalEmotionsPercentage.happy"
             emotion="Happy"
           />
           <EllipseGraph
             class="p-10"
-            :progress="totalEmotions.sad"
+            :progress="totalEmotionsPercentage.sad"
             emotion="Sad"
           />
         </div>
@@ -105,12 +105,12 @@
         >
           <EllipseGraph
             class="p-10"
-            :progress="totalEmotions.angry"
+            :progress="totalEmotionsPercentage.angry"
             emotion="Angry"
           />
           <EllipseGraph
             class="p-10"
-            :progress="totalEmotions.fearful"
+            :progress="totalEmotionsPercentage.fearful"
             emotion="Fearful"
           />
         </div>
@@ -119,12 +119,12 @@
         >
           <EllipseGraph
             class="p-10"
-            :progress="totalEmotions.disgusted"
+            :progress="totalEmotionsPercentage.disgusted"
             emotion="Disgusted"
           />
           <EllipseGraph
             class="p-10"
-            :progress="totalEmotions.surprised"
+            :progress="totalEmotionsPercentage.surprised"
             emotion="Surprised"
           />
         </div>
@@ -173,7 +173,7 @@ export default {
       userId: null,
       participantIds: [],
       currentEmotions: [],
-      totalEmotions: {},
+      totalEmotionsPercentage: {},
       showModal: true,
       roomName: "",
     };
@@ -223,7 +223,7 @@ export default {
               .catch((error) => {
                 console.log("err", error);
                 this.$axios
-                  .$post("/api/users/test", {
+                  .$post("/api/users", {
                     username: itsUserName,
                     role: "student",
                   })
@@ -477,16 +477,14 @@ export default {
             },
           })
           .then((result) => {
-            // console.log("result", result);
             this.currentEmotions = result;
-            this.totalEmotions = result.totalEmotions;
-            console.log("totalEmotion", this.totalEmotions);
+            this.totalEmotionsPercentage = result.totalEmotionsPercentage;
           })
           .catch((err) => {
             console.log("err", err);
             this.currentEmotions = [];
           });
-      }, 1250); // Delay of 0.5 seconds (500 milliseconds)
+      }, 10000); // Delay
     },
   },
 };

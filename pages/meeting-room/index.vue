@@ -17,14 +17,14 @@
       </h2>
       <div
         id="container"
-        class="relative mb-7 flex h-[633px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll xl:h-[844px] xl:w-[1198px] 2xl:h-[905px] 2xl:w-[1598px]"
+        class="relative mb-7 flex h-[633px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll pb-10 xl:h-[844px] xl:w-[1198px] 2xl:h-[905px] 2xl:w-[1598px]"
       >
         <!-- Ganti Sama Nama Room -->
         <div
           v-for="(data, index) in meeting"
           :key="index"
           class="relative h-auto w-[388px] rounded-lg border border-blue-50 bg-white px-6 py-4 shadow-lg"
-          @click="goToDetail(data.code)"
+          @click="goToDetail(data._id)"
         >
           <!--  -->
           <svg
@@ -123,10 +123,10 @@ export default {
         console.log(error);
       }
     },
-    goToDetail(code) {
+    goToDetail(meetingId) {
       this.$router.push({
-        path: `/meeting-room/${code}`,
-        params: { code },
+        path: `/meeting-room/${meetingId}`,
+        params: { meetingId },
       });
     },
   },
