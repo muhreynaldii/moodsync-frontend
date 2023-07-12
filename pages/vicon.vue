@@ -1,6 +1,6 @@
 <template>
   <main
-    class="ml-[161px] flex h-screen w-screen items-center justify-start overflow-hidden bg-white pr-[90px]"
+    class="ml-[100px] xl:ml-[161px] flex h-screen w-screen items-center justify-start overflow-hidden bg-white pr-[90px]"
   >
     <pop-up-join v-show="showModal" class="z-50" @join-modal="joinSession" />
     <div class="absolute left-[22px] top-[21px] w-full">
@@ -8,15 +8,15 @@
     </div>
     <div class="flex flex-col">
       <div
-        class="h-[717.53px]"
+        class="h-[625.53px] xl:h-[717.53px]"
         :class="{
-          'w-[900px] xl:w-[1300px] 2xl:w-[1832px]': !this.$auth.user,
-          'w-[700px] xl:w-[1000] 2xl:w-[1332px]': this.$auth.user,
+          'w-[900px] xl:w-[1184px] 2xl:w-[1623px]': !this.$auth.user,
+          'w-[580px] xl:w-[918px] 2xl:w-[1332px]': this.$auth.user,
         }"
       >
         <div class="flex items-center justify-center">
           <div
-            class="grid h-[710px] items-center justify-center gap-1 object-fill"
+            class="grid h-[548px] xl:h-[710px] items-center justify-center gap-1 object-fill"
             :class="[getGridClass(subscribers.length)]"
           >
             <!-- <user-video
@@ -32,7 +32,7 @@
               :user-id="userId"
               type="local"
               @click.native="updateMainVideoStreamManager(publisher)"
-              class="aspect-video"
+              class="w-[100%] h-[100%]"
             />
             <user-video
               v-for="sub in subscribers"
@@ -52,9 +52,10 @@
           <AudioSettings />
           <ActionBar
             @on-camera="toggleCamera"
+            @toggle-mic="toggleMic"
             @open-chat="openChatbox"
             @share-Screen="toggleScreenSharing"
-            class="absolute -bottom-[24px] left-1/2 -translate-x-1/2 -translate-y-1/2"
+            class="absolute -bottom-[28px] left-1/2 -translate-x-1/2 -translate-y-1/2"
           />
           <div
             class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
@@ -76,7 +77,7 @@
         </div>
       </div>
     </div>
-    <div class="h-[538.48px] w-[300px] pl-[87px]" v-if="this.$auth.user">
+    <div class="h-[600px] xl:h-[653.48px] w-[300px] pl-[20px] xl:pl-[30px]" v-if="this.$auth.user">
       <p class="w-[300px] text-center text-[23px] font-medium text-[#1C64F2]">
         Overall Class Emotion
       </p>
@@ -169,6 +170,7 @@ export default {
       isHovered: false,
       // itsSessionId: "SessionA",
       // itsUserName: "Participant" + Math.floor(Math.random() * 100),
+      isMicOn: undefined,
       meetingId: null,
       userId: null,
       participantIds: [],
@@ -273,7 +275,7 @@ export default {
             let publisher = this.OV.initPublisher(undefined, {
               audioSource: undefined,
               videoSource: undefined,
-              publishAudio: true,
+              publishAudio: this.isMicOn,
               publishVideo: true,
               resolution: "640x480",
               frameRate: 30,
@@ -373,14 +375,14 @@ export default {
           .getVideoTracks()[0].enabled = false;
       }
     },
-    toggleMic() {
+    toggleMic(isMicOn) {
       if (this.isMicOn) {
         // Mengaktifkan microphone
         this.publisher.publishAudio(true);
       } else {
         // Mematikan microphone
         this.publisher.publishAudio(false);
-      }
+       }
     },
     toggleChat() {
       this.isOpened = !this.isOpened;

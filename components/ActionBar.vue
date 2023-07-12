@@ -8,7 +8,7 @@
         <font-awesome-icon :icon="cameraIcon" />
       </button>
       <button
-        @click="toggleIcon"
+        @click="toggleMic"
         class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border-[1px] border-[#E5E7EB] bg-white text-[24px]"
       >
         <font-awesome-icon
@@ -71,11 +71,12 @@ export default {
       this.isCameraOn = !this.isCameraOn;
       this.$emit("on-camera", this.isCameraOn);
     },
-    toggleIcon() {
+    toggleMic() {
       this.isMicOn = !this.isMicOn;
-      console.log(this.isMicOn);
+      this.$emit("toggle-mic", this.isMicOn);
     },
     toggleScreenSharing() {
+      this.isScreenSharing = !this.isScreenSharing;
       this.$emit("share-Screen", this.isScreenSharing);
     },
   },
