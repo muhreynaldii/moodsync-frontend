@@ -11,6 +11,7 @@
       class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xl capitalize"
     >
       {{ currentPredict }}
+      <img :src="getEmoteIcon(currentPredict)" alt="Emote Icon" />
     </p>
   </div>
 </template>
@@ -150,6 +151,26 @@ export default {
         }
       });
     },
+    getEmoteIcon(emotion) {
+    switch (emotion) {
+      case 'neutral':
+        return require('~/assets/img/Neutral.png');
+      case 'happy':
+        return require('~/assets/img/Happy.png');
+      case 'sad':
+        return require('~/assets/img/Sad.png');
+      case 'angry':
+        return require('~/assets/img/Angry.png');
+      case 'fearful':
+        return require('~/assets/img/Fearful.png');
+      case 'disgusted':
+        return require('~/assets/img/Disgusted.png');
+      case 'surprise':
+        return require('~/assets/img/Surprised.png');
+      default:
+        return '';
+    }
+  },
     // initSocketIo() {
     //   this.socketIo = io(API_BASE_URL);
     //   this.socketIo.emit("join", this.streamManager.session.sessionId);

@@ -47,7 +47,7 @@
         />
         <div class="flex items-center justify-center">
           <button
-            class="mx-2 mt-2 h-[48px] w-[119px] rounded-[8px] border border-gray-200 bg-white text-black hover:border-red-400 hover:bg-red-500 hover:text-white"
+            class="mx-2 h-[48px] w-[119px] rounded-[8px] border border-gray-200 bg-white text-black hover:border-red-400 hover:bg-red-500 hover:text-white"
             type="reset"
             @click="goBack"
           >
