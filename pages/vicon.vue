@@ -1,6 +1,6 @@
 <template>
   <main
-    class="ml-[100px] xl:ml-[161px] flex h-screen w-screen items-center justify-start overflow-hidden bg-white pr-[90px]"
+    class="ml-[100px] flex h-screen w-screen items-center justify-start overflow-hidden bg-white pr-[90px] xl:ml-[161px]"
   >
     <pop-up-join v-show="showModal" class="z-50" @join-modal="joinSession" />
     <div class="absolute left-[22px] top-[21px] w-full">
@@ -16,7 +16,7 @@
       >
         <div class="flex items-center justify-center">
           <div
-            class="grid h-[548px] xl:h-[710px] items-center justify-center gap-1 object-fill"
+            class="grid h-[548px] items-center justify-center gap-1 object-fill xl:h-[710px]"
             :class="[getGridClass(subscribers.length)]"
           >
             <!-- <user-video
@@ -32,7 +32,7 @@
               :user-id="userId"
               type="local"
               @click.native="updateMainVideoStreamManager(publisher)"
-              class="w-[100%] h-[100%]"
+              class="h-[100%] w-[100%]"
             />
             <user-video
               v-for="sub in subscribers"
@@ -77,7 +77,10 @@
         </div>
       </div>
     </div>
-    <div class="h-[600px] xl:h-[653.48px] w-[300px] pl-[20px] xl:pl-[30px]" v-if="this.$auth.user">
+    <div
+      class="h-[600px] w-[300px] pl-[20px] xl:h-[653.48px] xl:pl-[30px]"
+      v-if="this.$auth.user"
+    >
       <p class="w-[300px] text-center text-[23px] font-medium text-[#1C64F2]">
         Overall Class Emotion
       </p>
@@ -170,7 +173,6 @@ export default {
       isHovered: false,
       // itsSessionId: "SessionA",
       // itsUserName: "Participant" + Math.floor(Math.random() * 100),
-      isMicOn: undefined,
       meetingId: null,
       userId: null,
       participantIds: [],
@@ -275,7 +277,7 @@ export default {
             let publisher = this.OV.initPublisher(undefined, {
               audioSource: undefined,
               videoSource: undefined,
-              publishAudio: this.isMicOn,
+              publishAudio: true,
               publishVideo: true,
               resolution: "640x480",
               frameRate: 30,
@@ -375,22 +377,15 @@ export default {
           .getVideoTracks()[0].enabled = false;
       }
     },
-    toggleMic(isMicOn) {
-      if (this.isMicOn) {
-        // Mengaktifkan microphone
+    toggleMic(value) {
+      if (value) {
         this.publisher.publishAudio(true);
       } else {
-        // Mematikan microphone
         this.publisher.publishAudio(false);
-       }
+      }
     },
     toggleChat() {
       this.isOpened = !this.isOpened;
-    },
-    createPublisher() {
-      this.publisher = new Publisher();
-      this.publisher.publishAudio(this.isMicOn);
-      this.session.publish(this.publisher);
     },
     toggleScreenSharing() {
       if (this.isScreenSharing) {
