@@ -11,6 +11,10 @@
       class="absolute right-4 top-4 rounded-full px-3 py-1 text-xl capitalize">
       <img :src="getEmoteIcon(currentPredict)" :alt="getEmoteIcon(currentPredict)" />
     </p>
+    <p v-if="type === 'local' && !this.$auth.user"
+      class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xl capitalize">
+      {{ currentPredict }}
+    </p>
   </div>
 </template>
 
