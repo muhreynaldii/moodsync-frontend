@@ -60,6 +60,8 @@ export default {
         { content: "Emotion Icons" },
         { content: "Emotion Analytics" },
         { content: "Real-time Feedback" },
+        { content: "Video Conference" },
+        { content: "Student List" },
       ],
     };
   },

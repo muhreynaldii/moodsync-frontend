@@ -74,9 +74,9 @@ export default {
           {
             data: this.data?.datas,
             backgroundColor: [
-              "rgba(152, 251, 152, 0.85)",
-              "rgba(249, 128, 128, 0.85)",
               "rgba(118, 169, 250, 0.85)",
+              "rgba(249, 128, 128, 0.85)",
+              "rgba(229, 231, 235, 0.85)",
             ],
           },
         ],
