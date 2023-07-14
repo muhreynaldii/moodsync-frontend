@@ -1,17 +1,16 @@
 <template>
-    <Pie
-      :chart-options="chartOptions"
-      :chart-data="chartData"
-      :chart-id="chartId"
-      :dataset-id-key="datasetIdKey"
-      :plugins="plugins"
-      :css-classes="cssClasses"
-      :styles="styles"
-      :width="width"
-      :height="height"
-
-      class="w-[100%] h-[100%]"
-    />
+  <Pie
+    :chart-options="chartOptions"
+    :chart-data="chartData"
+    :chart-id="chartId"
+    :dataset-id-key="datasetIdKey"
+    :plugins="plugins"
+    :css-classes="cssClasses"
+    :styles="styles"
+    :width="width"
+    :height="height"
+    class="h-[100%] w-[100%]"
+  />
 </template>
 
 <script>
@@ -75,8 +74,9 @@ export default {
           {
             data: this.data?.datas,
             backgroundColor: [
-              "rgba(118, 169, 250, 0.85)",
+              "rgba(152, 251, 152, 0.85)",
               "rgba(249, 128, 128, 0.85)",
+              "rgba(118, 169, 250, 0.85)",
             ],
           },
         ],
@@ -89,13 +89,13 @@ export default {
         aspectRatio: 1,
         plugins: {
           legend: {
-            position: 'top',
+            position: "top",
             labels: {
               font: {
-                size: 16
-              }
-            }
-          }
+                size: 16,
+              },
+            },
+          },
         },
       };
     },

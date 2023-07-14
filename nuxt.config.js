@@ -90,7 +90,7 @@ export default {
     redirect: {
       login: "/login",
       logout: "/login",
-      home: "/dashboard-dosen",
+      home: "/dashboard-pengajar",
     },
   },
 };

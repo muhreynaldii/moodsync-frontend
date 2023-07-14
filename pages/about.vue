@@ -17,8 +17,8 @@
           {{ data.content }}
         </p>
         <nuxt-link
-          to="/index"
-          class="mt-[0px] flex h-[39px] items-center justify-center rounded-lg bg-blue-600 hover:bg-blue-700 text-center text-[12px] text-white lg:w-[152.25px] xl:mt-[8px] xl:h-[52px] xl:w-[203px] xl:text-base"
+          to="/"
+          class="mt-[0px] flex h-[39px] items-center justify-center rounded-lg bg-blue-600 text-center text-[12px] text-white hover:bg-blue-700 lg:w-[152.25px] xl:mt-[8px] xl:h-[52px] xl:w-[203px] xl:text-base"
         >
           Get Started!
         </nuxt-link>
