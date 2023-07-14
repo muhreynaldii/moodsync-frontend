@@ -12,7 +12,7 @@
           :class="{
             'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-[#e1effe] no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
               link.isActive,
-            'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] hover:bg-[#f5faff] bg-white no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
+            'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-white no-underline shadow-[5px_5px_10px_0_#d4d4d4] hover:bg-[#f5faff]':
               !link.isActive,
           }"
         >
@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       linksData: [
-        { to: "dashboard-dosen", icon: "icons-dashboard" },
+        { to: "dashboard-pengajar", icon: "icons-dashboard" },
         { to: "vicon", icon: "icons-vicon" },
         { to: "daftar-mahasiswa", icon: "icons-daftar" },
         { to: "meeting-room", icon: "icons-room" },

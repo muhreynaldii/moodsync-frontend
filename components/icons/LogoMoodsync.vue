@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/dashboard-dosen">
+  <nuxt-link to="/dashboard-pengajar">
     <svg
       width="49"
       height="50"

@@ -1,7 +1,9 @@
 <template>
   <main class="h-screen overflow-hidden bg-white">
     <div class="flex">
-      <section class="ml-[78.75px] xl:ml-[105px] 2xl:ml-[145px] flex h-screen xl:w-1/2 flex-col justify-center w-[40%]">
+      <section
+        class="ml-[78.75px] flex h-screen w-[40%] flex-col justify-center xl:ml-[105px] xl:w-1/2 2xl:ml-[145px]"
+      >
         <heading-pages text="Features" />
         <div class="flex flex-col py-4">
           <ul
@@ -20,14 +22,14 @@
           </ul>
         </div>
         <nuxt-link
-          to="/index"
-          class="w-[152.25px] rounded-lg bg-blue-600 hover:bg-blue-700 px-[24px] py-[14px] text-center text-[12px] text-white lg:h-[39px] lg:w-[152.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[203px] xl:px-[12px] xl:py-[14px] xl:text-base"
+          to="/"
+          class="w-[152.25px] rounded-lg bg-blue-600 px-[24px] py-[14px] text-center text-[12px] text-white hover:bg-blue-700 lg:h-[39px] lg:w-[152.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[203px] xl:px-[12px] xl:py-[14px] xl:text-base"
         >
           Get Started!
         </nuxt-link>
       </section>
       <aside
-        class="xl:mr-[38px] flex h-screen xl:w-1/2 justify-end 2xl:justify-center mr-[29px] w-[60%]"
+        class="mr-[29px] flex h-screen w-[60%] justify-end xl:mr-[38px] xl:w-1/2 2xl:justify-center"
       >
         <img
           src="~img/sad-fun-confused-light.png"
@@ -55,7 +57,7 @@ export default {
     return {
       list: [
         { content: "Emotion Detection" },
-        { content: "Emotion Icons and Avatars" },
+        { content: "Emotion Icons" },
         { content: "Emotion Analytics" },
         { content: "Real-time Feedback" },
       ],
