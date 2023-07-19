@@ -162,7 +162,7 @@
 <script>
 export default {
   name: "DaftarMahasiswa",
-  layout: "side",
+  layout: "side-back",
   middleware: "auth",
   head: {
     title: "Daftar-Mahasiswa | Moodsync",
