@@ -32,7 +32,7 @@
               :user-id="userId"
               type="local"
               @click.native="updateMainVideoStreamManager(publisher)"
-              class="h-[100%] w-[100%]"
+              class="h-full w-full"
             />
             <user-video
               v-for="sub in subscribers"
@@ -49,7 +49,7 @@
         <div
           class="relative my-[29px] flex w-full items-center justify-between px-[19px]"
         >
-          <AudioSettings />
+          <AudioSettings @input="setAudioVolume"/>
           <ActionBar
             @on-camera="toggleCamera"
             @toggle-mic="toggleMic"
@@ -150,17 +150,7 @@ export default {
   name: "App",
   // middleware: "auth",
   layout: "side",
-  // mounted() {
-  //   this.joinSession();
-  //   // this.audioObject.addEventListener('volumechange', this.updateVolumeSlider)
-  // },
-  // beforeDestroy() {
-  //   // Menghapus event listener sebelum komponen dihancurkan
-  //   this.audioObject.removeEventListener(
-  //     "volumechange",
-  //     this.updateVolumeSlider
-  //   );
-  // },
+
   data() {
     return {
       // OpenVidu objects
@@ -387,8 +377,8 @@ export default {
     toggleChat() {
       this.isOpened = !this.isOpened;
     },
-    toggleScreenSharing() {
-      if (this.isScreenSharing) {
+    toggleScreenSharing(isScreenSharing) {
+      if (isScreenSharing) {
         this.stopScreenSharing();
       } else {
         this.startScreenSharing();
@@ -427,12 +417,11 @@ export default {
         });
     },
 
-    // updateVolumeSlider() {
-    //   // Mendapatkan nilai volume saat ini dari objek audio
-    //   const currentVolume = this.getAudioVolume();
-    //   // Mengupdate nilai volume pada properti data
-    //   this.volume = currentVolume;
-    // },
+    setAudioVolume() {
+        // Ambil nilai volume dari slider dan set volume audio pada Publisher
+        const audioVolume = parseInt(this.volume);
+        this.publisher.setAudioVolume(audioVolume);
+    },
     openChatbox() {
       EventBus.$emit("openChatbox"); // Mengirim sinyal ke komponen chatbox
     },

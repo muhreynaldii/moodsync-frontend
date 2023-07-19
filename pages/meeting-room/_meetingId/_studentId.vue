@@ -74,14 +74,14 @@
 <script>
 export default {
   name: "EmotionDetail",
-  layout: "side",
+  layout: "side-back",
   middleware: "auth",
   head: {
-    title: "Emotion-Detail - exported project",
+    title: "Emotion-Detail | Moodsync",
     meta: [
       {
         property: "og:title",
-        content: "Emotion-Detail - exported project",
+        content: "Emotion-Detail | Moodsync",
       },
     ],
   },
