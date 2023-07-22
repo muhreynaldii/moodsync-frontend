@@ -3,8 +3,9 @@
     <div class="flex flex-row justify-between gap-2">
       <button
         @click="toggleCamera"
-        class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border-[1px] border-[#E5E7EB] bg-white text-[24px]"
+        class="tooltip flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border-[1px] border-[#E5E7EB] bg-white text-[24px]"
       >
+      <span class="tooltiptext">Tooltip text</span>
         <font-awesome-icon :icon="cameraIcon" />
       </button>
       <button
@@ -120,5 +121,34 @@ export default {
   fill: var(
     --dl-color-primary-700
   ); /* Ganti dengan warna yang diinginkan saat di hover */
+}
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 </style>

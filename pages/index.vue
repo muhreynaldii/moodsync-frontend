@@ -29,7 +29,7 @@
             to="/vicon"
             class="rounded-lg border border-Gray-200 bg-white text-center font-medium text-black hover:bg-slate-50 lg:h-[39px] lg:w-[167.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[223px] xl:px-[12px] xl:py-[14px] xl:text-base"
           >
-            Masuk Sebagai Siswa
+            Masuk Sebagai Pelajar
           </nuxt-link>
         </div>
       </section>
