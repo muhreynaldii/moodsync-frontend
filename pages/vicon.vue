@@ -143,9 +143,6 @@ import { OpenVidu } from "openvidu-browser";
 import EventBus from "../plugins/event-bus";
 import { mapGetters } from "vuex";
 
-const APPLICATION_SERVER_URL =
-  process.env.NODE_ENV === "production" ? "" : "http://localhost:3005/";
-
 export default {
   name: "App",
   // middleware: "auth",
@@ -347,7 +344,7 @@ export default {
     },
     async createSession(sessionId) {
       const response = await this.$axios.post(
-        APPLICATION_SERVER_URL + "api/session",
+        process.env.API_BASE_URL + "api/session",
         { customSessionId: sessionId },
         {
           headers: { "Content-Type": "application/json" },
@@ -357,7 +354,7 @@ export default {
     },
     async createToken(sessionId) {
       const response = await this.$axios.post(
-        APPLICATION_SERVER_URL + "api/session/" + sessionId + "/connections",
+        process.env.API_BASE_URL + "api/session/" + sessionId + "/connections",
         {},
         {
           headers: { "Content-Type": "application/json" },
