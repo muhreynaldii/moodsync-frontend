@@ -1,11 +1,6 @@
 <template>
   <div @mouseover="showDropdown" @mouseleave="hideDropdown">
     <div class="flex w-[100px] items-center">
-      <!-- <img
-        src="~img/user-profile-example.png"
-        alt="user-profile-example"
-        class="rounded-full"
-      /> -->
       <p class="text-black">{{ this.$auth.user }}</p>
       <icons-arrow-down
         class="ml-[10px]"

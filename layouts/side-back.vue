@@ -1,6 +1,6 @@
 <template>
   <div class="relative overflow-hidden">
-    <icons-logo-moodsync class="absolute left-8 top-8 scale-75 xl:scale-100" />
+    <icons-logo-moodsync class="hover:animate-bounce absolute left-8 top-8 scale-75 xl:scale-100" />
     <button class="absolute left-32 top-8 scale-75 xl:scale-100  bg-blue-600 hover:bg-blue-700 px-3 py-3 rounded-Radius8" @click="goBack">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />

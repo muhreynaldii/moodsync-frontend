@@ -23,7 +23,7 @@
         <div
           v-for="(data, index) in meeting"
           :key="index"
-          class="relative h-auto w-[388px] rounded-lg border border-blue-50 bg-white px-6 py-4 shadow-lg"
+          class="relative h-auto w-[388px] rounded-lg border border-blue-50 bg-white hover:bg-[#f7f7f7] px-6 py-4 shadow-lg"
           @click="goToDetail(data._id)"
         >
           <!--  -->

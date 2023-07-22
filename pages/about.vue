@@ -18,7 +18,7 @@
         </p>
         <nuxt-link
           to="/"
-          class="mt-[0px] flex h-[39px] items-center justify-center rounded-lg bg-blue-600 text-center text-[12px] text-white hover:bg-blue-700 lg:w-[152.25px] xl:mt-[8px] xl:h-[52px] xl:w-[203px] xl:text-base"
+          class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 mt-[0px] flex h-[39px] items-center justify-center rounded-lg bg-blue-600 text-center text-[12px] text-white hover:bg-blue-700 lg:w-[152.25px] xl:mt-[8px] xl:h-[52px] xl:w-[203px] xl:text-base"
         >
           Get Started!
         </nuxt-link>
