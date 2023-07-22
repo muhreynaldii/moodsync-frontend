@@ -167,7 +167,7 @@ export default {
         return require('~/assets/img/Fearful.png');
       case 'disgusted':
         return require('~/assets/img/Disgusted.png');
-      case 'surprise':
+      case 'surprised':
         return require('~/assets/img/Surprised.png');
       default:
         return '';
