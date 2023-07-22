@@ -7,7 +7,7 @@
       :key="index"
       class="scale-75 xl:scale-100"
     >
-      <nuxt-link :to="link.to">
+      <nuxt-link :to="link.to" :title="link.tooltip">
         <div
           :class="{
             'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-[#e1effe] no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
@@ -31,10 +31,10 @@ export default {
   data() {
     return {
       linksData: [
-        { to: "dashboard-pengajar", icon: "icons-dashboard" },
-        { to: "vicon", icon: "icons-vicon" },
-        { to: "daftar-mahasiswa", icon: "icons-daftar" },
-        { to: "meeting-room", icon: "icons-room" },
+        { to: "dashboard-pengajar", icon: "icons-dashboard", tooltip: "Dashboard" },
+        { to: "vicon", icon: "icons-vicon", tooltip: "Video Conference" },
+        { to: "daftar-mahasiswa", icon: "icons-daftar", tooltip: "Daftar Pelajar" },
+        { to: "meeting-room", icon: "icons-room", tooltip: "Daftar Meeting Room" },
       ],
     };
   },
@@ -44,6 +44,7 @@ export default {
         to: `/${link.to}`,
         isActive: this.$route.name === link.to,
         icon: this.$route.name === link.to ? `${link.icon}-blue` : link.icon,
+        tooltip: link.tooltip,
       }));
     },
   },
