@@ -344,7 +344,7 @@ export default {
     },
     async createSession(sessionId) {
       const response = await this.$axios.post(
-        process.env.API_BASE_URL + "api/session",
+        process.env.API_BASE_URL + "/api/session",
         { customSessionId: sessionId },
         {
           headers: { "Content-Type": "application/json" },
@@ -354,7 +354,7 @@ export default {
     },
     async createToken(sessionId) {
       const response = await this.$axios.post(
-        process.env.API_BASE_URL + "api/session/" + sessionId + "/connections",
+        process.env.API_BASE_URL + "/api/session/" + sessionId + "/connections",
         {},
         {
           headers: { "Content-Type": "application/json" },
