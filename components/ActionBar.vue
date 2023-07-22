@@ -5,19 +5,20 @@
         @click="toggleCamera"
         class="tooltip flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border-[1px] border-[#E5E7EB] bg-white text-[24px]"
       >
-      <span class="tooltiptext">Tooltip text</span>
+      <span class="tooltiptext">Toggle Camera</span>
         <font-awesome-icon :icon="cameraIcon" />
       </button>
       <button
         @click="toggleMic"
-        class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border-[1px] border-[#E5E7EB] bg-white text-[24px]"
+        class="tooltip flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border-[1px] border-[#E5E7EB] bg-white text-[24px]"
       >
+      <span class="tooltiptext">Toggle Mic</span>
         <font-awesome-icon
           :icon="isMicOn ? 'microphone' : 'microphone-slash'"
         />
       </button>
       <button
-        class="flex h-[60px] w-[60px] items-center justify-center rounded-[18px] border border-[#E5E7EB]"
+        class="tooltip flex h-[60px] w-[60px] items-center justify-center rounded-[18px] border border-[#E5E7EB]"
         @click="toggleScreenSharing"
       >
         <svg
@@ -31,9 +32,10 @@
             :class="{ hovered: isHovered }"
           />
         </svg>
+        <span class="tooltiptext">Toggle Share Screen</span>
       </button>
       <button
-        class="flex h-[60px] w-[60px] items-center justify-center rounded-[18px] border border-[#E5E7EB]"
+        class="tooltip flex h-[60px] w-[60px] items-center justify-center rounded-[18px] border border-[#E5E7EB]"
         @click="$emit('open-chat')"
       >
         <svg
@@ -49,6 +51,7 @@
             :class="{ hovered: isHovered }"
           />
         </svg>
+        <span class="tooltiptext">Toggle Chat</span>
       </button>
     </div>
   </div>
@@ -125,19 +128,20 @@ export default {
 /* Tooltip container */
 .tooltip {
   position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
+  font-size: 12px;
   visibility: hidden;
   width: 120px;
-  background-color: black;
+  background-color: var(--dl-color-primary-600);
   color: #fff;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
+  opacity: 0;
+  transition: opacity 1s;
  
   /* Position the tooltip text - see examples below! */
   position: absolute;
@@ -150,5 +154,17 @@ export default {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--dl-color-primary-600) transparent transparent transparent;
 }
 </style>
