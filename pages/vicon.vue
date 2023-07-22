@@ -58,7 +58,7 @@
             class="absolute -bottom-[28px] left-1/2 -translate-x-1/2 -translate-y-1/2"
           />
           <div
-            class="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
+            class="tooltip flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[18px] border border-[#E5E7EB] bg-red-500 hover:bg-red-700"
             @click="leaveSession"
           >
             <svg
@@ -73,6 +73,7 @@
                 clip-rule="evenodd"
               />
             </svg>
+            <span class="tooltiptext">Disconnect</span>
           </div>
         </div>
       </div>
@@ -579,5 +580,47 @@ export default {
   grid-column: span 2 / span 2;
   grid-column-start: 4;
   grid-row-start: 3;
+}
+
+.tooltip {
+  position: relative;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  font-size: 12px;
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--dl-color-red-600);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 1s;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--dl-color-red-600) transparent transparent transparent;
 }
 </style>
