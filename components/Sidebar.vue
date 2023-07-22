@@ -33,8 +33,8 @@ export default {
       linksData: [
         { to: "dashboard-pengajar", icon: "icons-dashboard", tooltip: "Dashboard" },
         { to: "vicon", icon: "icons-vicon", tooltip: "Video Conference" },
-        { to: "daftar-mahasiswa", icon: "icons-daftar", tooltip: "Daftar Pelajar" },
-        { to: "meeting-room", icon: "icons-room", tooltip: "Daftar Meeting Room" },
+        { to: "daftar-pelajar", icon: "icons-daftar", tooltip: "Student List" },
+        { to: "meeting-room", icon: "icons-room", tooltip: "Meeting Rooms" },
       ],
     };
   },

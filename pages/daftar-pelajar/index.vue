@@ -55,15 +55,15 @@
 
 <script>
 export default {
-  name: "DaftarMahasiswa",
+  name: "DaftarPelajar",
   layout: "side",
   middleware: "auth",
   head: {
-    title: "Daftar-Mahasiswa | Moodsync",
+    title: "Daftar-Pelajar | Moodsync",
     meta: [
       {
         property: "og:title",
-        content: "Daftar-Mahasiswa | Moodsync",
+        content: "Daftar-Pelajar | Moodsync",
       },
     ],
   },
@@ -91,7 +91,7 @@ export default {
     },
     goToDetail(username) {
       this.$router.push({
-        path: `/daftar-mahasiswa/${username}`,
+        path: `/daftar-pelajar/${username}`,
         params: { username },
       });
     },

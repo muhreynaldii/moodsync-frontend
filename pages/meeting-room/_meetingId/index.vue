@@ -161,15 +161,15 @@
 
 <script>
 export default {
-  name: "DaftarMahasiswa",
+  name: "DaftarPelajar",
   layout: "side-back",
   middleware: "auth",
   head: {
-    title: "Daftar-Mahasiswa | Moodsync",
+    title: "Daftar-Pelajar | Moodsync",
     meta: [
       {
         property: "og:title",
-        content: "Daftar-Mahasiswa | Moodsync",
+        content: "Daftar-Pelajar | Moodsync",
       },
     ],
   },
