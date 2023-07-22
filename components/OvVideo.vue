@@ -1,15 +1,19 @@
 <template>
   <div class="h-[100%] w-[100%]">
     <video
-    ref="videoElement"
-    class="h-[100%] w-[100%] rounded-[6px] object-cover"
-    controls
-    autoplay
+      ref="videoElement"
+      class="h-[100%] w-[100%] rounded-[6px] object-cover"
+      controls
+      autoplay
     ></video>
     <p
       v-if="type === 'local' && !this.$auth.user"
-      class="absolute right-4 top-4 rounded-full px-3 py-1 text-xl capitalize">
-      <img :src="getEmoteIcon(currentPredict)" :alt="getEmoteIcon(currentPredict)" />
+      class="absolute right-4 top-4 rounded-full px-3 py-1 text-xl capitalize"
+    >
+      <img
+        :src="getEmoteIcon(currentPredict)"
+        :alt="getEmoteIcon(currentPredict)"
+      />
     </p>
   </div>
 </template>
@@ -19,7 +23,6 @@ import * as faceapi from "face-api.js";
 import { io } from "socket.io-client";
 import { mapActions } from "vuex";
 
-const API_BASE_URL = "http://localhost:3005";
 const MODEL_URL =
   "https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights";
 
@@ -133,7 +136,7 @@ export default {
         "join",
         `student-${this.streamManager.session.sessionId}`
       );
-      this.socketIo = io(API_BASE_URL);
+      this.socketIo = io(process.env.API_BASE_URL);
       this.socketIo.emit(
         "join",
         `student-${this.streamManager.session.sessionId}`
@@ -150,25 +153,25 @@ export default {
       });
     },
     getEmoteIcon(emotion) {
-    switch (emotion) {
-      case 'neutral':
-        return require('~/assets/img/Neutral.png');
-      case 'happy':
-        return require('~/assets/img/Happy.png');
-      case 'sad':
-        return require('~/assets/img/Sad.png');
-      case 'angry':
-        return require('~/assets/img/Angry.png');
-      case 'fearful':
-        return require('~/assets/img/Fearful.png');
-      case 'disgusted':
-        return require('~/assets/img/Disgusted.png');
-      case 'surprise':
-        return require('~/assets/img/Surprised.png');
-      default:
-        return '';
-    }
-  },
+      switch (emotion) {
+        case "neutral":
+          return require("~/assets/img/Neutral.png");
+        case "happy":
+          return require("~/assets/img/Happy.png");
+        case "sad":
+          return require("~/assets/img/Sad.png");
+        case "angry":
+          return require("~/assets/img/Angry.png");
+        case "fearful":
+          return require("~/assets/img/Fearful.png");
+        case "disgusted":
+          return require("~/assets/img/Disgusted.png");
+        case "surprise":
+          return require("~/assets/img/Surprised.png");
+        default:
+          return "";
+      }
+    },
     // initSocketIo() {
     //   this.socketIo = io(API_BASE_URL);
     //   this.socketIo.emit("join", this.streamManager.session.sessionId);
