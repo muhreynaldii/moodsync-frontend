@@ -114,7 +114,7 @@
         <div
           v-else-if="activeTab === 'participants'"
           id="container"
-          class="relative mb-7 flex h-[633px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll xl:h-[844px] xl:w-[1198px] 2xl:h-[905px] 2xl:w-[1598px]"
+          class="relative mb-7 flex max-h-[633px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll xl:max-h-[844px] xl:w-[1198px] 2xl:max-h-[905px] 2xl:w-[1598px]"
         >
           <div
             v-if="!users.length"
