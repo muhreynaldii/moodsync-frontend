@@ -32,14 +32,14 @@
               :user-id="userId"
               type="local"
               @click.native="updateMainVideoStreamManager(publisher)"
-              class="h-full w-full"
+              class="h-full w-full bg-slate-300"
             />
             <user-video
               v-for="sub in subscribers"
               :key="sub.stream.connection.connectionId"
               :stream-manager="sub"
               @click.native="updateMainVideoStreamManager(sub)"
-              class="aspect-video"
+              class="aspect-video bg-slate-300"
             />
           </div>
         </div>
