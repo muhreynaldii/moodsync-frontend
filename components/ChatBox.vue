@@ -1,7 +1,8 @@
 <template>
   <div :class="['chatbox', { open: isChatboxOpen }]">
     <div class="chat" style="background-color: #ebf5ff">
-      <div class="menu">
+      <!-- Pengelompokan Chat (Next Development) -->
+      <!-- <div class="menu">
         <button
           :class="['menu-button', { active: showGroup }]"
           @click="showGroupChat"
@@ -15,7 +16,7 @@
         >
           Personal
         </button>
-      </div>
+      </div> -->
       <!-- Daftar pesan chat -->
       <div class="messages">
         <div v-for="message in messages" :key="message.id" class="message">
