@@ -83,7 +83,7 @@
           <FormulateInput
             type="submit"
             name="Login"
-            input-class="h-[36px] w-[231px] xl:w-[308px] xl:h-[48px] self-center rounded-md bg-blue-600 hover:bg-blue-700 font-medium text-white text-[12px] xl:text-base"
+            input-class="relative before:ease h-[36px] w-[231px] xl:w-[308px] xl:h-[48px] self-center rounded-md bg-blue-600 transition-all duration-200 before:absolute before:right-0 before:top-0 before:h-14 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-blue-500 hover:before:-translate-x-80 font-medium text-white text-[12px] xl:text-base"
             class="mt-[28px]"
           />
         </FormulateForm>
