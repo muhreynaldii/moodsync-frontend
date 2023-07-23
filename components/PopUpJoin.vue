@@ -47,14 +47,14 @@
         />
         <div class="flex items-center justify-center">
           <button
-            class="mx-2 h-[48px] w-[119px] rounded-[8px] border border-gray-200 bg-white text-black hover:border-red-400 hover:bg-red-500 hover:text-white"
+            class="transition-colors mx-2 h-[48px] w-[119px] rounded-[8px] border border-gray-200 bg-white text-black hover:border-red-400 hover:bg-red-500 hover:text-white"
             type="reset"
             @click="goBack"
           >
             Back
           </button>
           <button
-            class="mx-2 h-[48px] w-[119px] rounded-[8px] bg-blue-600 text-white hover:bg-blue-700"
+            class="transition-colors mx-2 h-[48px] w-[119px] rounded-[8px] bg-blue-600 text-white hover:bg-blue-700"
             type="submit"
           >
             Join!

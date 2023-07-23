@@ -77,7 +77,7 @@ export default {
         labels: this.data?.labels,
         datasets: [
           {
-            label: "Emosi Mahasiswa",
+            label: "Emosi Pelajar",
             data: this.data?.datas,
             backgroundColor: "rgba(164, 202, 254, 0.7)",
             borderColor: "rgba(89, 142, 245, 0.7)",

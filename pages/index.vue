@@ -21,15 +21,15 @@
         <div class="flex justify-start gap-10">
           <nuxt-link
             to="/login"
-            class="rounded-lg bg-blue-600 text-center text-white hover:bg-blue-700 lg:h-[39px] lg:w-[167.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[223px] xl:px-[12px] xl:py-[14px] xl:text-base"
+            class="before:ease relative text-center font-medium rounded-lg overflow-hidden border border-blue-600 bg-blue-600 text-white shadow-2xl transition-all duration-200 before:absolute before:right-0 before:top-0 before:h-14 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-blue-500 hover:before:-translate-x-60 lg:h-[39px] lg:w-[180px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[228px] xl:px-[12px] xl:py-[14px] xl:text-base"
           >
-            Masuk Sebagai Pengajar
+          <span class="relative z-10">Masuk Sebagai Pengajar</span>
           </nuxt-link>
           <nuxt-link
             to="/vicon"
-            class="rounded-lg border border-Gray-200 bg-white text-center font-medium text-black hover:bg-slate-50 lg:h-[39px] lg:w-[167.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[223px] xl:px-[12px] xl:py-[14px] xl:text-base"
+            class="relative text-center font-medium rounded-lg overflow-hidden border border-grey-200 text-black shadow-2xl transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-blue-600 before:duration-300 before:ease-out hover:text-white hover:shadow-blue-600 hover:before:h-80 hover:before:w-80 lg:h-[39px] lg:w-[180px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[228px] xl:px-[12px] xl:py-[14px] xl:text-base"
           >
-            Masuk Sebagai Siswa
+          <span class="relative z-10">Masuk Sebagai Pelajar</span>
           </nuxt-link>
         </div>
       </section>

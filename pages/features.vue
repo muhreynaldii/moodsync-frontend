@@ -23,9 +23,9 @@
         </div>
         <nuxt-link
           to="/"
-          class="w-[152.25px] rounded-lg bg-blue-600 px-[24px] py-[14px] text-center text-[12px] text-white hover:bg-blue-700 lg:h-[39px] lg:w-[152.25px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[203px] xl:px-[12px] xl:py-[14px] xl:text-base"
+          class="before:ease relative text-center font-medium rounded-lg overflow-hidden border border-blue-600 bg-blue-600 text-white shadow-2xl transition-all duration-200 before:absolute before:right-0 before:top-0 before:h-14 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-blue-500 hover:before:-translate-x-60 lg:h-[39px] lg:w-[180px] lg:px-[9.13px] lg:py-[10.5px] lg:text-[12px] xl:h-[52px] xl:w-[228px] xl:px-[12px] xl:py-[14px] xl:text-base"
         >
-          Get Started!
+        <span class="relative z-10">Get Started!</span>
         </nuxt-link>
       </section>
       <aside
@@ -60,6 +60,8 @@ export default {
         { content: "Emotion Icons" },
         { content: "Emotion Analytics" },
         { content: "Real-time Feedback" },
+        { content: "Video Conference" },
+        { content: "Student List" },
       ],
     };
   },

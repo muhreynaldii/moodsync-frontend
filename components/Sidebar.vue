@@ -7,12 +7,12 @@
       :key="index"
       class="scale-75 xl:scale-100"
     >
-      <nuxt-link :to="link.to">
+      <nuxt-link :to="link.to" :title="link.tooltip">
         <div
           :class="{
             'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-[#e1effe] no-underline shadow-[5px_5px_10px_0_#d4d4d4]':
               link.isActive,
-            'relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-white no-underline shadow-[5px_5px_10px_0_#d4d4d4] hover:bg-[#f5faff]':
+            'transition duration-150 ease-in-out hover:scale-125 relative flex h-[50px] w-[50px] items-center justify-center rounded-[50%] bg-white no-underline shadow-[5px_5px_10px_0_#d4d4d4] hover:bg-[#f5faff]':
               !link.isActive,
           }"
         >
@@ -31,10 +31,10 @@ export default {
   data() {
     return {
       linksData: [
-        { to: "dashboard-pengajar", icon: "icons-dashboard" },
-        { to: "vicon", icon: "icons-vicon" },
-        { to: "daftar-mahasiswa", icon: "icons-daftar" },
-        { to: "meeting-room", icon: "icons-room" },
+        { to: "dashboard-pengajar", icon: "icons-dashboard", tooltip: "Dashboard" },
+        { to: "vicon", icon: "icons-vicon", tooltip: "Video Conference" },
+        { to: "daftar-pelajar", icon: "icons-daftar", tooltip: "Student List" },
+        { to: "meeting-room", icon: "icons-room", tooltip: "Meeting Rooms" },
       ],
     };
   },
@@ -44,6 +44,7 @@ export default {
         to: `/${link.to}`,
         isActive: this.$route.name === link.to,
         icon: this.$route.name === link.to ? `${link.icon}-blue` : link.icon,
+        tooltip: link.tooltip,
       }));
     },
   },

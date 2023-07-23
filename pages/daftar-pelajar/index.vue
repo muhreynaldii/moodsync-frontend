@@ -17,19 +17,19 @@
       </h2>
       <div
         id="container"
-        class="relative flex h-[633px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll mb-7 xl:h-[844px] xl:w-[1198px] 2xl:h-[905px] 2xl:w-[1598px]"
+        class="relative flex max-h-[545px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll mb-7 xl:max-h-[771px] xl:w-[1198px] 2xl:max-h-[820px] 2xl:w-[1598px]"
       >
         <div
           v-for="(data, index) in users"
           :key="index"
-          class="relative h-[94px] w-[388px] rounded-lg border border-blue-50 bg-white px-6 py-4 shadow-lg"
+          class="group transition-colors relative h-[94px] w-[388px] rounded-lg border border-blue-50 bg-white hover:bg-blue-50 px-6 py-4 shadow-lg"
           @click="goToDetail(data.username)"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="var(--dl-color-primary-50)"
-            class="absolute bottom-0 right-0 z-0 h-[100%] w-auto"
+            class="group-hover:fill-white transition-colors absolute bottom-0 right-0 z-0 h-[100%] w-auto"
           >
             <path
               fill-rule="evenodd"
@@ -55,15 +55,15 @@
 
 <script>
 export default {
-  name: "DaftarMahasiswa",
+  name: "DaftarPelajar",
   layout: "side",
   middleware: "auth",
   head: {
-    title: "Daftar-Mahasiswa | Moodsync",
+    title: "Daftar-Pelajar | Moodsync",
     meta: [
       {
         property: "og:title",
-        content: "Daftar-Mahasiswa | Moodsync",
+        content: "Daftar-Pelajar | Moodsync",
       },
     ],
   },
@@ -91,7 +91,7 @@ export default {
     },
     goToDetail(username) {
       this.$router.push({
-        path: `/daftar-mahasiswa/${username}`,
+        path: `/daftar-pelajar/${username}`,
         params: { username },
       });
     },

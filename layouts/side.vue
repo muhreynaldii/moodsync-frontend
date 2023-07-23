@@ -1,6 +1,6 @@
 <template>
   <div class="relative overflow-hidden">
-    <icons-logo-moodsync class="absolute left-8 top-8 scale-75 xl:scale-100" />
+    <icons-logo-moodsync class="hover:rotate-[360deg] transition-all absolute left-8 top-8 scale-75 xl:scale-100" />
     <sidebar v-if="this.$auth.user" />
     <user-dropdown
       class="absolute right-12 top-8 z-50"

@@ -6,14 +6,24 @@
       controls
       autoplay
     ></video>
+    <transition name="popup" mode="out-in" @enter="enter" @leave="leave">
+      <p
+        v-if="type === 'local' && !this.$auth.user"
+        :key="currentPredict"
+        class="absolute right-4 top-4 rounded-full px-3 py-1 text-xl capitalize"
+      >
+        <img
+          :src="getEmoteIcon(currentPredict)"
+          :alt="getEmoteIcon(currentPredict)"
+          class="scale-1 transform"
+        />
+      </p>
+    </transition>
     <p
       v-if="type === 'local' && !this.$auth.user"
-      class="absolute right-4 top-4 rounded-full px-3 py-1 text-xl capitalize"
+      class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xl capitalize"
     >
-      <img
-        :src="getEmoteIcon(currentPredict)"
-        :alt="getEmoteIcon(currentPredict)"
-      />
+      {{ currentPredict }}
     </p>
   </div>
 </template>
@@ -166,7 +176,7 @@ export default {
           return require("~/assets/img/Fearful.png");
         case "disgusted":
           return require("~/assets/img/Disgusted.png");
-        case "surprise":
+        case "surprised":
           return require("~/assets/img/Surprised.png");
         default:
           return "";
@@ -185,15 +195,16 @@ export default {
 </script>
 
 <style scoped>
-/* .vicon-lecturer {
-  top: 0px;
-  left: 0px;
-  width: 970.75px;
-  height: 726px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: 33px;
-} */
+.popup-enter-active,
+.popup-leave-active {
+  transition: all 0.3s ease-out;
+}
+.popup-enter, .popup-leave-to /* .popup-leave-active in <2.1.8 */ {
+  opacity: 0;
+  transform: scale(0);
+}
+.popup-enter-to, .popup-leave /* .popup-leave-active in <2.1.8 */ {
+  opacity: 1;
+  transform: scale(1);
+}
 </style>

@@ -114,7 +114,7 @@
         <div
           v-else-if="activeTab === 'participants'"
           id="container"
-          class="relative mb-7 flex h-[633px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll xl:h-[844px] xl:w-[1198px] 2xl:h-[905px] 2xl:w-[1598px]"
+          class="relative mb-7 flex max-h-[633px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll xl:max-h-[844px] xl:w-[1198px] 2xl:max-h-[905px] 2xl:w-[1598px]"
         >
           <div
             v-if="!users.length"
@@ -125,14 +125,14 @@
           <div
             v-for="(data, index) in users"
             :key="index"
-            class="relative h-[94px] w-[388px] rounded-lg border border-blue-50 bg-white px-6 py-4 shadow-lg"
+            class="group transition-colors relative h-[94px] w-[388px] rounded-lg border border-blue-50 bg-white hover:bg-blue-50 px-6 py-4 shadow-lg"
             @click="goToDetail(data._id)"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="var(--dl-color-primary-50)"
-              class="absolute bottom-0 right-0 z-0 h-[100%] w-auto"
+              class="group-hover:fill-white transition-colors absolute bottom-0 right-0 z-0 h-[100%] w-auto"
             >
               <path
                 fill-rule="evenodd"
@@ -161,15 +161,15 @@
 
 <script>
 export default {
-  name: "DaftarMahasiswa",
-  layout: "side",
+  name: "DaftarPelajar",
+  layout: "side-back",
   middleware: "auth",
   head: {
-    title: "Daftar-Mahasiswa | Moodsync",
+    title: "Daftar-Pelajar | Moodsync",
     meta: [
       {
         property: "og:title",
-        content: "Daftar-Mahasiswa | Moodsync",
+        content: "Daftar-Pelajar | Moodsync",
       },
     ],
   },
