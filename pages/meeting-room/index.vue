@@ -23,7 +23,7 @@
         <div
           v-for="(data, index) in meeting"
           :key="index"
-          class="group relative h-auto w-[388px] rounded-lg border border-blue-50 bg-white hover:bg-blue-50 px-6 py-4 shadow-lg"
+          class="group transition-colors relative h-auto w-[388px] rounded-lg border border-blue-50 bg-white hover:bg-blue-50 px-6 py-4 shadow-lg"
           @click="goToDetail(data._id)"
         >
           <!--  -->
@@ -31,7 +31,7 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="var(--dl-color-primary-50)"
-            class="group-hover:fill-white absolute bottom-0 right-0 z-0 h-[100%] w-auto"
+            class="group-hover:fill-white transition-colors absolute bottom-0 right-0 z-0 h-[100%] w-auto"
           >
             <path
               fill-rule="evenodd"
