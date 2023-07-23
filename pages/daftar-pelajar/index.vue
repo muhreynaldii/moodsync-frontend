@@ -17,7 +17,7 @@
       </h2>
       <div
         id="container"
-        class="relative flex max-h-[633px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll mb-7 xl:max-h-[844px] xl:w-[1198px] 2xl:max-h-[905px] 2xl:w-[1598px]"
+        class="relative flex max-h-[545px] w-[800px] flex-row flex-wrap gap-2 overflow-scroll mb-7 xl:max-h-[771px] xl:w-[1198px] 2xl:max-h-[820px] 2xl:w-[1598px]"
       >
         <div
           v-for="(data, index) in users"
